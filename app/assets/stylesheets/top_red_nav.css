@@ -1,0 +1,10 @@
+.classic_red_nav {
+  background-color: red;
+  display: flex;
+  align-items: flex-end;
+}
+
+.toplogo {
+  display: flex;
+  text-align: center;
+}
