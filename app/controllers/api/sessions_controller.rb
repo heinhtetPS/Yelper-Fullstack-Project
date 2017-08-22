@@ -8,17 +8,17 @@ class Api::SessionsController < ApplicationController
     )
     if @user
       login(@user)
-      #render the homepage
+      render :root
     else
       render json: ["Invalid username or password"], status: 422
       #redirect back to login page
     end
   end
 
-  #destroy session = logout 
+  #destroy session = logout
   def destroy
     logout
-    #redirect back to root
+    render :root
   end
 
 
