@@ -38,6 +38,9 @@ GEM
       i18n (~> 0.7)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
+    annotate (2.7.2)
+      activerecord (>= 3.2, < 6.0)
+      rake (>= 10.4, < 13.0)
     arel (7.1.4)
     bcrypt (3.1.11)
     better_errors (2.3.0)
@@ -174,6 +177,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  annotate
   bcrypt (~> 3.1.7)
   better_errors
   binding_of_caller
@@ -195,4 +199,4 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 BUNDLED WITH
-   1.15.3
+   1.15.4
