@@ -11,6 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-window.createNewUser = createNewUser;
-window.loginUser = loginUser;
-window.logoutUser = logoutUser;
+window.createNewUser = sessionUtil.createNewUser;
+window.loginUser = sessionUtil.loginUser;
+window.logoutUser = sessionUtil.logoutUser;

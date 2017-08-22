@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     #login/logout
     resource :session, only: [:create, :destroy]
     #user
-    resources :user, only: [:create]
+    resources :users, only: [:create]
   end
 
 end
