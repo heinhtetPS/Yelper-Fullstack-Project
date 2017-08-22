@@ -1,0 +1,79 @@
+State Shape 
+YELP project
+
+{
+  entities: {
+    Sample Users: {
+      1: {
+        id: 1,
+        username: 'Guest',
+        review_ids: [1, 3],
+      },
+      2: {
+        id: 2,
+        username: Guest2,
+        review_ids: [2, 10, 11],
+      }
+    },
+    Businesses: {
+      1: {
+        id : 1,
+        name: "Chipotle",
+        Address: 123 Main st, NY 11232
+        website: www.chipotle.com,
+        Category: Mexican, fast Food
+	Rating: 4 (out of 5)
+        Price: 2 (out of 4)
+        Options bools: {
+		Delivery: true,
+		Takeout: true,
+		Takes Reservations : false,
+		Accepts Credit Cards : true,
+		Wi-Fi: false, 
+
+		}
+	1: {
+        id : 2,
+        name: "McDonalds",
+        Address: 111 Main st, NY 11232
+        website: www.mcdonalds.com,
+        Category: Fast Food, Hamburgers
+	Rating: 3 (out of 5)
+        Price: 1 (out of 4)
+        Options bools: {
+		Delivery: true,
+		Takeout: true,
+		Takes Reservations : false,
+		Accepts Credit Cards : true,
+		Wi-Fi: true, 
+		
+     Reviews: {
+     		id: 1
+		Poster id: 1
+		Business id: 1
+		Date Posted: 3/11/17
+		Rating: 3 (out of 5)
+		Body: {
+			I hate to be the party pooper here, but I think it's important to know what to expect.
+			The prices have increased significantly since the menus posted in the photos- around a 40% 
+			increase already and they just recently opened. The portions are laughably tiny, which with 
+			the price combination makes it very expensive. Expect to pay about $60-80 per person 
+			(without drinks!). Very unreasonable for the neighborhood. 
+			}
+		id: 2
+		Poster id: 4
+		Business id: 2
+		Date Posted: 6/13/17
+		Rating: 1 (out of 5)
+		Body: {
+			I love to be the party pooper here, I think it's important to know what to expect.
+			The prices have decreased since the menus posted in the photos- around a 20% 
+			decrease already and they just recently opened. The portions are laughably huge, which with 
+			the price combination makes it very nice. Expect to pay about $6-8 per person 
+			(without drinks!). Very reasonable for the neighborhood. 
+			}
+			
+	UI State: 
+		
+}
+      

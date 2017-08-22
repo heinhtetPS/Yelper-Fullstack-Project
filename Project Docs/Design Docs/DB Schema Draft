@@ -1,0 +1,44 @@
+USERS
+
+column name	      data type	        details
+id	            integer	not null, primary key
+username	      string	not null, indexed, unique
+email	          string	not null, indexed, unique
+password_digest	      string	not null
+session_token	string	not null, indexed, unique
+
+
+BUSINESSES
+
+column name	    data type	      details
+id	          integer	not null, primary key
+Name	          string	not null
+Address	          text	not null
+owner_id	        integer	not null, foreign key (references users), indexed
+price	            integer	not null,
+categories        string
+Address           string
+Hours             string
+PhoneNumber       string
+Website           string
+Pictures          String
+Is there a way to have an options hash as a data type? Will ruby and JS play together nicely on this?
+I want to have a "Other stats" hash which contains a bunch of stuff as keys and only BOOLS as values
+For example: {takesReservations: false, delivery: true, hasWIFI: false}
+
+
+REVIEWS
+
+column name	          data type	      details
+id	              integer	not null, primary key
+author_id	        integer	not null, foreign key (references users), indexed
+date	            string	not null
+rating	        integer	
+body            text
+
+BONUS
+TAGS on reviews
+
+
+
+

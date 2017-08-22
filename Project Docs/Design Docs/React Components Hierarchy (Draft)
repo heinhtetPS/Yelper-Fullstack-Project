@@ -1,0 +1,146 @@
+Component Hierarchy
+
+HOME PAGE
+    New stylish invisible Top nav
+      - Left side links: reviews, events, talk
+          -review link to search results page showing random reviews instead of businesses
+          - not sure about events/talk (maybe replace with something else?)
+      - Right side AUTH (login & signup)
+          - Anon User will see Login and signup buttons
+          - Logged user will see their profile dwopdown
+              - Both will lead to User form (either create user or create session)
+    NO classic bottom top nav
+    Massive splash image
+        -Maybe make it different everytime you refresh
+    Centered logo/root link
+        - Links back to the "/" generic root path 
+       Searchbar container
+          - Left search(term)
+          - Right search(location)
+          - Search button
+     Category container
+        - Restaurants link goes to search results pg with Restaurant category
+        - Nightlife link goes to search results pg with Nightlife category
+        - Home link goes to search results pg with Home category
+        - Delivery link goes to search results pg with Delivery category
+
+Businesses by Category
+    Category Button Restaurants
+    Category Button Shopping
+    Category Button Nightlife
+    Category Button Life
+    Category Button Beauty
+    Category Button Auto
+      - all the above buttons will lead to search results pg with category already input
+
+Review previews container
+    - Probably can use the same business short info from search results
+    - Pic, Business name, Stars, $$, category, location
+Classic footer
+    - About links
+    - Discover links
+    - For business owners links
+    - Lang & country drops
+     - Maybe if I have time, make these link to my professional info 
+
+
+
+SEARCH RESULTS PAGE
+
+Classic Top nav container 
+    Logo/root link
+    Search bar container
+        - Left search(term)
+        - Right search(location)
+        - Submit button
+      Sign up(auth)
+        - Anon users will see Sign up button
+        - Logged users will see their profile drowdown
+      Bottom Nav
+        - Instead of the current links, do restaurants, nightlife, Food categories, write a review
+        - Resturants lead to same url with restaurant category
+        - Resturants lead to same url with nightlife category
+        - Food categories dropdown, leads to same URL with more specific food category
+        - write a review leads to review form when logged, unlogged user will lead to login form
+        Login(auth)
+          - same as the other one
+Search Filter Container
+      Money buttons
+        - clicking each will filter search with that category
+      Delivery, takeout, open now buttons
+        - clicking each will filter search with these bools
+      More filters button(this thing brings out a massive element
+        - Sort by
+        - Neighborhood
+        - Distance
+        - Price
+        
+GMAPS Module 
+    Redo search in map
+      - Will update when I learn more about Gmaps API
+    There are google Ads below the gmap
+      - Will update when I learn more about Gmaps API
+    The map MOVES when you scroll down
+      - Maybe I can do this with CSS?
+
+Search Results container
+    UL of results 
+        - Business name
+        - Rating
+        - # of reviews
+        - Price
+        - Category
+        - picture
+    Showing page 1 of x
+    
+Related Stuff container
+    Related searches
+    Related reviews
+    Other related BS
+    - Not sure about these
+    
+Missing business? Box container
+    - Button to add business(requires Auth)
+    
+    
+SHOW PAGE (BUSINESS)
+    Classic Top nav container 
+       - All same as previous
+
+Show page media container
+    Gmaps on leftside
+        - Mapping of location
+            - Will update when I learn more about Gmaps API
+        Related info: address, phone #, website, directions, etc
+            - Will update when I learn more about Gmaps API
+    Pics slider on right side
+        - Pics scroll by themselves
+        - Or upon clicking arrows
+        - The one that gets clicked gets big
+        - Maybe this can be acieved with CSS? I bet I can do it with JS
+Action buttons on top right
+    - Write review(requires guest login)
+        - Leads to login pg for unlogged, to Write a review form for logged
+    - Add pic, share, bookmark
+        - Not sure If I can do these in time
+Reviews search bar container
+    - Search bar, search button, same as before
+    - Sort by dropdown
+    - Language dropdown
+
+Reviews body
+    Featured/top reviews container
+        - Pic
+        - Some short part of review
+    Reviews main body (for real this time)
+        - Pic
+        - Stats: name, loc, friends, reviews, photos, rank
+        - How many stars
+        - Date
+        - Buttons to say “useful”, funny or cool (if time allows)
+
+Static info Right column container
+    - Hours of operation
+    - More info
+    - Lots of random stuff that are easy to include as they are simple Bools
+

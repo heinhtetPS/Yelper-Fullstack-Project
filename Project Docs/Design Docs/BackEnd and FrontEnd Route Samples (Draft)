@@ -1,0 +1,42 @@
+BACKEND API ROUTES
+
+Root
+GET / - loads React web app, main homepage
+
+
+Session/Auth
+POST /api/session   (new login)
+DELETE /api/session   (Logout)
+
+
+User
+POST /api/user  (Create New User if time allows)
+GET /api/user/:id	(If not, just go with DEMO account)
+PATCH /api/user/:id    (Update your own business, require login)
+
+
+
+Businesses
+GET /api/business (Index: with constraints. maybe all businesses in a certain location?)
+POST /api/business  (Create New business)
+GET /api/business/:id	(Business show page)
+PATCH /api/business/:id    (Update your own business, require login)
+
+Reviews
+GET /api/reviews(with business id?) (Index: with constraints? See all of your own reviews? All reviews of a business?)
+POST /api/reviews  (Post New review)
+GET /api/reviews/:id	(Show individual review)
+PATCH /api/reviews/:id    (Update your own review, require login)
+
+FRONT END ROUTES
+
+Homepage
+
+
+Search Results Page
+
+Business Show page
+
+New Business Form
+
+New Review form

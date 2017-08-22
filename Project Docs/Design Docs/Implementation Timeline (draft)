@@ -1,0 +1,36 @@
+Phase 1: Backend setup and Demo Authentication (2 days)
+Objective: Functioning database structure with backend associations and migrations done
+Objective: Functioning rails project with Demo authentication that works
+
+
+Phase 2: Business, Reviews Model, API, and setup front end store and State (2 days)
+Objective: State can be checked through the debugger, API routes return json info, models are ready 
+
+Phase 3: Complete Businesses (2 days)
+Objective: Complete all business related components, routes, forms
+  - Question: Should I be seeding the DB with fake businesses or real stuff based on Gmaps locations?
+
+Phase 4: Reviews (1 day)
+Objective: Complete all review related components, routes, forms, links
+Objective: Put together business and review stuff and have a decently working show page with reviews
+
+Phase 5: Learn about GMAPS API
+Objective: How do I put Gmap on the site.
+Objective: How do I make that Gmap point to a specific location
+Objective: How do I put icons on the map where the search addresses are located? Search within an area?
+Objective: Implement these maps on the show and search results page
+
+Phase 6: Learn more about the search function and improve its functionality
+Objective: Search with filters, categories, etc
+Objective: Search only in a particular location, put little flags on the map
+
+
+
+Phase 7: - CSS, styling elements, making map follow as you scroll
+Objective: Clone the CSS styles of the original and pick out pictures and etc
+Objective: Learn how to make the map follow you down
+
+Bonus Features
+
+- Adding buttons to press on the reviews saying :Useful, :funny, 
+- Make a more dynamic searching function and the ability to sort results
