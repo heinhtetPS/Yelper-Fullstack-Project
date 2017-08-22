@@ -10,6 +10,8 @@
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
+/test/tmp/
+/test/version_tmp/
 !/log/.keep
 !/tmp/.keep
 node_modules/
