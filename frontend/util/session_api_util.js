@@ -2,10 +2,10 @@
 //to API (rails backend database) and retrieves
 //user and session info
 
-export const createNewUser = (newUser) => (
+export const createNewUser = newUser => (
   $.ajax({
     method: 'POST',
-    url: 'api/user',
+    url: 'api/users',
     data: { newUser }
   })
 );

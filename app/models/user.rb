@@ -13,6 +13,7 @@
 
 class User < ApplicationRecord
   validates :username, :email, presence: true
+  validates :username, uniqueness: true
   validates :password_digest, presence: { message: 'Password can\'t be blank' }
   validates :password, length: { minimum: 6, allow_nil: true }
   attr_reader :password
@@ -22,7 +23,7 @@ class User < ApplicationRecord
 
   #Used to find user object in DB
   def self.find_by_credentials(username, raw_pass)
-    user = User.find_by(name: username)
+    user = User.find_by(username: username)
     if user && user.is_password?(raw_pass)
       return user
     else
