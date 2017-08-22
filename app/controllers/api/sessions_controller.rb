@@ -1,5 +1,6 @@
 class Api::SessionsController < ApplicationController
 
+  #new session = new login
   def create
     @user = User.find_by_credentials(
     params[:user][:username],
@@ -14,6 +15,7 @@ class Api::SessionsController < ApplicationController
     end
   end
 
+  #destroy session = logout 
   def destroy
     logout
     #redirect back to root

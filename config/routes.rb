@@ -1,3 +1,11 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  root to: "static_pages#root"
+  #put all api routes here
+  namespace :api, defaults: {format: :json} do
+    #login/logout
+    resource :session, only: [:create, :destroy]
+    #user
+    resources :user, only: [:create]
+  end
+
 end
