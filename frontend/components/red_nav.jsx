@@ -9,19 +9,21 @@ class RedNav extends React.Component {
 
  render() {
    let navclass;
+   let authlinks;
    if (this.props.location.pathname === "/") {
      navclass = "invisible_nav";
+     authlinks = (<div className="auth_links">
+       <Link to="/login" id="loginbutton" className="loginbtn">Log In</Link>
+       <Link to="/signup" id="signupbutton" className="signupbtn">Sign Up</Link>
+     </div>);
    } else {
      navclass = "classic_red_nav";
+     authlinks = null;
    }
    return (
      //toggle class here to make invis nav effect
      <nav className={navclass}>
-
-        <div className="auth_links">
-          <Link to="/login" id="loginbutton" className="loginbtn">Log In</Link>
-          <Link to="/signup" id="signupbutton" className="signupbtn">Sign Up</Link>
-        </div>
+        {authlinks}
      </nav>
    );
  }

@@ -6,9 +6,18 @@ import SessionFormContainer from './session_form_container';
 import RedNavContainer from './red_nav_container';
 import MainSplashContainer from './main_splash_container';
 
+
+let logopos;
+if (location.pathname === "/") {
+  logopos = "midlogo";
+} else {
+  logopos = "toplogo";
+}
+
+//PLAN to remove main logo out of the the main app thing and put them inside other comps
 const App = () => (
-  <div>
-    <h1 className="toplogo">YERPLER</h1>
+  <div className="chill">
+    <Link to="/" className={logopos}>YELPER</Link>
       <Route path="/" component={RedNavContainer} />
       <Route exact path="/" component={MainSplashContainer} />
       <Route path="/login" component={SessionFormContainer} />
