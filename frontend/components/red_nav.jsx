@@ -8,12 +8,14 @@ class RedNav extends React.Component {
   }
 
  render() {
-
    return (
      //toggle class here to make invis nav effect
      <nav className="classic_red_nav">
-       <Link to="/login">Log In</Link>
-       <Link to="/signup">Sign Up</Link>
+
+        <div className="auth_links">
+          <Link to="/login" id="loginbutton">Log In</Link>
+          <Link to="/signup" id="signupbutton">Sign Up</Link>
+        </div>
      </nav>
    );
  }
