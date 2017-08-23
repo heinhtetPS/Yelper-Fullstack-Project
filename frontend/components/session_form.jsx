@@ -18,24 +18,26 @@ class SessionForm extends React.Component {
  }
 
  whichform() {
-   if (this.props.location.pathname === "signup") {
+   if (this.props.location.pathname === "/signup") {
      return(
        <form>
-         <input type ="text" placeholder="Username"></input>
-         <input type ="text" placeholder="Email"></input>
-         <input type ="text" placeholder="Password"></input>
+         <input type ="text" placeholder="Username"></input> <br />
+         <input type ="text" placeholder="Email"></input> <br />
+         <input type ="text" placeholder="Password"></input> <br />
        </form>
      );
    } else {
      return (
        <form>
-
+         <input type ="text" placeholder="Username"></input> <br />
+         <input type ="text" placeholder="Password"></input> <br />
        </form>
      );
    }
  }
 
  render() {
+   debugger
    return (
      <div>
        {this.whichform()}

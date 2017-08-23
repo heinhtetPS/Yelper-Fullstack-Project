@@ -13,8 +13,6 @@ const mapStateToProps = ({ session }) => {
 };
 
 const mapDispatchToProps = (dispatch, { location }) => {
-  // check how to grab location
-  debugger
   const formType = location.pathname.slice(1);
   const processForm = (formType === 'login') ? loginUser : createNewUser;
   return {

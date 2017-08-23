@@ -17,11 +17,12 @@
 }
 
 .toplogo {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
+  width: 180px;
+  height: 40px;
   z-index: 99;
-
+  border: 2px solid #73AD21;
+  text-align: center;
+  left: 100px;
 }
 
 .midlogo {
@@ -31,21 +32,38 @@
   z-index: 99;
 }
 
-/*this doesn't work*/
-#signupbutton #loginbutton {
+.signupbtn {
+  color: white;
+  width: 105px;
+  height: 36px;
   border-radius: 10px;
-  border: 2px solid #73AD21;
+  border: 2px solid white;
+  font-size: 20px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.loginbtn .signupbtn {
-  border-radius: 10px;
-  border: 2px solid #73AD21;
-  font-size: 20px;
+/*doesntwork*/
+.signupbutton:hover {
+  background-color: white;
+}
+
+.loginbtn {
+  color: white;
+  width: 65px;
+  height: 36px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .auth_links {
   width: 95%;
   display: flex;
-  flex-direction: column;
-  text-align: right;
+  flex-direction: row;
+  text-align: center;
+  justify-content: flex-end;
 }
