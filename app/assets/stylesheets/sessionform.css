@@ -1,7 +1,14 @@
 
-/*doesn't work*/
 .right-side-house {
   position: fixed;
   right: 30px;
   top: 100px;
+}
+
+.tinytext {
+  font-size: 11px;
+}
+
+.Redh2 {
+  color: #D32323;
 }

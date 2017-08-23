@@ -5,7 +5,7 @@
 export const createNewUser = newUser => (
   $.ajax({
     method: 'POST',
-    url: 'api/users',
+    url: '/api/users',
     data: { newUser }
   })
 );

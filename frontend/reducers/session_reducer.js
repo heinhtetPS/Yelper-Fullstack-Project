@@ -4,6 +4,7 @@ import { RECEIVE_CURRENT_USER, RECEIVE_ERRORS } from '../actions/session_actions
 
 
 const SessionReducer = (state = {currentUser: null, errors: []}, action) => {
+  debugger
   Object.freeze(state);
   switch (action.type) {
 
@@ -18,6 +19,7 @@ const SessionReducer = (state = {currentUser: null, errors: []}, action) => {
     default:
       return state;
   }
+  debugger
 };
 
 export default SessionReducer;

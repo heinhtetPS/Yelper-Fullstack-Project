@@ -19,6 +19,7 @@ const mapDispatchToProps = (dispatch, { location }) => {
     processForm: user => dispatch(processForm(user)),
     formType
   };
+  debugger
 };
 
 export default connect(
