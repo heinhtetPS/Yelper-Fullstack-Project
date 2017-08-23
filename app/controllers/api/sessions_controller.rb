@@ -17,8 +17,13 @@ class Api::SessionsController < ApplicationController
 
   #destroy session = logout
   def destroy
-    logout
-    redirect_to :root
+    @user = current_user
+    if @user
+      logout
+      render :destroy
+    else
+      render json: ["Nobody signed in"], status: 404
+    end
   end
 
 
