@@ -5,7 +5,8 @@ class Api::UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       login(@user)
-      redirect_to :root
+      #no redirects here, must render some JSON
+      render :show
     else
       render json: @user.errors.full_messages
     end

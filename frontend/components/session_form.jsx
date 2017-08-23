@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 
 class SessionForm extends React.Component {
 
@@ -32,6 +32,7 @@ class SessionForm extends React.Component {
    e.preventDefault();
    const user = Object.assign({}, this.state);
    this.props.processForm(user);
+   //we also want to clear form and redirect to root
  }
 
  whichform() {

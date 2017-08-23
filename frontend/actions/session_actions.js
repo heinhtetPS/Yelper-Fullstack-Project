@@ -13,6 +13,8 @@ export const receiveErrors = errors => ({
   errors
 });
 
+//dispatch is an arg for the returning function
+//doesn't show up in logger because it is being invoked with dispatch as arg
 export const createNewUser = user => dispatch => {
   return sessionUtil.createNewUser(user).then(user => (
     dispatch(receiveCurrentUser(user))

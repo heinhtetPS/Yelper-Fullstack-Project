@@ -8,7 +8,7 @@ class Api::SessionsController < ApplicationController
     )
     if @user
       login(@user)
-      redirect_to :root
+      render :show
     else
       render json: ["Invalid username or password"], status: 422
       #redirect back to login page
