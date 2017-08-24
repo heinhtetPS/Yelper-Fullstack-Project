@@ -4,11 +4,12 @@ Objective: Functioning rails project with Demo authentication that works
 
 
 Phase 2: Business, Reviews Model, API, and setup front end store and State (2 days)
-Objective: State can be checked through the debugger, API routes return json info, models are ready 
+Objective: State can be checked through the debugger, API routes return json info, models are ready
 
 Phase 3: Complete Businesses (2 days)
 Objective: Complete all business related components, routes, forms
   - Question: Should I be seeding the DB with fake businesses or real stuff based on Gmaps locations?
+    answer: yes I should seed the DB with fake stuff
 
 Phase 4: Reviews (1 day)
 Objective: Complete all review related components, routes, forms, links
@@ -32,5 +33,5 @@ Objective: Learn how to make the map follow you down
 
 Bonus Features
 
-- Adding buttons to press on the reviews saying :Useful, :funny, 
+- Adding buttons to press on the reviews saying :Useful, :funny,
 - Make a more dynamic searching function and the ability to sort results

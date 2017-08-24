@@ -6,14 +6,14 @@ HOME PAGE
           -review link to search results page showing random reviews instead of businesses
           - not sure about events/talk (maybe replace with something else?)
       - Right side AUTH (login & signup)
-          - Anon User will see Login and signup buttons
-          - Logged user will see their profile dwopdown
-              - Both will lead to User form (either create user or create session)
-    NO classic bottom top nav
-    Massive splash image
+          - Anon User will see Login and signup buttons   (done)
+          - Logged user will see their profile dwopdown   (done)
+              - Both will lead to User form (either create user or create session)  (done)
+    NO classic bottom top nav   (done)
+    Massive splash image      (done)
         -Maybe make it different everytime you refresh
-    Centered logo/root link
-        - Links back to the "/" generic root path 
+    Centered logo/root link    (done)
+        - Links back to the "/" generic root path   (done)
        Searchbar container
           - Left search(term)
           - Right search(location)
@@ -41,13 +41,13 @@ Classic footer
     - Discover links
     - For business owners links
     - Lang & country drops
-     - Maybe if I have time, make these link to my professional info 
+     - Maybe if I have time, make these link to my professional info
 
 
 
 SEARCH RESULTS PAGE
 
-Classic Top nav container 
+Classic Top nav container
     Logo/root link
     Search bar container
         - Left search(term)
@@ -74,8 +74,8 @@ Search Filter Container
         - Neighborhood
         - Distance
         - Price
-        
-GMAPS Module 
+
+GMAPS Module
     Redo search in map
       - Will update when I learn more about Gmaps API
     There are google Ads below the gmap
@@ -84,7 +84,7 @@ GMAPS Module
       - Maybe I can do this with CSS?
 
 Search Results container
-    UL of results 
+    UL of results
         - Business name
         - Rating
         - # of reviews
@@ -92,19 +92,19 @@ Search Results container
         - Category
         - picture
     Showing page 1 of x
-    
+
 Related Stuff container
     Related searches
     Related reviews
     Other related BS
     - Not sure about these
-    
+
 Missing business? Box container
     - Button to add business(requires Auth)
-    
-    
+
+
 SHOW PAGE (BUSINESS)
-    Classic Top nav container 
+    Classic Top nav container
        - All same as previous
 
 Show page media container
@@ -143,4 +143,3 @@ Static info Right column container
     - Hours of operation
     - More info
     - Lots of random stuff that are easy to include as they are simple Bools
-

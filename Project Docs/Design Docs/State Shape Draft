@@ -1,9 +1,15 @@
-State Shape 
+State Shape
 YELP project
 
 {
   entities: {
-    Sample Users: {
+    Session: {
+        currentUser: {
+          id: 1,
+          username: user1
+        }
+    }
+    Users: {
       1: {
         id: 1,
         username: 'Guest',
@@ -20,6 +26,8 @@ YELP project
         id : 1,
         name: "Chipotle",
         Address: 123 Main st, NY 11232
+        map_lat: 1341.324
+        map_lng: 1234.11
         website: www.chipotle.com,
         Category: Mexican, fast Food
 	Rating: 4 (out of 5)
@@ -29,7 +37,7 @@ YELP project
 		Takeout: true,
 		Takes Reservations : false,
 		Accepts Credit Cards : true,
-		Wi-Fi: false, 
+		Wi-Fi: false,
 
 		}
 	1: {
@@ -45,8 +53,8 @@ YELP project
 		Takeout: true,
 		Takes Reservations : false,
 		Accepts Credit Cards : true,
-		Wi-Fi: true, 
-		
+		Wi-Fi: true,
+
      Reviews: {
      		id: 1
 		Poster id: 1
@@ -55,10 +63,10 @@ YELP project
 		Rating: 3 (out of 5)
 		Body: {
 			I hate to be the party pooper here, but I think it's important to know what to expect.
-			The prices have increased significantly since the menus posted in the photos- around a 40% 
-			increase already and they just recently opened. The portions are laughably tiny, which with 
-			the price combination makes it very expensive. Expect to pay about $60-80 per person 
-			(without drinks!). Very unreasonable for the neighborhood. 
+			The prices have increased significantly since the menus posted in the photos- around a 40%
+			increase already and they just recently opened. The portions are laughably tiny, which with
+			the price combination makes it very expensive. Expect to pay about $60-80 per person
+			(without drinks!). Very unreasonable for the neighborhood.
 			}
 		id: 2
 		Poster id: 4
@@ -67,13 +75,10 @@ YELP project
 		Rating: 1 (out of 5)
 		Body: {
 			I love to be the party pooper here, I think it's important to know what to expect.
-			The prices have decreased since the menus posted in the photos- around a 20% 
-			decrease already and they just recently opened. The portions are laughably huge, which with 
-			the price combination makes it very nice. Expect to pay about $6-8 per person 
-			(without drinks!). Very reasonable for the neighborhood. 
+			The prices have decreased since the menus posted in the photos- around a 20%
+			decrease already and they just recently opened. The portions are laughably huge, which with
+			the price combination makes it very nice. Expect to pay about $6-8 per person
+			(without drinks!). Very reasonable for the neighborhood.
 			}
-			
-	UI State: 
-		
+
 }
-      

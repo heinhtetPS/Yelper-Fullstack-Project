@@ -1,16 +1,16 @@
 BACKEND API ROUTES
 
 Root
-GET / - loads React web app, main homepage
+GET / - loads React web app, main homepage   (done)
 
 
 Session/Auth
-POST /api/session   (new login)
-DELETE /api/session   (Logout)
+POST /api/session   (new login)  (done)
+DELETE /api/session   (Logout)   (done)
 
 
 User
-POST /api/user  (Create New User if time allows)
+POST /api/user  (Create New User)   (done)
 GET /api/user/:id	(If not, just go with DEMO account)
 PATCH /api/user/:id    (Update your own business, require login)
 
@@ -31,6 +31,15 @@ PATCH /api/reviews/:id    (Update your own review, require login)
 FRONT END ROUTES
 
 Homepage
+- links to:
+  - search results page (through search)
+  - business show (if they click on featured business)
+  - session form (login, new user)
+  -
+
+Session Form
+  - links to:
+    - Homepage
 
 
 Search Results Page
