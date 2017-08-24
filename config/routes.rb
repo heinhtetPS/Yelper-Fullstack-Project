@@ -6,6 +6,8 @@ Rails.application.routes.draw do
     resources :users, only: [:create]
     #login/logout
     resource :session, only: [:create, :destroy]
+    #business (restaurants)
+    resources :businesses, only: [:index, :create, :update], :path => "biz"
   end
 
 end

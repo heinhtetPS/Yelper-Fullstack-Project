@@ -2,7 +2,14 @@ class Api::BusinessesController < ApplicationController
 
   #create new business & persist into DB
   def index
-    @allBusiness = Business.all 
+    # allbusiness = bounds ? Bench.in_bounds(bounds) : Bench.all
+    #
+    # if params[:minSeating] && params[:maxSeating]
+    #   allbusiness = allbusiness.where(seating: seating_range)
+    # end
+    #
+    # @allbusiness = allbusiness.includes(:reviews, :favorite_users)
+    # render :index
   end
 
   def create
@@ -19,7 +26,10 @@ class Api::BusinessesController < ApplicationController
 
   end
 
-  #BONUS business show
+  def create
+    @business = Business.create!(business_params)
+    render :show
+  end
 
 
   private

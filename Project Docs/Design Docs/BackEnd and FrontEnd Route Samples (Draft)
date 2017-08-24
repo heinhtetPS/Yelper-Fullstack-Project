@@ -17,10 +17,10 @@ PATCH /api/user/:id    (Update your own business, require login)
 
 
 Businesses
-GET /api/business (Index: with constraints. maybe all businesses in a certain location?)
-POST /api/business  (Create New business)
-GET /api/business/:id	(Business show page)
-PATCH /api/business/:id    (Update your own business, require login)
+GET /api/biz (Index: with constraints. maybe all businesses in a certain location?)
+POST /api/biz  (Create New business)
+GET /api/biz/:id	(Business show page)
+PATCH /api/biz/:id    (Update your own business, require login)
 
 Reviews
 GET /api/reviews(with business id?) (Index: with constraints? See all of your own reviews? All reviews of a business?)
