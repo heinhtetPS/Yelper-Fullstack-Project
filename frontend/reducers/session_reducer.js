@@ -9,7 +9,8 @@ const SessionReducer = (state = {currentUser: null, errors: []}, action) => {
   Object.freeze(state);
 
   switch (action.type) {
-
+    //here I had to fix a mistake where I combined state with currentUser,
+    //this resulted in state never changing
     case RECEIVE_CURRENT_USER:
       const currentUser = action.currentUser;
       return merge({}, {currentUser: null, errors: []}, {currentUser});

@@ -10,7 +10,8 @@ export const createNewUser = newUser => (
     data: {user: newUser}
   })
 );
-
+//had an error where controller didn't accept the data
+//had to put it inside obj
 export const loginUser = user => (
   $.ajax({
     method: 'POST',
@@ -19,6 +20,8 @@ export const loginUser = user => (
   })
 );
 
+//I had to create a custom destroy view for this to update correctly
+//it just has {} in it
 export const logoutUser = () => (
   $.ajax({
     method: 'DELETE',

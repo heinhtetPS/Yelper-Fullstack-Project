@@ -7,6 +7,7 @@ const mapStateToProps = ({ session }) => {
   return {
     //this checks for currentUser and puts true or false inside the
     //loggedin key of session obj, also errors
+    //it might become useful to put in current user here
     loggedIn: Boolean(session.currentUser),
     errors: session.errors
   }
@@ -14,6 +15,7 @@ const mapStateToProps = ({ session }) => {
 
 const mapDispatchToProps = (dispatch, { location }) => {
   // change this later, probably to search stuff
+  //this will eventually contain the search fields
   const formType = location.pathname.slice(1);
   const processForm = (formType === 'login') ? loginUser : createNewUser;
   return {

@@ -6,23 +6,24 @@ class RedNav extends React.Component {
   constructor(props) {
     super(props);
   }
-
+  //this toggles the hidden class of the dropdown
   togglehidden() {
     $('#hider').toggleClass('hidden-dropdown-items unhidden-dropdown-items');
   }
 
  render() {
+   //ternary declaration, either we're on homepage for transparent nav or classic red on all others
    let navclass = this.props.location.pathname === "/" ? "invisible_nav" : "classic_red_nav";
    let authlinks;
 
-
+   //check for login & path to show minimalist white buttons for login and signup
    if (!this.props.loggedIn && this.props.location.pathname === "/") {
      authlinks = (<div className="auth_links">
        <Link to="/login" id="loginbutton" className="loginbtn">Log In</Link>
        <Link to="/signup" id="signupbutton" className="signupbtn">Sign Up</Link>
      </div>);
    } else if (this.props.loggedIn) {
-        //later, change this to dwop down
+        //here's the dropdown button and menu
      authlinks = (<div className="auth_links">
        <img className="dropdown-btn"
           onClick={this.togglehidden}

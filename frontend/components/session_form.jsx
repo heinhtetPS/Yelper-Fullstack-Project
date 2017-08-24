@@ -6,6 +6,7 @@ class SessionForm extends React.Component {
   constructor(props) {
     super(props);
 
+    //initial state is blank
     if (this.props.location.pathname === "/signup") {
       this.state = {
         username: "",
@@ -22,6 +23,7 @@ class SessionForm extends React.Component {
      this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  //when people type, change the state text
   update(field) {
     return e => this.setState({
       [field]: e.currentTarget.value
@@ -67,6 +69,7 @@ class SessionForm extends React.Component {
        </div>
      );
    } else {
+     //this is the login form 
      return (
        <div className="sessionForm_master">
          <form onSubmit={this.handleSubmit}>
