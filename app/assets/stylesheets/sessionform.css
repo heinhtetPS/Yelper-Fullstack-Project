@@ -1,13 +1,21 @@
 .sessionForm_master {
-  width: 50%;
+  width: 100%;
   text-align: center;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  margin-left: 300px;
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-
+.left-side-form {
+  max-width: 300px;
+}
 .right-side-house {
+  width: fit-content;
   display: flex;
-  border: 2px solid;
+  /*border: 2px solid;*/
+  padding-left: 40px;
 }
 
 .tinytext {
@@ -16,13 +24,14 @@
 
 .Redh2 {
   color: #D32323;
+  font-size: 22px;
 }
 
 .errorbox {
-  display: block;
+  height: fit-content;
+  padding: 5px;
   border: 2px solid;
   border-radius: 10px;
-  width: 25%;
   background-color: #FCD6D3;
 }
 
