@@ -17,7 +17,7 @@ const SessionReducer = (state = nullUser, action) => {
     //this resulted in state never changing
     case RECEIVE_CURRENT_USER:
       const currentUser = action.currentUser;
-      return merge({}, nullUser, {currentUser});
+      return merge({}, nullUser, { currentUser });
 
 //this is wrong, it doesn't merge correctly, need to merge errors into the errors array that's already in state
 //fixed by adding nulluser and putting errors in obj

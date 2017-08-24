@@ -13,7 +13,7 @@
 
 class User < ApplicationRecord
   validates :username, :email, :session_token, presence: true
-  validates :username, uniqueness: true
+  validates :username, :email, uniqueness: true
   validates :password_digest, presence: { message: 'Password can\'t be blank' }
   validates :password, length: { minimum: 6, allow_nil: true }
   attr_reader :password
@@ -50,7 +50,7 @@ class User < ApplicationRecord
 
   #Used to generate salted/hashed digest
   def password=(raw_pass)
-    @password = password
+    @password = raw_pass
     self.password_digest = BCrypt::Password.create(raw_pass)
   end
 

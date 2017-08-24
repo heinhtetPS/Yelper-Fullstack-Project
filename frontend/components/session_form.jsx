@@ -23,7 +23,7 @@ class SessionForm extends React.Component {
      this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  //This thing redirects to root immediately
+  //This thing redirects to root immediately ASK TA
   //still have a problem that it doesn't show user name even after redirect
   componentWillReceiveProps(nextProps) {
     if (nextProps.loggedIn) {
@@ -49,10 +49,18 @@ class SessionForm extends React.Component {
   }
 
   clearform() {
-    this.setState ({
-      username: "",
-      password: ""
-    });
+    if (this.props.location.pathname === "/signup") {
+      this.state = {
+        username: "",
+        email: "",
+        password: ""
+      };
+    } else {
+      this.state = {
+        username: "",
+        password: ""
+      };
+    }
   }
 
   toggleerrors() {
@@ -89,7 +97,7 @@ class SessionForm extends React.Component {
                     onChange={this.update('email')}
                /> <br />
                <input type ="text"
-                      placeholder="Secret Password"
+                      placeholder="Password"
                       value={this.state.password}
                       onChange={this.update('password')}
                  /> <br />
