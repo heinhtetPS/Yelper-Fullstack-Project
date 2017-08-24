@@ -3,8 +3,12 @@ import { merge } from 'lodash';
 
 import { RECEIVE_CURRENT_USER, RECEIVE_ERRORS } from '../actions/session_actions';
 
+const nullUser = Object.freeze({
+  currentUser: null,
+  errors: []
+});
 
-const SessionReducer = (state = {currentUser: null, errors: []}, action) => {
+const SessionReducer = (state = nullUser, action) => {
 
   Object.freeze(state);
 
@@ -13,13 +17,13 @@ const SessionReducer = (state = {currentUser: null, errors: []}, action) => {
     //this resulted in state never changing
     case RECEIVE_CURRENT_USER:
       const currentUser = action.currentUser;
-      return merge({}, {currentUser: null, errors: []}, {currentUser});
+      return merge({}, nullUser, {currentUser});
 
 //this is wrong, it doesn't merge correctly, need to merge errors into the errors array that's already in state
-//attempted fix 1
+//fixed by adding nulluser and putting errors in obj
     case RECEIVE_ERRORS:
       const errors = action.errors;
-      return merge({}, {currentUser: null, errors: []}, errors);
+      return merge({}, nullUser, { errors } );
 
     default:
       return state;
