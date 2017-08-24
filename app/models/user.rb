@@ -12,7 +12,7 @@
 #
 
 class User < ApplicationRecord
-  validates :username, :email, presence: true
+  validates :username, :email, :session_token, presence: true
   validates :username, uniqueness: true
   validates :password_digest, presence: { message: 'Password can\'t be blank' }
   validates :password, length: { minimum: 6, allow_nil: true }

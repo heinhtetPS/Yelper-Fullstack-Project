@@ -12,3 +12,15 @@
 .Redh2 {
   color: #D32323;
 }
+
+.errorbox {
+  display: block;
+  border: 2px solid;
+  border-radius: 10px;
+  width: 25%;
+  background-color: #FCD6D3;
+}
+
+.errorbox-hidden {
+  display: none;
+}

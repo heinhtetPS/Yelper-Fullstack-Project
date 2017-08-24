@@ -23,6 +23,14 @@ class SessionForm extends React.Component {
      this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  //This thing redirects to root immediately
+  //still have a problem that it doesn't show user name even after redirect
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.loggedIn) {
+      this.props.history.push('/');
+    }
+  }
+
   //when people type, change the state text
   update(field) {
     return e => this.setState({
@@ -30,11 +38,34 @@ class SessionForm extends React.Component {
     });
   }
 
+  renderErrors() {
+    return (
+      <ul id="hider"className="errorbox-hidden">
+        {this.props.errors.map((error, idx) => (
+          <li key={`error-${idx}`}>{error}</li>
+        ))}
+      </ul>
+    );
+  }
+
+  clearform() {
+    this.setState ({
+      username: "",
+      password: ""
+    });
+  }
+
+  toggleerrors() {
+    $('#hider').toggleClass('errorbox-hidden errorbox');
+  }
+
   handleSubmit(e) {
    e.preventDefault();
    const user = Object.assign({}, this.state);
    this.props.processForm(user);
-   //we also want to clear form and redirect to root
+   this.toggleerrors();
+   this.clearform();
+   //we also want to clear form
  }
 
  whichform() {
@@ -42,6 +73,7 @@ class SessionForm extends React.Component {
    if (this.props.location.pathname === "/signup") {
      return(
        <div className="sessionForm_master">
+         {this.renderErrors()}
          <form onSubmit={this.handleSubmit}>
            <h2 className="Redh2">Sign Up for Yelp</h2> <br />
            <p>Connect with great local businesses</p> <br />
@@ -69,9 +101,10 @@ class SessionForm extends React.Component {
        </div>
      );
    } else {
-     //this is the login form 
+     //this is the login form
      return (
        <div className="sessionForm_master">
+         {this.renderErrors()}
          <form onSubmit={this.handleSubmit}>
            <h2>Log In to Yelp</h2> <br />
            <p>New to Yelp?</p> <Link to="/signup">Sign up!</Link> <br />

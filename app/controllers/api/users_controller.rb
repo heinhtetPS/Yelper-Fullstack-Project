@@ -8,7 +8,7 @@ class Api::UsersController < ApplicationController
       #no redirects here, must render some JSON
       render :show
     else
-      render json: @user.errors.full_messages
+      render json: @user.errors.full_messages, status: 422
     end
   end
 
