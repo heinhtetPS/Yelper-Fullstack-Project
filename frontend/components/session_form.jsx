@@ -105,7 +105,9 @@ class SessionForm extends React.Component {
            <p className="tinytext">Already on Yelp?</p>
            <Link to="/login" className="tinytext">Log In</Link>
          </form>
-         <img className="right-side-house" src="https://s3-media4.fl.yelpcdn.com/assets/2/www/img/1e82406ff345/signup/signup_illustration.png"></img>
+         <div className="right-side-house">
+           <img src="https://s3-media4.fl.yelpcdn.com/assets/2/www/img/1e82406ff345/signup/signup_illustration.png"></img>
+         </div>
        </div>
      );
    } else {
@@ -114,7 +116,7 @@ class SessionForm extends React.Component {
        <div className="sessionForm_master">
          {this.renderErrors()}
          <form onSubmit={this.handleSubmit}>
-           <h2>Log In to Yelp</h2> <br />
+           <h2 className="Redh2">Log In to Yelp</h2> <br />
            <p>New to Yelp?</p> <Link to="/signup">Sign up!</Link> <br />
            <p>By signing up, you agree to Yelp’s Terms of Service and Privacy Policy.</p>
              <input type ="text"
@@ -131,7 +133,9 @@ class SessionForm extends React.Component {
            <p className="tinytext">New to Yelp?</p>
            <Link to="/signup" className="tinytext">Sign up</Link>
          </form>
-         <img className="right-side-house" src="https://s3-media4.fl.yelpcdn.com/assets/2/www/img/1e82406ff345/signup/signup_illustration.png"></img>
+         <div className="right-side-house">
+           <img src="https://s3-media4.fl.yelpcdn.com/assets/2/www/img/1e82406ff345/signup/signup_illustration.png"></img>
+         </div>
        </div>
      );
    }
