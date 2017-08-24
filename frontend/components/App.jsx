@@ -16,12 +16,14 @@ if (location.pathname === "/") {
 
 //PLAN to remove main logo out of the the main app thing and put them inside other comps
 const App = () => (
-  <div className="chill">
-    <Link to="/" className={logopos}>YELPER</Link>
-      <Route path="/" component={RedNavContainer} />
-      <Route exact path="/" component={MainSplashContainer} />
-      <Route path="/login" component={SessionFormContainer} />
-      <Route path="/signup" component={SessionFormContainer} />
+  <div>
+    <Route exact path="/" component={MainSplashContainer} />
+      <div className="page-container">
+        <Route path="/" component={RedNavContainer} />
+
+        <Route path="/login" component={SessionFormContainer} />
+        <Route path="/signup" component={SessionFormContainer} />
+      </div>
   </div>
 );
 

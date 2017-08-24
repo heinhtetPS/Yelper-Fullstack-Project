@@ -9,7 +9,6 @@
   color: black;
   position: relative;
    left: 40%;
-   top: 140px;
 }
 
 .midlogo {
@@ -19,8 +18,9 @@
   border: 2px solid #73AD21;
   font-size: 40px;
   text-decoration: none;
-  text-shadow: 1px 1px 4px white, 0 0 25px red, 0 0 5px darkblue;
-  color: black;
+  text-shadow: 1px 1px 4px black, 0 0 25px red, 0 0 5px darkblue;
+  color: white;
   position: relative;
    left: 40%;
+   top: 120px;
 }

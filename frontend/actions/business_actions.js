@@ -2,10 +2,11 @@ import * as businessUtil from '../util/business_api_util';
 
 export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
 export const RECEIVE_SINGLE_BUSINESS = 'RECEIVE_SINGLE_BUSINESS,';
+export const RECEIVE_BUSINESSES = 'RECEIVE_BUSINESSES';
 
-export const receiveCurrentBusiness = currentBusiness => ({
-  type: RECEIVE_CURRENT_BUSINESS,
-  currentBusiness
+export const receiveBusinesses = businesses => ({
+  type: RECEIVE_BUSINESSES,
+  businesses
 });
 
 export const receiveSingleBusiness = payload => ({
@@ -26,6 +27,15 @@ export const createNewBusiness = business => dispatch => {
   ), err => (
     dispatch(receiveErrors(err.responseJSON))
   ));
+};
+
+export const fetchBenches = filters => dispatch => {
+  return businessUtil.fetchAllBusinesses(filters).then(businesses => (
+    dispatch(receiveBusinesses(businesses))
+  ), err => (
+    dispatch(receiveErrors(err.responseJSON))
+  ));
+
 };
 
 //null to remove currentuser

@@ -14,6 +14,7 @@ class RedNav extends React.Component {
  render() {
    //ternary declaration, either we're on homepage for transparent nav or classic red on all others
    let navclass = this.props.location.pathname === "/" ? "invisible_nav" : "classic_red_nav";
+   let logopos = this.props.location.pathname === "/" ? "midlogo" : "toplogo";
    let authlinks;
 
    //check for login & path to show minimalist white buttons for login and signup
@@ -38,6 +39,7 @@ class RedNav extends React.Component {
    //actual render happens here
    return (
      <nav className={navclass}>
+       <Link to="/" className={logopos}>YELPER</Link>
         {authlinks}
      </nav>
    );

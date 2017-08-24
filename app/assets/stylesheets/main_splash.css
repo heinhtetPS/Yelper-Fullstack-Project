@@ -1,3 +1,10 @@
+.page-container {
+  max-width: 960px;
+  height: 530px;
+  margin-left: 181px;
+  margin-right: 181px;
+}
+
 .splashbg {
   width: 100%;
   height: 570px;
@@ -7,4 +14,8 @@
   background-position: center center;
   background-size: cover;
   background-image: url("https://s3-media2.fl.yelpcdn.com/assets/srv0/yelp_large_assets/a2a6dfbdce53/assets/img/home/hero_photos/Y52KtIDZeG8aAMBaLIjSlQ.jpg");
+}
+
+.search_container {
+
 }

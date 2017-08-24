@@ -13,13 +13,7 @@
   height: 64px;
   position: absolute;
   top: 0px;
-}
-
-
-.midlogo {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
+  left: 0px;
 }
 
 .signupbtn {
@@ -54,12 +48,12 @@
 
 
 .auth_links {
-  width: 95%;
+  width: 85%;
   display: flex;
   z-index: 80;
-  flex-direction: row;
-  text-align: center;
   justify-content: flex-end;
+  /*position: absolute;
+  top: 50px;*/
 }
 
 .dropdown-btn {

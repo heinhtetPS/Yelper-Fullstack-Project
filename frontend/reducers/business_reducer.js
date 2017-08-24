@@ -10,13 +10,13 @@ const businessReducer = (state = {}, action) => {
     case RECEIVE_ALL_BUSINESS:
       return merge({}, state, action.business);
     case RECEIVE_SINGLE_BUSINESS:
-      const poke = action.payload.business;
-      poke.item_ids = action.payload.items.map(item => item.id);
-
-      return merge({}, state, { [poke.id]: poke });
+      const biz = action.payload.business;
+      //UNcomment once you have created reviews
+      // biz.review_ids = action.payload.reviews.map(review => review.id);
+      return merge({}, state, { [biz.id]: biz });
     default:
       return state;
   }
 };
 
-export default businessReducer;
+export default BusinessReducer;
