@@ -37,10 +37,18 @@ class RedNav extends React.Component {
    }
 
    //actual render happens here
+   //for our logo, make this an h1 with an A link inside
+   //put css tag on the h1 and put bg image url on it
+   //Let the size be 160 x 80
+   //display block on the a link
    return (
      <nav className={navclass}>
-       <Link to="/" className={logopos}>YELPER</Link>
+       <img src="/newlogo.png"></img>
+       <h1 className="putlogohere">
+         <Link to="/" className={logopos}>YELPER</Link>
+       </h1>
         {authlinks}
+
      </nav>
    );
  }
