@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
-import * as sessionUtil from './util/session_api_util';
+import * as businessUtil from './util/business_api_util';
 
 //This function waits for all DOM elements to lead before rendering
 //React and redux master components such as store
@@ -24,6 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-window.createNewUser = sessionUtil.createNewUser;
-window.loginUser = sessionUtil.loginUser;
-window.logoutUser = sessionUtil.logoutUser;
+window.fetchSingleBusiness = businessUtil.fetchSingleBusiness;
+window.fetchAllBusinesses = businessUtil.fetchAllBusinesses;
+window.createNewBusiness = businessUtil.createNewBusiness;

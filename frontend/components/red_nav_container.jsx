@@ -16,12 +16,8 @@ const mapStateToProps = ({ session }) => {
 
 const mapDispatchToProps = (dispatch, { location }) => {
   // see what you'll need here
-  const formType = location.pathname.slice(1);
-  const processForm = (formType === 'login') ? loginUser : createNewUser;
   return {
     logoutUser: user => dispatch(logoutUser(user)),
-    processForm: user => dispatch(processForm(user)),
-    formType
   };
 };
 

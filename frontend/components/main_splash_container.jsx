@@ -16,11 +16,8 @@ const mapStateToProps = ({ session }) => {
 const mapDispatchToProps = (dispatch, { location }) => {
   // change this later, probably to search stuff
   //this will eventually contain the search fields
-  const formType = location.pathname.slice(1);
-  const processForm = (formType === 'login') ? loginUser : createNewUser;
   return {
-    processForm: user => dispatch(processForm(user)),
-    formType
+
   };
 };
 

@@ -1,8 +1,8 @@
 .bottom_main_container {
   max-width: 960px;
   height: 600px;
-  margin-left: 85px;
-  margin-right: 85px;
+  margin-left: 411px;
+  margin-right: 411px;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -12,5 +12,33 @@
   height: 68px;
   padding-top: 36px;
   text-align: center;
-  border: 5px magenta;
+  border-bottom: 1px solid gray;
+}
+
+.featured_container {
+  padding-top: 22px;
+  text-align: center;
+  width: 960px;
+  height: 384px;
+}
+
+.bizzes_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.biz_photo_box {
+  max-width: 298px;
+  max-height: 180px;
+  overflow: hidden;
+}
+
+.biz_box {
+  background-color: yellow;
+  border: 1px solid black;
+  width: 299px;
+  height: 322px;
+  padding-left: 15px;
+  padding-right: 15px;
 }

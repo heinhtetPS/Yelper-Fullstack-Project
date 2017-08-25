@@ -8,7 +8,7 @@ const BusinessReducer = (state = {}, action) => {
 
   switch (action.type) {
     case RECEIVE_BUSINESSES:
-      return merge({}, state, action.business);
+      return merge({}, state, action.businesses);
     case RECEIVE_SINGLE_BUSINESS:
       const biz = action.payload.business;
       //UNcomment once you have created reviews
