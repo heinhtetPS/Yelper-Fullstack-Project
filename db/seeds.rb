@@ -5,11 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
+User.destroy_all
 User.create!({username: 'demo_user',
               email: 'demo@gmail.com',
               password: 'password'})
-
+Business.destroy_all
 Business.create!({
               name: 'App Academy Diner',
               address: '159 W 25th St, New York, NY 10001',
@@ -34,5 +34,18 @@ Business.create!({
               hours: 4,
               delivery: true,
               take_out: true,
+              accepts_credit_cards: true,
+              wifi: false})
+Business.create!({
+              name: 'Bizzz 3',
+              address: '979 Main Ave, New York, NY 10001',
+              map_lat: 42.745156,
+              map_lng: -71.9007,
+              price: 2,
+              owner_id: 1,
+              website: 'https://www.google.com/',
+              hours: 4,
+              delivery: false,
+              take_out: false,
               accepts_credit_cards: true,
               wifi: false})
