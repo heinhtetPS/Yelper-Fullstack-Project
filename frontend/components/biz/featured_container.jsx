@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 
 import Featured from './featured';
-// import { logoutUser } from '../actions/session_actions';
+import { fetchABusiness } from '../../actions/business_actions';
 
 const mapStateToProps = ({ session }) => {
   return {
@@ -17,7 +17,7 @@ const mapStateToProps = ({ session }) => {
 const mapDispatchToProps = (dispatch, { location }) => {
   // see what you'll need here
   return {
-    logoutUser: user => dispatch(logoutUser(user)),
+    fetchABusiness: id => dispatch(fetchABusiness(id)),
   };
 };
 

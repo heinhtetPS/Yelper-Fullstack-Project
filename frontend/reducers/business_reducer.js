@@ -1,12 +1,13 @@
 import { merge } from 'lodash';
 //Either import merge with no brackets from lodash/merge OR use no brackets and just from lodash
 
-import { RECEIVE_BUSINESSES, RECEIVE_SINGLE_BUSINESS, RECEIVE_ERRORS, createNewBusiness } from '../actions/business_actions';
+import { RECEIVE_BUSINESSES, RECEIVE_SINGLE_BUSINESS, RECEIVE_ERRORS } from '../actions/business_actions';
 
 const BusinessReducer = (state = {}, action) => {
   Object.freeze(state);
 
   switch (action.type) {
+
     case RECEIVE_BUSINESSES:
       return merge({}, state, action.businesses);
     case RECEIVE_SINGLE_BUSINESS:

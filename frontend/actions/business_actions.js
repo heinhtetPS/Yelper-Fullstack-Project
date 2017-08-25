@@ -23,14 +23,14 @@ export const receiveErrors = errors => ({
 //doesn't show up in logger because it is being invoked with dispatch as arg
 export const createNewBusiness = business => dispatch => {
   return businessUtil.createNewBusiness(business).then(business => (
-    dispatch(receiveCurrentBusiness(business))
+    dispatch(receiveSingleBusiness(business))
   ), err => (
     dispatch(receiveErrors(err.responseJSON))
   ));
 };
-
-export const fetchBusinesses = filters => dispatch => {
-  return businessUtil.fetchAllBusinesses(filters).then(businesses => (
+//add filters here before dispatch
+export const fetchBusinesses = () => dispatch => {
+  return businessUtil.fetchAllBusinesses().then(businesses => (
     dispatch(receiveBusinesses(businesses))
   ), err => (
     dispatch(receiveErrors(err.responseJSON))

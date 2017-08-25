@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
 import * as businessUtil from './util/business_api_util';
-import { fetchABusiness } from './actions/business_actions';
+import { fetchABusiness, fetchBusinesses } from './actions/business_actions';
 
 //This function waits for all DOM elements to lead before rendering
 //React and redux master components such as store
@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 window.fetchABusiness = fetchABusiness;
+window.fetchBusinesses = fetchBusinesses;
 window.fetchSingleBusiness = businessUtil.fetchSingleBusiness;
 window.fetchAllBusinesses = businessUtil.fetchAllBusinesses;
 window.createNewBusiness = businessUtil.createNewBusiness;

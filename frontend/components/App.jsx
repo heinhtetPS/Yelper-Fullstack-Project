@@ -7,7 +7,7 @@ import RedNavContainer from './red_nav_container';
 import MainSplashContainer from './main_splash_container';
 import SearchContainer from './biz/search_container';
 import CitiesNavContainer from './cities_nav_container';
-import FeaturedContainer from './biz/featured_container'
+import FeaturedContainer from './biz/featured_container';
 
 
 let logopos;
