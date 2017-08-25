@@ -5,9 +5,16 @@ class Featured extends React.Component {
 
   constructor(props) {
     super(props);
+
+    this.state = {
+      Leftbox: {},
+      Middlebox: {},
+      Rightbox: {}
+    };
   }
 
   render() {
+
     return (
       <div className="featured_container">
         <h2>Hot & New Businesses</h2>
