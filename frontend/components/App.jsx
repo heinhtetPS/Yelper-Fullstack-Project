@@ -18,7 +18,8 @@ if (location.pathname === "/") {
   logopos = "toplogo";
 }
 
-//PLAN to remove main logo out of the the main app thing and put them inside other comps
+//PLAN: Maybe I should make a global page container with standardized dimensions
+//Here, the structure is messed up because mainsplash renders everwhere despite having the exact condition 
 const App = () => (
   <div>
     <Route exact path="/" component={MainSplashContainer} />

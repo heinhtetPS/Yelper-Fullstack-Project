@@ -6,15 +6,29 @@ class Featured extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      Leftbox: {},
-      Middlebox: {},
-      Rightbox: {}
-    };
+    // this.state = {
+    //   Leftbox: {},
+    //   Middlebox: {},
+    //   Rightbox: {}
+    // };
+  }
+
+  componentDidMount() {
+    this.props.fetchBusinesses();
+    // this.setState({Leftbox: this.props.fetchABusiness(1)});
+    // this.setState({Middlebox: this.props.fetchABusiness(2)});
+    // this.setState({Rightbox: this.props.fetchABusiness(1)});
+    //because these are async, we need to set conditionals for rendering
+    //instead fetch all businesses
   }
 
   render() {
 
+    //i want to put each businesses's full info inside lbox, mbox and rbox
+    //and then distribute this info into the HTML when it has loaded
+    //simply index through the array received and set conditionals to not render if array < 3
+    // if (this.props.biz.length >=2)
+    // console.log(this.props.biz)
     return (
       <div className="featured_container">
         <h2>Hot & New Businesses</h2>
@@ -53,7 +67,9 @@ class Featured extends React.Component {
         </div>
       </div>
     );
+
   }
+
 
 }
 
