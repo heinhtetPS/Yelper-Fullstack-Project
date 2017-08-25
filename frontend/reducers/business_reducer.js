@@ -10,10 +10,10 @@ const BusinessReducer = (state = {}, action) => {
     case RECEIVE_BUSINESSES:
       return merge({}, state, action.businesses);
     case RECEIVE_SINGLE_BUSINESS:
-      const biz = action.payload.business;
+      const biz = action.payload;
       //UNcomment once you have created reviews
       // biz.review_ids = action.payload.reviews.map(review => review.id);
-      return merge({}, state, { [biz.id]: biz });
+      return merge({}, state.biz, biz);
     case RECEIVE_ERRORS:
       const errors = action.errors;
       return merge({}, state, { errors: errors } );

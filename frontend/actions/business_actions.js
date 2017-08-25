@@ -38,4 +38,13 @@ export const fetchBusinesses = filters => dispatch => {
 
 };
 
+export const fetchABusiness = id => dispatch => {
+  return businessUtil.fetchSingleBusiness(id).then(business => (
+    dispatch(receiveSingleBusiness(business))
+  ), err => (
+    dispatch(receiveErrors(err.responseJSON))
+  ));
+
+};
+
 //null to remove currentuser

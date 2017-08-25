@@ -2,6 +2,8 @@ class Api::BusinessesController < ApplicationController
 
   #create new business & persist into DB
   def index
+    @allbusiness = Business.all
+    #Below is all the filtering stuff
     # allbusiness = bounds ? Bench.in_bounds(bounds) : Bench.all
     #
     # if params[:minSeating] && params[:maxSeating]

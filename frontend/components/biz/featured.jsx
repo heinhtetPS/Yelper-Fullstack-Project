@@ -14,7 +14,7 @@ class Featured extends React.Component {
         <div className="bizzes_container">
           <div className="biz_box">
             <div className="biz_photo_box">
-              <Link to="">
+              <Link to="/api/biz/1">
                 <img src="https://s3-media3.fl.yelpcdn.com/bphoto/_mSOrFPac21VHKv59h38jA/l.jpg"></img>
               </Link>
 

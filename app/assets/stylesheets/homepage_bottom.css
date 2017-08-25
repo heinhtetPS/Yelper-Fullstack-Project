@@ -26,6 +26,7 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin-top: 12px;
 }
 
 .biz_photo_box {
@@ -33,12 +34,23 @@
   max-height: 180px;
   overflow: hidden;
 }
+/*this selector doesnt work*/
+.biz_photo_box > img {
+  max-height:100%;
+  max-width:100%;
+}
 
 .biz_box {
-  background-color: yellow;
-  border: 1px solid black;
   width: 299px;
   height: 322px;
   padding-left: 15px;
   padding-right: 15px;
+}
+
+.biz_info_box {
+  text-align: left;
+  text-indent: 12px;
+  width:298px;
+  height:197px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }

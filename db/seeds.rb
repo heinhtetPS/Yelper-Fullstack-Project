@@ -23,3 +23,16 @@ Business.create!({
               take_out: false,
               accepts_credit_cards: true,
               wifi: false})
+Business.create!({
+              name: 'Bizzz 2',
+              address: '159 Main St, New York, NY 10001',
+              map_lat: 42.745156,
+              map_lng: -71.9007,
+              price: 4,
+              owner_id: 1,
+              website: 'https://www.google.com/',
+              hours: 4,
+              delivery: true,
+              take_out: true,
+              accepts_credit_cards: true,
+              wifi: false})

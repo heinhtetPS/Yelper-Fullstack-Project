@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     #login/logout
     resource :session, only: [:create, :destroy]
     #business (restaurants)
-    resources :businesses, only: [:index, :create, :update], :path => "biz"
+    resources :businesses, only: [:index, :show, :create, :update], :path => "biz"
   end
 
 end
