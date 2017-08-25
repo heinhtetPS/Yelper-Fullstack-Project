@@ -18,33 +18,43 @@
 
 .signupbtn {
   color: white;
-  width: 105px;
-  height: 36px;
-  border-radius: 10px;
+  width: 53px;
+  height: 17px;
+  border-radius: 4px;
   border: 2px solid white;
-  font-size: 20px;
+  font-size: 14px;
   z-index: 80;
+  padding: 7px 24px 8px;
   text-decoration: none;
+  font-weight: bold;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+  .signupbtn:hover {
+    background-color: white;
+    color: #666;
+  }
 
 .loginbtn {
   color: white;
-  width: 65px;
-  height: 36px;
+  width: 42px;
+  height: 17px;
+  padding: 9px 12px 8px;
+  margin-right: 5px;
   z-index: 80;
+  font-size: 14px;
   text-decoration: none;
+  font-weight: bold;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+  .loginbtn:hover {
+    border-bottom: 2px solid white;
+  }
 
-/*doesntwork*/
-.signupbutton:hover {
-  background-color: white;
-}
+
 
 
 .auth_links {
@@ -52,8 +62,8 @@
   display: flex;
   z-index: 80;
   justify-content: flex-end;
-  /*position: absolute;
-  top: 50px;*/
+  position: absolute;
+  top: 30px;
 }
 
 .dropdown-btn {

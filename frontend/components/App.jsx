@@ -5,6 +5,7 @@ import { Route, Redirect,
 import SessionFormContainer from './session_form_container';
 import RedNavContainer from './red_nav_container';
 import MainSplashContainer from './main_splash_container';
+import SearchContainer from './biz/search_container';
 
 
 let logopos;
@@ -20,9 +21,9 @@ const App = () => (
     <Route exact path="/" component={MainSplashContainer} />
       <div className="page-container">
         <Route path="/" component={RedNavContainer} />
-
         <Route path="/login" component={SessionFormContainer} />
         <Route path="/signup" component={SessionFormContainer} />
+        <Route exact path="/" component={SearchContainer} />
       </div>
   </div>
 );

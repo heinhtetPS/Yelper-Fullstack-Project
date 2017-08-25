@@ -29,7 +29,7 @@ export const createNewBusiness = business => dispatch => {
   ));
 };
 
-export const fetchBenches = filters => dispatch => {
+export const fetchBusinesses = filters => dispatch => {
   return businessUtil.fetchAllBusinesses(filters).then(businesses => (
     dispatch(receiveBusinesses(businesses))
   ), err => (
