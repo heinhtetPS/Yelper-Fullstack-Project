@@ -1,0 +1,16 @@
+.bottom_main_container {
+  max-width: 960px;
+  height: 600px;
+  margin-left: 85px;
+  margin-right: 85px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.cities_nav_container {
+  width: 960px;
+  height: 68px;
+  padding-top: 36px;
+  text-align: center;
+  border: 5px magenta;
+}

@@ -43,10 +43,7 @@ class RedNav extends React.Component {
    //display block on the a link
    return (
      <nav className={navclass}>
-       <img src="/newlogo.png"></img>
-       <h1 className="putlogohere">
          <Link to="/" className={logopos}>YELPER</Link>
-       </h1>
         {authlinks}
 
      </nav>

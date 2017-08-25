@@ -19,14 +19,16 @@
   font-size: 12px;
   text-decoration: none;
   color: white;
-  display:block;
+  position: relative;
+   left: 40%;
+   top: 120px;
 }
 
 .putlogohere {
   width: 160px;
   height: 80px;
-  background-image: url('../images/newlogo.png');
-  /*background-image: url(https://s3-media3.fl.yelpcdn.com/assets/srv0/yelp_design_web/b085a608c15f/assets/img/logos_homepage/default.png);*/
+  /*background-image: url('../images/newlogo.png');*/
+  background-image: url(https://s3-media3.fl.yelpcdn.com/assets/srv0/yelp_design_web/b085a608c15f/assets/img/logos_homepage/default.png);
   background-size: 160px 80px;
   position: relative;
    left: 40%;
