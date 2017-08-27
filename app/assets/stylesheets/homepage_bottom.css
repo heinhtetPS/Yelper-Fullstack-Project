@@ -1,8 +1,8 @@
 .bottom_main_container {
   max-width: 960px;
   height: 600px;
-  margin-left: 411px;
-  margin-right: 411px;
+  margin-left: 125px;
+  margin-right: 125px;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -20,6 +20,7 @@
   text-align: center;
   width: 960px;
   height: 384px;
+  background-color: yellow;
 }
 
 .bizzes_container {
@@ -27,6 +28,7 @@
   flex-direction: row;
   justify-content: center;
   margin-top: 12px;
+  height: 352px;
 }
 
 .biz_photo_box {
@@ -53,4 +55,24 @@
   width:298px;
   height:197px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.categories-main {
+  text-align: center;
+  display: inline-block;
+  margin-top: 25px;
+  width: 960px;
+  height: 354px;
+  background-color: wheat;
+}
+
+/*this one needs to get pushed down instead of
+covered by the above*/
+.global-footer {
+  display: block;
+  vertical-align: baseline;
+  background-color: #F5F5F5;
+  width: 1255px;
+  height: 500px;
+  border-top: solid #ccc 1px;
 }

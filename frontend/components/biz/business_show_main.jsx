@@ -7,12 +7,23 @@ class BusinessShowMain extends React.Component {
     super(props);
   }
 
+  componentDidMount() {
+    //this finds the business based on the last number in
+    //url. Will not work for >10 businesses
+    this.props.fetchABusiness(
+      this.props.location.pathname.slice(-1)
+    );
+  }
+
 
   render() {
+    const {currentbiz} = this.props;
+
+    console.log(currentbiz)
     return (
-      <p>
-        THIS IS THE SHOW PAGE FOR {this.props.biz.name}
-      </p>
+      <h1>
+        THIS IS THE SHOW PAGE FOR {currentbiz}
+      </h1>
     );
   }
 }
