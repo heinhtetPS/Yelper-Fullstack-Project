@@ -10,6 +10,11 @@ const BizIndexItem = ({ biz }) => {
   //need to get # of review (this.props.reviews.length)
   //need to get categories array (this.props.categories.join(','))
   //need to get location (maybe slice after ,s)
+
+
+
+
+
   return (
     <div className="biz_box">
       <div className="biz_photo_box">

@@ -19,11 +19,18 @@ if (location.pathname === "/") {
   logopos = "toplogo";
 }
 
+//this doesn't work, find out why
+function returntotop() {
+  document.body.scrollTop = 0; // For Chrome, Safari and Opera
+  document.documentElement.scrollTop = 0; // For IE and Firefox
+}
+
 //PLAN: Maybe I should make a global page container with standardized dimensions
 //Here, the structure is messed up because mainsplash renders everwhere despite having the exact condition
 const App = () => (
   <div>
     <Route exact path="/" component={MainSplashContainer} />
+    <Route path="/biz" onClick={returntotop()}component={BusinessShowContainer} />
         <div className="inside-splash">
           <Route path="/" component={RedNavContainer} />
           <Route path="/login" component={SessionFormContainer} />
@@ -35,7 +42,6 @@ const App = () => (
           <Route exact path="/" component={FeaturedContainer} />
           <Route exact path="/" component={CategoriesIndexContainer} />
         </div>
-    <Route path="/biz" component={BusinessShowContainer} />
     <div className="global-footer">
 
     </div>

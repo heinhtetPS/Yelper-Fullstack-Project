@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import BizIndexItem from './biz_index_item';
 
 class BusinessShowMain extends React.Component {
 
@@ -17,13 +18,30 @@ class BusinessShowMain extends React.Component {
 
 
   render() {
-    const {currentbiz} = this.props;
+    //THIS PATTERN SUCEEDS, COPY THIS PATTERN ELSEWHERE
+    let currentbiz = null;
+    let pricecounter = [];
+    if (this.props.biz[0]) {
+      currentbiz = this.props.biz[0];
+      for (let i = 0; i < currentbiz.price; i++) {
+          pricecounter.push('$');
+      }
+    }
 
-    console.log(currentbiz)
+    if (!currentbiz)
+    return null;
+
     return (
-      <h1>
-        THIS IS THE SHOW PAGE FOR {currentbiz}
-      </h1>
+      <div className="biz-page-container">
+        <div className="biz-header-left">
+          <h1>{currentbiz.name}</h1>
+          <div className="stars-img"></div>
+          <p>xx reviews</p>
+          <p className="price-counter">{pricecounter.join('')}</p>
+          <a className="categories-links">Categories here</a>
+        </div>
+
+      </div>
     );
   }
 }
