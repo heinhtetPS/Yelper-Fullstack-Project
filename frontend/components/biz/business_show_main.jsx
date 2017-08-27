@@ -36,9 +36,15 @@ class BusinessShowMain extends React.Component {
         <div className="biz-header-left">
           <h1>{currentbiz.name}</h1>
           <div className="stars-img"></div>
-          <p>xx reviews</p>
+          <p className="reviews-count">xx reviews</p>
           <p className="price-counter">{pricecounter.join('')}</p>
-          <a className="categories-links">Categories here</a>
+          <Link to="/"className="categories-links" >Categories here</Link>
+        </div>
+        <div className="biz-header-right">
+
+        </div>
+        <div className="biz-content-container">
+
         </div>
 
       </div>
