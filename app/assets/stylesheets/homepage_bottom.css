@@ -84,7 +84,8 @@
 .stars-smaller {
   width: 102px;
   height: 18px;
-  background: url("https://s3-media2.fl.yelpcdn.com/assets/srv0/yelp_design_web/9b34e39ccbeb/assets/img/stars/stars.png") no-repeat;
+  margin-left: 13px;
+  background: url(https://s3-media2.fl.yelpcdn.com/assets/srv0/yelp_design_web/9b34e39ccbeb/assets/img/stars/stars.png) 0 320px;
   background-size: 102px 560px;
   vertical-align: middle;
 }
@@ -94,7 +95,6 @@
   height: 24px;
   margin: 0;
   margin-right: 90px;
-  margin-left: 10px;
   line-height: 19px;
 }
 

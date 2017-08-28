@@ -17,7 +17,12 @@ class ResultsShow extends React.Component {
 
         </div>
         <div className="results-content">
+            <div className="biz-index-container">
 
+            </div>
+            <div className="map-column-container">
+
+            </div>
         </div>
       </div>
     );

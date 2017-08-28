@@ -1,7 +1,6 @@
 .results-page-container {
   width: 1620px;
-  height: 1800px;
-  background-color: yellow;
+  height: 1400px;
   position: relative;
   top: 88px;
 }
@@ -14,10 +13,27 @@
 
 .results-content {
   width: 960px;
-  height: 1000px;
+  height: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: 315px;
   margin-right: 315px;
+  background-color: yellow;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.biz-index-container {
+  width: 620px;
+  height: 1000px;
+  padding-right: 10px;
+  background-color: wheat;
+}
+
+.map-column-container {
+  width:300px;
+  height: 1000px;
+  padding-left: 20px;
   background-color: turquoise;
 }

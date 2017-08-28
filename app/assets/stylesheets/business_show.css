@@ -36,7 +36,7 @@
 .stars-img {
   width: 132px;
   height: 24px;
-  background: url("https://s3-media2.fl.yelpcdn.com/assets/srv0/yelp_design_web/9b34e39ccbeb/assets/img/stars/stars.png") no-repeat;
+  background: url(https://s3-media2.fl.yelpcdn.com/assets/srv0/yelp_design_web/9b34e39ccbeb/assets/img/stars/stars.png) 0 0;
   background-size: 132px 560px;
   display: inline-block;
   vertical-align: middle;
