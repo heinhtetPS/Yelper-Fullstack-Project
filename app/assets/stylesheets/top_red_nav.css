@@ -23,17 +23,36 @@
   border-radius: 4px;
   border: 2px solid white;
   font-size: 14px;
-  z-index: 80;
+  z-index: 50;
   padding: 7px 24px 8px;
   text-decoration: none;
   font-weight: bold;
   display: flex;
   align-items: center;
-  justify-content: center;
 }
   .signupbtn:hover {
     background-color: white;
     color: #666;
+  }
+
+.signupRed {
+  color: white;
+  background-color: #BD1F1F;
+  width: 80px;
+  height: 24px;
+  border-radius: 4px;
+  font-size: 14px;
+  z-index: 50;
+  padding: 6px 12px 6px;
+  text-decoration: none;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+    margin-bottom: 12px;
+}
+  .signupRed:hover {
+    background-color: #A71C1C;
   }
 
 .loginbtn {
@@ -42,7 +61,7 @@
   height: 17px;
   padding: 9px 12px 8px;
   margin-right: 5px;
-  z-index: 80;
+  z-index: 50;
   font-size: 14px;
   text-decoration: none;
   font-weight: bold;
@@ -54,16 +73,39 @@
     border-bottom: 2px solid white;
   }
 
+.loginRed {
+  color: white;
+  width: 104px;
+  height: 27px;
+  z-index: 50;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  }
+  .loginRed:hover {
+    background-color: #A71C1C;
+  }
 
-
-
-.auth_links {
+.auth-links {
   width: 85%;
   display: flex;
-  z-index: 80;
+  z-index: 50;
   justify-content: flex-end;
   position: absolute;
   top: 30px;
+}
+
+.auth-red {
+  width: 88%;
+  display: flex;
+  flex-direction: column-reverse;
+  z-index: 50;
+  align-items: flex-end;
+  position: absolute;
+  top: 12px;
 }
 
 .dropdown-btn {
@@ -85,6 +127,17 @@
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+}
+
+.bottom-red-nav {
+  background-color: #BD1F1F;
+  width: 100%;
+  height: 27px;
+
+}
+
+.hidden-nav {
+  display: none;
 }
 
 

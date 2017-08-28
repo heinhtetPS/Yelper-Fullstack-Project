@@ -42,6 +42,7 @@ const App = () => (
           <Route exact path="/" component={FeaturedContainer} />
           <Route exact path="/" component={CategoriesIndexContainer} />
         </div>
+
     <div className="global-footer">
         <div className="footer-content">
             <div className="footer-column">

@@ -1,7 +1,7 @@
 .toplogo {
   width: 180px;
   height: 40px;
-  z-index: 50;
+  z-index: 90;
   border: 2px solid #73AD21;
   font-size: 40px;
   text-decoration: none;
@@ -14,7 +14,7 @@
 .midlogo {
   width: 160px;
   height: 80px;
-  z-index: 50;
+  z-index: 90;
   border: 2px solid #73AD21;
   font-size: 12px;
   text-decoration: none;
