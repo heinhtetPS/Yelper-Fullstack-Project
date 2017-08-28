@@ -15,7 +15,7 @@ class Api::BusinessesController < ApplicationController
   end
 
   def create
-    @business = Business.new(business_params)
+    @business = Business.create(business_params)
     if @business.save
       render :show
     else
@@ -25,12 +25,6 @@ class Api::BusinessesController < ApplicationController
 
   def show
     @business = Business.find(params[:id])
-
-  end
-
-  def create
-    @business = Business.create!(business_params)
-    render :show
   end
 
 

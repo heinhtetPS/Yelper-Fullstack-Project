@@ -20,6 +20,13 @@ class User < ApplicationRecord
   after_initialize :ensure_session_token
 
   #Do ASSOCS here when other tables are migrated
+  has_many :reviews,
+  foreign_key: :author_id,
+  class_name: "Review"
+
+  has_many :businesses,
+  foreign_key: :owner_id,
+  class_name: "Business"
 
   #Used to find user object in DB
   def self.find_by_credentials(username, raw_pass)
