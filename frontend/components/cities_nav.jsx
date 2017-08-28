@@ -9,7 +9,7 @@ class CitiesNav extends React.Component {
   render() {
     return (
       <div className="cities_nav_container">
-        <p>Yelp Brooklyn</p>
+        <h1 className="Redh2">Yelp Brooklyn</h1>
       </div>
     );
   }

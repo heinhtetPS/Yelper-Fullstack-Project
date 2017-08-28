@@ -24,11 +24,13 @@
 .Redh2 {
   color: #D32323;
   font-size: 22px;
+  font-weight: bold;
 }
 
 /*needs major fix*/
 .errorbox {
   height: fit-content;
+  width: 700px;
   padding: 5px;
   border: 2px solid;
   border-radius: 10px;

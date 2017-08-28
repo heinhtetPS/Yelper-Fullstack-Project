@@ -26,10 +26,11 @@ class Featured extends React.Component {
 
     //time to put index item up here because its better than
     //passing in shit that will fail loudly and cause error states
-
+    //BUG: make a failed login and then come back to homepage to seee
+    //4th featured item with empty shit. Errors item 
     return (
       <div className="featured_container">
-        <h2>Hot & New Businesses</h2>
+        <h3 className="Redh3">Hot & New Businesses</h3>
         <div className="bizzes_container">
             {this.props.biz.map(
               business => <BizIndexItem

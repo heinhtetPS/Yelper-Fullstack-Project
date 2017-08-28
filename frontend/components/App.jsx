@@ -43,7 +43,24 @@ const App = () => (
           <Route exact path="/" component={CategoriesIndexContainer} />
         </div>
     <div className="global-footer">
+        <div className="footer-content">
+            <div className="footer-column">
 
+            </div>
+            <div className="footer-column">
+
+            </div>
+            <div className="footer-column">
+
+            </div>
+            <div className="footer-column">
+
+            </div>
+            <div className="cityscape"></div>
+            <small className="final-foot">
+              Copyright © 2017 Hein Htet Pyi Soe. This website is intended for academic use only.
+            </small>
+        </div>
     </div>
   </div>
 );
