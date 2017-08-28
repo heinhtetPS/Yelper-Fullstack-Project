@@ -16,6 +16,9 @@ class ResultsShow extends React.Component {
         <div className="top-shelf-options">
 
         </div>
+        <div className="results-content">
+
+        </div>
       </div>
     );
   }
