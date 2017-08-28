@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import BizIndexItem from './biz_index_item';
+import Bizmap from '../map'; 
 
 class BusinessShowMain extends React.Component {
 
@@ -32,7 +33,7 @@ class BusinessShowMain extends React.Component {
           pricecounter.push('$');
       }
 
-      //set categories 
+      //set categories
       currentbiz.categories.forEach(el =>
       biz_categories.push(el.name));
     }
