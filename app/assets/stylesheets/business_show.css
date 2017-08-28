@@ -64,16 +64,31 @@
 
 .biz-content-container {
   width: 960px;
-  height: 320px;
-  border: 2px solid black;
+  height: 374px;
   display: flex;
   flex-direction: row;
 }
 
+.map-card-show {
+  width: 300px;
+  height: 372px;
+  background-color: white;
+  border: 1px solid #CCCCCC;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 .show-map-container {
-  width: 420px;
-  height: 320px;
-  background-color: green;
+  width: 280px;
+  height: 215px;
+  margin: 5px 0 0 9px;
+  border: solid 1px #CCCCCC;
+}
+
+.address-info-show {
+  width: 300px;
+  height: 152px;
+  background-color: white;
+
 }
 
 .show-pics-container {

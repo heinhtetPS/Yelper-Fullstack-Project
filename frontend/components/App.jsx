@@ -23,9 +23,9 @@ function returntotop() {
   document.documentElement.scrollTop = 0; // For IE and Firefox
 }
 
-//PLAN: Maybe I should make a global page container with standardized dimensions
-//Here, the structure is messed up because mainsplash renders everwhere despite having the exact condition
+
 const App = () => (
+
   <div>
     <Route exact path="/" component={MainSplashContainer} />
     <Route path="/" component={RedNavContainer} />

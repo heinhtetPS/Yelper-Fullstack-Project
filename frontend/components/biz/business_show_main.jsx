@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import BizIndexItem from './biz_index_item';
-import Bizmap from '../map'; 
+import Bizmap from '../map';
 
 class BusinessShowMain extends React.Component {
 
@@ -57,9 +57,14 @@ class BusinessShowMain extends React.Component {
 
         </div>
         <div className="biz-content-container">
-          <div className="show-map-container">
-
-          </div>
+            <div className="map-card-show">
+              <Bizmap />
+              <div className="address-info-show">
+                <h3>Located at:</h3>
+                <p>{currentbiz.address}</p>
+                <p>{currentbiz.website}</p>
+              </div>
+            </div>
           <div className="show-pics-container">
 
           </div>

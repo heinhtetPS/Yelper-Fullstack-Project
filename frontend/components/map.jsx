@@ -25,9 +25,7 @@ class Bizmap extends React.Component {
 
   render() {
     return (
-      <div className="map" ref="map">
-        Map
-      </div>
+        <div className="show-map-container" ref={ map => this.mapNode = map }/>
     );
   }
 }
