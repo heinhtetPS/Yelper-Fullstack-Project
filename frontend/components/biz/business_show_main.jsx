@@ -20,12 +20,21 @@ class BusinessShowMain extends React.Component {
   render() {
     //THIS PATTERN SUCEEDS, COPY THIS PATTERN ELSEWHERE
     let currentbiz = null;
-    let pricecounter = [];
+    const pricecounter = [];
+    const biz_categories = [];
+
+    //if async info has been retrieved....
     if (this.props.biz[0]) {
       currentbiz = this.props.biz[0];
+
+      //set price $$$s
       for (let i = 0; i < currentbiz.price; i++) {
           pricecounter.push('$');
       }
+
+      //set categories 
+      currentbiz.categories.forEach(el =>
+      biz_categories.push(el.name));
     }
 
     if (!currentbiz)
@@ -39,7 +48,7 @@ class BusinessShowMain extends React.Component {
               <div className="stars-img"></div>
               <p className="reviews-count">xx reviews</p>
               <p className="price-counter">{pricecounter.join('')}</p>
-              <Link to="/"className="categories-links" >Categories here</Link>
+              <Link to="/"className="categories-links" >{biz_categories.join(", ")}</Link>
             </div>
             <div className="biz-header-right">
 

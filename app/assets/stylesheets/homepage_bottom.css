@@ -58,19 +58,28 @@
 .biz_info_box {
   text-align: left;
   text-indent: 12px;
+  font-size: 12px;
   width:298px;
-  height:130px;
+  height:160px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  line-height: 1px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .small-header {
   width: 250px;
-  height: 10px;
+  height: 14px;
+  font-size: 16px;
+  margin-top: 10px;
   line-height: normal;
+  font-weight: bold;
+  text-decoration: none;
 }
+  .small-header:hover {
+    text-decoration: underline;
+  }
 
 .stars-smaller {
   width: 102px;
@@ -86,19 +95,34 @@
   margin: 0;
   margin-right: 90px;
   margin-left: 10px;
-  /*line-height: 19px;*/
+  line-height: 19px;
 }
 
 .price-counter-smaller {
   letter-spacing: 2px;
+  font-size: 16px;
   margin: 0px;
   margin-right: 10px;
 }
 
+.svg-fire {
+  color: red;
+  height: 18px;
+  width: 18px;
+  margin-right: 10px;
+}
+
+
+.fire-line {
+  width: 200px;
+  height: 20px;
+  margin: 0px;
+}
 
 
 .categories-main {
   text-align: center;
+  font-size: 10px;
   display: inline-block;
   margin-top: 25px;
   width: 960px;
