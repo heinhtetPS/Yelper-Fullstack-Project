@@ -28,6 +28,8 @@ class Business < ApplicationRecord
   foreign_key: :owner_id,
   class_name: "User"
 
+  has_many :business_categories, inverse_of: :business, dependent: :destroy
+  has_many :categories, through: :business_categories, source: :category
 
 
 end
