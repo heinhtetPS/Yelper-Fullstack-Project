@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Route } from 'react-router-dom';
+import SearchContainer from './biz/search_container';
 
 class RedNav extends React.Component {
 
@@ -51,6 +52,8 @@ class RedNav extends React.Component {
      <nav className={navclass}>
          <Link to="/" className={logopos}>YELPER</Link>
         {authlinks}
+        <Route path="/biz" component={SearchContainer} />
+        <Route path="/search" component={SearchContainer} />
         <nav className={bottomnavclass}>
           <ul>
 

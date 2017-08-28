@@ -1,8 +1,8 @@
 .bottom_main_container {
   max-width: 960px;
   height: 900px;
-  margin-left: 125px;
-  margin-right: 125px;
+  margin-left: 315px;
+  margin-right: 315px;
   margin-top: 10px;
   padding-left: 15px;
   padding-right: 15px;
@@ -106,7 +106,7 @@
 }
 
 .svg-fire {
-  color: red;
+  fill: red;
   height: 18px;
   width: 18px;
   margin-right: 10px;
@@ -135,7 +135,7 @@ covered by the above*/
 .global-footer {
   vertical-align: baseline;
   background-color: #F5F5F5;
-  width: 1256px;
+  width: 1620px;
   height: 400px;
   border-top: solid #ccc 1px;
 }
@@ -143,8 +143,8 @@ covered by the above*/
 .footer-content {
   width: 960px;
   height: 400px;
-  margin-right: 133px;
-  margin-left: 140px;
+  margin-right: 315px;
+  margin-left: 335px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

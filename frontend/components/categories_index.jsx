@@ -13,9 +13,9 @@ class CategoriesIndex extends React.Component {
 
     return (
       <div className="categories-main">
-        <h1>Browse Business By Category</h1>
+        <h3 className="Redh3">Browse Business By Category</h3>
       </div>
-    )
+    );
   }
 
 }

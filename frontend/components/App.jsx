@@ -6,10 +6,9 @@ import SessionFormContainer from './session_form_container';
 import RedNavContainer from './red_nav_container';
 import MainSplashContainer from './main_splash_container';
 import SearchContainer from './biz/search_container';
-import CitiesNavContainer from './cities_nav_container';
-import FeaturedContainer from './biz/featured_container';
-import CategoriesIndexContainer from './categories_index_container';
+import HomeBottom from './homepage_bottom_content';
 import BusinessShowContainer from './biz/business_show_container';
+import ResultsContainer from './biz/results_container';
 
 
 let logopos;
@@ -37,11 +36,10 @@ const App = () => (
           <Route path="/signup" component={SessionFormContainer} />
           <Route exact path="/" component={SearchContainer} />
         </div>
-        <div className="bottom_main_container">
-          <Route exact path="/" component={CitiesNavContainer} />
-          <Route exact path="/" component={FeaturedContainer} />
-          <Route exact path="/" component={CategoriesIndexContainer} />
-        </div>
+        <Route exact path="/" component={HomeBottom} />
+        <Route path ="/search" component={ResultsContainer}/>
+
+
 
     <div className="global-footer">
         <div className="footer-content">
