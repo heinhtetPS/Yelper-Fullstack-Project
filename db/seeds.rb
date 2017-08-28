@@ -9,8 +9,14 @@ User.destroy_all
 User.create!({username: 'demo_user',
               email: 'demo@gmail.com',
               password: 'password'})
+User.create!({username: 'user1',
+              email: 'user1@gmail.com',
+              password: 'password'})
+User.create!({username: 'user2',
+              email: 'user2@gmail.com',
+              password: 'password'})
 Business.destroy_all
-Business.create!({
+a = Business.new({
               name: 'App Academy Diner',
               address: '159 W 25th St, New York, NY 10001',
               map_lat: 40.7453156,
@@ -23,7 +29,12 @@ Business.create!({
               take_out: false,
               accepts_credit_cards: true,
               wifi: false})
-Business.create!({
+              a1 = Category.new(name: "Education")
+              a2 = Category.new(name: "Restaurant")
+              a.categories.push(a1)
+              a.categories.push(a2)
+              a.save!
+b = Business.new({
               name: 'Bizzz 2',
               address: '159 Main St, New York, NY 10001',
               map_lat: 42.745156,
@@ -36,7 +47,11 @@ Business.create!({
               take_out: true,
               accepts_credit_cards: true,
               wifi: false})
-Business.create!({
+              b1 = Category.new(name: "Nightlife")
+              b.categories.push(a2)
+              b.categories.push(b1)
+              b.save!
+c = Business.new({
               name: 'Bizzz 3',
               address: '979 Main Ave, New York, NY 10001',
               map_lat: 42.745156,
@@ -49,3 +64,7 @@ Business.create!({
               take_out: false,
               accepts_credit_cards: true,
               wifi: false})
+              c1 = Category.new(name: "Shopping")
+              c.categories.push(b1)
+              c.categories.push(c1)
+              c.save!
