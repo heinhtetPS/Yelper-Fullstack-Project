@@ -2,10 +2,9 @@ import React from 'react';
 import { Route, Redirect,
   Switch, Link, HashRouter } from 'react-router-dom';
 
-import SessionFormContainer from './session_form_container';
 import RedNavContainer from './red_nav_container';
 import MainSplashContainer from './main_splash_container';
-import SearchContainer from './biz/search_container';
+import Homemiddle from './homepage_middle_content';
 import HomeBottom from './homepage_bottom_content';
 import BusinessShowContainer from './biz/business_show_container';
 import ResultsContainer from './biz/results_container';
@@ -29,15 +28,11 @@ function returntotop() {
 const App = () => (
   <div>
     <Route exact path="/" component={MainSplashContainer} />
+    <Route path="/" component={RedNavContainer} />
     <Route path="/biz" onClick={returntotop()}component={BusinessShowContainer} />
-        <div className="inside-splash">
-          <Route path="/" component={RedNavContainer} />
-          <Route path="/login" component={SessionFormContainer} />
-          <Route path="/signup" component={SessionFormContainer} />
-          <Route exact path="/" component={SearchContainer} />
-        </div>
-        <Route exact path="/" component={HomeBottom} />
-        <Route path ="/search" component={ResultsContainer}/>
+    <Route exact path="/" component={Homemiddle} />
+    <Route exact path="/" component={HomeBottom} />
+    <Route path="/search" component={ResultsContainer} />
 
 
 
