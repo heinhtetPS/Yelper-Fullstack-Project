@@ -13,7 +13,9 @@ const BizIndexItem = ({ biz }) => {
 
 
 
-
+  const biz_categories = [];
+  biz.categories.forEach(el =>
+  biz_categories.push(el.name));
   let bizurl = "/biz/" + biz.id
   console.log(bizurl);
   return (
@@ -24,8 +26,11 @@ const BizIndexItem = ({ biz }) => {
         </Link>
       </div>
       <div className="biz_info_box">
-        <h3>{biz.name}</h3>
-        <p>{pricecounter.join('')}</p>
+        <h3 className="small-header">{biz.name}</h3>
+        <div className="stars-smaller"></div>
+        <p className="reviews-count-smaller">xx reviews</p>
+        <p className="price-counter">{pricecounter.join('')}</p>
+        <Link to="/"className="categories-links" >{biz_categories.join(", ")}</Link>
       </div>
     </div>
   )

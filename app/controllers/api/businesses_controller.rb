@@ -14,6 +14,8 @@ class Api::BusinessesController < ApplicationController
     # render :index
   end
 
+  #Remember: category is not technically part of business's own db
+  #but it is required to save! or create!
   def create
     @business = Business.new(business_params)
     if @business.save

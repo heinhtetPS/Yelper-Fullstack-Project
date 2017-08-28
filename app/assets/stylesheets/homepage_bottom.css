@@ -60,8 +60,42 @@
   text-indent: 12px;
   width:298px;
   height:130px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
+.small-header {
+  width: 250px;
+  height: 10px;
+  line-height: normal;
+}
+
+.stars-smaller {
+  width: 102px;
+  height: 18px;
+  background: url("https://s3-media2.fl.yelpcdn.com/assets/srv0/yelp_design_web/9b34e39ccbeb/assets/img/stars/stars.png") no-repeat;
+  background-size: 102px 560px;
+  vertical-align: middle;
+}
+
+.reviews-count-smaller {
+  width: 88px;
+  height: 24px;
+  margin: 0;
+  margin-right: 90px;
+  margin-left: 10px;
+  /*line-height: 19px;*/
+}
+
+.price-counter-smaller {
+  letter-spacing: 2px;
+  margin: 0px;
+  margin-right: 10px;
+}
+
+
 
 .categories-main {
   text-align: center;
