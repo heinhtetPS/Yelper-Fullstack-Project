@@ -40,7 +40,6 @@ class Search extends React.Component {
      searchcontainer = "search-container-top";
    }
 
-   console.log(this.props);
    return (
      <div>
        <div className={searchcontainer}>

@@ -8,6 +8,8 @@ Rails.application.routes.draw do
     resource :session, only: [:create, :destroy]
     #business (restaurants)
     resources :businesses, only: [:index, :show, :create, :update], :path => "biz"
+    #Reviews
+    resources :reviews, only: [:create, :show, :update, :destroy]
   end
 
 end

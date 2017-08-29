@@ -5,8 +5,8 @@
   height: 456px;
   padding-left: 15px;
   padding-right: 15px;
-  margin-right: 315px;
-  margin-left: 315px;
+  margin-right: 0 auto;
+  margin-left: 0 auto;
 }
 
 .biz-headers {

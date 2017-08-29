@@ -24,7 +24,7 @@ function returntotop() {
   document.documentElement.scrollTop = 0; // For IE and Firefox
 }
 
-
+//why does it still render sessionform after coming back to "/"
 const App = () => (
 
   <div>
@@ -34,8 +34,8 @@ const App = () => (
     <Route exact path="/" component={Homemiddle} />
     <Route exact path="/" component={HomeBottom} />
     <Route path="/search" component={ResultsContainer} />
-    <Route path="/login" component={SessionFormContainer} />
-    <Route path="/signup" component={SessionFormContainer} />
+    <Route exact path="/login" component={SessionFormContainer} />
+    <Route exact path="/signup" component={SessionFormContainer} />
 
 
 

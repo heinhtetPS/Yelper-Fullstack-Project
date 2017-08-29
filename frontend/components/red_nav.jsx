@@ -44,10 +44,7 @@ class RedNav extends React.Component {
    }
 
    //actual render happens here
-   //for our logo, make this an h1 with an A link inside
-   //put css tag on the h1 and put bg image url on it
-   //Let the size be 160 x 80
-   //display block on the a link
+   // Why does it still render sessionform after going to "/"?
    return (
      <nav className={navclass}>
          <Link to="/" className={logopos}>YELPER</Link>
