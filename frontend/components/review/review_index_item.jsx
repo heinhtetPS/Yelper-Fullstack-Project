@@ -29,7 +29,7 @@ const ReviewIndexItem = ({ review }) => {
               <div className="stars-img"></div>
             </Link>
           </div>
-          <Link to="/">{review.body}</Link>
+          <Link to="/login">{review.body}</Link>
         </div>
       </div>
     )

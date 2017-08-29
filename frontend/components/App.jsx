@@ -9,6 +9,7 @@ import HomeBottom from './homepage_bottom_content';
 import BusinessShowContainer from './biz/business_show_container';
 import ResultsContainer from './biz/results_container';
 import SessionFormContainer from './session_form_container';
+import ReviewFormContainer from './review/review_form_container';
 
 
 let logopos;
@@ -24,7 +25,7 @@ function returntotop() {
   document.documentElement.scrollTop = 0; // For IE and Firefox
 }
 
-//why does it still render sessionform after coming back to "/"
+//why does it still render sessionform after coming back to "/" after errors?
 const App = () => (
 
   <div className="global-container">
