@@ -8,6 +8,7 @@ import Homemiddle from './homepage_middle_content';
 import HomeBottom from './homepage_bottom_content';
 import BusinessShowContainer from './biz/business_show_container';
 import ResultsContainer from './biz/results_container';
+import SessionFormContainer from './session_form_container';
 
 
 let logopos;
@@ -33,6 +34,8 @@ const App = () => (
     <Route exact path="/" component={Homemiddle} />
     <Route exact path="/" component={HomeBottom} />
     <Route path="/search" component={ResultsContainer} />
+    <Route path="/login" component={SessionFormContainer} />
+    <Route path="/signup" component={SessionFormContainer} />
 
 
 

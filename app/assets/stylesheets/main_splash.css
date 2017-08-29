@@ -1,8 +1,7 @@
 .inside-splash {
   max-width: 960px;
   height: 530px;
-  margin-left: 315px;
-  margin-right: 315px;
+  margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
 }

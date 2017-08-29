@@ -12,7 +12,7 @@ const mapStateToProps = ({ session }) => {
   }
 };
 
-//chose form submit method according to current URL 
+//chose form submit method according to current URL
 const mapDispatchToProps = (dispatch, { location }) => {
   const formType = location.pathname.slice(1);
   const processForm = (formType === 'login') ? loginUser : createNewUser;
