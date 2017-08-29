@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
 User.create!({username: 'demo_user',
               email: 'demo@gmail.com',
               password: 'password'})
@@ -67,3 +68,50 @@ c = Business.new({
               c.categories.push(b1)
               c.categories.push(c1)
               c.save!
+Review.destroy_all
+Review.create(
+    author_id: 1,
+    business_id: 1,
+    rating: 4.5,
+    body: "So good!! Ordered off of Uber Eats and the wings & seasoned fries were so good. The way they packaged the food was very nice as well.
+    I haven't been in person yet but will continue ordering it off of UberEATS.
+    Also it's black owned & they have some dope wing flavors on the menu that I've never seen before."
+)
+Review.create(
+    author_id: 2,
+    business_id: 1,
+    rating: 2,
+    body: "Really cute ambiance and delicious food.
+    The daily soup and the biscuits and the potato wedges were all delicious. The space is very big and trendy.
+    Unfortunately, I am giving a one star because they charged me more than what I had written on their receipt.
+    I hate restaurants who do this. I always keep my receipt so I know when they covertly charge me extra."
+)
+Review.create(
+    author_id: 3,
+    business_id: 1,
+    rating: 5,
+    body: "Great place to dine! I love how you have a nice view and eat at the same time.
+    Inside of the resturant is also very clean and arsty. The far best restaurant I've been to in New York."
+)
+Review.create(
+    author_id: 1,
+    business_id: 2,
+    rating: 3.5,
+    body: "Beautiful place and busy as can be.
+  Food seemed inspired and drinks were well made. The chefs seems young but confident and people were frequently turned away.
+  I walked in and asked for an opening. 45 minutes or bar were the options, so I opted for bar.   Pasta was great and  would go back for more.
+  Unfortunately they seemed rather busy and politely unaccommodating.   I witness some patrons getting air kisses while others just told no seating ready and at least two groups told the outdoor tables (which were empty) were closed by 9 pm so they could not eat there."
+)
+Review.create(
+    author_id: 2,
+    business_id: 2,
+    rating: 3,
+    body: "Good place for a casual dinner. I enjoyed the atmosphere and food. Had Salmon Crudo, beef tartare and a stake.
+    Everything was good. Stake is overpriced for the quality. Not enough deserts. ;)"
+)
+Review.create(
+    author_id: 2,
+    business_id: 3,
+    rating: 1.5,
+    body: "Nice location, great building, Great ambience but portions are small, expensive and flavorless."
+)
