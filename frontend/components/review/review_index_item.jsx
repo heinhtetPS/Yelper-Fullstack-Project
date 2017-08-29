@@ -3,10 +3,19 @@ import { Link } from 'react-router-dom';
 
 const ReviewIndexItem = ({ review }) => {
 
+  if(review === null || review === undefined)
+  return null;
+
   const reviewdate = review.created_at.slice(0, 10);
   let thisuser = null;
   if (review.user)
   thisuser = review.user
+
+  //finally worked after hours of debugging:
+  //first if is to render sample case: no problem if it renders before props
+  //2nd conditional avoids rendering before props are received
+  // 3rd one is the real case where props (especially user is needed)
+  //final else is to MAKE SURE it doesn't render while also not returning nothing
 
   if (review.id === -1) {
     return (
@@ -24,7 +33,7 @@ const ReviewIndexItem = ({ review }) => {
         </div>
       </div>
     )
-  } else {
+  } else if (thisuser != null) {
     return (
 
       <div className="review-item">
@@ -41,6 +50,8 @@ const ReviewIndexItem = ({ review }) => {
         </div>
       </div>
     );
+  } else {
+    return null;
   }
 }
 
