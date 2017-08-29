@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import BizIndexItem from './biz_index_item';
+import ReviewIndexItem from '../review/review_index_item';
 import Bizmap from '../map';
 
 class BusinessShowMain extends React.Component {
@@ -22,6 +23,7 @@ class BusinessShowMain extends React.Component {
     //THIS PATTERN SUCEEDS, COPY THIS PATTERN ELSEWHERE
     let currentbiz = null;
     let reviewnumber = null;
+    let sample = null;
     const pricecounter = [];
     const biz_categories = [];
 
@@ -41,12 +43,22 @@ class BusinessShowMain extends React.Component {
 
       //set # of reviews
       //without retrieving reviews, it is undefined
-      // reviewnumber = currentbiz.reviews.count;
-      console.log(currentbiz);
+      reviewnumber = currentbiz.review_ids ? currentbiz.review_ids.length : 0;
+
+      //generate sample review
+      sample = {
+        id: 9999,
+        author_id: 9999,
+        rating: 0,
+        body: `Start your review of ${currentbiz.name}`,
+        created_at: "2017-08-29T13:44:03.245Z"
+      };
     }
 
     if (!currentbiz)
     return null;
+
+
 
     return (
       <div className="biz-page-container">
@@ -80,11 +92,17 @@ class BusinessShowMain extends React.Component {
 
         <div className="biz-bottom-content">
           <div className="reviews-main-container">
-
+            <ReviewIndexItem key={sample.id} review={sample} />
+            {currentbiz.reviews.map(
+              review => <ReviewIndexItem
+              key={review.id}
+              review={review}     />)}
           </div>
 
           <div className="right-info-column">
+              <div className="info-header-box">
 
+              </div>
           </div>
 
         </div>

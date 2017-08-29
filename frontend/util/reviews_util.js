@@ -22,7 +22,7 @@ export const fetchAllReviews = () => (
   })
 );
 
-export const fetchSingleReview = (id) => (
+export const fetchSingleReview = id => (
   $.ajax({
     method: 'GET',
     url: `api/reviews/${id}`

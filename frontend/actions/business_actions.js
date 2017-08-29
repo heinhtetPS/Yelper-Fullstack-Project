@@ -9,6 +9,7 @@ export const receiveBusinesses = businesses => ({
   businesses
 });
 
+//maybe I should get reviews from here also?
 export const receiveSingleBusiness = payload => ({
   type: RECEIVE_SINGLE_BUSINESS,
   payload,

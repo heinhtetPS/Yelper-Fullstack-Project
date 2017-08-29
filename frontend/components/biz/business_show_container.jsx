@@ -13,6 +13,7 @@ const mapStateToProps = ({ session, biz }) => {
     errors: session.errors,
     currentUser: session.currentUser,
     biz: selectAllbiz(biz)
+    //put reviews here
   }
 };
 

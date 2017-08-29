@@ -27,7 +27,7 @@ function returntotop() {
 //why does it still render sessionform after coming back to "/"
 const App = () => (
 
-  <div>
+  <div className="global-container">
     <Route exact path="/" component={MainSplashContainer} />
     <Route path="/" component={RedNavContainer} />
     <Route path="/biz" onClick={returntotop()}component={BusinessShowContainer} />

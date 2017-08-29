@@ -5,15 +5,16 @@ import { RECEIVE_BUSINESSES, RECEIVE_SINGLE_BUSINESS, RECEIVE_ERRORS } from '../
 
 const BusinessReducer = (state = {}, action) => {
   Object.freeze(state);
-
+  //replace array of reviews with just array of IDs
   switch (action.type) {
 
     case RECEIVE_BUSINESSES:
       return merge({}, state, action.businesses);
     case RECEIVE_SINGLE_BUSINESS:
-    //not sure about thids
+    //not sure about this
       const biz = action.payload;
-      // biz.review_ids = action.payload.reviews.map(review => review.id);
+      //this gives me errors
+      // biz.review_ids = biz.reviews.map(review => review.id);
       return merge({}, state.biz, biz);
     case RECEIVE_ERRORS:
       const errors = action.errors;

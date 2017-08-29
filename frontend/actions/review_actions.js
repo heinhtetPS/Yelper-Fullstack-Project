@@ -1,8 +1,9 @@
 import * as reviewUtil from '../util/reviews_util';
 
 export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
-export const RECEIVE_REVIEWS = 'RECEIVE_REVIEWS';
 export const RECEIVE_SINGLE_REVIEW = 'RECEIVE_SINGLE_REVIEW,';
+export const RECEIVE_REVIEWS = 'RECEIVE_REVIEWS';
+
 
 export const receiveReviews = reviews => ({
   type: RECEIVE_REVIEWS,
@@ -46,3 +47,15 @@ export const fetchAReview = id => dispatch => {
   ));
 
 };
+
+///////////////////////////maybe it should be like this instead
+
+// export const requestSteps = todoId => dispatch => (
+//   StepAPIUtil.fetchSteps(todoId)
+//   .then(steps => dispatch(receiveSteps(steps)))
+// );
+//
+// export const createStep = (todoId, step) => dispatch => (
+//   StepAPIUtil.createStep(todoId, step)
+//   .then(step => dispatch(receiveStep(step)))
+// );

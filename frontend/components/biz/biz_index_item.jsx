@@ -10,7 +10,7 @@ const BizIndexItem = ({ biz }) => {
   //need to get # of review (this.props.reviews.length)
   //need to get location (maybe slice after ,s)
 
-
+  let num_reviews = biz.reviews.length;
 
   const biz_categories = [];
   biz.categories.forEach(el =>
@@ -27,7 +27,7 @@ const BizIndexItem = ({ biz }) => {
       <div className="biz_info_box">
         <Link to={bizurl} className="small-header">{biz.name}</Link>
         <div className="stars-smaller"></div>
-        <p className="reviews-count-smaller">xx reviews</p>
+        <p className="reviews-count-smaller">{num_reviews} reviews</p>
         <p className="price-counter-smaller">{pricecounter.join('')}</p>
         <Link to="/"className="categories-links" >{biz_categories.join(", ")}</Link>
         <p>{biz.address}</p>
