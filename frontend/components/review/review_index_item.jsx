@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const ReviewIndexItem = ({ review }) => {
 
   const reviewdate = review.created_at.slice(0, 10);
-  if (review.id === 9999) {
+  if (review.id === -1) {
     return (
       <div className="review-item">
         <div className="user-sidebar">
@@ -26,7 +26,7 @@ const ReviewIndexItem = ({ review }) => {
       <div className="review-item">
         <div className="user-sidebar">
           <img src="https://s3-media3.fl.yelpcdn.com/assets/srv0/yelp_styleguide/bf5ff8a79310/assets/img/default_avatars/user_medium_square.png"></img>
-          <p>User: {review.author_id}</p>
+          <p>{review.user.username}</p>
         </div>
         <div className="review-right-column">
           <div className="body-head">

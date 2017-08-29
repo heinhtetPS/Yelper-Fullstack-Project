@@ -10,7 +10,8 @@ const ReviewsReducer = (state = {}, action) => {
 
     case RECEIVE_SINGLE_BUSINESS:
     //damn how do i pass in ID instead of hard code?
-      const reviews = action.payload[1].reviews;
+      const currentid = action.payload.id;
+      const reviews = action.payload[currentid].reviews;
       return merge({}, state, reviews);
 
     default:

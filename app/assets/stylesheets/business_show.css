@@ -2,12 +2,13 @@
   position: relative;
   top: 110px;
   width: 960px;
-  height: 456px;
+  height: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin-right: 0 auto;
   margin-left: 0 auto;
 }
+
 
 .biz-headers {
   width: 960px;
@@ -102,12 +103,14 @@
   height: 1200px;
   display: flex;
   flex-direction: row;
+  margin-top: 30px;
 }
 
 .reviews-main-container {
   width: 629px;
   height: 100%;
   overflow: auto;
+
 }
 
 .review-item {
@@ -149,11 +152,27 @@
 .right-info-column {
   width: 300px;
   height: 1200px;
-
+  margin-top: 30px;
 }
 
 .info-header-box {
   width: 300px;
-  height: 134px;
+  height: 180px;
   background-color: gainsboro;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.svg-link {
+  fill: blue;
+  height: 18px;
+  width: 18px;
+  margin-right: 10px;
+}
+
+.more-info {
+  width: 300px;
+  height: auto;
+  background-color: wheat;
 }
