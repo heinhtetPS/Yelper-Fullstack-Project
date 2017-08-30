@@ -15,7 +15,7 @@ const mapStateToProps = ({ session }) => {
 //chose form submit method according to current URL
 const mapDispatchToProps = (dispatch, { location }) => {
   const formType = location.pathname.slice(1);
-  const processForm = (formType === 'edit') ? editReview : createNewReview;
+  const processForm = (formType === 'writeareview') ? createNewReview : editReview;
   return {
     processForm: user => dispatch(processForm(user)),
     formType

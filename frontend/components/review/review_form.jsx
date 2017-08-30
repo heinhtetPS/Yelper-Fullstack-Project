@@ -22,15 +22,15 @@ class ReviewForm extends React.Component {
     // }
 
      this.handleSubmit = this.handleSubmit.bind(this);
-     this.submitDemo = this.submitDemo.bind(this);
+
   }
 
   //This thing redirects to login if not logged in
-  componentWillReceiveProps(nextProps) {
-    if (!nextProps.loggedIn) {
-      this.props.history.push('/login');
-    }
-  }
+  // componentWillReceiveProps(nextProps) {
+  //   if (!nextProps.loggedIn) {
+  //     this.props.history.push('/login');
+  //   }
+  // }
 
   //when people type, change the state text
   update(field) {
@@ -84,26 +84,26 @@ class ReviewForm extends React.Component {
          {this.renderErrors()}
          <h2 className="Redh2">Write a Review</h2> <br />
          <div className="bizz-reminder">
-           <form onSubmit={this.handleSubmit}>
-             <div className="review-box">
-               <h2>Your review</h2>
-               <div className="bordered-container">
-                 <div className="stars-interactive">
-
-                 </div>
-                 <textarea className="body-field"
-                   placeholder="Your review helps us learn about great local businesses.
-                   Please don't review this business if you received a freebie for writing this or if you're connected in any way to the owner or employees.">
-
-                 </textarea>
-                 <input type="submit" value="Post Review" /> <br />
+         </div>
+         <form onSubmit={this.handleSubmit}>
+           <div className="review-box">
+             <h2>Your review</h2>
+             <div className="bordered-container">
+               <div className="stars-interactive">
 
                </div>
+               <textarea className="body-field"
+                 placeholder="Your review helps us learn about great local businesses.
+                 Please don't review this business if you received a freebie for writing this or if you're connected in any way to the owner or employees.">
+
+               </textarea>
+               <input type="submit" value="Post Review" /> <br />
 
              </div>
 
-           </form>
-         </div>
+           </div>
+
+         </form>
 
        </div>
      );

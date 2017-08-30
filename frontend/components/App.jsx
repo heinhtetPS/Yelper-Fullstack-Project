@@ -19,7 +19,7 @@ if (location.pathname === "/") {
   logopos = "toplogo";
 }
 
-//this doesn't work, find out why
+//put this in the link instead
 function returntotop() {
   document.body.scrollTop = 0; // For Chrome, Safari and Opera
   document.documentElement.scrollTop = 0; // For IE and Firefox
@@ -31,13 +31,13 @@ const App = () => (
   <div className="global-container">
     <Route exact path="/" component={MainSplashContainer} />
     <Route path="/" component={RedNavContainer} />
-    <Route path="/biz" onClick={returntotop()}component={BusinessShowContainer} />
+    <Route path="/biz" component={BusinessShowContainer} />
     <Route exact path="/" component={Homemiddle} />
     <Route exact path="/" component={HomeBottom} />
     <Route path="/search" component={ResultsContainer} />
     <Route exact path="/login" component={SessionFormContainer} />
     <Route exact path="/signup" component={SessionFormContainer} />
-    <Route exact path="/writeareview" component={ReviewFormContainer} />
+    <Route path="/writeareview" component={ReviewFormContainer} />
 
 
 

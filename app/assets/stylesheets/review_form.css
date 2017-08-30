@@ -3,11 +3,13 @@
   margin-right: auto;
   margin-top: 100px;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .bizz-reminder {
-
+  background-color: turquoise;
+  min-width: 300px;
+  min-height: 200px;
 }
 
 .review-box {
@@ -23,5 +25,6 @@
 }
 
 .body-field {
-
+  min-width: 200px;
+  min-height: 100px;
 }
