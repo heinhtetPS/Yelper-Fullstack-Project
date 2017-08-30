@@ -84,10 +84,6 @@ class ReviewForm extends React.Component {
 
  whichform() {
 
-
-
-
-
    //1st one returns create form, else edit form
    if (this.props.formType === "writeareview") {
      return(
@@ -98,8 +94,14 @@ class ReviewForm extends React.Component {
            <div className="input-container">
              <h2>Your review</h2>
              <div className="bordered-container">
-               <div className="stars-interactive"></div>
-               <h2>Select your rating</h2>
+               <div className="stars-interactive">
+                 <input type="radio" name="rating" value="1"/>
+                <input type="radio" name="rating" value="2"/>
+                <input type="radio" name="rating" value="3"/>
+                <input type="radio" name="rating" value="4"/>
+                <input type="radio" name="rating" value="5"/>
+               </div>
+               <label>Select your rating</label>
                <textarea className="body-field"
                  placeholder="Your review helps us learn about great local businesses.
                  Please don't review this business if you received a freebie for writing this or if you're connected in any way to the owner or employees.">
@@ -125,7 +127,13 @@ class ReviewForm extends React.Component {
            <div className="input-container">
              <h2>Your review</h2>
              <div className="bordered-container">
-               <div className="stars-interactive"></div>
+               <div className="stars-interactive">
+                 <input type="radio" name="rating" value="1"/>
+                <input type="radio" name="rating" value="2"/>
+                <input type="radio" name="rating" value="3"/>
+                <input type="radio" name="rating" value="4"/>
+                <input type="radio" name="rating" value="5"/>
+               </div>
                <h2>Select your rating</h2>
                <textarea className="body-field"
                  placeholder="The stuff you wrote before...">

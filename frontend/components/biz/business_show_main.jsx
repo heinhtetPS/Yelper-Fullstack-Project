@@ -26,6 +26,7 @@ class BusinessShowMain extends React.Component {
     let reviewnumber = null;
     let sample = null;
     let price_describe = "";
+    let writelink = "/";
     const pricecounter = [];
     const biz_categories = [];
 
@@ -61,6 +62,9 @@ class BusinessShowMain extends React.Component {
         body: `Start your review of ${currentbiz.name}`,
         created_at: "2017-08-29T13:44:03.245Z"
       };
+
+      //set writeareview link
+      writelink = `/writeareview/${currentbiz.id}`;
     }
 
     //extra prevention for error triggering
@@ -80,7 +84,7 @@ class BusinessShowMain extends React.Component {
             </div>
             <div className="biz-header-right">
               <div className="review-button">
-                <Link to="/writeareview" className="link-styling">
+                <Link to={writelink} className="link-styling">
                   <svg className="svg-star">
                     <path d="M12 1.5l2.61 6.727 6.89.53-5.278 4.688 1.65 7.055L12 16.67 6.13 20.5l1.648-7.055L2.5 8.757l6.89-.53L12 1.5z"></path>
                   </svg>
