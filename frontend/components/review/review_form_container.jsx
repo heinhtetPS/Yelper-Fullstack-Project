@@ -17,7 +17,8 @@ const mapStateToProps = ({ session, biz }) => {
 
 //chose form submit method according to current URL
 const mapDispatchToProps = (dispatch, { location }) => {
-  const formType = location.pathname.slice(1);
+
+  const formType = location.pathname.split("/")[1];
   const processForm = (formType === 'writeareview') ? createNewReview : editReview;
   return {
     fetchABusiness: id => dispatch(fetchABusiness(id)),

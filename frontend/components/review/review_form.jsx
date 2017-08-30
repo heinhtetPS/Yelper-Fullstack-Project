@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import BizIndexItem from '../biz/biz_index_item';
+import SmallerReviewItem from './smaller_review_item';
 
 class ReviewForm extends React.Component {
 
@@ -20,13 +21,14 @@ class ReviewForm extends React.Component {
     //     password: ""
     //   };
     // }
-
      this.handleSubmit = this.handleSubmit.bind(this);
 
   }
 
   componentDidMount() {
-
+    this.props.fetchABusiness(
+      this.props.location.pathname.slice(-1)
+    );
   }
 
   //This thing redirects to login if not logged in
@@ -81,16 +83,19 @@ class ReviewForm extends React.Component {
  }
 
  whichform() {
+
+
+
+
+
    //1st one returns create form, else edit form
-   if (this.props.location.pathname === "/writeareview") {
+   if (this.props.formType === "writeareview") {
      return(
-       <div className="reviewForm-master">
+       <div className="review-box">
          {this.renderErrors()}
-         <h2 className="Redh2">Write a Review</h2> <br />
-         <div className="bizz-reminder">
-         </div>
+
          <form onSubmit={this.handleSubmit}>
-           <div className="review-box">
+           <div className="input-container">
              <h2>Your review</h2>
              <div className="bordered-container">
                <div className="stars-interactive"></div>
@@ -114,13 +119,10 @@ class ReviewForm extends React.Component {
    } else {
      //this is the edit form
      return(
-       <div className="reviewForm-master">
+       <div className="review-box">
          {this.renderErrors()}
-         <h2 className="Redh2">Edit yourw</h2> <br />
-         <div className="bizz-reminder">
-         </div>
          <form onSubmit={this.handleSubmit}>
-           <div className="review-box">
+           <div className="input-container">
              <h2>Your review</h2>
              <div className="bordered-container">
                <div className="stars-interactive"></div>
@@ -145,11 +147,33 @@ class ReviewForm extends React.Component {
 
  render() {
    console.log(this.props);
-   return (
-     <div>
-       {this.whichform()}
-     </div>
-   );
+   let currentbiz = null;
+
+   if (this.props.biz[0]) {
+     currentbiz = this.props.biz[0];
+
+     return (
+       <div className="reviewForm-master">
+         <h2 className="Redh2">Write a Review</h2> <br />
+         <div className="bizz-reminder">
+           <BizIndexItem key={currentbiz.id}
+             biz={currentbiz}/>
+         </div>
+         <div className="other-reviews">
+           <h2>Other reviews for {currentbiz.name}</h2>
+           {currentbiz.reviews.map(
+             review => <SmallerReviewItem
+             key={review.id}
+             review={review}     />)}
+         </div>
+         {this.whichform()}
+       </div>
+     );
+   } else {
+     return null;
+   }
+
+
  }
 
   //...

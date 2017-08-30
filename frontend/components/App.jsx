@@ -37,7 +37,7 @@ const App = () => (
     <Route path="/search" component={ResultsContainer} />
     <Route exact path="/login" component={SessionFormContainer} />
     <Route exact path="/signup" component={SessionFormContainer} />
-    <Route path="/writeareview" component={ReviewFormContainer} />
+    <Route path="/writeareview/:id" component={ReviewFormContainer} />
 
 
 

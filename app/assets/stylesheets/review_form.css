@@ -3,16 +3,42 @@
   margin-right: auto;
   margin-top: 100px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .bizz-reminder {
-  background-color: turquoise;
-  width: 600px;
-  height: 72px;
+  width: 300px;
+  height: 342px;
+  display: flex;
 }
 
 .review-box {
+  width: -webkit-fill-available;
+}
+
+.other-reviews {
+  min-width: 400px;
+  margin: 0 10px 0 120px;
+  max-height: 340px;
+  overflow: scroll;
+}
+
+.review-item-small {
+  max-width: 375px;
+  max-height: 200px;
+  display: flex;
+}
+
+.review-right-column-small {
+
+}
+
+.review-body-small {
+  font-size: 10px;
+}
+
+.body-head-small {
 
 }
 

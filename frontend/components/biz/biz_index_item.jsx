@@ -16,6 +16,7 @@ const BizIndexItem = ({ biz }) => {
   biz_categories.push(el.name));
   let bizurl = "/biz/" + biz.id
 
+
   return (
     <div className="biz_box">
       <div className="biz_photo_box">
