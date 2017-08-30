@@ -29,6 +29,14 @@ export const createNewReview = review => dispatch => {
     dispatch(receiveErrors(err.responseJSON))
   ));
 };
+
+export const editReview = review => dispatch => {
+  return reviewUtil.createNewReview(review).then(review => (
+    dispatch(receiveSingleReview(review))
+  ), err => (
+    dispatch(receiveErrors(err.responseJSON))
+  ));
+};
 //add filters here before dispatch
 export const fetchReviews = () => dispatch => {
   return reviewUtil.fetchAllReviews().then(reviews => (

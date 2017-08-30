@@ -11,7 +11,6 @@ const BizIndexItem = ({ biz }) => {
   //need to get location (maybe slice after ,s)
 
   let num_reviews = biz.reviews.length;
-
   const biz_categories = [];
   biz.categories.forEach(el =>
   biz_categories.push(el.name));

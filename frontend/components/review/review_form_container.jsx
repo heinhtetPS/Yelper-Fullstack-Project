@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-// import { loginUser, logoutUser, createNewUser } from '../actions/session_actions';
+import { editReview, createNewReview } from '../../actions/review_actions';
 import ReviewForm from './review_form';
 
 const mapStateToProps = ({ session }) => {
