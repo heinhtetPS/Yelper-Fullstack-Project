@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const ReviewIndexItem = ({ review }) => {
+const ReviewIndexItem = ({ review, business_id }) => {
 
   if(review === null || review === undefined)
   return null;
@@ -9,8 +9,14 @@ const ReviewIndexItem = ({ review }) => {
   const reviewdate = review.created_at.slice(0, 10);
   let thisuser = null;
   if (review.user)
-  thisuser = review.user
+  thisuser = review.user;
 
+  // let writelink = "/login";
+  // if(business_id)
+  //its right here but I can't access it 
+  let writelink = `/writeareview/${business_id}`;
+
+  console.log(business_id);
   //finally worked after hours of debugging:
   //first if is to render sample case: no problem if it renders before props
   //2nd conditional avoids rendering before props are received
@@ -25,11 +31,11 @@ const ReviewIndexItem = ({ review }) => {
         </div>
         <div className="review-right-column">
           <div className="body-head">
-            <Link to="/">
+            <Link to={writelink}>
               <div className="stars-img"></div>
             </Link>
           </div>
-          <Link to="/login">{review.body}</Link>
+          <Link to={writelink}>{review.body}</Link>
         </div>
       </div>
     )

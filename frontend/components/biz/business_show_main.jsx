@@ -122,7 +122,8 @@ class BusinessShowMain extends React.Component {
             {currentbiz.reviews.map(
               review => <ReviewIndexItem
               key={review.id}
-              review={review}     />)}
+              review={review}
+              business_id={currentbiz.id}     />)}
           </div>
 
           <div className="right-info-column">

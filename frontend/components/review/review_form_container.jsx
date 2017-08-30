@@ -22,7 +22,7 @@ const mapDispatchToProps = (dispatch, { location }) => {
   const processForm = (formType === 'writeareview') ? createNewReview : editReview;
   return {
     fetchABusiness: id => dispatch(fetchABusiness(id)),
-    processForm: user => dispatch(processForm(user)),
+    processForm: review => dispatch(processForm(review)),
     formType
   };
 

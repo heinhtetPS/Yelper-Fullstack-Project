@@ -37,15 +37,15 @@ class ReviewForm extends React.Component {
     });
   }
 
-  renderErrors() {
-    return (
-      <ul id="hider"className="errorbox-hidden">
-        {this.props.errors.map((error, idx) => (
-          <li key={`error-${idx}`}>{error}</li>
-        ))}
-      </ul>
-    );
-  }
+  // renderErrors() {
+  //   return (
+  //     <ul id="hider"className="errorbox-hidden">
+  //       {this.props.errors.map((error, idx) => (
+  //         <li key={`error-${idx}`}>{error}</li>
+  //       ))}
+  //     </ul>
+  //   );
+  // }
   //this doesn't work anyway
   // clearform() {
   //   if (this.props.location.pathname === "/signup") {
@@ -69,9 +69,9 @@ class ReviewForm extends React.Component {
   handleSubmit(e) {
    e.preventDefault();
    const review = Object.assign({}, this.state);
-   this.props.processForm(user);
+   this.props.processForm(review);
    this.toggleerrors();
-   this.clearform();
+  //  this.clearform();
  }
 
  whichform() {
@@ -80,7 +80,7 @@ class ReviewForm extends React.Component {
    if (this.props.formType === "writeareview") {
      return(
        <div className="review-box">
-         {this.renderErrors()}
+
 
          <form onSubmit={this.handleSubmit}>
            <div className="input-container">
@@ -114,7 +114,7 @@ class ReviewForm extends React.Component {
      //this is the edit form
      return(
        <div className="review-box">
-         {this.renderErrors()}
+
          <form onSubmit={this.handleSubmit}>
            <div className="input-container">
              <h2>Your review</h2>

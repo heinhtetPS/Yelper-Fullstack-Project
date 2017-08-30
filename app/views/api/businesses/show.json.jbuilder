@@ -4,7 +4,7 @@ json.set! @business.id do
     :price, :website, :pictures, :hours, :delivery, :take_out, :accepts_credit_cards,
     :wifi, :categories
     json.reviews @business.reviews.each do |review|
-      json.extract! review, :id, :author_id, :body, :rating, :created_at
+      json.extract! review, :id, :author_id, :body, :business_id, :rating, :created_at
       json.user review.user :username
     end
 end

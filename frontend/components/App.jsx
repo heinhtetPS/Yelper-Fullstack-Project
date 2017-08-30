@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, Redirect,
   Switch, Link, HashRouter } from 'react-router-dom';
 
+import { ProtectedRoute, AuthRoute } from '../util/route_util';
 import RedNavContainer from './red_nav_container';
 import MainSplashContainer from './main_splash_container';
 import Homemiddle from './homepage_middle_content';
@@ -35,9 +36,9 @@ const App = () => (
     <Route exact path="/" component={Homemiddle} />
     <Route exact path="/" component={HomeBottom} />
     <Route path="/search" component={ResultsContainer} />
-    <Route exact path="/login" component={SessionFormContainer} />
-    <Route exact path="/signup" component={SessionFormContainer} />
-    <Route path="/writeareview/:id" component={ReviewFormContainer} />
+    <AuthRoute exact path="/login" component={SessionFormContainer} />
+    <AuthRoute exact path="/signup" component={SessionFormContainer} />
+    <ProtectedRoute path="/writeareview/:id" component={ReviewFormContainer} />
 
 
 
