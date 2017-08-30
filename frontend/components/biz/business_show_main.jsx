@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import BizIndexItem from './biz_index_item';
 import ReviewIndexItem from '../review/review_index_item';
 import Bizmap from '../map';
+import { ProtectedRoute } from '../../util/route_util';
 
 class BusinessShowMain extends React.Component {
 
@@ -132,7 +133,7 @@ class BusinessShowMain extends React.Component {
                     <path d="M14 15H4c-.55 0-1-.45-1-1V4c0-.55.45-1 1-1h3v1H4v10h10v-3h1v3c0 .55-.45 1-1 1zm-5.12-4.465L7.463 9.12l3.83-3.827L9 3h6v6l-2.293-2.293-3.828 3.828z"></path>
                   </svg>
                 </Link>
-                <p>$$$$ Price Range: {price_describe}</p>
+                <p>{pricecounter.join('')} Price Range: {price_describe}</p>
               </div>
               <div className="more-info">
                 <h2>More Business Info</h2>

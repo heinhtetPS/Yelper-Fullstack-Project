@@ -9,18 +9,10 @@ class ReviewForm extends React.Component {
     super(props);
 
     //initial state is blank
-    // if (this.props.location.pathname === "/create") {
-    //   this.state = {
-    //     username: "",
-    //     email: "",
-    //     password: ""
-    //   };
-    // } else {
-    //   this.state = {
-    //     username: "",
-    //     password: ""
-    //   };
-    // }
+      this.state = {
+        rating: null,
+        body: "",
+      };
      this.handleSubmit = this.handleSubmit.bind(this);
 
   }
