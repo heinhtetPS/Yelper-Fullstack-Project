@@ -14,11 +14,20 @@ class Bizmap extends React.Component {
 
   componentDidMount() {
 
-    //this is centered on A/a building
-    const mapOptions = {
-      center: { lat: this.props.biz.map_lat, lng: this.props.biz.map_lng },
-      zoom: 14
-    };
+    //this is centered on props location
+    //this is made for single biz, need to change for results
+    let mapOptions = {};
+    if (this.props.singleBiz) {
+      mapOptions = {
+        center: { lat: this.props.biz.map_lat, lng: this.props.biz.map_lng },
+        zoom: 14
+      };
+    } else {
+      mapOptions = {
+        center: { lat: 40.7449978, lng: -73.9937579 },
+        zoom: 10
+      };
+    }
 
     const map = this.refs.map;
     this.map = new google.maps.Map(this.mapNode, mapOptions);
@@ -40,9 +49,11 @@ class Bizmap extends React.Component {
     }
   }
 
+  //this is required to do search results bounds
   registerListeners() {
 
   }
+
 
   handleMarkerClick(biz) {
 

@@ -1,23 +1,22 @@
 .results-page-container {
-  width: 1620px;
-  height: 1400px;
+  max-width: 1620px;
+  height: 100%;
   position: relative;
   top: 88px;
 }
 
 .top-shelf-options {
-  width: 1620px;
+  max-width: 1620px;
   height: 141px;
   background-color: #f5f5f5;
 }
 
 .results-content {
   width: 960px;
-  height: 1200px;
+  height: 100%;
   padding-left: 15px;
   padding-right: 15px;
-  margin-left: 315px;
-  margin-right: 315px;
+  margin: 0 auto;
   background-color: yellow;
   display: flex;
   flex-direction: row;

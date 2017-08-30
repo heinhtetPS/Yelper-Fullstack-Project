@@ -67,6 +67,7 @@
   width: 180px;
   height: 36px;
   border: 1px solid black;
+  border-radius: 6px;
   background-color: #CD0E02;
   display: flex;
   flex-direction: row;
@@ -120,6 +121,7 @@
   width: 660px;
   height: 320px;
   background-color: wheat;
+  margin-top: 20px;
 }
 
 .biz-bottom-content {
