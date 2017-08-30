@@ -4,14 +4,13 @@ class Api::BusinessesController < ApplicationController
   def index
     @allbusiness = Business.all
     #Below is all the filtering stuff
-    # allbusiness = bounds ? Bench.in_bounds(bounds) : Bench.all
+    # @allbusiness = bounds ? Business.in_bounds(bounds) : Business.all
     #
+    #filtering with other settings
     # if params[:minSeating] && params[:maxSeating]
     #   allbusiness = allbusiness.where(seating: seating_range)
     # end
     #
-    # @allbusiness = allbusiness.includes(:reviews, :favorite_users)
-    # render :index
   end
 
   #Remember: category is not technically part of business's own db

@@ -19,8 +19,8 @@ Business.destroy_all
 a = Business.new({
               name: 'App Academy Diner',
               address: '159 W 25th St, New York, NY 10001',
-              map_lat: 40.7453156,
-              map_lng: -73.9940007,
+              map_lat: 40.7449978,
+              map_lng: -73.9937579,
               price: 1,
               owner_id: 1,
               website: 'https://www.appacademy.io/',
@@ -37,8 +37,8 @@ a = Business.new({
 b = Business.new({
               name: 'Bizzz 2',
               address: '159 Main St, New York, NY 10001',
-              map_lat: 42.745156,
-              map_lng: -71.9007,
+              map_lat: 40.6531023,
+              map_lng: -74.0228799,
               price: 4,
               owner_id: 1,
               website: 'https://www.google.com/',

@@ -96,7 +96,12 @@ class BusinessShowMain extends React.Component {
         </div>
         <div className="biz-content-container">
             <div className="map-card-show">
-              <Bizmap />
+              <Bizmap
+                businesses={currentbiz}
+                biz={currentbiz}
+                bizID={currentbiz.id}
+                singleBiz={true}
+                fetchABusiness={this.props.fetchABusiness}/>
               <div className="address-info-show">
                 <h3>Located at:</h3>
                 <p>{currentbiz.address}</p>
