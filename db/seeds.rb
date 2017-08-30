@@ -35,10 +35,10 @@ a = Business.new({
               a.categories.push(a2)
               a.save!
 b = Business.new({
-              name: 'Bizzz 2',
-              address: '159 Main St, New York, NY 10001',
-              map_lat: 40.6531023,
-              map_lng: -74.0228799,
+              name: 'Sunset Pub 2',
+              address: '501-509 44th St, Brooklyn, NY 11220',
+              map_lat: 40.6483354,
+              map_lng: -74.0078366,
               price: 4,
               owner_id: 1,
               website: 'https://www.google.com/',
@@ -52,10 +52,10 @@ b = Business.new({
               b.categories.push(b1)
               b.save!
 c = Business.new({
-              name: 'Bizzz 3',
-              address: '979 Main Ave, New York, NY 10001',
-              map_lat: 42.745156,
-              map_lng: -71.9007,
+              name: 'Brooklyn Bridge Cafe',
+              address: 'Brooklyn Bridge, New York, NY 10038',
+              map_lat: 40.7042293,
+              map_lng: -73.9965586,
               price: 2,
               owner_id: 1,
               website: 'https://www.google.com/',
