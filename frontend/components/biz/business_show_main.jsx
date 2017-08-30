@@ -76,10 +76,17 @@ class BusinessShowMain extends React.Component {
               <div className="stars-img"></div>
               <p className="reviews-count">{reviewnumber} reviews</p>
               <p className="price-counter">{pricecounter.join('')}</p>
-              <Link to="/"className="categories-links" >{biz_categories.join(", ")}</Link>
+              <Link to="/search"className="categories-links" >{biz_categories.join(", ")}</Link>
             </div>
             <div className="biz-header-right">
-
+              <div className="review-button">
+                <Link to="/writeareview" className="link-styling">
+                  <svg className="svg-star">
+                    <path d="M12 1.5l2.61 6.727 6.89.53-5.278 4.688 1.65 7.055L12 16.67 6.13 20.5l1.648-7.055L2.5 8.757l6.89-.53L12 1.5z"></path>
+                  </svg>
+                  Write a Review
+                </Link>
+              </div>
             </div>
 
         </div>

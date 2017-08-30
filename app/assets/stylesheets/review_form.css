@@ -8,8 +8,8 @@
 
 .bizz-reminder {
   background-color: turquoise;
-  min-width: 300px;
-  min-height: 200px;
+  width: 600px;
+  height: 72px;
 }
 
 .review-box {
@@ -17,14 +17,30 @@
 }
 
 .bordered-container {
-
+  max-width: 629px;
+  max-height: 236px;
+  border: 1px solid gray;
+  display: flex;
+  flex-direction: column;
 }
 
 .stars-interactive {
-
+  width: 132px;
+  height: 24px;
+  background: url(https://s3-media2.fl.yelpcdn.com/assets/srv0/yelp_design_web/9b34e39ccbeb/assets/img/stars/stars.png) 0 0;
+  background-size: 132px 560px;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .body-field {
   min-width: 200px;
   min-height: 100px;
+}
+
+.post-button {
+  max-width: 140px;
+  border: 1px solid black;
+  background-color: #CD0E02;
+  color: white;
 }

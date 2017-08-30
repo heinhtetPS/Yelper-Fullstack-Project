@@ -7,8 +7,8 @@ const BizIndexItem = ({ biz }) => {
       pricecounter.push('$');
   }
   //need to get stars info
-  //need to get # of review (this.props.reviews.length)
   //need to get location (maybe slice after ,s)
+  //need to make an onClick that returns you to top
 
   let num_reviews = biz.reviews.length;
   const biz_categories = [];
