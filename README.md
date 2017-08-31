@@ -1,24 +1,5 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## [Yelper](https://yelper2017.herokuapp.com/#/)
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Yelper is a full stack web application inspired by Yelp.com. It utilizes React.js with Redux on the frontend to produce dynamic content and a PostgreSql database backend. Ruby on rails serves a nice framework that connects the two and provides structure for the app.
