@@ -148,7 +148,6 @@ class ReviewForm extends React.Component {
  }
 
  render() {
-   console.log(this.props);
    let currentbiz = null;
 
    if (this.props.biz[0]) {

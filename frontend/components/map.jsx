@@ -88,7 +88,6 @@ class Bizmap extends React.Component {
     } else {
       mapClass = "results-map-container";
     }
-    // console.log(mapClass);
     return (
         <div className={mapClass} ref={ map => this.mapNode = map }/>
     );

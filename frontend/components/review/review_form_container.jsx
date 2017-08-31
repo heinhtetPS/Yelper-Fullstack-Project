@@ -7,8 +7,6 @@ import ReviewForm from './review_form';
 
 const mapStateToProps = ({ session, biz }) => {
   return {
-    //this checks for currentUser and puts true or false inside the
-    //loggedin key of session obj, also errors
     loggedIn: Boolean(session.currentUser),
     currentUser: session.currentUser,
     errors: session.errors,

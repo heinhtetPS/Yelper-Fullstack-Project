@@ -28,7 +28,7 @@ class ResultsShow extends React.Component {
       <div className="results-page-container">
         <div className="top-shelf-options">
           <div className="top-shelf-content">
-            <h2>Best searchterm in Brooklyn, NY</h2>
+            <h2>Best {searchterm} in Brooklyn, NY</h2>
 
           </div>
         </div>

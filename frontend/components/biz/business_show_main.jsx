@@ -23,7 +23,6 @@ class BusinessShowMain extends React.Component {
   //   if (this.props.biz[0].id !== nextProps.biz[0].id) {
   //    this.props.fetchABusiness(nextProps.biz[0].id);
   //  }
-  console.log(newProps);
   }
 
 
@@ -81,10 +80,18 @@ class BusinessShowMain extends React.Component {
 
       //get ratings from all reviews and set average
       currentbiz.reviews.forEach(review => ratings.push(review.rating));
-      average_rating = Math.round(ratings.reduce((a,b) => a + b, 0)) / ratings.length;
+      average_rating = ratings.reduce((a,b) => a + b, 0) / ratings.length;
+      average_rating = Math.round(average_rating*2)/2;
+      if (average_rating === 1.5)
+      average_rating = 6;
+      if (average_rating === 2.5)
+      average_rating = 7;
+      if (average_rating === 3.5)
+      average_rating = 8;
+      if (average_rating === 4.5)
+      average_rating = 9;
       //we will generate stars based on that average
 
-      // console.log(average_rating);
     }
 
     //extra prevention for error triggering
