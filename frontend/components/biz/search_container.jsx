@@ -5,10 +5,10 @@ import { updateFilter } from '../../actions/filter_actions';
 import Search from './search';
 
 const mapStateToProps = state => ({
-  //look up what we should put here
+  //put filters here
   // benches: asArray(state),
   // minSeating: state.filters.minSeating,
-  // maxSeating: state.filters.maxSeating
+  categories: state.filters.categories,
   state
 });
 

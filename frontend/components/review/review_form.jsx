@@ -10,7 +10,7 @@ class ReviewForm extends React.Component {
 
     //initial state is blank
       this.state = {
-        rating: null,
+        rating: 1,
         body: "",
       };
      this.handleSubmit = this.handleSubmit.bind(this);
@@ -24,11 +24,11 @@ class ReviewForm extends React.Component {
   }
 
   //This thing redirects to login if not logged in
-  // componentWillReceiveProps(nextProps) {
-  //   if (!nextProps.loggedIn) {
-  //     this.props.history.push('/login');
-  //   }
-  // }
+  componentWillReceiveProps(nextProps) {
+    if (!nextProps.loggedIn) {
+      this.props.history.push('/login');
+    }
+  }
 
   //when people type, change the state text
   update(field) {
@@ -68,8 +68,10 @@ class ReviewForm extends React.Component {
 
   handleSubmit(e) {
    e.preventDefault();
-   const review = Object.assign({}, this.state);
-   this.props.processForm(review);
+   const newreview = Object.assign({}, this.state);
+   //rating is 0
+   debugger
+   this.props.processForm({newreview});
    this.toggleerrors();
   //  this.clearform();
  }
@@ -87,17 +89,17 @@ class ReviewForm extends React.Component {
              <h2>Your review</h2>
              <div className="bordered-container">
                <div className="stars-interactive">
-                 <input type="radio" name="rating" value="1"/>
-                <input type="radio" name="rating" value="2"/>
-                <input type="radio" name="rating" value="3"/>
-                <input type="radio" name="rating" value="4"/>
-                <input type="radio" name="rating" value="5"/>
+                 <input type="radio" name="rating" value="1" onClick={this.update('body')}/>
+                <input type="radio" name="rating" value="2" onClick={this.update('body')}/>
+                <input type="radio" name="rating" value="3" onClick={this.update('body')}/>
+                <input type="radio" name="rating" value="4" onClick={this.update('body')}/>
+                <input type="radio" name="rating" value="5" onClick={this.update('body')}/>
                </div>
                <label>Select your rating</label>
                <textarea className="body-field"
                  placeholder="Your review helps us learn about great local businesses.
-                 Please don't review this business if you received a freebie for writing this or if you're connected in any way to the owner or employees.">
-
+                 Please don't review this business if you received a freebie for writing this or if you're connected in any way to the owner or employees."
+                 onChange={this.update('body')}>
                </textarea>
                <input type="submit" value="Post Review" className="post-button"/>
                <small>* You can always edit or remove reviews later</small>

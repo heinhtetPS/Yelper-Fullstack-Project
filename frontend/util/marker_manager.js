@@ -8,7 +8,6 @@ export default class MarkerManager {
 
 
   updateMarkers(businesses) {
-    console.log('time to update the map');
 
     //keep a list of all the businesses we're looking at now
     const allBusiness = {};

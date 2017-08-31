@@ -5,7 +5,10 @@ class Search extends React.Component {
 
   constructor(props) {
     super(props);
-    //do state stuff here
+    this.state = {
+      categories: "",
+      bounds: "",
+    };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -17,11 +20,18 @@ class Search extends React.Component {
 
   handleSubmit(e) {
    e.preventDefault();
-  //  const user = Object.assign({}, this.state);
-  //  this.props.processForm(user);
-  //  this.toggleerrors();
+   const currentfilters = Object.assign({}, this.state);
+
+
   //  this.clearform();
-    this.props.history.push('/search');
+    this.props.updateFilter('categories', this.state.categories );
+
+    //redirect or reload
+    if(this.props.location.pathname === "/search") {
+      window.location.reload();
+    } else {
+      this.props.history.push('/search');
+    }
  }
 
  render() {
@@ -49,11 +59,12 @@ class Search extends React.Component {
            </span>
            <input className="search-keyword"type="text"
              placeholder="tacos, cheap dinner, Max's"
+              onChange={this.update('categories')}
 
              />
            <input className="search-location"type="text"
                placeholder="New York, NY"
-
+              onChange={this.update('bounds')}
                />
              <button className="search-submit-home" onSubmit={this.handleSubmit}>
                <span>

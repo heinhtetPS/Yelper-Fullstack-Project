@@ -1,7 +1,7 @@
 import { merge } from 'lodash';
 //Either import merge with no brackets from lodash/merge OR use no brackets and just from lodash
 
-import { UPDATE_FILTER } from '../actions/business_actions';
+import { UPDATE_FILTER } from '../actions/filter_actions';
 
 const defaultFilters = Object.freeze({
   bounds: {},
@@ -18,6 +18,7 @@ const FiltersReducer = (state = defaultFilters, action) => {
         [action.filter]: action.value
       };
       return merge({}, state, newFilter);
+
     default:
       return state;
   }

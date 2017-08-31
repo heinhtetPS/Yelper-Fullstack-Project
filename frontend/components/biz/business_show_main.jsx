@@ -19,6 +19,13 @@ class BusinessShowMain extends React.Component {
     );
   }
 
+  componentWillReceiveProps(newProps) {
+  //   if (this.props.biz[0].id !== nextProps.biz[0].id) {
+  //    this.props.fetchABusiness(nextProps.biz[0].id);
+  //  }
+  console.log(newProps);
+  }
+
 
   render() {
     //THIS PATTERN SUCEEDS, COPY THIS PATTERN ELSEWHERE
@@ -32,7 +39,7 @@ class BusinessShowMain extends React.Component {
     const ratings = [];
     const ratingclass = ["", "one-stars-big", "two-stars-big",
     "three-stars-big", "four-stars-big", "five-stars-big", "onehalf-stars-big",
-    "twohalf-stars-big", "threehalf-stars-big", "fourhalf-stars-big"]
+    "twohalf-stars-big", "threehalf-stars-big", "fourhalf-stars-big"];
     const pricecounter = [];
     const biz_categories = [];
 
@@ -76,8 +83,8 @@ class BusinessShowMain extends React.Component {
       currentbiz.reviews.forEach(review => ratings.push(review.rating));
       average_rating = Math.round(ratings.reduce((a,b) => a + b, 0)) / ratings.length;
       //we will generate stars based on that average
-      
-      console.log(average_rating);
+
+      // console.log(average_rating);
     }
 
     //extra prevention for error triggering

@@ -39,7 +39,7 @@ class Bizmap extends React.Component {
     this.map = new google.maps.Map(this.mapNode, mapOptions);
     this.MarkerManager = new MarkerManager(this.map);
 
-    if (this.props.biz) {
+    if (this.props.singleBiz) {
       this.props.fetchABusiness(this.props.biz.id);
     } else {
       this.registerListeners();
@@ -81,13 +81,14 @@ class Bizmap extends React.Component {
   }
 
   render() {
+
     let mapClass = "";
     if (this.props.singleBiz) {
       mapClass = "show-map-container";
     } else {
       mapClass = "results-map-container";
     }
-    console.log(mapClass);
+    // console.log(mapClass);
     return (
         <div className={mapClass} ref={ map => this.mapNode = map }/>
     );

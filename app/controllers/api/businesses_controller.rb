@@ -7,9 +7,10 @@ class Api::BusinessesController < ApplicationController
     #If there are bounds, filter by them, else default all
     @allbusiness = bounds ? Business.in_bounds(bounds) : Business.all
 
-    #filtering with other settings, lets try categories first 
+    #filtering with other settings, lets try categories first
+
     if params[:categories]
-      @allbusiness = @allbusiness.categories.includes(params[:categories])
+      @allbusiness = @allbusiness.joins(:categories).where("categories.name = ?", params[:categories])
     end
   end
 

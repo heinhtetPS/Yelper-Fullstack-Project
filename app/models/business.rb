@@ -40,10 +40,10 @@ class Business < ApplicationRecord
     #Use this when constructing search results to constrict
     #results to inside the current map
     def self.in_bounds(bounds)
-      self.where("lat < ?", bounds[:northEast][:lat])
-      .where("lat > ?", bounds[:southWest][:lat])
-      .where("lng > ?", bounds[:southWest][:lng])
-      .where("lng < ?", bounds[:northEast][:lng])
+      self.where("map_lat < ?", bounds[:northEast][:lat])
+      .where("map_lat > ?", bounds[:southWest][:lat])
+      .where("map_lng > ?", bounds[:southWest][:lng])
+      .where("map_lng < ?", bounds[:northEast][:lng])
    end
 
 end

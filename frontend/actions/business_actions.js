@@ -30,8 +30,8 @@ export const createNewBusiness = business => dispatch => {
   ));
 };
 //add filters here before dispatch
-export const fetchBusinesses = () => dispatch => {
-  return businessUtil.fetchAllBusinesses().then(businesses => (
+export const fetchBusinesses = filters => dispatch => {
+  return businessUtil.fetchAllBusinesses(filters).then(businesses => (
     dispatch(receiveBusinesses(businesses))
   ), err => (
     dispatch(receiveErrors(err.responseJSON))
