@@ -28,6 +28,11 @@ class BusinessShowMain extends React.Component {
     let sample = null;
     let price_describe = "";
     let writelink = "/";
+    let average_rating = null;
+    const ratings = [];
+    const ratingclass = ["", "one-stars-big", "two-stars-big",
+    "three-stars-big", "four-stars-big", "five-stars-big", "onehalf-stars-big",
+    "twohalf-stars-big", "threehalf-stars-big", "fourhalf-stars-big"]
     const pricecounter = [];
     const biz_categories = [];
 
@@ -66,6 +71,13 @@ class BusinessShowMain extends React.Component {
 
       //set writeareview link
       writelink = `/writeareview/${currentbiz.id}`;
+
+      //get ratings from all reviews and set average
+      currentbiz.reviews.forEach(review => ratings.push(review.rating));
+      average_rating = Math.round(ratings.reduce((a,b) => a + b, 0)) / ratings.length;
+      //we will generate stars based on that average
+      
+      console.log(average_rating);
     }
 
     //extra prevention for error triggering
@@ -78,7 +90,7 @@ class BusinessShowMain extends React.Component {
         <div className="biz-headers">
             <div className="biz-header-left">
               <h1 className="biz-name">{currentbiz.name}</h1>
-              <div className="stars-img"></div>
+              <div className={ratingclass[average_rating]}></div>
               <p className="reviews-count">{reviewnumber} reviews</p>
               <p className="price-counter">{pricecounter.join('')}</p>
               <Link to="/search"className="categories-links" >{biz_categories.join(", ")}</Link>
