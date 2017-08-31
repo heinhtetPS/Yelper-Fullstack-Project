@@ -32,7 +32,7 @@ const App = () => (
   <div className="global-container">
     <Route exact path="/" component={MainSplashContainer} />
     <Route path="/" component={RedNavContainer} />
-    <Route path="/biz" component={BusinessShowContainer} />
+    <Route path="/biz/:id" component={BusinessShowContainer} />
     <Route exact path="/" component={Homemiddle} />
     <Route exact path="/" component={HomeBottom} />
     <Route path="/search" component={ResultsContainer} />

@@ -15,7 +15,7 @@ class BusinessShowMain extends React.Component {
     //this finds the business based on the last number in
     //url. Will not work for >10 businesses
     this.props.fetchABusiness(
-      this.props.location.pathname.slice(-1)
+      this.props.match.params.id
     );
   }
 
@@ -44,8 +44,8 @@ class BusinessShowMain extends React.Component {
     const biz_categories = [];
 
     //if async info has been retrieved....
-    if (this.props.biz[0]) {
-      currentbiz = this.props.biz[0];
+    if (this.props.biz) {
+      currentbiz = this.props.biz;
 
       //set price $$$s & text
       for (let i = 0; i < currentbiz.price; i++) {

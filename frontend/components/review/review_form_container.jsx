@@ -10,6 +10,7 @@ const mapStateToProps = ({ session, biz }) => {
     //this checks for currentUser and puts true or false inside the
     //loggedin key of session obj, also errors
     loggedIn: Boolean(session.currentUser),
+    currentUser: session.currentUser,
     errors: session.errors,
     biz: selectAllbiz(biz)
   }

@@ -12,6 +12,7 @@ class ReviewForm extends React.Component {
       this.state = {
         rating: 1,
         body: "",
+        //put business id here
       };
      this.handleSubmit = this.handleSubmit.bind(this);
 
@@ -71,7 +72,7 @@ class ReviewForm extends React.Component {
    const newreview = Object.assign({}, this.state);
    //rating is 0
    debugger
-   this.props.processForm({newreview});
+   this.props.processForm({review: newreview});
    this.toggleerrors();
   //  this.clearform();
  }
@@ -89,11 +90,11 @@ class ReviewForm extends React.Component {
              <h2>Your review</h2>
              <div className="bordered-container">
                <div className="stars-interactive">
-                 <input type="radio" name="rating" value="1" onClick={this.update('body')}/>
-                <input type="radio" name="rating" value="2" onClick={this.update('body')}/>
-                <input type="radio" name="rating" value="3" onClick={this.update('body')}/>
-                <input type="radio" name="rating" value="4" onClick={this.update('body')}/>
-                <input type="radio" name="rating" value="5" onClick={this.update('body')}/>
+                 <input type="radio" name="rating" value="1" onClick={this.update('rating')}/>
+                <input type="radio" name="rating" value="2" onClick={this.update('rating')}/>
+                <input type="radio" name="rating" value="3" onClick={this.update('rating')}/>
+                <input type="radio" name="rating" value="4" onClick={this.update('rating')}/>
+                <input type="radio" name="rating" value="5" onClick={this.update('rating')}/>
                </div>
                <label>Select your rating</label>
                <textarea className="body-field"
