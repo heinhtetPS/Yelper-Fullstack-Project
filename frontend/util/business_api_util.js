@@ -20,10 +20,11 @@ export const updateABusiness = updatedBusiness => (
 );
 
 
-export const fetchAllBusinesses = () => (
+export const fetchAllBusinesses = data => (
   $.ajax({
     method: 'GET',
-    url: 'api/biz'
+    url: 'api/biz',
+    data
   })
 );
 

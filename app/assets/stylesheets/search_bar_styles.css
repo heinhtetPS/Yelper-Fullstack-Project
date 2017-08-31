@@ -10,7 +10,7 @@
   height: 40px;
   position: relative;
   top: -94px;
-  left: 270px;
+  left: 295px;
   z-index: 60;
 }
 
@@ -66,4 +66,5 @@
   width: 24px;
   height: 24px;
   fill: white;
+  background-color: #BD1F1F;
 }

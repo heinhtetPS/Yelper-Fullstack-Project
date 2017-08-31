@@ -21,18 +21,26 @@ class ResultsShow extends React.Component {
     return (
       <div className="results-page-container">
         <div className="top-shelf-options">
+          <div className="top-shelf-content">
+            <h2>Best searchquery in Brooklyn, NY</h2>
 
+          </div>
         </div>
         <div className="results-content">
             <div className="biz-index-container">
 
             </div>
             <div className="map-column-container">
-              <div className="show-map-container">
+              <div className="results-map-container">
+                <div className="results-map-header">
+
+                </div>
                 <Bizmap
                   businesses={this.props.businesses}
                   singleBiz={false}
-                  fetchBusinesses={this.props.fetchBusinesses}/>
+                  fetchBusinesses={this.props.fetchBusinesses}
+                  updateFilters = {this.props.updateFilters}
+                  />
               </div>
             </div>
         </div>

@@ -2,15 +2,15 @@ class Api::BusinessesController < ApplicationController
 
   #create new business & persist into DB
   def index
-    @allbusiness = Business.all
-    #Below is all the filtering stuff
-    # @allbusiness = bounds ? Business.in_bounds(bounds) : Business.all
+    #old style no filters
+    # @allbusiness = Business.all
+    #If there are bounds, filter by them, else default all 
+    @allbusiness = bounds ? Business.in_bounds(bounds) : Business.all
     #
     #filtering with other settings
     # if params[:minSeating] && params[:maxSeating]
     #   allbusiness = allbusiness.where(seating: seating_range)
     # end
-    #
   end
 
   #Remember: category is not technically part of business's own db
@@ -39,5 +39,9 @@ class Api::BusinessesController < ApplicationController
     :hours, :delivery, :take_out,
     :accepts_credit_cards, :wifi, categories: [],
     )
+  end
+
+  def bounds
+    params[:bounds]
   end
 end

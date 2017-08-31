@@ -17,17 +17,22 @@ class Bizmap extends React.Component {
     //this is centered on props location
     //this is made for single biz, need to change for results
     let mapOptions = {};
+
     if (this.props.singleBiz) {
       mapOptions = {
         center: { lat: this.props.biz.map_lat, lng: this.props.biz.map_lng },
         zoom: 14
       };
+
     } else {
       mapOptions = {
         center: { lat: 40.7449978, lng: -73.9937579 },
         zoom: 10
       };
+
     }
+
+
 
     const map = this.refs.map;
     this.map = new google.maps.Map(this.mapNode, mapOptions);
@@ -51,7 +56,22 @@ class Bizmap extends React.Component {
 
   //this is required to do search results bounds
   registerListeners() {
-
+    this.map.addListener('idle', () => {
+      const latLngBounds = this.map.getBounds();
+      const northEast = {
+        lat: latLngBounds.getNorthEast().lat(),
+          lng: latLngBounds.getNorthEast().lng(),
+      };
+      const southWest = {
+        lat: latLngBounds.getSouthWest().lat(),
+        lng: latLngBounds.getSouthWest().lng(),
+      }
+      const bounds = {
+        northEast,
+        southWest,
+      };
+      this.props.updateFilter('bounds', bounds);
+    });
   }
 
 
@@ -60,9 +80,15 @@ class Bizmap extends React.Component {
   }
 
   render() {
-
+    let mapClass = "";
+    if (this.props.singleBiz) {
+      mapClass = "show-map-container";
+    } else {
+      mapClass = "results-map-container";
+    }
+    console.log(mapClass);
     return (
-        <div className="show-map-container" ref={ map => this.mapNode = map }/>
+        <div className={mapClass} ref={ map => this.mapNode = map }/>
     );
   }
 }
