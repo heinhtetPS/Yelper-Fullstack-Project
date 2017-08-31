@@ -39,7 +39,7 @@ class ResultsShow extends React.Component {
                   businesses={this.props.businesses}
                   singleBiz={false}
                   fetchBusinesses={this.props.fetchBusinesses}
-                  updateFilters = {this.props.updateFilters}
+                  updateFilter = {this.props.updateFilter}
                   />
               </div>
             </div>

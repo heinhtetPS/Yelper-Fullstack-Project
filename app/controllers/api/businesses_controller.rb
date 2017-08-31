@@ -4,13 +4,13 @@ class Api::BusinessesController < ApplicationController
   def index
     #old style no filters
     # @allbusiness = Business.all
-    #If there are bounds, filter by them, else default all 
+    #If there are bounds, filter by them, else default all
     @allbusiness = bounds ? Business.in_bounds(bounds) : Business.all
-    #
-    #filtering with other settings
-    # if params[:minSeating] && params[:maxSeating]
-    #   allbusiness = allbusiness.where(seating: seating_range)
-    # end
+
+    #filtering with other settings, lets try categories first 
+    if params[:categories]
+      @allbusiness = @allbusiness.categories.includes(params[:categories])
+    end
   end
 
   #Remember: category is not technically part of business's own db

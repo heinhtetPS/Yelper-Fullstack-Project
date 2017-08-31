@@ -10,14 +10,16 @@ export default class MarkerManager {
   updateMarkers(businesses) {
     console.log('time to update the map');
 
-    //keep a list of all the markers we're supposed to render
+    //keep a list of all the businesses we're looking at now
     const allBusiness = {};
     businesses.forEach(biz => allBusiness[biz.id] = biz);
-    
+
+    //for each business create a marker on map
     businesses
     .filter(biz => !this.markers[biz.id])
     .forEach(newbiz => this.createMarkerFromBiz(newbiz));
 
+    //get rid of old marks that aren't in allBusiness anymore
     Object.keys(this.markers)
     .filter(bizID => !allBusiness[bizID])
     .forEach((bizID) => this.removeMarker(this.markers[bizID]));

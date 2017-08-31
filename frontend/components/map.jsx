@@ -16,6 +16,7 @@ class Bizmap extends React.Component {
 
     //this is centered on props location
     //this is made for single biz, need to change for results
+    //Brooklyn defaults: 40.650404    -74.0119036    12
     let mapOptions = {};
 
     if (this.props.singleBiz) {
@@ -65,7 +66,7 @@ class Bizmap extends React.Component {
       const southWest = {
         lat: latLngBounds.getSouthWest().lat(),
         lng: latLngBounds.getSouthWest().lng(),
-      }
+      };
       const bounds = {
         northEast,
         southWest,

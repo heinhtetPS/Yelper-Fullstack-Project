@@ -1,13 +1,23 @@
 import { merge } from 'lodash';
 //Either import merge with no brackets from lodash/merge OR use no brackets and just from lodash
 
-// import { } from '../actions/business_actions';
+import { UPDATE_FILTER } from '../actions/business_actions';
 
-const FiltersReducer = (state = {}, action) => {
+const defaultFilters = Object.freeze({
+  bounds: {},
+  categories: {}
+});
+
+const FiltersReducer = (state = defaultFilters, action) => {
   Object.freeze(state);
   //replace array of reviews with just array of IDs
   switch (action.type) {
 
+    case UPDATE_FILTER:
+      const newFilter = {
+        [action.filter]: action.value
+      };
+      return merge({}, state, newFilter);
     default:
       return state;
   }
