@@ -9,7 +9,7 @@ class Api::ReviewsController < ApplicationController
 
     #maybe we need to set user_id here
     #maybe we can include that in the params or current_user?
-    # @review.author_id = current_user.id
+    @review.author_id = current_user.id
     debugger
     if @review.save
       render :show
@@ -37,6 +37,6 @@ class Api::ReviewsController < ApplicationController
 private
 
   def review_params
-    params.require(:review).permit(:author_id, :rating, :body)
+    params.require(:review).permit(:business_id, :rating, :body)
   end
 end

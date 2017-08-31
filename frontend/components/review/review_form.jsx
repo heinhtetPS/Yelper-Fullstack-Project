@@ -12,7 +12,7 @@ class ReviewForm extends React.Component {
       this.state = {
         rating: 1,
         body: "",
-        //put business id here
+        business_id: this.props.location.pathname.slice(-1)
       };
      this.handleSubmit = this.handleSubmit.bind(this);
 
@@ -70,10 +70,9 @@ class ReviewForm extends React.Component {
   handleSubmit(e) {
    e.preventDefault();
    const newreview = Object.assign({}, this.state);
-   //rating is 0
-   debugger
    this.props.processForm({review: newreview});
    this.toggleerrors();
+   this.props.history.push(`/biz/${this.props.location.pathname.slice(-1)}`);
   //  this.clearform();
  }
 
