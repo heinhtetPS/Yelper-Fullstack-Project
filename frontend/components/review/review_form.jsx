@@ -89,11 +89,31 @@ class ReviewForm extends React.Component {
              <h2>Your review</h2>
              <div className="bordered-container">
                <div className="stars-interactive">
-                 <input type="radio" name="rating" value="1" onClick={this.update('rating')}/>
-                <input type="radio" name="rating" value="2" onClick={this.update('rating')}/>
-                <input type="radio" name="rating" value="3" onClick={this.update('rating')}/>
-                <input type="radio" name="rating" value="4" onClick={this.update('rating')}/>
-                <input type="radio" name="rating" value="5" onClick={this.update('rating')}/>
+                 <input type="radio"
+                   name="rating"
+                   value="1"
+                   onClick={this.update('rating')}
+                   className="invis-radio"/>
+                <input type="radio"
+                  name="rating"
+                  value="2"
+                  onClick={this.update('rating')}
+                  className="invis-radio"/>
+                <input type="radio"
+                  name="rating"
+                  value="3"
+                  onClick={this.update('rating')}
+                  className="invis-radio"/>
+                <input type="radio"
+                  name="rating"
+                  value="4"
+                  onClick={this.update('rating')}
+                  className="invis-radio"/>
+                <input type="radio"
+                  name="rating"
+                  value="5"
+                  onClick={this.update('rating')}
+                  className="invis-radio"/>
                </div>
                <label>Select your rating</label>
                <textarea className="body-field"

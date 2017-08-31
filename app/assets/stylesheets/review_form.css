@@ -29,7 +29,7 @@
 
 .review-item-small {
   max-width: 375px;
-  max-height: 200px;
+  max-height: fit-content;
   display: flex;
 }
 
@@ -54,7 +54,7 @@
 }
 
 .stars-interactive {
-  width: 132px;
+  width: 135px;
   height: 24px;
   background: url(https://s3-media2.fl.yelpcdn.com/assets/srv0/yelp_design_web/9b34e39ccbeb/assets/img/stars/stars.png) 0 0;
   background-size: 132px 560px;
@@ -65,6 +65,11 @@
 .body-field {
   min-width: 200px;
   min-height: 100px;
+}
+
+.invis-radio {
+  margin: 0px 15px 0px 0px;
+  opacity: 0.3;
 }
 
 .post-button {
