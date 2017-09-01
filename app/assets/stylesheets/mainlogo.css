@@ -28,10 +28,10 @@
     height: 78px;
     background-image: url(http://res.cloudinary.com/dooqsrgbq/image/upload/v1504222291/newlogo_umq3dl.png);
     background-size: cover;
-    position: relative;
     font-size: 19px;
     color: rgba(0,0,0,0);
     display: block;
+    position: relative;
     left: 38%;
     top: 110px;
 }

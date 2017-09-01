@@ -1,6 +1,6 @@
 .classic_red_nav {
   background: #D32323 url(https://s3-media4.fl.yelpcdn.com/assets/srv0/yelp_styleguide/c146b0884f6a/assets/img/structural/header_stars.png) no-repeat center;
-  width: 100%;
+  width: 1400px;
   height: 64px;
   position: absolute;
   top: 0px;
@@ -99,7 +99,7 @@
 }
 
 .auth-red {
-  width: 93%;
+  width: 1180px;
   display: flex;
   flex-direction: column-reverse;
   z-index: 50;
@@ -112,7 +112,7 @@
 .dropdown-btn {
   width: 38px;
   height: 38px;
-
+  margin-bottom: 33px;
 }
 
 .hidden-dropdown-items {
