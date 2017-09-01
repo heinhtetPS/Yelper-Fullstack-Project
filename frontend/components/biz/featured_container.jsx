@@ -13,7 +13,7 @@ const mapStateToProps = ({ session, biz }) => {
     errors: session.errors,
     currentUser: session.currentUser,
     biz: selectAllbiz(biz)
-  }
+  };
 };
 //the selector up here will turn it into an array
 

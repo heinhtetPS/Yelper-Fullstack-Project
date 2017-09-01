@@ -27,11 +27,12 @@ class Search extends React.Component {
     this.props.updateFilter('categories', this.state.categories );
 
     //redirect or reload
-    if(this.props.location.pathname === "/search") {
-      window.location.reload();
-    } else {
-      this.props.history.push('/search');
-    }
+    // if(this.props.location.pathname === "/search") {
+    //   window.location.reload();
+    // } else {
+    //   this.props.history.push('/search');
+    // }
+    this.props.history.push(`/search?${this.state.categories}`)
  }
 
  render() {

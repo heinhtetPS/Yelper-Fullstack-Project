@@ -10,28 +10,22 @@ class ResultsShow extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchBusinesses(this.props.categories);
-
-    //because these are async, we need to set conditionals for rendering
+      //this used to look at filter in state but I changed it because state doens't refresh right
+      this.props.updateFilter("categories", this.props.location.search.slice(1));
   }
 
 
   render() {
-    let searchterm = "searchterm";
-    if (this.props.categories)
-    searchterm = this.props.categories;
+    let searchterm = this.props.location.search.slice(1);
+    console.log(this.props.categories);
 
     let msgbox = this.props.businesses.length === 0 ? "" : "hidden";
-
-
-
-
 
     return (
       <div className="results-page-container">
         <div className="top-shelf-options">
           <div className="top-shelf-content">
-            <h2>Best searchterm in Brooklyn, NY</h2>
+            <h2>Best {searchterm}(s) in Brooklyn, NY</h2>
 
           </div>
         </div>

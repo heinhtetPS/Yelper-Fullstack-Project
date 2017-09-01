@@ -8,7 +8,6 @@ class Api::BusinessesController < ApplicationController
     @allbusiness = bounds ? Business.in_bounds(bounds) : Business.all
 
     #filtering with other settings, lets try categories first
-
     if params[:categories]
       @allbusiness = @allbusiness.joins(:categories).where("categories.name = ?", params[:categories])
     end
