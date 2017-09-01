@@ -20,9 +20,13 @@ class ResultsShow extends React.Component {
     let searchterm = "searchterm";
     if (this.props.categories)
     searchterm = this.props.categories;
-    let filteredBizz = null;
-    // if (this.props.categories)
-    // filteredBizz =
+
+    let msgbox = this.props.businesses.length === 0 ? "" : "hidden";
+
+
+
+
+
     return (
       <div className="results-page-container">
         <div className="top-shelf-options">
@@ -34,6 +38,7 @@ class ResultsShow extends React.Component {
         <div className="results-content">
             <div className="biz-index-container">
               <ul>
+                <p className={msgbox}>Sorry, your search returned no results.</p>
                 {this.props.businesses.map(
                   business => <BizIndexItem
                   key={business.id}

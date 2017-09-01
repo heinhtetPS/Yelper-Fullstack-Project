@@ -1,6 +1,6 @@
 .results-page-container {
   max-width: 1620px;
-  height: 100%;
+  min-height: 1200px;
   position: relative;
   top: 88px;
 }
@@ -14,6 +14,10 @@
 .top-shelf-content {
   width: 960px;
   margin: 0 auto;
+}
+
+.hidden {
+  display: none;
 }
 
 .results-content {
@@ -38,7 +42,6 @@
 .map-column-container {
   width:300px;
   height: 800px;
-  background-color: turquoise;
 }
 
 .results-map-container {
