@@ -24,12 +24,14 @@
 }
 
 .putlogohere {
-  width: 160px;
-  height: 80px;
-  /*background-image: url('../images/newlogo.png');*/
-  background-image: url(https://s3-media3.fl.yelpcdn.com/assets/srv0/yelp_design_web/b085a608c15f/assets/img/logos_homepage/default.png);
-  background-size: 160px 80px;
-  position: relative;
-   left: 40%;
-   top: 120px;
+  width: 256px;
+    height: 78px;
+    background-image: url(http://res.cloudinary.com/dooqsrgbq/image/upload/v1504222291/newlogo_umq3dl.png);
+    background-size: cover;
+    position: relative;
+    font-size: 19px;
+    color: rgba(0,0,0,0);
+    display: block;
+    left: 38%;
+    top: 110px;
 }

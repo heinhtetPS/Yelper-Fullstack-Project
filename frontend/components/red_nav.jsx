@@ -16,7 +16,7 @@ class RedNav extends React.Component {
    //ternary declaration, either we're on homepage for transparent nav or classic red on all others
    let navclass = this.props.location.pathname === "/" ? "invisible_nav" : "classic_red_nav";
    let bottomnavclass = this.props.location.pathname === "/" ? "hidden-nav" : "bottom-red-nav";
-   let logopos = this.props.location.pathname === "/" ? "midlogo" : "toplogo";
+   let logopos = this.props.location.pathname === "/" ? "putlogohere" : "toplogo";
    let auth_color = this.props.location.pathname === "/" ? "auth-links" : "auth-red";
    let signupcolor = this.props.location.pathname === "/" ? "signupbtn" : "signupRed";
    let logincolor = this.props.location.pathname === "/" ? "loginbtn" : "loginRed";
