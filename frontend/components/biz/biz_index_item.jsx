@@ -16,7 +16,6 @@ const BizIndexItem = ({ biz }) => {
   biz_categories.push(el.name));
   let bizurl = "/biz/" + biz.id
 
-  console.log(biz.reviews);
 
 
   return (

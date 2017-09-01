@@ -20,7 +20,6 @@ class ResultsShow extends React.Component {
     let searchterm = "searchterm";
     if (this.props.categories)
     searchterm = this.props.categories;
-    console.log(this.props);
     let filteredBizz = null;
     // if (this.props.categories)
     // filteredBizz =
