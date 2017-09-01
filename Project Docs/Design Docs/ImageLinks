@@ -82,3 +82,11 @@ https://s3-media3.fl.yelpcdn.com/assets/srv0/yelp_large_assets/f1767b5aca82/asse
 
 red header stars
 https://s3-media4.fl.yelpcdn.com/assets/srv0/yelp_styleguide/c146b0884f6a/assets/img/structural/header_stars.png
+
+
+temp
+
+cloudname: dooqsrgbq
+apikey: 221745267721198
+API Secret: DgCz5D2Fr-MQOYQTW4qqoVHA79E
+Environment variable: CLOUDINARY_URL=cloudinary://221745267721198:DgCz5D2Fr-MQOYQTW4qqoVHA79E@dooqsrgbq

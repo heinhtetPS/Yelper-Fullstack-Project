@@ -1,0 +1,21 @@
+.left-column {
+  max-width: 465px;
+  height: auto;
+}
+
+.right-column {
+  max-width: 412px;
+  height: auto;
+      margin-left: 75px;
+}
+
+.biz-house {
+  width: 412px;
+  height: 248px;
+  background-image: url(https://s3-media3.fl.yelpcdn.com/assets/2/biz/img/cfd2f4c2e0b3/signup/new_biz.png);
+}
+
+.add-inputs {
+  width: -webkit-fill-available;
+  height: 18px;
+}

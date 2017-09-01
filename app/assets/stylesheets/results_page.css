@@ -43,7 +43,7 @@
 
 .results-map-container {
   width: 300px;
-  height: 345px;
+  height: 300px;
   margin: 0;
   border: solid 1px #CCCCCC;
 }
@@ -51,5 +51,12 @@
 .results-map-header {
   width: 300px;
   height: 43px;
+  background-color: #F5F5F5;
+}
+
+.create-question {
+  margin-top: 50px;
+  width: auto;
+  height: 180px;
   background-color: #F5F5F5;
 }

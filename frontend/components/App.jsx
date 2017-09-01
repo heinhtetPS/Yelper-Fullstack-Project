@@ -11,6 +11,7 @@ import BusinessShowContainer from './biz/business_show_container';
 import ResultsContainer from './biz/results_container';
 import SessionFormContainer from './session_form_container';
 import ReviewFormContainer from './review/review_form_container';
+import BusinessNewContainer from './biz/business_new_container';
 
 
 let logopos;
@@ -39,7 +40,7 @@ const App = () => (
     <AuthRoute exact path="/login" component={SessionFormContainer} />
     <AuthRoute exact path="/signup" component={SessionFormContainer} />
     <ProtectedRoute path="/writeareview/:id" component={ReviewFormContainer} />
-
+    <ProtectedRoute path="/addbusiness" component={BusinessNewContainer} />
 
 
     <div className="global-footer">

@@ -8,6 +8,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{Figaro.env.GMAPS_API}" %>
     <%= javascript_include_tag 'application' %>
+    <script src="//widget.cloudinary.com/global/all.js" type="text/javascript"></script>
+
+      <script type="text/javascript">
+        window.cloudinary_options = {
+            cloud_name: '<%= ENV['CLOUD_NAME'] %>',
+            upload_preset: '<%= ENV['UPLOAD_PRESET'] %>'
+          };
+      </script>
   </head>
 
   <body>
@@ -17,13 +25,3 @@
 
 
 <!-- use with ruby style #{} -->
-
-
-
-
-<!-- for later -->
-<!-- <script src="http://widget.cloudinary.com/global/all.js" type="text/javascript"></script> -->
-<!-- window.CLOUDINARY_OPTIONS = {
-        cloud_name: "<%= ENV['CLOUD_NAME'] %>",
-        upload_preset: "<%= ENV['UPLOAD_PRESET'] %>"
-      } -->
