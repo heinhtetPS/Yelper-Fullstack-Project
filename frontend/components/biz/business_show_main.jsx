@@ -149,6 +149,7 @@ class BusinessShowMain extends React.Component {
               review => <ReviewIndexItem
               key={review.id}
               review={review}
+              currentUser_id={this.props.currentUser.id}
               business_id={currentbiz.id}     />)}
           </div>
 

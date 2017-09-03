@@ -1,7 +1,7 @@
 import { merge } from 'lodash';
 //Either import merge with no brackets from lodash/merge OR use no brackets and just from lodash
 
-import { RECEIVE_SINGLE_BUSINESS } from '../actions/business_actions';
+import { RECEIVE_SINGLE_BUSINESS, REMOVE_A_REVIEW } from '../actions/business_actions';
 
 const ReviewsReducer = (state = {}, action) => {
   Object.freeze(state);
@@ -13,7 +13,9 @@ const ReviewsReducer = (state = {}, action) => {
       const currentid = action.payload.id;
       const reviews = action.payload[currentid].reviews;
       return merge({}, state, reviews);
-
+    case REMOVE_A_REVIEW:
+      //delete that review
+      return merge({}, state, reviews);
     default:
         return state;
 

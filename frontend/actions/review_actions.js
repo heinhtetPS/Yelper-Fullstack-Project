@@ -3,6 +3,7 @@ import * as reviewsUtil from '../util/reviews_util';
 export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
 export const RECEIVE_SINGLE_REVIEW = 'RECEIVE_SINGLE_REVIEW';
 export const RECEIVE_REVIEWS = 'RECEIVE_REVIEWS';
+export const REMOVE_A_REVIEW = 'REMOVE_A_REVIEW';
 
 
 export const receiveReviews = reviews => ({
@@ -14,6 +15,11 @@ export const receiveSingleReview = payload => ({
   type: RECEIVE_SINGLE_REVIEW,
   payload,
 });
+
+export const removeAReview = review_id => ({
+    type: REMOVE_A_REVIEW,
+    review_id,
+  });
 
 export const receiveErrors = errors => ({
   type: RECEIVE_ERRORS,
@@ -54,6 +60,15 @@ export const fetchAReview = id => dispatch => {
     dispatch(receiveErrors(err.responseJSON))
   ));
 
+};
+
+export const deleteAReview = (id) => (dispatch) => {
+  return (
+    reviewsUtil.deleteAReview(id).then(
+      (id) => dispatch(removeAReview(id)),
+      (errors) => dispatch(receiveErrors(errors.responseJSON))
+    )
+  );
 };
 
 ///////////////////////////maybe it should be like this instead

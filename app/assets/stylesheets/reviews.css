@@ -1,0 +1,50 @@
+.reviews-main-container {
+  width: 629px;
+  height: 100%;
+  overflow: auto;
+
+}
+
+.user-sidebar {
+  display: flex;
+  max-width: 210px;
+  border: 1px dashed gray;
+  margin: 0 5px 0 5px;
+}
+
+.user-sidebar > img {
+  max-width: 60px;
+  max-height: 60px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.review-item {
+  max-width: 629px;
+  min-height: 100px;
+  overflow: auto;
+  border: 1px solid gray;
+  display: flex;
+}
+
+.review-right-column {
+  max-width: 380px;
+  margin: 0 5px 0 5px;
+}
+
+.body-head {
+  display: flex;
+}
+
+.review-body {
+  font-size: 12px;
+
+}
+
+.hidden-delete {
+  display: none;
+}
+
+.show-delete {
+  height: 20px;
+}

@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { deleteAReview } from '../../actions/review_actions';
 
-const ReviewIndexItem = ({ review, business_id }) => {
+const ReviewIndexItem = ({ review, business_id, currentUser_id }) => {
 
   if(review === null || review === undefined)
   return null;
@@ -37,6 +38,11 @@ const ReviewIndexItem = ({ review, business_id }) => {
       starsrating = 9;
   }
 
+  //delete button for logged users
+  let deletebuttonclass = "hidden-delete"
+  if (thisuser && thisuser.id === currentUser_id)
+  deletebuttonclass = "show-delete";
+
   if (review.id === -1) {
     return (
       <div className="review-item">
@@ -68,6 +74,7 @@ const ReviewIndexItem = ({ review, business_id }) => {
           </div>
           <p className="review-body">{review.body}</p>
         </div>
+        <button className={deletebuttonclass} onClick={deleteAReview(review.id)}>Delete</button>
       </div>
     );
   } else {

@@ -118,5 +118,29 @@
   margin-top: 25px;
   width: 960px;
   height: 354px;
-  background-color: wheat;
+  background-color: #f5f5f5;
+}
+
+.cat-boxes-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 40px 0 40px;
+}
+
+.cat-box {
+  margin: 10px 20px 10px 20px;
+  border-radius: 6px;
+  width: 217px;
+  height: 137px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cat-box:hover {
+  border: 1px solid gray;
 }
