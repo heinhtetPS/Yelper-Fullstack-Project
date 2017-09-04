@@ -41,8 +41,12 @@ class BusinessShowMain extends React.Component {
     "twohalf-stars-big", "threehalf-stars-big", "fourhalf-stars-big"];
     const pricecounter = [];
     const biz_categories = [];
-
+    let loggedUserId = null;
     //if async info has been retrieved....
+    if (this.props.currentUser)
+    loggedUserId = this.props.currentUser.id;
+
+
     if (this.props.biz) {
       currentbiz = this.props.biz;
 
@@ -149,7 +153,7 @@ class BusinessShowMain extends React.Component {
               review => <ReviewIndexItem
               key={review.id}
               review={review}
-              currentUser_id={this.props.currentUser.id}
+              currentUser_id={loggedUserId}
               business_id={currentbiz.id}     />)}
           </div>
 
