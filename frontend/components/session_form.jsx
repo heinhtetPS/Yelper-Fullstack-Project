@@ -88,12 +88,14 @@ class SessionForm extends React.Component {
    if (this.props.location.pathname === "/signup") {
      return(
        <div className="sessionForm_master">
-         {this.renderErrors()}
+
          <div className="left-side-form">
+
            <form onSubmit={this.handleSubmit}>
              <h2 className="Redh2">Sign Up for Yelp</h2> <br />
              <p>Connect with great local businesses</p> <br />
              <p>By signing up, you agree to Yelp’s Terms of Service and Privacy Policy.</p>
+               {this.renderErrors()}
              <input type ="text"
                placeholder="Username"
                value={this.state.username}
@@ -119,16 +121,17 @@ class SessionForm extends React.Component {
          </div>
        </div>
      );
-   } else {
+   } else if (this.props.location.pathname === "/login"){
      //this is the login form
      return (
        <div className="sessionForm_master">
-         {this.renderErrors()}
+
          <div className="left-side-form">
            <form onSubmit={this.handleSubmit}>
              <h2 className="Redh2">Log In to Yelp</h2> <br />
              <p>New to Yelp?</p> <Link to="/signup">Sign up!</Link> <br />
              <p>By signing up, you agree to Yelp’s Terms of Service and Privacy Policy.</p>
+                    {this.renderErrors()}
              <input type ="text"
                placeholder="Username"
                value={this.state.username}
@@ -150,15 +153,22 @@ class SessionForm extends React.Component {
          </div>
        </div>
      );
+   } else {
+     return null;
    }
  }
 
  render() {
-   return (
-     <div>
-       {this.whichform()}
-     </div>
-   );
+   if (this.props.location.pathname === "/login" ||
+        this.props.location.pathname === "/signup") {
+          return (
+            <div>
+              {this.whichform()}
+            </div>
+          );
+        } else {
+          return null;
+        }
  }
 
   //...
