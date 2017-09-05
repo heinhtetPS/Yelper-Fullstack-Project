@@ -7,6 +7,8 @@
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-around;
+  width: auto;
+  height: auto;
 }
 
 .left-side-form {
@@ -15,7 +17,8 @@
 .right-side-house {
   max-width: 382px;
   display: flex;
-  /*border: 2px solid;*/
+  flex-direction: column;
+  justify-content: center;
   padding-left: 40px;
 }
 
@@ -23,11 +26,38 @@
   font-size: 11px;
 }
 
+.session-inputs {
+  width: 100%;
+  height: 22px;
+  font-size: 14px;
+  border-radius: 3px;
+  border: 1px solid #999;
+  margin: 7px 0px 0px 0px;
+}
+
 .Redh2 {
   color: #D32323;
   font-size: 22px;
   font-weight: bold;
   width: -webkit-fill-available;
+}
+
+.session-submit {
+  width: 100%;
+  background-color: #D32323;
+  color: white;
+  padding: 8px 19px 9px;
+  border-radius: 3px;
+  vertical-align: middle;
+    margin-top: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid gray;
+}
+
+.session-submit:hover {
+  background-color: red;
 }
 
 .errorbox {

@@ -116,10 +116,10 @@
 }
 
 .dropdown-btn:hover {
-  width: 38px;
-  height: 38px;
+  width: 37px;
+  height: 37px;
   margin-bottom: 33px;
-  border: solid black 1px
+  border: solid black 1px;
 }
 
 .hidden-dropdown-items {
