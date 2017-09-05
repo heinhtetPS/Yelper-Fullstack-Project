@@ -17,7 +17,6 @@ class ResultsShow extends React.Component {
 
   render() {
     let searchterm = this.props.location.search.slice(1);
-    console.log(this.props.categories);
 
     let msgbox = this.props.businesses.length === 0 ? "" : "hidden";
 

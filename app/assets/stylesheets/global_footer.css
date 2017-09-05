@@ -1,5 +1,5 @@
 .global-container {
-  
+
 }
 
 /*this one needs to get pushed down instead of
@@ -25,7 +25,6 @@ covered by the above*/
 }
 
 .footer-column {
-  border: 1px solid black;
   width: 180px;
   height: 198px;
   padding-left: 12px;

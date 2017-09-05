@@ -115,19 +115,28 @@
   margin-bottom: 33px;
 }
 
+.dropdown-btn:hover {
+  width: 38px;
+  height: 38px;
+  margin-bottom: 33px;
+  border: solid black 1px
+}
+
 .hidden-dropdown-items {
   display: none;
 }
 
 .unhidden-dropdown-items {
-  display: block;
+    display: flex;
+    flex-direction: column;
+    border-radius: 3px;
     position: absolute;
-    right: 20px;
-    top: 50px;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    right: 0px;
+    top: 39px;
+    background-color: #f5f5f5;
     z-index: 1;
+    padding: 10px 10px 10px 10px;
+    border: outset 2px darkgray;
 }
 
 .bottom-red-nav {
