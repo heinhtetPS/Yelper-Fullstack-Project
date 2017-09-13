@@ -6,9 +6,6 @@ class Api::ReviewsController < ApplicationController
 
   def create
     @review = Review.new(review_params)
-
-    #maybe we need to set user_id here
-    #maybe we can include that in the params or current_user?
     @review.author_id = current_user.id
     if @review.save
       render :show

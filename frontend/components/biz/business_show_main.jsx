@@ -4,6 +4,7 @@ import BizIndexItem from './biz_index_item';
 import ReviewIndexItem from '../review/review_index_item';
 import Bizmap from '../map';
 import { ProtectedRoute } from '../../util/route_util';
+import { deleteAReview } from '../../actions/review_actions';
 
 class BusinessShowMain extends React.Component {
 
@@ -17,6 +18,7 @@ class BusinessShowMain extends React.Component {
     this.props.fetchABusiness(
       this.props.match.params.id
     );
+    window.scrollTo(0, 0);
   }
 
   componentWillReceiveProps(newProps) {
@@ -155,7 +157,8 @@ class BusinessShowMain extends React.Component {
               review={review}
               currentUser_id={loggedUserId}
               business_id={currentbiz.id}
-                   />)}
+              fetchBusiness={this.props.fetchABusiness}
+              deleteAReview={deleteAReview(review.id)}     />)}
           </div>
 
           <div className="right-info-column">

@@ -16,9 +16,6 @@ class BusinessNewForm extends React.Component {
 
   }
 
-  componentDidMount() {
-
-  }
 
   //This thing redirects to login if not logged in
   componentWillReceiveProps(nextProps) {

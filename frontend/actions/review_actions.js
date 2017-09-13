@@ -66,7 +66,7 @@ export const deleteAReview = (id) => (dispatch) => {
   return (
     reviewsUtil.deleteAReview(id).then(
       (id) => dispatch(removeAReview(id)),
-      (errors) => dispatch(receiveErrors(errors.responseJSON))
+      (err) => dispatch(receiveErrors(err.responseJSON))
     )
   );
 };

@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { deleteAReview } from '../../actions/review_actions';
+import { fetchSingleBusiness } from '../../util/business_api_util';
+import { deleteAReview } from '../../util/reviews_util';
 
-const ReviewIndexItem = ({ review, business_id, currentUser_id }) => {
+const ReviewIndexItem = ({ review, business_id, currentUser_id, fetchABusiness, deleteAReview }) => {
 
   if(review === null || review === undefined)
   return null;
@@ -19,7 +20,10 @@ const ReviewIndexItem = ({ review, business_id, currentUser_id }) => {
   //its right here but I can't access it
   let writelink = `/writeareview/${business_id}`;
 
-  let delethisreview = (review) => { dispatch(deleteAReview(review)) };
+  function deleteAndRefresh() {
+    deleteAReview(review.id);
+    fetchSingleBusiness(business_id);
+  }
 
   //finally worked after hours of debugging:
   //first if is to render sample case: no problem if it renders before props
@@ -78,12 +82,14 @@ const ReviewIndexItem = ({ review, business_id, currentUser_id }) => {
           </div>
           <p className="review-body">{review.body}</p>
         </div>
-        <button className={deletebuttonclass} onClick={deleteAReview(review.id)}>Delete</button>
+        <button className={deletebuttonclass} onClick={deleteAndRefresh}>Delete</button>
       </div>
     );
   } else {
     return null;
   }
 }
+
+
 
 export default ReviewIndexItem;
