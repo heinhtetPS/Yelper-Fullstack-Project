@@ -9,7 +9,16 @@
   width: 740px;
   height: 40px;
   position: relative;
-  top: -90px;
+  top: -117px;
+  left: 295px;
+  z-index: 60;
+}
+
+.search-container-fix {
+  width: 740px;
+  height: 40px;
+  position: relative;
+  top: -87px;
   left: 295px;
   z-index: 60;
 }

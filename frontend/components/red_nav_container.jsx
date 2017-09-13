@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 
 import RedNav from './red_nav';
-import { logoutUser } from '../actions/session_actions';
+import { loginUser, logoutUser } from '../actions/session_actions';
 
 const mapStateToProps = ({ session }) => {
   return {
@@ -17,6 +17,7 @@ const mapStateToProps = ({ session }) => {
 const mapDispatchToProps = (dispatch, { location }) => {
   // see what you'll need here
   return {
+    loginUser: user => dispatch(loginUser({username: 'demo_user', password: 'password'})),
     logoutUser: user => dispatch(logoutUser(user)),
   };
 };

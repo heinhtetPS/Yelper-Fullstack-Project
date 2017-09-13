@@ -73,6 +73,43 @@
     border-bottom: 2px solid white;
   }
 
+.demobtn {
+  color: white;
+  width: 81px;
+  height: 17px;
+  padding: 9px 12px 8px;
+  z-index: 50;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+  .demobtn:hover {
+    border-bottom: 2px solid white;
+  }
+
+  .demoRed {
+    color: white;
+    width: 104px;
+    height: 27px;
+    z-index: 50;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -27px;
+    right: 845px;
+    cursor: pointer;
+  }
+    .demoRed:hover {
+      background-color: #A71C1C;
+    }
+
 .loginRed {
   color: white;
   width: 104px;
@@ -90,7 +127,7 @@
   }
 
 .auth-links {
-  width: 79%;
+  width: 85%;
   display: flex;
   z-index: 50;
   justify-content: flex-end;

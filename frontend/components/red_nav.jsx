@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, Route } from 'react-router-dom';
 import SearchContainer from './biz/search_container';
 
+
 class RedNav extends React.Component {
 
   constructor(props) {
@@ -12,6 +13,11 @@ class RedNav extends React.Component {
     $('#hider').toggleClass('hidden-dropdown-items unhidden-dropdown-items');
   }
 
+  // loginDemo() {
+  //   debugger
+  //   this.props.loginUser({username: 'demo_user', password: 'password'});
+  // }
+
  render() {
    //ternary declaration, either we're on homepage for transparent nav or classic red on all others
    let navclass = this.props.location.pathname === "/" ? "invisible_nav" : "classic_red_nav";
@@ -20,6 +26,7 @@ class RedNav extends React.Component {
    let auth_color = this.props.location.pathname === "/" ? "auth-links" : "auth-red";
    let signupcolor = this.props.location.pathname === "/" ? "signupbtn" : "signupRed";
    let logincolor = this.props.location.pathname === "/" ? "loginbtn" : "loginRed";
+   let democolor = this.props.location.pathname === "/" ? "demobtn" : "demoRed";
    let authlinks;
 
    //check for login & path to show minimalist white buttons for login and signup
@@ -27,6 +34,7 @@ class RedNav extends React.Component {
      this.props.location.pathname != "/login" &&
      this.props.location.pathname != "/signup") {
      authlinks = (<div className={auth_color}>
+       <a className={democolor} onClick={this.props.loginUser}>Demo Login</a>
        <Link to="/login" className={logincolor}>Log In</Link>
        <Link to="/signup" className={signupcolor}>Sign Up</Link>
      </div>);

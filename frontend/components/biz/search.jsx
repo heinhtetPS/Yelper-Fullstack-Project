@@ -52,7 +52,11 @@ class Search extends React.Component {
      searchlocation = "search-location";
      searchsubmit = "search-submit-home";
    } else {
-     searchcontainer = "search-container-top";
+     if (this.props.state.session.currentUser) {
+       searchcontainer = "search-container-fix";
+     } else {
+       searchcontainer = "search-container-top";
+     }
      searchheader = "search-header-top";
      searchkeyword = "search-keyword-top";
      searchlocation = "search-location-top";
