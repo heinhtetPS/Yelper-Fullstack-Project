@@ -6,8 +6,6 @@ const BizIndexItem = ({ biz }) => {
   for (let i = 0; i < biz.price; i++) {
       pricecounter.push('$');
   }
-  //need to get stars info
-  //need to get location (maybe slice after ,s)
   //need to make an onClick that returns you to top
 
   let num_reviews = biz.reviews.length;
@@ -15,8 +13,6 @@ const BizIndexItem = ({ biz }) => {
   biz.categories.forEach(el =>
   biz_categories.push(el.name));
   let bizurl = "/biz/" + biz.id
-
-
 
   return (
     <div className="biz_box">

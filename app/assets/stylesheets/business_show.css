@@ -50,6 +50,10 @@
   margin-right: 10px;
 }
 
+.categories-links {
+  cursor: pointer;
+}
+
 .biz-header-right {
   width: 440px;
   height: 36px;
@@ -66,12 +70,14 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .link-styling {
   text-decoration: none;
   font-weight: bold;
   color: white;
+  cursor: pointer;
 }
 
 .svg-star {

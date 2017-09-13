@@ -12,10 +12,14 @@ const ReviewIndexItem = ({ review, business_id, currentUser_id }) => {
   if (review.user)
   thisuser = review.user;
 
+  //try to pass dispatch function from parent instead of jury rigging it in here
+
   // let writelink = "/login";
   // if(business_id)
   //its right here but I can't access it
   let writelink = `/writeareview/${business_id}`;
+
+  let delethisreview = (review) => { dispatch(deleteAReview(review)) };
 
   //finally worked after hours of debugging:
   //first if is to render sample case: no problem if it renders before props

@@ -154,7 +154,8 @@ class BusinessShowMain extends React.Component {
               key={review.id}
               review={review}
               currentUser_id={loggedUserId}
-              business_id={currentbiz.id}     />)}
+              business_id={currentbiz.id}
+                   />)}
           </div>
 
           <div className="right-info-column">

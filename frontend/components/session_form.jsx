@@ -40,13 +40,19 @@ class SessionForm extends React.Component {
   }
 
   renderErrors() {
-    return (
-      <ul id="hider"className="errorbox-hidden">
-        {this.props.errors.map((error, idx) => (
-          <li key={`error-${idx}`}>{error}</li>
-        ))}
-      </ul>
-    );
+
+    if (this.props.length > 0) {
+      return (
+        <ul id="errorhider"className="errorbox-hidden">
+          {this.props.errors.map((error, idx) => (
+            <li key={`error-${idx}`}>{error}</li>
+          ))}
+        </ul>
+      );
+
+    } else {
+      return null;
+    }
   }
 
   clearform() {
@@ -67,7 +73,7 @@ class SessionForm extends React.Component {
 
 
   toggleerrors() {
-    $('#hider').toggleClass('errorbox-hidden errorbox');
+    $('#errorhider').toggleClass('errorbox-hidden errorbox');
   }
 
   handleSubmit(e) {

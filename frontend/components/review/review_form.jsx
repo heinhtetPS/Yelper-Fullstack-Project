@@ -40,7 +40,7 @@ class ReviewForm extends React.Component {
 
   // renderErrors() {
   //   return (
-  //     <ul id="hider"className="errorbox-hidden">
+  //     <ul id="errorhider"className="errorbox-hidden">
   //       {this.props.errors.map((error, idx) => (
   //         <li key={`error-${idx}`}>{error}</li>
   //       ))}
@@ -64,7 +64,7 @@ class ReviewForm extends React.Component {
   // }
 
   toggleerrors() {
-    $('#hider').toggleClass('errorbox-hidden errorbox');
+    $('#errorhider').toggleClass('errorbox-hidden errorbox');
   }
 
   handleSubmit(e) {
