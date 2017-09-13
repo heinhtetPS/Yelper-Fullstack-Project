@@ -187,9 +187,9 @@
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
     border-bottom: 8px solid white;
-    position: relative;
-    top: -20px;
-    left: 52px;
+    position: absolute;
+    bottom: 102%;
+    left: 50%;
 }
 
 .unhidden-dropdown-items {

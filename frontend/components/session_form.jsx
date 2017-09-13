@@ -30,6 +30,10 @@ class SessionForm extends React.Component {
     if (nextProps.loggedIn) {
       this.props.history.push('/');
     }
+
+    if (nextProps.errors.length > 0) {
+      this.toggleerrors()
+    }
   }
 
   //when people type, change the state text
@@ -40,8 +44,6 @@ class SessionForm extends React.Component {
   }
 
   renderErrors() {
-
-    if (this.props.length > 0) {
       return (
         <ul id="errorhider"className="errorbox-hidden">
           {this.props.errors.map((error, idx) => (
@@ -49,10 +51,6 @@ class SessionForm extends React.Component {
           ))}
         </ul>
       );
-
-    } else {
-      return null;
-    }
   }
 
   clearform() {
@@ -73,14 +71,15 @@ class SessionForm extends React.Component {
 
 
   toggleerrors() {
-    $('#errorhider').toggleClass('errorbox-hidden errorbox');
+      $('#errorhider').toggleClass('errorbox-hidden errorbox');
   }
 
   handleSubmit(e) {
    e.preventDefault();
    const user = Object.assign({}, this.state);
    this.props.processForm(user);
-   if (this.props.errors) {
+  //  debugger
+   if (this.props.errors.length > 0) {
      this.toggleerrors();
    }
    this.clearform();
@@ -92,6 +91,87 @@ class SessionForm extends React.Component {
  }
 
  whichform() {
+  //  //1st one returns Signup form, else login form
+  //  if (this.props.location.pathname === "/signup") {
+  //    return(
+  //      <div className="sessionForm_master">
+   //
+  //        <div className="left-side-form">
+   //
+  //          <form onSubmit={this.handleSubmit}>
+  //            <h2 className="Redh2">Sign Up for Yelper</h2> <br />
+  //            <p>Connect with great local businesses</p> <br />
+  //            <p>By signing up, you agree to Yelper’s Terms of Service and Privacy Policy.</p>
+  //              {this.renderErrors()}
+  //            <input type ="text"
+  //              className="session-inputs"
+  //              placeholder="Username"
+  //              value={this.state.username}
+  //              onChange={this.update('username')}
+  //              /> <br />
+  //            <input type ="text"
+  //              className="session-inputs"
+  //              placeholder="Email"
+  //              value={this.state.email}
+  //              onChange={this.update('email')}
+  //              /> <br />
+  //            <input type ="password"
+  //              className="session-inputs"
+  //              placeholder="Password"
+  //              value={this.state.password}
+  //              onChange={this.update('password')}
+  //              /> <br />
+  //            <input type="submit" className="session-submit"value="Sign up" /> <br />
+  //            <p className="tinytext">Already on Yelper?</p>
+  //            <Link to="/login" className="tinytext">Log In</Link>
+  //          </form>
+  //        </div>
+  //        <div className="right-side-house">
+  //          <img src="https://s3-media4.fl.yelpcdn.com/assets/2/www/img/1e82406ff345/signup/signup_illustration.png"></img>
+  //        </div>
+  //      </div>
+  //    );
+  //  } else if (this.props.location.pathname === "/login"){
+  //    //this is the login form
+  //    return (
+  //      <div className="sessionForm_master">
+   //
+  //        <div className="left-side-form">
+  //          <form onSubmit={this.handleSubmit}>
+  //            <h2 className="Redh2">Log In to Yelper</h2> <br />
+  //            <p>New to Yelper?</p> <Link to="/signup">Sign up!</Link> <br />
+  //            <p>By signing up, you agree to Yelper’s Terms of Service and Privacy Policy.</p>
+  //                   {this.renderErrors()}
+  //            <input type ="text"
+  //              className="session-inputs"
+  //              placeholder="Username"
+  //              value={this.state.username}
+  //              onChange={this.update('username')}
+  //              /> <br />
+  //            <input type ="password"
+  //              className="session-inputs"
+  //              placeholder="Password"
+  //              value={this.state.password}
+  //              onChange={this.update('password')}
+  //              /> <br />
+  //            <input type="submit" className="session-submit"value="Log In" /> <br />
+  //              <button onClick={this.submitDemo}>Demo Login</button>
+   //
+  //            <p className="tinytext">New to Yelper?</p>
+  //            <Link to="/signup" className="tinytext">Sign up</Link>
+  //          </form>
+  //        </div>
+  //        <div className="right-side-house">
+  //          <img src="https://s3-media4.fl.yelpcdn.com/assets/2/www/img/1e82406ff345/signup/signup_illustration.png"></img>
+  //        </div>
+  //      </div>
+  //    );
+  //  } else {
+  //    return null;
+  //  }
+ }
+
+ render() {
    //1st one returns Signup form, else login form
    if (this.props.location.pathname === "/signup") {
      return(
@@ -101,7 +181,7 @@ class SessionForm extends React.Component {
 
            <form onSubmit={this.handleSubmit}>
              <h2 className="Redh2">Sign Up for Yelper</h2> <br />
-             <p>Connect with great local businesses</p> <br />
+             <p>Connect with great local businesses</p>
              <p>By signing up, you agree to Yelper’s Terms of Service and Privacy Policy.</p>
                {this.renderErrors()}
              <input type ="text"
@@ -170,19 +250,6 @@ class SessionForm extends React.Component {
    } else {
      return null;
    }
- }
-
- render() {
-   if (this.props.location.pathname === "/login" ||
-        this.props.location.pathname === "/signup") {
-          return (
-            <div>
-              {this.whichform()}
-            </div>
-          );
-        } else {
-          return null;
-        }
  }
 
   //...
