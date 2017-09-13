@@ -109,6 +109,10 @@
     right: 32px;
 }
 
+.full-button {
+  display: flex;
+}
+
 .dropdown-btn {
   width: 38px;
   height: 38px;

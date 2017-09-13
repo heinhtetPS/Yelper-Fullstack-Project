@@ -33,14 +33,16 @@ class RedNav extends React.Component {
    } else if (this.props.loggedIn) {
         //here's the dropdown button and menu
      authlinks = (<div className={auth_color}>
-       <img className="dropdown-btn"
-          onClick={this.togglehidden}
-         src="https://s3-media3.fl.yelpcdn.com/assets/srv0/yelp_styleguide/bf5ff8a79310/assets/img/default_avatars/user_medium_square.png"></img>
-       <div className="button-right-arrow">
-         <svg className="svg-triangle">
-           <path d="M7 9L3.5 5h7L7 9z"></path>
-         </svg>
+       <div className="full-button">
+         <img className="dropdown-btn"
+           onClick={this.togglehidden}
+           src="https://s3-media3.fl.yelpcdn.com/assets/srv0/yelp_styleguide/bf5ff8a79310/assets/img/default_avatars/user_medium_square.png"></img>
+         <div className="button-right-arrow">
+           <svg className="svg-triangle">
+             <path d="M7 9L3.5 5h7L7 9z"></path>
+           </svg>
          </div>
+       </div>
        <div id='hider'className="hidden-dropdown-items">
          <div className="arrow-up"></div>
          <p>{this.props.currentUser.username}</p>
