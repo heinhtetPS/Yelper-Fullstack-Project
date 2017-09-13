@@ -32,6 +32,7 @@
   font-size: 14px;
   border-radius: 3px;
   border: 1px solid #999;
+  padding: 5px 9px;
   margin: 7px 0px 0px 0px;
 }
 
@@ -45,6 +46,7 @@
 .session-submit {
   width: 100%;
   background-color: #D32323;
+  font-size: 14px;
   color: white;
   padding: 8px 19px 9px;
   border-radius: 3px;

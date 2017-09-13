@@ -94,9 +94,9 @@ class SessionForm extends React.Component {
          <div className="left-side-form">
 
            <form onSubmit={this.handleSubmit}>
-             <h2 className="Redh2">Sign Up for Yelp</h2> <br />
+             <h2 className="Redh2">Sign Up for Yelper</h2> <br />
              <p>Connect with great local businesses</p> <br />
-             <p>By signing up, you agree to Yelp’s Terms of Service and Privacy Policy.</p>
+             <p>By signing up, you agree to Yelper’s Terms of Service and Privacy Policy.</p>
                {this.renderErrors()}
              <input type ="text"
                className="session-inputs"
@@ -117,7 +117,7 @@ class SessionForm extends React.Component {
                onChange={this.update('password')}
                /> <br />
              <input type="submit" className="session-submit"value="Sign up" /> <br />
-             <p className="tinytext">Already on Yelp?</p>
+             <p className="tinytext">Already on Yelper?</p>
              <Link to="/login" className="tinytext">Log In</Link>
            </form>
          </div>
@@ -133,9 +133,9 @@ class SessionForm extends React.Component {
 
          <div className="left-side-form">
            <form onSubmit={this.handleSubmit}>
-             <h2 className="Redh2">Log In to Yelp</h2> <br />
-             <p>New to Yelp?</p> <Link to="/signup">Sign up!</Link> <br />
-             <p>By signing up, you agree to Yelp’s Terms of Service and Privacy Policy.</p>
+             <h2 className="Redh2">Log In to Yelper</h2> <br />
+             <p>New to Yelper?</p> <Link to="/signup">Sign up!</Link> <br />
+             <p>By signing up, you agree to Yelper’s Terms of Service and Privacy Policy.</p>
                     {this.renderErrors()}
              <input type ="text"
                className="session-inputs"
@@ -145,14 +145,14 @@ class SessionForm extends React.Component {
                /> <br />
              <input type ="password"
                className="session-inputs"
-               placeholder="password"
+               placeholder="Password"
                value={this.state.password}
                onChange={this.update('password')}
                /> <br />
-             <input type="submit" className="session-submit"value="Log In!" /> <br />
+             <input type="submit" className="session-submit"value="Log In" /> <br />
                <button onClick={this.submitDemo}>Demo Login</button>
 
-             <p className="tinytext">New to Yelp?</p>
+             <p className="tinytext">New to Yelper?</p>
              <Link to="/signup" className="tinytext">Sign up</Link>
            </form>
          </div>
