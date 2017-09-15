@@ -13,6 +13,19 @@ class Api::BusinessesController < ApplicationController
     end
   end
 
+  def featured
+    #can improve this by making sure that no duplicates exist
+    @featuredBiz = []
+
+    3.times do
+    random = rand(1..Business.count)
+    @featuredBiz.concat(Business.where(id: random).take(1))
+    end
+
+    render :index
+
+  end
+
   #Remember: category is not technically part of business's own db
   #but it is required to save! or create!
   def create

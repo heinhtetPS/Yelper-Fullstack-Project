@@ -24,8 +24,6 @@ class SessionForm extends React.Component {
      this.submitDemo = this.submitDemo.bind(this);
   }
 
-  //This thing redirects to root immediately ASK TA
-  //still have a problem that it doesn't show user name even after redirect
   componentWillReceiveProps(nextProps) {
     if (nextProps.loggedIn) {
       this.props.history.push('/');
@@ -53,6 +51,7 @@ class SessionForm extends React.Component {
       );
   }
 
+  //when should I clear errors?
   clearform() {
     if (this.props.location.pathname === "/signup") {
       this.state = {

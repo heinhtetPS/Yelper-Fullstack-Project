@@ -46,10 +46,16 @@ const App = () => (
     <div className="global-footer">
         <div className="footer-content">
             <div className="footer-column">
-
+              <h1>About</h1>
+                <ul>
+                  <li><a href="#">About me (Portfolio)</a></li>
+                  <li><a href="#">Visit my Linked In</a></li>
+                  <li><a href="#">Visit my Github</a></li>
+                  <li><a href="#">Visit my Portfolio</a></li>
+                </ul>
             </div>
             <div className="footer-column">
-
+                <h1>Discover</h1>
             </div>
             <div className="footer-column">
 
