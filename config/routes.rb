@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     resources :users, only: [:create]
     #login/logout
     resource :session, only: [:create, :destroy]
-    #business (restaurants)
+    #business 
     resources :businesses, only: [:index, :show, :create, :update, :featured], :path => "biz"
     #Reviews
     resources :reviews, only: [:create, :show, :update, :destroy]
