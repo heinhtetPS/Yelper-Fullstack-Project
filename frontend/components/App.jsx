@@ -49,7 +49,7 @@ const App = () => (
               <h1>About</h1>
                 <ul>
                   <li><a href="#">About me (Portfolio)</a></li>
-                  <li><a href="#">Visit my Linked In</a></li>
+                  <li><a href="#">Visit my LinkedIn</a></li>
                   <li><a href="#">Visit my Github</a></li>
                   <li><a href="#">See my Resume</a></li>
                 </ul>
@@ -57,7 +57,7 @@ const App = () => (
             <div className="footer-column">
                 <h1>Discover</h1>
                 <ul>
-                  <li><a href="#">Restuarants</a></li>
+                  <li><a href="#">Restaurants</a></li>
                   <li><a href="#">Nightlife</a></li>
                   <li><a href="#">Shopping</a></li>
 
