@@ -32,7 +32,7 @@ class Search extends React.Component {
     // } else {
     //   this.props.history.push('/search');
     // }
-    this.props.history.push(`/search?${this.state.categories}`)
+    this.props.history.push(`/search?${this.state.categories}`);
  }
 
  render() {

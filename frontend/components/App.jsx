@@ -48,18 +48,18 @@ const App = () => (
             <div className="footer-column">
               <h1>About</h1>
                 <ul>
-                  <li><a href="#">About me (Portfolio)</a></li>
-                  <li><a href="#">Visit my LinkedIn</a></li>
-                  <li><a href="#">Visit my Github</a></li>
-                  <li><a href="#">See my Resume</a></li>
+                  <li><a href="http://heinhtetps.info/">About me (Portfolio)</a></li>
+                  <li><a href="https://www.linkedin.com/in/heinhtetps/">Visit my LinkedIn</a></li>
+                  <li><a href="https://github.com/heinhtetPS">Visit my Github</a></li>
+                  <li><a href="https://docs.google.com/document/d/1j4HoSYk9OcmpYWhjg-tFaYapDt87OjPT3Lgx_ldRv0A/edit?usp=sharing">See my Resume</a></li>
                 </ul>
             </div>
             <div className="footer-column">
                 <h1>Discover</h1>
                 <ul>
-                  <li><a href="#">Restaurants</a></li>
-                  <li><a href="#">Nightlife</a></li>
-                  <li><a href="#">Shopping</a></li>
+                  <li><a href="/search?Restaurant">Restaurants</a></li>
+                  <li><a href="/search?Nightlife">Nightlife</a></li>
+                  <li><a href="/search?Shopping">Shopping</a></li>
 
                 </ul>
             </div>
