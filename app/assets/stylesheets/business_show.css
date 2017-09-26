@@ -111,8 +111,9 @@
 
 .address-info-show {
   width: 300px;
-  height: 152px;
+  height: 137px;
   background-color: white;
+  padding: 10px
 
 }
 
@@ -141,6 +142,7 @@
   width: 300px;
   height: 180px;
   background-color: gainsboro;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -157,4 +159,5 @@
   width: 300px;
   height: auto;
   background-color: wheat;
+  padding: 10px;
 }
