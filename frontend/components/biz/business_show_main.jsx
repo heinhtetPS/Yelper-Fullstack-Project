@@ -150,7 +150,7 @@ class BusinessShowMain extends React.Component {
         <div className="biz-bottom-content">
           <div className="reviews-main-container">
             <h1 className="Redh2">Recommended reviews for {currentbiz.name}</h1>
-            <ReviewIndexItem key={sample.id} review={sample} />
+            <ReviewIndexItem key={sample.id} review={sample} business_id={currentbiz.id} />
             {currentbiz.reviews.map(
               review => <ReviewIndexItem
               key={review.id}

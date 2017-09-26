@@ -46,6 +46,9 @@ const App = () => (
     <div className="global-footer">
         <div className="footer-content">
             <div className="footer-column">
+
+            </div>
+            <div className="footer-column">
               <h1>About</h1>
                 <ul>
                   <li><a href="http://heinhtetps.info/">About me (Portfolio)</a></li>
@@ -55,16 +58,13 @@ const App = () => (
                 </ul>
             </div>
             <div className="footer-column">
-                <h1>Discover</h1>
-                <ul>
-                  <li><a href="/search?Restaurant">Restaurants</a></li>
-                  <li><a href="/search?Nightlife">Nightlife</a></li>
-                  <li><a href="/search?Shopping">Shopping</a></li>
+              <h1>Discover</h1>
+              <ul>
+                <li><a href="/search?Restaurant">Restaurants</a></li>
+                <li><a href="/search?Nightlife">Nightlife</a></li>
+                <li><a href="/search?Shopping">Shopping</a></li>
 
-                </ul>
-            </div>
-            <div className="footer-column">
-
+              </ul>
             </div>
             <div className="footer-column">
 
