@@ -100,8 +100,9 @@
 /*seperator*/
 
 .zero-stars-small {
-  width: 132px;
+  width: 110px;
   height: 18px;
+  margin-left: 10px;
   background: url(https://s3-media2.fl.yelpcdn.com/assets/srv0/yelp_design_web/9b34e39ccbeb/assets/img/stars/stars.png) 0 320px;
   background-size: 132px 560px;
   display: inline-block;
@@ -109,8 +110,9 @@
 }
 
 .one-stars-small {
-  width: 132px;
+  width: 110px;
   height: 18px;
+  margin-left: 10px;
   background: url(https://s3-media2.fl.yelpcdn.com/assets/srv0/yelp_design_web/9b34e39ccbeb/assets/img/stars/stars.png) 0 302px;
   background-size: 132px 560px;
   display: inline-block;
@@ -118,8 +120,9 @@
 }
 
 .onehalf-stars-small {
-  width: 132px;
+  width: 110px;
   height: 18px;
+  margin-left: 10px;
   background: url(https://s3-media2.fl.yelpcdn.com/assets/srv0/yelp_design_web/9b34e39ccbeb/assets/img/stars/stars.png) 0 284px;
   background-size: 132px 560px;
   display: inline-block;
@@ -127,8 +130,9 @@
 }
 
 .two-stars-small {
-  width: 132px;
+  width: 110px;
   height: 18px;
+  margin-left: 10px;
   background: url(https://s3-media2.fl.yelpcdn.com/assets/srv0/yelp_design_web/9b34e39ccbeb/assets/img/stars/stars.png) 0 266px;
   background-size: 132px 560px;
   display: inline-block;
@@ -136,8 +140,9 @@
 }
 
 .twohalf-stars-small {
-  width: 132px;
+  width: 110px;
   height: 18px;
+  margin-left: 10px;
   background: url(https://s3-media2.fl.yelpcdn.com/assets/srv0/yelp_design_web/9b34e39ccbeb/assets/img/stars/stars.png) 0 248px;
   background-size: 132px 560px;
   display: inline-block;
@@ -145,8 +150,9 @@
 }
 
 .three-stars-small {
-  width: 132px;
+  width: 110px;
   height: 18px;
+  margin-left: 10px;
   background: url(https://s3-media2.fl.yelpcdn.com/assets/srv0/yelp_design_web/9b34e39ccbeb/assets/img/stars/stars.png) 0 230px;
   background-size: 132px 560px;
   display: inline-block;
@@ -154,8 +160,9 @@
 }
 
 .threehalf-stars-small {
-  width: 132px;
+  width: 110px;
   height: 18px;
+  margin-left: 10px;
   background: url(https://s3-media2.fl.yelpcdn.com/assets/srv0/yelp_design_web/9b34e39ccbeb/assets/img/stars/stars.png) 0 212px;
   background-size: 132px 560px;
   display: inline-block;
@@ -163,8 +170,9 @@
 }
 
 .four-stars-small {
-  width: 132px;
+  width: 110px;
   height: 18px;
+  margin-left: 10px;
   background: url(https://s3-media2.fl.yelpcdn.com/assets/srv0/yelp_design_web/9b34e39ccbeb/assets/img/stars/stars.png) 0 194px;
   background-size: 132px 560px;
   display: inline-block;
@@ -172,8 +180,9 @@
 }
 
 .fourhalf-stars-small {
-  width: 132px;
+  width: 110px;
   height: 18px;
+  margin-left: 10px;
   background: url(https://s3-media2.fl.yelpcdn.com/assets/srv0/yelp_design_web/9b34e39ccbeb/assets/img/stars/stars.png) 0 176px;
   background-size: 132px 560px;
   display: inline-block;
@@ -181,8 +190,9 @@
 }
 
 .five-stars-small {
-  width: 132px;
+  width: 110px;
   height: 18px;
+  margin-left: 10px;
   background: url(https://s3-media2.fl.yelpcdn.com/assets/srv0/yelp_design_web/9b34e39ccbeb/assets/img/stars/stars.png) 0 158px;
   background-size: 132px 560px;
   display: inline-block;

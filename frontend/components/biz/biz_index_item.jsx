@@ -8,11 +8,31 @@ const BizIndexItem = ({ biz }) => {
   }
   //need to make an onClick that returns you to top
 
-  let num_reviews = biz.reviews.length;
+
   const biz_categories = [];
   biz.categories.forEach(el =>
   biz_categories.push(el.name));
-  let bizurl = "/biz/" + biz.id
+  let bizurl = "/biz/" + biz.id;
+
+  //ratings
+  let average_rating = null;
+  let ratings = [];
+  let num_reviews = biz.reviews.length;
+  const ratingclass = ["", "one-stars-small", "two-stars-small",
+  "three-stars-small", "four-stars-small", "five-stars-small", "onehalf-stars-small",
+  "twohalf-stars-small", "threehalf-stars-small", "fourhalf-stars-small"];
+  //get ratings from all reviews and set average
+  biz.reviews.forEach(review => ratings.push(review.rating));
+  average_rating = ratings.reduce((a,b) => a + b, 0) / ratings.length;
+  average_rating = Math.round(average_rating*2)/2;
+  if (average_rating === 1.5)
+  average_rating = 6;
+  if (average_rating === 2.5)
+  average_rating = 7;
+  if (average_rating === 3.5)
+  average_rating = 8;
+  if (average_rating === 4.5)
+  average_rating = 9;
 
   return (
     <div className="biz_box">
@@ -23,7 +43,7 @@ const BizIndexItem = ({ biz }) => {
       </div>
       <div className="biz_info_box">
         <Link to={bizurl} className="small-header">{biz.name}</Link>
-        <div className="stars-smaller"></div>
+        <div className={ratingclass[average_rating]}></div>
         <p className="reviews-count-smaller">{num_reviews} reviews</p>
         <p className="price-counter-smaller">{pricecounter.join('')}</p>
         <Link to="/"className="categories-links" >{biz_categories.join(", ")}</Link>
