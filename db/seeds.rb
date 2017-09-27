@@ -24,6 +24,9 @@ a = Business.new({
               price: 1,
               owner_id: 1,
               website: 'https://www.appacademy.io/',
+              pictures: ["https://s3-media2.fl.yelpcdn.com/bphoto/u3RjQ0E6K8viHxse8qkKjw/o.jpg",
+              "https://s3-media1.fl.yelpcdn.com/bphoto/YBePGUWTyKEXG-48vQ5KEQ/o.jpg",
+              "https://s3-media3.fl.yelpcdn.com/bphoto/X2RwIiwSmvwXGVlg7heH7w/o.jpg"],
               hours: 24,
               delivery: false,
               take_out: false,
@@ -42,6 +45,9 @@ b = Business.new({
               price: 4,
               owner_id: 1,
               website: 'https://www.google.com/',
+              pictures: ["https://s3-media3.fl.yelpcdn.com/bphoto/vrYLTug9lxlIptT7pfs7vw/o.jpg",
+              "http://blog.propcy.com/wp-content/uploads/2015/11/cover-2.jpg",
+              "http://images.nymag.com/images/2/realestate/neighborhoods/2010/sunsetpark100420_lede.jpg"],
               hours: 4,
               delivery: true,
               take_out: true,
@@ -59,6 +65,9 @@ c = Business.new({
               price: 2,
               owner_id: 1,
               website: 'https://www.google.com/',
+              pictures: ["http://www.history.com/s3static/video-thumbnails/AETN-History_VMS/21/205/tdih-may24-HD_still_624x352.jpg",
+              "https://www.nycgo.com/images/made/images/uploads/articles/Guide_to_the_Brooklyn_Bridge_/Brooklyn-Bridge-Julienne-Schaer_900_601_70.jpg",
+              "https://cdn.vox-cdn.com/uploads/chorus_asset/file/7242569/30141787176_563493a63b_o.jpg"],
               hours: 4,
               delivery: false,
               take_out: false,
@@ -68,6 +77,42 @@ c = Business.new({
               c.categories.push(b1)
               c.categories.push(c1)
               c.save!
+d = Business.new({
+                            name: 'Peppers Diner',
+                            address: '104 Chestnut St, Newark, NJ 07105',
+                            map_lat: 40.726185523600634,
+                            map_lng: -74.17156040668488,
+                            price: 1,
+                            owner_id: 1,
+                            website: 'https://www.google.com/',
+                            pictures: ["https://media-cdn.tripadvisor.com/media/photo-p/07/f2/86/57/peppers-diner-2.jpg",
+                            "https://s3-media4.fl.yelpcdn.com/bphoto/K2ZA5xjNSCXhMIDMvlzj3A/o.jpg",
+                            "https://s3-media4.fl.yelpcdn.com/bphoto/b9Sdx4rskTSv9AKQxTatwg/o.jpg"],
+                            hours: 4,
+                            delivery: false,
+                            take_out: false,
+                            accepts_credit_cards: true,
+                            wifi: false})
+                            d.categories.push(a2)
+                            d.save!
+e = Business.new({
+                                            name: 'GameCity Pool Hall',
+                                            address: '5389 Merrick Rd, Massapequa Park, NY 11762',
+                                            map_lat: 40.668327,
+                                            map_lng: -73.437757,
+                                            price: 2,
+                                            owner_id: 1,
+                                            website: 'https://www.google.com/',
+                                            pictures: ["http://yangonlife.cdn3.mspiral.biz/cdn/farfuture/3vtOjj0IgrXEID9eMRykwj7089eXhrNchU4hQQM9PGo/mtime:1407586619/sites/yangonlife.com.mm/files/styles/directory_detail_image/public/directory_photo/2013-10-25_10913.jpg?itok=4ki-gH2K",
+                                            "https://s3-media1.fl.yelpcdn.com/bphoto/1AqC83RyDWuYs8Aw45yOYw/o.jpg",
+                                            "https://s3-media1.fl.yelpcdn.com/bphoto/w2RvGQqLzc9qcl1LKKPCBQ/o.jpg"],
+                                            hours: 4,
+                                            delivery: false,
+                                            take_out: false,
+                                            accepts_credit_cards: true,
+                                            wifi: false})
+                                            e.categories.push(b1)
+                                            e.save!
 Review.destroy_all
 r1 = Review.create(
     author_id: 1,
