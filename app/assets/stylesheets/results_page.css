@@ -42,6 +42,7 @@
 .map-column-container {
   width:300px;
   height: 800px;
+  padding-left: 10px;
 }
 
 .results-map-container {
