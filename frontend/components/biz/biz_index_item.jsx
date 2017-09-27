@@ -34,11 +34,20 @@ const BizIndexItem = ({ biz }) => {
   if (average_rating === 4.5)
   average_rating = 9;
 
+  //pic
+  //doesn't recognize as array
+  let firstpic = "https://s3-media1.fl.yelpcdn.com/bphoto/RraP9mVDSf38nayXvxnynA/o.jpg"
+  if (biz.pictures.length < 5) {
+    firstpic = biz.pictures[0];
+  } else {
+    firstpic = biz.pictures;
+  }
+
   return (
     <div className="biz_box">
       <div className="biz_photo_box">
         <Link to={bizurl}>
-          <img src="https://s3-media3.fl.yelpcdn.com/bphoto/_mSOrFPac21VHKv59h38jA/l.jpg"></img>
+          <img src={firstpic}></img>
         </Link>
       </div>
       <div className="biz_info_box">

@@ -41,10 +41,10 @@
   max-height: 180px;
   overflow: hidden;
 }
-/*this selector doesnt work*/
-.biz_photo_box > img {
-  max-height:100%;
-  max-width:100%;
+
+.biz_photo_box > a > img {
+  width: 298px;
+  height: 180px;
 }
 
 .biz_box {
