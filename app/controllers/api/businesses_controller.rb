@@ -1,6 +1,5 @@
 class Api::BusinessesController < ApplicationController
 
-  #create new business & persist into DB
   def index
     #old style no filters
     # @allbusiness = Business.all
@@ -28,7 +27,7 @@ class Api::BusinessesController < ApplicationController
     @business = Business.find(params[:id])
   end
 
-  #maybe we can do edit and destroy later if time permits
+  #maybe we can do edit later if time permits
 
 
   private

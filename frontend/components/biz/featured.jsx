@@ -17,12 +17,12 @@ class Featured extends React.Component {
 
   render() {
 
-    //i want to put each businesses's full info inside lbox, mbox and rbox
-    //and then distribute this info into the HTML when it has loaded
-    //simply index through the array received and set conditionals to not render if array < 3
-    //for now this can be all of them, later when you have tons of biz, grab random onesg
+    let passpath = "";
+    if (this.props.match)
+    passpath = this.props.match.path;
 
-    //time to put index item up here because its better than
+    let test = "This is a test";
+
     //passing in shit that will fail loudly and cause error states
     //BUG: make a failed login and then come back to homepage to seee
     //4th featured item with empty shit. Errors item
@@ -33,7 +33,8 @@ class Featured extends React.Component {
             {this.props.biz.map(
               business => <BizIndexItem
               key={business.id}
-              biz={business}     />)}
+              biz={business}
+              path={test}     />)}
         </div>
       </div>
     );
