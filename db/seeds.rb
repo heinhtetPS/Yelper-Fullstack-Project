@@ -42,7 +42,7 @@ b = Business.new({
               address: '501-509 44th St, Brooklyn, NY 11220',
               map_lat: 40.6483354,
               map_lng: -74.0078366,
-              price: 4,
+              price: 3,
               owner_id: 1,
               website: 'https://www.google.com/',
               pictures: ["https://s3-media3.fl.yelpcdn.com/bphoto/vrYLTug9lxlIptT7pfs7vw/o.jpg",
@@ -96,23 +96,42 @@ d = Business.new({
                             d.categories.push(a2)
                             d.save!
 e = Business.new({
-                                            name: 'GameCity Pool Hall',
-                                            address: '5389 Merrick Rd, Massapequa Park, NY 11762',
-                                            map_lat: 40.668327,
-                                            map_lng: -73.437757,
-                                            price: 2,
-                                            owner_id: 1,
-                                            website: 'https://www.google.com/',
-                                            pictures: ["http://yangonlife.cdn3.mspiral.biz/cdn/farfuture/3vtOjj0IgrXEID9eMRykwj7089eXhrNchU4hQQM9PGo/mtime:1407586619/sites/yangonlife.com.mm/files/styles/directory_detail_image/public/directory_photo/2013-10-25_10913.jpg?itok=4ki-gH2K",
-                                            "https://s3-media1.fl.yelpcdn.com/bphoto/1AqC83RyDWuYs8Aw45yOYw/o.jpg",
-                                            "https://s3-media1.fl.yelpcdn.com/bphoto/w2RvGQqLzc9qcl1LKKPCBQ/o.jpg"],
-                                            hours: 4,
-                                            delivery: false,
-                                            take_out: false,
-                                            accepts_credit_cards: true,
-                                            wifi: false})
-                                            e.categories.push(b1)
-                                            e.save!
+                    name: 'GameCity Pool Hall',
+                    address: '5389 Merrick Rd, Massapequa Park, NY 11762',
+                    map_lat: 40.668327,
+                    map_lng: -73.437757,
+                    price: 2,
+                    owner_id: 1,
+                    website: 'https://www.google.com/',
+                    pictures: ["http://yangonlife.cdn3.mspiral.biz/cdn/farfuture/3vtOjj0IgrXEID9eMRykwj7089eXhrNchU4hQQM9PGo/mtime:1407586619/sites/yangonlife.com.mm/files/styles/directory_detail_image/public/directory_photo/2013-10-25_10913.jpg?itok=4ki-gH2K",
+                    "https://s3-media1.fl.yelpcdn.com/bphoto/1AqC83RyDWuYs8Aw45yOYw/o.jpg",
+                    "https://s3-media1.fl.yelpcdn.com/bphoto/w2RvGQqLzc9qcl1LKKPCBQ/o.jpg"],
+                    hours: 4,
+                    delivery: false,
+                    take_out: false,
+                    accepts_credit_cards: true,
+                    wifi: false})
+                    e.categories.push(b1)
+                    e.save!
+e = Business.new({
+                              name: 'Shack By the Sea',
+                              address: '204 Old Montauk Hwy, Montauk, NY 11954',
+                              map_lat: 41.054414,
+                              map_lng: -71.875071,
+                              price: 1,
+                              owner_id: 1,
+                              website: 'https://www.google.com/',
+                              pictures: ["https://www.dphotographer.co.uk/users/8226/thm1024/1410795428_Shack%20by%20the%20Sea%3DKRM.jpg",
+                              "https://media.wired.com/photos/5926779faf95806129f4f8ad/master/w_4972,c_limit/bizet_didier_03.jpg",
+                              "https://s3-media1.fl.yelpcdn.com/bphoto/9j34GWMBUMty6L_s74E1_g/o.jpg"],
+                              hours: 4,
+                              delivery: false,
+                              take_out: false,
+                              accepts_credit_cards: true,
+                              wifi: false})
+                              e.categories.push(a2)
+                              e.categories.push(c1)
+                              e.save!
 Review.destroy_all
 r1 = Review.create(
     author_id: 1,
@@ -158,5 +177,36 @@ r6 = Review.create(
     author_id: 2,
     business_id: 3,
     rating: 1.5,
-    body: "Nice location, great building, Great ambience but portions are small, expensive and flavorless."
+    body: "Nice location, great place, the Greatest ambience but portions are small, expensive and flavorless."
+)
+r7 = Review.create(
+    author_id: 2,
+    business_id: 4,
+    rating: 3,
+    body: "There's always a bunch of rowdy Highschool kids here making a lot of noise and causing a lot of discomfort for me and my family. These hooligans are smoking indoors and walking around as if they owned the place. The food is quite good though. "
+)
+
+r8 = Review.create(
+    author_id: 2,
+    business_id: 5,
+    rating: 3,
+    body: "We came here last Friday with a bunch of friends for my BF bday. We had an awesome time there's tons of games so we were occupied and it was definitely different then your typical bar night. Drinks were a little high for what I expected because it's really not a high end place. Also the bathroom smelled like cat pee and was pretty disgusting but again not high end what do you expect. This is a really fun and great place if you're looking for a different experience than just drinking at a bar. They have a machine to turn dollars into quarters so you can play the games."
+)
+
+r9 = Review.create(
+    author_id: 2,
+    business_id: 6,
+    rating: 5,
+    body: "Execellent sea food, very fresh great servuce, not super expensive but definitely not cheap.clams are the best I've ever had , sauce is good , some pasta dishes could be a little bland, but good and the pasta is ok not the freshist. But any seafood you get will be excellent. High turnover very busy.
+
+Recomend the shrimp randazzo over pasta
+Recomend paying cash
+Drinks are alittle over priced."
+)
+
+r10 = Review.create(
+    author_id: 1,
+    business_id: 6,
+    rating: 5,
+    body: "Anytime of the year it is a great place to stop for seafood.  My daughter loved their lobster salad (lobster roll).  It's right on the water in Sheepshead Bay.  You can eat inside or outside to watch the fishing boats.   Hasn't changed much over the years, which is a good thing,"
 )
