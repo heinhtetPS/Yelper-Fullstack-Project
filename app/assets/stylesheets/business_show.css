@@ -118,11 +118,30 @@
 }
 
 .show-pics-container {
-  width: 660px;
+  width: 680px;
   height: 320px;
-  background-color: wheat;
   margin-top: 20px;
+  display: flex;
+  align-items: center;
 }
+
+.middlepic {
+  width: 250px;
+  height: 250px;
+}
+
+.leftpic {
+  width: 220px;
+  height: 220px;
+}
+
+.rightpic {
+  width: 220px;
+  height: 220px;
+}
+
+
+
 
 .biz-bottom-content {
   width: 960px;

@@ -27,6 +27,10 @@ class BusinessShowMain extends React.Component {
   //  }
   }
 
+  // $('.leftpic').hover(() => {
+  //
+  // });
+
 
   render() {
     //THIS PATTERN SUCEEDS, COPY THIS PATTERN ELSEWHERE
@@ -44,6 +48,7 @@ class BusinessShowMain extends React.Component {
     const pricecounter = [];
     const biz_categories = [];
     let loggedUserId = null;
+    let bizpics = [];
     //if async info has been retrieved....
     if (this.props.currentUser)
     loggedUserId = this.props.currentUser.id;
@@ -98,7 +103,11 @@ class BusinessShowMain extends React.Component {
       average_rating = 9;
       //we will generate stars based on that average
 
-    }
+      //pictures
+      bizpics = currentbiz.pictures;
+      console.log(bizpics[0]);
+
+    }//end of props biz check
 
     //extra prevention for error triggering
     if (!currentbiz)
@@ -142,7 +151,9 @@ class BusinessShowMain extends React.Component {
               </div>
             </div>
           <div className="show-pics-container">
-
+              <img id="showpics" className="leftpic" src={bizpics[1]}></img>
+              <img id="showpics" className="middlepic" src={bizpics[0]}></img>
+              <img id="showpics" className="rightpic" src={bizpics[2]}></img>
           </div>
 
         </div>

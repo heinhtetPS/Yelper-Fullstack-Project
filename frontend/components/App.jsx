@@ -60,9 +60,9 @@ const App = () => (
             <div className="footer-column">
               <h1>Discover</h1>
               <ul>
-                <li><a href="/search?Restaurant">Restaurants</a></li>
-                <li><a href="/search?Nightlife">Nightlife</a></li>
-                <li><a href="/search?Shopping">Shopping</a></li>
+                <li><Link to="/search?Restaurant">Restaurants</Link></li>
+                <li><Link to="/search?Nightlife">Nightlife</Link></li>
+                <li><Link to="/search?Shopping">Shopping</Link></li>
 
               </ul>
             </div>
