@@ -57,7 +57,7 @@ const BizIndexItem = ({ biz }, path  ) => {
           <div className={ratingclass[average_rating]}></div>
           <p className="reviews-count-smaller">{num_reviews} reviews</p>
           <p className="price-counter-smaller">{pricecounter.join('')}</p>
-          <Link to="/"className="categories-links" >{biz_categories.join(", ")}</Link>
+          <Link to="/search"className="categories-links" >{biz_categories.join(", ")}</Link>
           <p>{biz.address}</p>
 
         </div>
@@ -78,7 +78,8 @@ const BizIndexItem = ({ biz }, path  ) => {
           <div className={ratingclass[average_rating]}></div>
           <p className="reviews-count-smaller">{num_reviews} reviews</p>
           <p className="price-counter-smaller">{pricecounter.join('')}</p>
-          <Link to="/"className="categories-links" >{biz_categories.join(", ")}</Link>
+          <Link to="/search"className="categories-links" >{biz_categories.join(", ")}</Link>
+
           <p>{biz.address}</p>
           <p className="fire-line">
             <svg className="svg-fire">
@@ -96,6 +97,8 @@ const BizIndexItem = ({ biz }, path  ) => {
 
 };
 
+// {biz_categories.map(cat =>
+// <Link to="/search?{cat}">{cat}</Link>)}
 
 
 export default BizIndexItem;
