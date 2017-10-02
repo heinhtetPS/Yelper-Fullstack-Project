@@ -27,10 +27,6 @@ class BusinessShowMain extends React.Component {
   //  }
   }
 
-  // $('.leftpic').hover(() => {
-  //
-  // });
-
 
   render() {
     //THIS PATTERN SUCEEDS, COPY THIS PATTERN ELSEWHERE
@@ -40,6 +36,7 @@ class BusinessShowMain extends React.Component {
     let sample = null;
     let price_describe = "";
     let writelink = "/";
+    let categoriesLinks = [];
     let average_rating = null;
     const ratings = [];
     const ratingclass = ["", "one-stars-big", "two-stars-big",
@@ -89,6 +86,12 @@ class BusinessShowMain extends React.Component {
       //set writeareview link
       writelink = `/writeareview/${currentbiz.id}`;
 
+      //set categories links
+      categoriesLinks = currentbiz.categories.map( cat => {
+        return ['/search?'.concat(cat.name), cat.name.concat(',  ')]
+      });
+      console.log(categoriesLinks);
+
       //get ratings from all reviews and set average
       currentbiz.reviews.forEach(review => ratings.push(review.rating));
       average_rating = ratings.reduce((a,b) => a + b, 0) / ratings.length;
@@ -105,14 +108,12 @@ class BusinessShowMain extends React.Component {
 
       //pictures
       bizpics = currentbiz.pictures;
-      console.log(bizpics[0]);
 
     }//end of props biz check
 
     //extra prevention for error triggering
     if (!currentbiz)
     return null;
-
 
     return (
       <div className="biz-page-container">
@@ -122,7 +123,9 @@ class BusinessShowMain extends React.Component {
               <div className={ratingclass[average_rating]}></div>
               <p className="reviews-count">{reviewnumber} reviews</p>
               <p className="price-counter">{pricecounter.join('')}</p>
-              <Link to="/search"className="categories-links" >{biz_categories.join(", ")}</Link>
+                  {categoriesLinks.map(
+                    cate => <Link to={cate[0]} className="categories-links">{cate[1]}</Link>
+                )}
             </div>
             <div className="biz-header-right">
               <div className="review-button">
