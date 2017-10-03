@@ -43,6 +43,11 @@ const BizIndexItem = ({ biz }, path  ) => {
     firstpic = biz.pictures;
   }
 
+  //categories links
+  let categoriesLinks = biz.categories.map( cat => {
+    return ['/search?'.concat(cat.name), cat.name.concat(', ')]
+  });
+
   if (window.location.href.includes("search?")) {
 
     return (
@@ -57,7 +62,9 @@ const BizIndexItem = ({ biz }, path  ) => {
           <div className={ratingclass[average_rating]}></div>
           <p className="reviews-count-smaller">{num_reviews} reviews</p>
           <p className="price-counter-smaller">{pricecounter.join('')}</p>
-          <Link to="/search"className="categories-links" >{biz_categories.join(", ")}</Link>
+            {categoriesLinks.map(
+              cate => <Link to={cate[0]} className="categories-links">{cate[1]}</Link>
+          )}
           <p>{biz.address}</p>
 
         </div>
@@ -78,8 +85,9 @@ const BizIndexItem = ({ biz }, path  ) => {
           <div className={ratingclass[average_rating]}></div>
           <p className="reviews-count-smaller">{num_reviews} reviews</p>
           <p className="price-counter-smaller">{pricecounter.join('')}</p>
-          <Link to="/search"className="categories-links" >{biz_categories.join(", ")}</Link>
-
+            {categoriesLinks.map(
+              cate => <Link to={cate[0]} className="categories-links">{cate[1]}</Link>
+          )}
           <p>{biz.address}</p>
           <p className="fire-line">
             <svg className="svg-fire">

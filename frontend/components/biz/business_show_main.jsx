@@ -88,9 +88,8 @@ class BusinessShowMain extends React.Component {
 
       //set categories links
       categoriesLinks = currentbiz.categories.map( cat => {
-        return ['/search?'.concat(cat.name), cat.name.concat(',  ')]
+        return ['/search?'.concat(cat.name), cat.name.concat(', ')]
       });
-      console.log(categoriesLinks);
 
       //get ratings from all reviews and set average
       currentbiz.reviews.forEach(review => ratings.push(review.rating));
