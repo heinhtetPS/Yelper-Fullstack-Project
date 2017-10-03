@@ -25,7 +25,7 @@ class CategoriesIndex extends React.Component {
             <Link to="/search?Shopping">
             <img src="https://s3-media2.fl.yelpcdn.com/assets/srv0/homepage/ad1f85392c04/assets/img/categories/72x72_shopping.png"></img>
               </Link>
-          <h3>Shopping</h3>
+          <h2>Shopping</h2>
           </div>
           <div className="cat-box">
             <Link to="/search?Nightlife">
