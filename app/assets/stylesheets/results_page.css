@@ -67,8 +67,8 @@
 .biz-index-container {
   width: 620px;
   height: 1000px;
-  padding-right: 10px;
   background-color: wheat;
+  padding: 15px 10px 0px 0px;
 }
 
 .map-column-container {
