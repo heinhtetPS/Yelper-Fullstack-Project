@@ -16,6 +16,17 @@
   margin: 0 auto;
 }
 
+.dollars-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.dollars-button {
+  padding: 10px;
+  border: solid 1px black;
+  border-radius: 3px;
+}
+
 .hidden {
   display: none;
 }
