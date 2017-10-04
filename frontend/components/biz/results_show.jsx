@@ -25,16 +25,7 @@ class ResultsShow extends React.Component {
         <div className="top-shelf-options">
           <div className="top-shelf-content">
             <h2>Best {searchterm}(s) in Brooklyn, NY</h2>
-            <ul>
-              <li>
-                <ul className="dollars-container">
-                  <li className="dollars-button">$</li>
-                  <li className="dollars-button">$$</li>
-                  <li className="dollars-button">$$$</li>
-                  <li className="dollars-button">$$$$</li>
-                </ul>
-              </li>
-            </ul>
+
 
           </div>
         </div>
@@ -72,6 +63,15 @@ class ResultsShow extends React.Component {
   }
 }
 
-
+// <ul>
+//   <li>
+//     <ul className="dollars-container">
+//       <li className="dollars-button">$</li>
+//       <li className="dollars-button">$$</li>
+//       <li className="dollars-button">$$$</li>
+//       <li className="dollars-button">$$$$</li>
+//     </ul>
+//   </li>
+// </ul>
 
 export default ResultsShow;
