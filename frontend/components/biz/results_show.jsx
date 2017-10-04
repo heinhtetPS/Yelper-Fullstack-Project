@@ -25,7 +25,29 @@ class ResultsShow extends React.Component {
         <div className="top-shelf-options">
           <div className="top-shelf-content">
             <h2>Best {searchterm}(s) in Brooklyn, NY</h2>
+              <ul className="filters-row">
 
+                  <li className="filters-element1">
+                    <ul className="dollars-container">
+                      <li className="dollars-button-unselected">$</li>
+                      <li className="dollars-button-unselected">$$</li>
+                      <li className="dollars-button-unselected">$$$</li>
+                      <li className="dollars-button-unselected">$$$$</li>
+                    </ul>
+                  </li>
+
+                  <li className="filters-element2">
+                    <label className="open-button">Open Now</label>
+                  </li>
+
+                  <li className="filters-element2">
+                    <label className="open-button">Delivery</label>
+                  </li>
+
+                  <li className="filters-element2">
+                    <label className="open-button">Take-out</label>
+                  </li>
+              </ul>
 
           </div>
         </div>
@@ -63,15 +85,6 @@ class ResultsShow extends React.Component {
   }
 }
 
-// <ul>
-//   <li>
-//     <ul className="dollars-container">
-//       <li className="dollars-button">$</li>
-//       <li className="dollars-button">$$</li>
-//       <li className="dollars-button">$$$</li>
-//       <li className="dollars-button">$$$$</li>
-//     </ul>
-//   </li>
-// </ul>
+
 
 export default ResultsShow;
