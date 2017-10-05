@@ -1,14 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const BizIndexItem = ({ biz }, path  ) => {
-  //getting path props didn't work
+const BizIndexItem = ( { biz }  ) => {
+
+  //manually populate $s based on price
   const pricecounter = [];
   for (let i = 0; i < biz.price; i++) {
       pricecounter.push('$');
   }
 
-
+  //generate category names and urls
   const biz_categories = [];
   biz.categories.forEach(el =>
   biz_categories.push(el.name));
@@ -34,7 +35,7 @@ const BizIndexItem = ({ biz }, path  ) => {
   if (average_rating === 4.5)
   average_rating = 9;
 
-  //pic
+  //pics
   //doesn't recognize as array
   let firstpic = "https://s3-media1.fl.yelpcdn.com/bphoto/RraP9mVDSf38nayXvxnynA/o.jpg"
   if (biz.pictures.length < 5) {
@@ -48,6 +49,7 @@ const BizIndexItem = ({ biz }, path  ) => {
     return ['/search?'.concat(cat.name), cat.name.concat(', ')]
   });
 
+  //appearing on search page (horizontal box)
   if (window.location.href.includes("search?")) {
 
     return (
@@ -71,6 +73,7 @@ const BizIndexItem = ({ biz }, path  ) => {
       </div>
     )
 
+    //appearing in featured or review page
   } else {
 
     return (
