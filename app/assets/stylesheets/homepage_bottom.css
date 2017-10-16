@@ -177,4 +177,5 @@
 
 .cat-box:hover {
   border: 1px solid gray;
+  cursor: pointer;
 }

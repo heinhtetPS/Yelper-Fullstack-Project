@@ -171,6 +171,10 @@
   padding-right: 3px;
 }
 
+.button-right-arrow:hover {
+  background-color: rgba(0,0,0,0.6);
+}
+
 .svg-triangle {
   fill: white;
   width: 10px;

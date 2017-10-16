@@ -13,11 +13,6 @@ class RedNav extends React.Component {
     $('#hider').toggleClass('hidden-dropdown-items unhidden-dropdown-items');
   }
 
-  // loginDemo() {
-  //   debugger
-  //   this.props.loginUser({username: 'demo_user', password: 'password'});
-  // }
-
  render() {
    //ternary declaration, either we're on homepage for transparent nav or classic red on all others
    let navclass = this.props.location.pathname === "/" ? "invisible_nav" : "classic_red_nav";
@@ -41,9 +36,9 @@ class RedNav extends React.Component {
    } else if (this.props.loggedIn) {
         //here's the dropdown button and menu
      authlinks = (<div className={auth_color}>
-       <div className="full-button">
+       <div className="full-button"  onClick={this.togglehidden}>
          <img className="dropdown-btn"
-           onClick={this.togglehidden}
+
            src="https://s3-media3.fl.yelpcdn.com/assets/srv0/yelp_styleguide/bf5ff8a79310/assets/img/default_avatars/user_medium_square.png"></img>
          <div className="button-right-arrow">
            <svg className="svg-triangle">

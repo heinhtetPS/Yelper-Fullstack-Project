@@ -7,8 +7,7 @@
 
 .user-sidebar {
   display: flex;
-  max-width: 210px;
-  border: 1px dashed gray;
+  width: 210px;
   margin: 0 5px 0 5px;
 }
 
@@ -16,6 +15,7 @@
   max-width: 60px;
   max-height: 60px;
   margin-left: 10px;
+  margin-right: 10px;
   margin-top: 10px;
 }
 
@@ -23,7 +23,8 @@
   max-width: 629px;
   min-height: 100px;
   overflow: auto;
-  border: 1px solid gray;
+  border-bottom: 1px solid gray;
+  margin-bottom: 10px;
   display: flex;
 }
 
