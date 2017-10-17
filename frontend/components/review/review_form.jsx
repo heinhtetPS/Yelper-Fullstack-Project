@@ -10,11 +10,13 @@ class ReviewForm extends React.Component {
 
     //initial state is blank
       this.state = {
-        rating: 1,
+        rating: 0,
         body: "",
         business_id: this.props.location.pathname.slice(-1)
       };
      this.handleSubmit = this.handleSubmit.bind(this);
+     this.handleOptionChange = this.handleOptionChange.bind(this);
+     this.changeStars = this.changeStars.bind(this);
 
   }
 
@@ -37,6 +39,49 @@ class ReviewForm extends React.Component {
       [field]: e.currentTarget.value
     });
   }
+
+  //change state to get different stars pics for rating
+  handleOptionChange(changeEvent) {
+  this.setState({
+    rating: changeEvent.target.value
+  });
+  console.log(this.state);
+}
+
+//sets the classname for stars component
+changeStars() {
+
+  switch(this.state.rating) {
+
+    case '0':
+    return "stars-interactive";
+    break;
+
+    case '1':
+    return "one-stars-big";
+    break;
+
+    case '2':
+    return "two-stars-big";
+    break;
+
+    case '3':
+    return "three-stars-big";
+    break;
+
+    case '4':
+    return "four-stars-big";
+    break;
+
+    case '5':
+    return "five-stars-big";
+    break;
+
+    default:
+    return "stars-interactive";
+    break;
+  }
+}
 
   // renderErrors() {
   //   return (
@@ -67,6 +112,7 @@ class ReviewForm extends React.Component {
     $('#errorhider').toggleClass('errorbox-hidden errorbox');
   }
 
+  //generic submit
   handleSubmit(e) {
    e.preventDefault();
    const newreview = Object.assign({}, this.state);
@@ -78,7 +124,11 @@ class ReviewForm extends React.Component {
 
  whichform() {
 
+   //changes stars image with radio options
+   let starschoice = this.changeStars();
+
    //1st one returns create form, else edit form
+
    if (this.props.formType === "writeareview") {
      return(
        <div className="review-box">
@@ -88,32 +138,37 @@ class ReviewForm extends React.Component {
            <div className="input-container">
              <h2>Your review:</h2>
              <div className="bordered-container">
-               <div className="stars-interactive">
+               <div className={starschoice}>
                  <input type="radio"
                    name="rating"
                    value="1"
-                   onClick={this.update('rating')}
-                   className="invis-radio"/>
+                   onChange={this.handleOptionChange}
+                   className="invis-radio"
+                   checked={this.state.rating===1}/>
                 <input type="radio"
                   name="rating"
                   value="2"
-                  onClick={this.update('rating')}
-                  className="invis-radio"/>
+                  onChange={this.handleOptionChange}
+                  className="invis-radio"
+                  checked={this.state.rating===2}/>
                 <input type="radio"
                   name="rating"
                   value="3"
-                  onClick={this.update('rating')}
-                  className="invis-radio"/>
+                  onChange={this.handleOptionChange}
+                  className="invis-radio"
+                  checked={this.state.rating===3}/>
                 <input type="radio"
                   name="rating"
                   value="4"
-                  onClick={this.update('rating')}
-                  className="invis-radio"/>
+                  onChange={this.handleOptionChange}
+                  className="invis-radio"
+                  checked={this.state.rating===4}/>
                 <input type="radio"
                   name="rating"
                   value="5"
-                  onClick={this.update('rating')}
-                  className="invis-radio"/>
+                  onChange={this.handleOptionChange}
+                  className="invis-radio"
+                  checked={this.state.rating===5}/>
                </div>
                <label>Select your rating</label>
                <textarea className="body-field"
@@ -141,7 +196,7 @@ class ReviewForm extends React.Component {
            <div className="input-container">
              <h2>Your review:</h2>
              <div className="bordered-container">
-               <div className="stars-interactive">
+               <div className={starschoice}>
                  <input type="radio" name="rating" value="1"/>
                 <input type="radio" name="rating" value="2"/>
                 <input type="radio" name="rating" value="3"/>
@@ -172,6 +227,9 @@ class ReviewForm extends React.Component {
 
    if (this.props.biz[0]) {
      currentbiz = this.props.biz[0];
+
+
+
 
      return (
        <div className="reviewForm-master">

@@ -58,7 +58,7 @@
 }
 
 .stars-interactive {
-  width: 135px;
+  width: 132px;
   height: 24px;
   background: url(https://s3-media2.fl.yelpcdn.com/assets/srv0/yelp_design_web/9b34e39ccbeb/assets/img/stars/stars.png) 0 0;
   background-size: 132px 560px;
@@ -66,14 +66,15 @@
   vertical-align: middle;
 }
 
+
 .body-field {
   min-width: 200px;
   min-height: 100px;
 }
 
 .invis-radio {
-  margin: 0px 15px 0px 0px;
-  opacity: 0.3;
+  margin: 0px 7px 0px 7px;
+  opacity: 0.1;
 }
 
 .post-button {
