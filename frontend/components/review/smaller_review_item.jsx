@@ -38,7 +38,7 @@ const SmallerReviewItem = ({ review }) => {
       <div className="review-item-small">
         <div className="user-sidebar-small">
           <img src="https://s3-media3.fl.yelpcdn.com/assets/srv0/yelp_styleguide/bf5ff8a79310/assets/img/default_avatars/user_medium_square.png"></img>
-          <p>{thisuser.username}</p>
+          <p className="user-name-text">{thisuser.username}</p>
         </div>
         <div className="review-right-column-small">
           <div className="body-head-small">

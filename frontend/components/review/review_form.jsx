@@ -86,7 +86,7 @@ class ReviewForm extends React.Component {
 
          <form onSubmit={this.handleSubmit}>
            <div className="input-container">
-             <h2>Your review</h2>
+             <h2>Your review:</h2>
              <div className="bordered-container">
                <div className="stars-interactive">
                  <input type="radio"
@@ -139,7 +139,7 @@ class ReviewForm extends React.Component {
 
          <form onSubmit={this.handleSubmit}>
            <div className="input-container">
-             <h2>Your review</h2>
+             <h2>Your review:</h2>
              <div className="bordered-container">
                <div className="stars-interactive">
                  <input type="radio" name="rating" value="1"/>
