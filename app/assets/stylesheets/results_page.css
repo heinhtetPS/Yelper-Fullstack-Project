@@ -36,6 +36,11 @@
 .dollars-button-unselected {
   padding: 10px;
   border: 1px solid gainsboro;
+  cursor: pointer;
+}
+
+.hidden-checkbox {
+  display: none;
 }
 
 .filters-element2 {

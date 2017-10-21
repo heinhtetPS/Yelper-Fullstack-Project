@@ -30,10 +30,15 @@ class ResultsShow extends React.Component {
 
                   <li className="filters-element1">
                     <ul className="dollars-container">
-                      <li className="dollars-button-unselected">$</li>
-                      <li className="dollars-button-unselected">$$</li>
-                      <li className="dollars-button-unselected">$$$</li>
-                      <li className="dollars-button-unselected">$$$$</li>
+
+                      <li className="dollars-button-unselected">$
+                        <input type="checkbox" className="hidden-checkbox" value="1" /></li>
+                      <li className="dollars-button-unselected">$$
+                      <input type="checkbox" className="hidden-checkbox" value="2" /></li>
+                      <li className="dollars-button-unselected">$$$
+                      <input type="checkbox" className="hidden-checkbox" value="3" /></li>
+                      <li className="dollars-button-unselected">$$$$
+                      <input type="checkbox" className="hidden-checkbox" value="4" /></li>
                     </ul>
                   </li>
 
