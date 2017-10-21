@@ -3,7 +3,7 @@
 
 ![alt text](https://github.com/heinhtetPS/Yelper-Fullstack-Project/blob/master/Project%20Docs/screenshots/splash.png "splash")
 
-Yelper is a full stack web application inspired by Yelp.com. It utilizes React.js with Redux on the frontend to produce dynamic content and a PostgreSql database backend. Ruby on rails serves a nice framework that connects the two and provides structure for the app.
+Yelper is a full stack web application inspired by Yelp.com. It utilizes React.js with Redux on the frontend to produce dynamic content fetched asynchronously (through AJAX requests) from the PostgreSql database in the backend. Requests are handled by Rails controllers and models leveraging polymorphic associations to provide convenient data packages that are returned as JSON objects after being formatted neatly with Jbuilder. Yelper also integrates Googlemaps API to provide geolocation browsing and filtering.
 
 ## Features and Implementation
 ================
@@ -26,7 +26,7 @@ One of the things I was most excited to tackle was the ability to learn about an
 
 This feature is, of course, based on the GoogleMaps API and displayed inside React components on the frontend. First, our React component retrieves location information stored in the backend database through a AJAX requests. This can be in the form of an address or latitude/longitude coordinates that correspond to the real world. These are then fed into the GoogleMaps API where they are parsed and become stored as markers on the map.
 
-The map component also keeps track of its search bounds so that they can be used to filter the results. The user can simply change the area of the map's focus to get completely different results based on those visual bounds. 
+The map component also keeps track of its search bounds so that they can be used to filter the results. The user can simply change the area of the map's focus to get completely different results based on those visual bounds.
 
 ### Reviews
 The core of Yelper's features and the reason why we are keeping this database of businesses is because we want this information to help inform our decisions. Reviews covers this need by letting customers share their opinions about which businesses they prefer and which ones are or aren't worth the customers' time. Something like this which used to be restricted to word of mouth can now be spread across the world through the power of the internet.
@@ -35,7 +35,7 @@ Users who have signed up for our website can leave reviews of businesses that wi
 
 ![alt text](https://github.com/heinhtetPS/Yelper-Fullstack-Project/blob/master/Project%20Docs/screenshots/reviews.png "review")
 
-Reviews are held in thier own table in the database but they are implicitely tied to businesses through database associations. Each review must have a business ID tied to it, which is automatically provided to the database at the time of creation. Each review is also tied to the user who created the review, which is why login or signup is required to leave a review.  
+Reviews are held in their own table in the database but they are implicitly tied to businesses through database associations. Each review must have a business ID tied to it, which is automatically provided to the database at the time of creation. Each review is also tied to the user who created the review, which is why login or signup is required to leave a review.  
 
 
 
