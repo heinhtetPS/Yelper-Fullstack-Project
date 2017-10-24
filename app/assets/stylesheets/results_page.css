@@ -39,6 +39,15 @@
   cursor: pointer;
 }
 
+.dollars-button-selected {
+  padding: 7px;
+  border: 1px solid #41a700;
+  background-color: #c4f3a4;
+  cursor: pointer;
+}
+
+
+
 .hidden-checkbox {
   display: none;
 }
@@ -49,8 +58,30 @@
 
 .open-button {
   border: 1px solid gray;
-    padding: 10px;
-    border-radius: 3px;
+  padding: 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.delivery-button {
+  border: 1px solid gray;
+  padding: 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.takeout-button {
+  border: 1px solid gray;
+  padding: 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.open-button-selected {
+  padding: 10px;
+  border: 1px solid #41a700;
+  background-color: #c4f3a4;
+  cursor: pointer;
 }
 
 .hidden {

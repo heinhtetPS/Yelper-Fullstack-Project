@@ -14,6 +14,10 @@ class ResultsShow extends React.Component {
       this.props.updateFilter("categories", this.props.location.search.slice(1));
   }
 
+  toggleSelected() {
+
+  }
+
 
   render() {
     //vars populate when props come in
@@ -31,27 +35,33 @@ class ResultsShow extends React.Component {
                   <li className="filters-element1">
                     <ul className="dollars-container">
 
-                      <li className="dollars-button-unselected">$
+                      <li className="dollars-button-selected">$
                         <input type="checkbox" className="hidden-checkbox" value="1" /></li>
+
                       <li className="dollars-button-unselected">$$
                       <input type="checkbox" className="hidden-checkbox" value="2" /></li>
+
                       <li className="dollars-button-unselected">$$$
                       <input type="checkbox" className="hidden-checkbox" value="3" /></li>
+
                       <li className="dollars-button-unselected">$$$$
                       <input type="checkbox" className="hidden-checkbox" value="4" /></li>
                     </ul>
                   </li>
 
                   <li className="filters-element2">
-                    <label className="open-button">Open Now</label>
+                    <label className="open-button-selected">Open Now</label>
+                    <input type="checkbox" className="hidden-checkbox" value="selected" />
                   </li>
 
                   <li className="filters-element2">
-                    <label className="open-button">Delivery</label>
+                    <label className="delivery-button">Delivery</label>
+                    <input type="checkbox" className="hidden-checkbox" value="unselected" />
                   </li>
 
                   <li className="filters-element2">
-                    <label className="open-button">Take-out</label>
+                    <label className="takeout-button">Take-out</label>
+                    <input type="checkbox" className="hidden-checkbox" value="unselected" />
                   </li>
               </ul>
 
