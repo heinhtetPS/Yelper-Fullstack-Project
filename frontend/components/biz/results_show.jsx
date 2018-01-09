@@ -18,7 +18,6 @@ class ResultsShow extends React.Component {
 
   }
 
-
   render() {
     //vars populate when props come in
     let searchterm = this.props.location.search.slice(1);
