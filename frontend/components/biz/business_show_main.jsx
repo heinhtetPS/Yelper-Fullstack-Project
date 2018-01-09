@@ -116,6 +116,7 @@ class BusinessShowMain extends React.Component {
 
     return (
       <div className="biz-page-container">
+        <div className="grey-bg"></div>
         <div className="biz-headers">
             <div className="biz-header-left">
               <h1 className="biz-name">{currentbiz.name}</h1>
