@@ -1,0 +1,15 @@
+Issues
+- Sometimes there are DELETE issues with deleting a review
+- Login errors problem persists: make a login error, return to home and bottom content will be replaced by login pg
+
+
+
+
+
+Incomplete
+- Picture carousel doesn't work
+- Buttons for filtering are hidden as they are incomplete
+
+Recent changes
+- Made a div for gray bg on the business page. It is encaged in the main div. Should there be a bigger wrapper to contain it?
+-
