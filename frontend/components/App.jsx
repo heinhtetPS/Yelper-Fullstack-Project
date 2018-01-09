@@ -54,7 +54,7 @@ const App = () => (
                   <li><a href="http://heinhtetps.info/">About me (Portfolio)</a></li>
                   <li><a href="https://www.linkedin.com/in/heinhtetps/">Visit my LinkedIn</a></li>
                   <li><a href="https://github.com/heinhtetPS">Visit my Github</a></li>
-                  <li><a href="https://docs.google.com/document/d/1j4HoSYk9OcmpYWhjg-tFaYapDt87OjPT3Lgx_ldRv0A/edit?usp=sharing">See my Resume</a></li>
+                  <li><a href="https://docs.google.com/document/d/1FQlIV4J4s8mVcTRoIxXGG6YHfxFv5kZgYQNB0T0lsPk/edit?usp=sharing">See my Resume</a></li>
                 </ul>
             </div>
             <div className="footer-column">
