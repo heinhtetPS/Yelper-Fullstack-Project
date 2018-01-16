@@ -11,7 +11,8 @@ class ResultsShow extends React.Component {
 
   componentDidMount() {
       //this used to look at filter in state but I changed it because state doens't refresh right
-      this.props.updateFilter("categories", this.props.location.search.slice(1));
+      //changing this from categories to searchterm didn't change anything at all
+      this.props.updateFilter("searchterm", this.props.location.search.slice(1));
   }
 
   toggleSelected() {

@@ -15,9 +15,11 @@ Incomplete
 - More robust search
 - better styling for business page right side
 - stars lighting up on write review page
-- 
+-
 
 
 Recent changes
 - Made a div for gray bg on the business page. It is encaged in the main div. Should there be a bigger wrapper to contain it?
--
+- attempting to increase search strength little by little. Got rid of case sensitivity with "ILIKE"
+- Next target for search is Name.
+- Categories seems to be deeply embedded, need to examine the entire reducer route to change it

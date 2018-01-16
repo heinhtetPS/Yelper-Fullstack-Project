@@ -12,6 +12,8 @@ class Search extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+
+  //made 2 changes to categories here and it didn't change the query
   update(field) {
     return e => this.setState({
       [field]: e.currentTarget.value
