@@ -23,3 +23,4 @@ Recent changes
 - attempting to increase search strength little by little. Got rid of case sensitivity with "ILIKE"
 - Next target for search is Name.
 - Categories seems to be deeply embedded, need to examine the entire reducer route to change it
+- add pg_search gem for more dynamic searching 

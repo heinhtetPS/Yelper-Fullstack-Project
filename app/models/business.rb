@@ -22,6 +22,7 @@
 #
 
 class Business < ApplicationRecord
+  include pgSearch
   validates :name, :map_lat, :map_lng, :address, :price, presence: true
   validates :categories, presence: { message: 'business must belong to at least one category'}
   validates :price, inclusion: { in: (1..4) }
