@@ -23,4 +23,7 @@ Recent changes
 - attempting to increase search strength little by little. Got rid of case sensitivity with "ILIKE"
 - Next target for search is Name.
 - Categories seems to be deeply embedded, need to examine the entire reducer route to change it
-- add pg_search gem for more dynamic searching 
+- add pg_search gem for more dynamic searching
+- pg_search seems to make no difference. Not sure how to use.
+- Included all instructions for business model and custom migration
+- Made a more correct query for business search but it still doesn't work  
