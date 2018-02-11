@@ -17,6 +17,10 @@ Incomplete
 - stars lighting up on write review page
 -
 
+To Do
+- Make this entire site mobile friendly
+- Make search more intuitive for random people. Show some results. Change bk to ny
+
 
 Recent changes
 - Made a div for gray bg on the business page. It is encaged in the main div. Should there be a bigger wrapper to contain it?
@@ -26,4 +30,4 @@ Recent changes
 - add pg_search gem for more dynamic searching
 - pg_search seems to make no difference. Not sure how to use.
 - Included all instructions for business model and custom migration
-- Made a more correct query for business search but it still doesn't work  
+- Made a more correct query for business search but it still doesn't work
