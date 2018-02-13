@@ -20,7 +20,9 @@ Incomplete
 To Do
 - Make this entire site mobile friendly
 - Make search more intuitive for random people. Show some results. Change bk to ny
-
+- Cities missing under yelp Brooklyn on main pg
+- Make all foods lead to restaurant
+- Change bounds upon changing location (means we need to find out how gmaps defines bounds on locations)
 
 Recent changes
 - Made a div for gray bg on the business page. It is encaged in the main div. Should there be a bigger wrapper to contain it?

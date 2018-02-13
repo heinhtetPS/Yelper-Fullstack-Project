@@ -5,7 +5,7 @@ import { UPDATE_FILTER } from '../actions/filter_actions';
 
 const defaultFilters = Object.freeze({
   bounds: {},
-  categories: {}
+  searchterm: {}
 });
 
 const FiltersReducer = (state = defaultFilters, action) => {

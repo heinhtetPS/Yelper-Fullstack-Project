@@ -28,42 +28,8 @@ class ResultsShow extends React.Component {
       <div className="results-page-container">
         <div className="top-shelf-options">
           <div className="top-shelf-content">
-            <h2>Best {searchterm}(s) in Brooklyn, NY</h2>
+            <h2>Best {searchterm}(s) in New York, NY</h2>
 
-              <ul className="filters-row">
-
-                  <li className="filters-element1">
-                    <ul className="dollars-container">
-
-                      <li className="dollars-button-selected">$
-                        <input type="checkbox" className="hidden-checkbox" value="1" /></li>
-
-                      <li className="dollars-button-unselected">$$
-                      <input type="checkbox" className="hidden-checkbox" value="2" /></li>
-
-                      <li className="dollars-button-unselected">$$$
-                      <input type="checkbox" className="hidden-checkbox" value="3" /></li>
-
-                      <li className="dollars-button-unselected">$$$$
-                      <input type="checkbox" className="hidden-checkbox" value="4" /></li>
-                    </ul>
-                  </li>
-
-                  <li className="filters-element2">
-                    <label className="open-button-selected">Open Now</label>
-                    <input type="checkbox" className="hidden-checkbox" value="selected" />
-                  </li>
-
-                  <li className="filters-element2">
-                    <label className="delivery-button">Delivery</label>
-                    <input type="checkbox" className="hidden-checkbox" value="unselected" />
-                  </li>
-
-                  <li className="filters-element2">
-                    <label className="takeout-button">Take-out</label>
-                    <input type="checkbox" className="hidden-checkbox" value="unselected" />
-                  </li>
-              </ul>
 
           </div>
         </div>

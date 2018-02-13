@@ -6,11 +6,11 @@ class Api::BusinessesController < ApplicationController
 
     #filtering with other settings, lets try categories first
     #categories works, now we have to make other params act like this
-    if params[:categories]
-      @allbusiness = @allbusiness.joins(:categories).where("categories.name ILIKE ?", params[:categories])
-      #the below query should work but doesn't
-    elsif params[:searchterm]
-      @allbusiness = @allbusiness.where("business.name ILIKE ?", "%#{params[:searchterm]}%")
+    if params[:searchterm]
+      @allbusiness = @allbusiness.joins(:categories).where("categories.name ILIKE ?", params[:searchterm])
+      #the below query doesn't work yet
+    # elsif params[:searchterm]
+    #   @allbusiness = @allbusiness.where("business.name ILIKE ?", "%#{params[:searchterm]}%")
 
     end
   end

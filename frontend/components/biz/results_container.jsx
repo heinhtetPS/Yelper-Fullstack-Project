@@ -9,7 +9,7 @@ const mapStateToProps = ({filters, biz}) => ({
   //we should put filters here
   // benches: asArray(state),
   // minSeating: state.filters.minSeating,
-  categories: filters.categories,
+  searchterm: filters.searchterm,
   businesses: selectAllbiz(biz)
 });
 

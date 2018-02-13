@@ -8,7 +8,7 @@ const mapStateToProps = state => ({
   //put filters here
   // benches: asArray(state),
   // minSeating: state.filters.minSeating,
-  categories: state.filters.categories,
+  searchterm: state.filters.searchterm,
   state
 });
 

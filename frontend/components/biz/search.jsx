@@ -6,7 +6,7 @@ class Search extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      categories: "",
+      searchterm: "",
       bounds: "",
     };
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -26,7 +26,7 @@ class Search extends React.Component {
 
 
   //  this.clearform();
-    this.props.updateFilter('categories', this.state.categories );
+    this.props.updateFilter('searchterm', this.state.searchterm );
 
     //redirect or reload
     // if(this.props.location.pathname === "/search") {
@@ -34,7 +34,7 @@ class Search extends React.Component {
     // } else {
     //   this.props.history.push('/search');
     // }
-    this.props.history.push(`/search?${this.state.categories}`);
+    this.props.history.push(`/search?${this.state.searchterm}`);
  }
 
  render() {
@@ -74,7 +74,7 @@ class Search extends React.Component {
            </span>
            <input className={searchkeyword}type="text"
              placeholder="tacos, cheap dinner, Max's"
-              onChange={this.update('categories')}
+              onChange={this.update('searchterm')}
 
              />
            <input className={searchlocation}type="text"
