@@ -73,14 +73,14 @@ class Search extends React.Component {
              Find
            </span>
            <input className={searchkeyword}type="text"
-             placeholder="tacos, cheap dinner, Max's"
+             placeholder="...restaurants, nightlife, shopping"
               onChange={this.update('searchterm')}
 
              />
            <input className={searchlocation}type="text"
                placeholder="New York, NY"
               onChange={this.update('bounds')}
-               />
+               disabled/>
              <button className={searchsubmit} onSubmit={this.handleSubmit}>
                <span>
                  <svg className="svg-search">

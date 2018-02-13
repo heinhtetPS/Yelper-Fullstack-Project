@@ -19,7 +19,7 @@ Incomplete
 
 To Do
 - Make this entire site mobile friendly
-- Make search more intuitive for random people. Show some results. Change bk to ny
+- Make search more intuitive for random people. Show some results.
 - Cities missing under yelp Brooklyn on main pg
 - Make all foods lead to restaurant
 - Change bounds upon changing location (means we need to find out how gmaps defines bounds on locations)
@@ -30,6 +30,7 @@ Recent changes
 - Next target for search is Name.
 - Categories seems to be deeply embedded, need to examine the entire reducer route to change it
 - add pg_search gem for more dynamic searching
-- pg_search seems to make no difference. Not sure how to use.
 - Included all instructions for business model and custom migration
-- Made a more correct query for business search but it still doesn't work
+- PG search is working but combining categories and name makes it fail
+- It seems like the search query is conflicting with the bounds query or category query
+- Should I make a search controller that is seperate from the business controller? How can this integrate into the entire redux cycle?

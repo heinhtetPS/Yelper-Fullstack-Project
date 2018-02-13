@@ -11,9 +11,12 @@ class Api::BusinessesController < ApplicationController
       #the below query doesn't work yet
     # elsif params[:searchterm]
     #   @allbusiness = @allbusiness.where("business.name ILIKE ?", "%#{params[:searchterm]}%")
-
+    #pg_search: the query below works but doesn't play well with the other
+        # @allbusiness = Business.search_name(params[:searchterm])
     end
   end
+
+  def
 
   #Remember: category is not technically part of business's own db
   #but it is required to save! or create!
