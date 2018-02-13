@@ -23,7 +23,10 @@
 
 class Business < ApplicationRecord
   include PgSearch
-  pg_search_scope :search_name, :against => [:name]
+  pg_search_scope :search_all, :against => [:name], :associated_against => {
+                                  :categories => :name},
+                                  using: {tsearch: {prefix: true}}
+
   validates :name, :map_lat, :map_lng, :address, :price, presence: true
   validates :categories, presence: { message: 'business must belong to at least one category'}
   validates :price, inclusion: { in: (1..4) }
@@ -48,5 +51,6 @@ class Business < ApplicationRecord
       .where("map_lng > ?", bounds[:southWest][:lng])
       .where("map_lng < ?", bounds[:northEast][:lng])
    end
+
 
 end

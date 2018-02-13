@@ -4,19 +4,10 @@ class Api::BusinessesController < ApplicationController
     #If there are bounds, filter by them, else default all
     @allbusiness = bounds ? Business.in_bounds(bounds) : Business.all
 
-    #filtering with other settings, lets try categories first
-    #categories works, now we have to make other params act like this
-    if params[:searchterm]
-      @allbusiness = @allbusiness.joins(:categories).where("categories.name ILIKE ?", params[:searchterm])
-      #the below query doesn't work yet
-    # elsif params[:searchterm]
-    #   @allbusiness = @allbusiness.where("business.name ILIKE ?", "%#{params[:searchterm]}%")
-    #pg_search: the query below works but doesn't play well with the other
-        # @allbusiness = Business.search_name(params[:searchterm])
-    end
-  end
+    #if there's a searchterm, compare it against names and categories
+    @allbusiness = Business.search_all(params[:searchterm]) if params[:searchterm]
 
-  def
+  end
 
   #Remember: category is not technically part of business's own db
   #but it is required to save! or create!

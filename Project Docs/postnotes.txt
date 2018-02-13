@@ -2,7 +2,7 @@ Issues
 - Review post reportedly has problems on different machines
 - Sometimes there are DELETE issues with deleting a review
 - Login errors problem persists: make a login error, return to home and bottom content will be replaced by login pg
-
+- Have seen similar errors to above from results page also
 
 
 
@@ -12,10 +12,8 @@ Incomplete
 - Buttons for filtering are hidden as they are incomplete (results page)
 - Make more DB seeds & refactor method of getting featured on homepage
 - Delete map markers properly
-- More robust search
 - better styling for business page right side
 - stars lighting up on write review page
--
 
 To Do
 - Make this entire site mobile friendly
@@ -33,4 +31,4 @@ Recent changes
 - Included all instructions for business model and custom migration
 - PG search is working but combining categories and name makes it fail
 - It seems like the search query is conflicting with the bounds query or category query
-- Should I make a search controller that is seperate from the business controller? How can this integrate into the entire redux cycle?
+- Combined the two into 1 single PG search, it works now. Except that caps messes it up.
