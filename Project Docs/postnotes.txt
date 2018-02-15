@@ -17,7 +17,7 @@ Incomplete
 
 To Do
 - Make this entire site mobile friendly
-- Make search more intuitive for random people. Show some results.
+- In order to achieve mobile friendly, we have to add @media queries to EVERY CSS file
 - Cities missing under yelp Brooklyn on main pg
 - Make all foods lead to restaurant
 - Change bounds upon changing location (means we need to find out how gmaps defines bounds on locations)
@@ -32,3 +32,8 @@ Recent changes
 - PG search is working but combining categories and name makes it fail
 - It seems like the search query is conflicting with the bounds query or category query
 - Combined the two into 1 single PG search, it works now. Except that caps messes it up.
+
+
+Mobile Progress
+- homepage splash, nav and search complete (exception: location field)
+- hompage bottom done except for global footer

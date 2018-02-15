@@ -35,3 +35,21 @@
     left: 38%;
     top: 110px;
 }
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+
+  .putlogohere {
+    width: 256px;
+    height: 78px;
+    background-image: url(http://res.cloudinary.com/dooqsrgbq/image/upload/v1506619682/logocleaner_xamefg.png);
+    background-size: cover;
+    font-size: 19px;
+    color: rgba(0,0,0,0);
+    display: block;
+    position: relative;
+    left: 10%;
+    top: 110px;
+  }
+
+}

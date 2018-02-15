@@ -1,6 +1,6 @@
 .bottom_main_container {
   max-width: 960px;
-  height: 900px;
+  height: auto;
   margin: 0 auto;
   margin-top: 10px;
   padding-left: 15px;
@@ -19,6 +19,7 @@
   color: #D32323;
   font-size: 16px;
   font-weight: bold;
+  text-align: center;
 }
 
 .featured_container {
@@ -149,7 +150,7 @@
   display: inline-block;
   margin-top: 25px;
   width: 960px;
-  height: 354px;
+  height: auto;
   background-color: #f5f5f5;
 }
 
@@ -178,4 +179,61 @@
 .cat-box:hover {
   border: 1px solid gray;
   cursor: pointer;
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+
+  .featured_container {
+    padding-top: 22px;
+    text-align: center;
+    width: 320px;
+    height: auto;
+  }
+
+  .bizzes_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+  }
+
+  .biz_box {
+    width: 299px;
+    height: 322px;
+    padding: 0px 0px 30px 0px;
+  }
+
+  .categories-main {
+    text-align: center;
+    font-size: 10px;
+    display: inline-block;
+    margin-top: 25px;
+    width: 320px;
+    height: auto;
+    background-color: #f5f5f5;
+  }
+
+  .cat-boxes-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 40px 0 20px;
+  }
+
+  .cat-box {
+    margin: 5px 0px 5px 5px;
+    border-radius: 6px;
+    width: 112px;
+    height: 130px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+  }
+
 }
