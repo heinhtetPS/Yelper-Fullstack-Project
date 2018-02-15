@@ -45,9 +45,7 @@ const App = () => (
 
     <div className="global-footer">
         <div className="footer-content">
-            <div className="footer-column">
-
-            </div>
+        
             <div className="footer-column">
               <h1>About</h1>
                 <ul>
@@ -66,9 +64,7 @@ const App = () => (
 
               </ul>
             </div>
-            <div className="footer-column">
 
-            </div>
             <div className="cityscape"></div>
             <small className="final-foot">
               Copyright © 2017 Hein Htet Pyi Soe. This website is intended for academic use only.
