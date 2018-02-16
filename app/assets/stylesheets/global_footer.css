@@ -64,10 +64,10 @@
 
 /* Smartphones (portrait) ----------- */
 /* This doesn't work yet */
-@media only screen and (max-width : 320px) {
+@media only screen and (max-width : 480px) {
 
   .footer-content {
-    width: 320px;
+    width: 480px;
     height: auto;
     margin: 0 auto;
     display: flex;
@@ -76,7 +76,7 @@
   }
 
   .cityscape {
-    width: 320px;
+    width: 480px;
     height: 100px;
     background-image: url("https://s3-media2.fl.yelpcdn.com/assets/srv0/yelp_styleguide/573fa19c8435/assets/img/structural/footer_cityscape.png");
     background-repeat: no-repeat;
@@ -86,7 +86,7 @@
 
   .final-foot {
     color: #666666;
-    width: 320px;
+    width: 480px;
     height: 19px;
     text-align: center;
     line-height: 13px;

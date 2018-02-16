@@ -37,3 +37,4 @@ Recent changes
 Mobile Progress
 - homepage splash, nav and search complete (exception: location field)
 - hompage bottom done except for global footer
+- The threshold seemed wrong. Trying 480 vs 320.
