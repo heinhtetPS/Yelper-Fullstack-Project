@@ -177,8 +177,69 @@ class BusinessShowMain extends React.Component {
 
           <div className="right-info-column">
               <div className="info-header-box">
-                <h2>Today: (Hours for the current day)</h2>
-                <Link to="/">Menu
+                <h2 className="Redh2">Business Hours:</h2>
+                  <table className="hours-table">
+                    <tbody>
+                      <tr>
+                        <th scope="row">Mon</th>
+                        <td>
+                          <span class="nowrap">6:30 pm</span> - <span class="nowrap">1:00 am</span>
+                        </td>
+                        <td class="extra">
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Tue</th>
+                          <td>
+                            Closed
+                          </td>
+                          <td class="extra">
+                          </td>
+                        </tr>
+                        <tr>
+                          <th scope="row">Wed</th>
+                            <td>
+                              <span class="nowrap">6:30 pm</span> - <span class="nowrap">1:00 am</span>
+                            </td>
+                            <td class="extra">
+                            </td>
+                          </tr>
+                            <tr>
+                              <th scope="row">Thu</th>
+                              <td>
+                                <span class="nowrap">6:30 pm</span> - <span class="nowrap">1:00 am</span>
+                              </td>
+                              <td class="extra">
+                              </td>
+                            </tr>
+                            <tr>
+                          <th scope="row">Fri</th>
+                          <td>
+                            <span class="nowrap">6:30 pm</span> - <span class="nowrap">1:00 am</span>
+                          </td>
+                          <td class="extra">
+                          </td>
+                        </tr>
+                            <tr>
+                              <th scope="row">Sat</th>
+                              <td>
+                                <span class="nowrap">6:30 pm</span> - <span class="nowrap">1:00 am</span>
+                              </td>
+                              <td class="extra">
+                              </td>
+                            </tr>
+                          <tr>
+                            <th scope="row">Sun</th>
+                            <td>
+                              <span class="nowrap">6:30 pm</span> - <span class="nowrap">1:00 am</span>
+                            </td>
+                            <td class="extra">
+                            </td>
+                          </tr>
+                    </tbody>
+                </table>
+                <h2 className="Redh2">Menu:</h2>
+                <Link to="/">View the full Menu
                   <svg className="svg-link">
                     <path d="M14 15H4c-.55 0-1-.45-1-1V4c0-.55.45-1 1-1h3v1H4v10h10v-3h1v3c0 .55-.45 1-1 1zm-5.12-4.465L7.463 9.12l3.83-3.827L9 3h6v6l-2.293-2.293-3.828 3.828z"></path>
                   </svg>
@@ -186,7 +247,7 @@ class BusinessShowMain extends React.Component {
                 <p>{pricecounter.join('')} Price Range: {price_describe}</p>
               </div>
               <div className="more-info">
-                <h2>More Business Info</h2>
+                <h2 className="Redh2">More Business Info</h2>
                 <p>Delivery: {currentbiz.delivery.toString()}</p>
                 <p>Take-out: {currentbiz.take_out.toString()}</p>
                 <p>Accepts Credit Cards: {currentbiz.accepts_credit_cards.toString()}</p>

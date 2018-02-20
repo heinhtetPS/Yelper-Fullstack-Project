@@ -5,14 +5,11 @@ Issues
 - Have seen similar errors to above from results page also
 
 
-
-
 Incomplete
 - Picture carousel doesn't work
 - Buttons for filtering are hidden as they are incomplete (results page)
 - Make more DB seeds & refactor method of getting featured on homepage
 - Delete map markers properly
-- better styling for business page right side
 - stars lighting up on write review page
 
 To Do
@@ -32,6 +29,9 @@ Recent changes
 - PG search is working but combining categories and name makes it fail
 - It seems like the search query is conflicting with the bounds query or category query
 - Combined the two into 1 single PG search, it works now. Except that caps messes it up.
+
+- taking a break from backend, fixed styling for results biz, biz right columns, biz show and others
+
 
 
 Mobile Progress
