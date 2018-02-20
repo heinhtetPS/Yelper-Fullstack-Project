@@ -58,7 +58,7 @@ class ResultsShow extends React.Component {
               <div className="create-question">
                 <h2 className="Redh2">Not here? Tell us what we're missing.</h2>
                 <p>If the business you're looking for isn't here, add it!</p>
-                <Link to="/addbusiness"className="post-button">Add a Business</Link>
+                <Link to="/addbusiness"className="new-biz-button">Add a Business</Link>
               </div>
             </div>
         </div>

@@ -47,7 +47,6 @@
 }
 
 
-
 .hidden-checkbox {
   display: none;
 }
@@ -102,8 +101,6 @@
 
 .biz-index-container {
   width: 620px;
-  height: 1000px;
-  background-color: wheat;
   padding: 15px 10px 0px 0px;
 }
 
@@ -127,8 +124,23 @@
 }
 
 .create-question {
-  margin-top: 50px;
+  margin-top: 60px;
   width: auto;
   height: 180px;
-  background-color: #F5F5F5;
+  padding: 5px 0px 5px 15px;
+  border: 1px solid #e6e6e6;
+}
+
+.new-biz-button {
+  padding: 7px 10px;
+  font-size: 12px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  background-color: #d90007;
+  border-color: #8d0005;
+  border-radius: 3px;
+  border: 1px;
+  cursor: pointer;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.3);
 }
