@@ -60,16 +60,20 @@ const BizIndexItem = ( { biz }  ) => {
           </Link>
         </div>
         <div className="biz_info_box_horizontal">
-          <Link to={bizurl} className="small-header">{biz.name}</Link>
-          <div className={ratingclass[average_rating]}></div>
-          <p className="reviews-count-smaller">{num_reviews} reviews</p>
-          <p className="price-counter-smaller">{pricecounter.join('')}</p>
-            {categoriesLinks.map(
-              cate => <Link to={cate[0]} className="categories-links">{cate[1]}</Link>
-          )}
-          <p>{biz.address}</p>
+
+            <Link to={bizurl} className="small-header">{biz.name}</Link>
+            <div className={ratingclass[average_rating]}></div>
+            <p className="reviews-count-smaller">{num_reviews} reviews</p>
+            <p className="price-counter-smaller">{pricecounter.join('')}</p>
+              {categoriesLinks.map(
+                cate => <Link to={cate[0]} className="categories-links">{cate[1]}</Link>
+            )}
+
+
+
 
         </div>
+        <p>{biz.address}</p>
       </div>
     )
 

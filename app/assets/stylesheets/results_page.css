@@ -7,7 +7,8 @@
 
 .top-shelf-options {
   max-width: 1400px;
-  height: 125px;
+  height: 110px;
+  padding-top: 15px;
   background-color: #f5f5f5;
 }
 

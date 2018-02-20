@@ -46,12 +46,13 @@
 .biz_photo_box_horizontal {
   max-width: 120px;
   max-height: 120px;
-  overflow: hidden;
+  border-radius: 3px;
 }
 
 .biz_photo_box > a > img {
   width: 298px;
   height: 180px;
+  border-radius: 3px;
 }
 .biz_photo_box_horizontal > a > img {
   width: 120px;
@@ -68,9 +69,10 @@
 .biz_box_horizontal {
   width: 600px;
   height: 160px;
-  padding-left: 15px;
-  padding-right: 15px;
-    display: flex;
+  padding: 10px 0px 5px 0px;
+  display: flex;
+  border-bottom: 1px solid #e6e6e6;
+  border-top: 1px solid #e6e6e6;
 }
 
 .biz_info_box {
@@ -87,24 +89,23 @@
 }
 
 .biz_info_box_horizontal {
-  text-align: left;
   text-indent: 12px;
   font-size: 12px;
-  width:298px;
+  width: 70%;
   height: 121px;
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-  line-height: 1px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.biz_info_box_horiz_left {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .small-header {
-  width: 250px;
-  height: 14px;
-  font-size: 16px;
+  width: 100%;
+  font-size: 18px;
   margin-top: 10px;
-  line-height: normal;
   font-weight: bold;
   text-decoration: none;
   cursor: pointer;
@@ -115,18 +116,16 @@
 
 
 .reviews-count-smaller {
-  width: 88px;
-  height: 24px;
+  width: 54%;
   margin: 0;
-  margin-right: 90px;
   line-height: 19px;
+  font-size: 12px;
 }
 
 .price-counter-smaller {
   letter-spacing: 2px;
-  font-size: 16px;
+  font-size: 14px;
   margin: 0px;
-  margin-right: 10px;
 }
 
 .svg-fire {
