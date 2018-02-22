@@ -38,3 +38,4 @@ Mobile Progress
 - hompage bottom done except for global footer
 - The threshold seemed wrong. Trying 480 instead of 320.
 - OK trying 375 AND 480. Must put 480 first.
+- Generally working much better, fix footer & apply to rest
