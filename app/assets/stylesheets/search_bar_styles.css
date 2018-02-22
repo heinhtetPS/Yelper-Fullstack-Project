@@ -124,7 +124,7 @@
   background-color: #BD1F1F;
 }
 
-/* Smartphones (portrait) ----------- */
+/* Tablet (portrait) ----------- */
 @media only screen and (max-width : 480px) {
 
   .search-container-splash {
@@ -133,6 +133,54 @@
     position: relative;
     top: 215px;
     margin-left: 10px;
+  }
+
+  .search-header {
+    background-color: white;
+    width: auto;
+    height: 35px;
+    font-weight: bold;
+    border-radius: 4px 0 0 4px;
+    line-height: 34px;
+    padding: 3px 5px 3px 5px;
+    border-top: 2px solid #9A9A9A;
+    border-bottom: 2px solid #EEEEEE;
+    font-size: 10px;
+  }
+
+  .search-keyword {
+    width: 320px;
+    height: 39px;
+    padding-left: 10px;
+    font-size: 12px;
+    margin: 0px;
+    border-left: 0px;
+  }
+
+  .search-location {
+    display: none;
+  }
+
+  .search-submit-home {
+    width: 48px;
+    height: 44px;
+    border-radius: 0 5px 5px 0;
+    border: 0;
+    background: #bd1f1f;
+    padding: 9px 0px 0px;
+    box-shadow: none;
+  }
+
+}
+
+/* Cellphone (portrait) ----------- */
+@media only screen and (max-width : 375px) {
+
+  .search-container-splash {
+    width: 100%;
+    height: 63px;
+    position: relative;
+    top: 215px;
   }
 
   .search-header {

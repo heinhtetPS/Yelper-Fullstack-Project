@@ -22,7 +22,6 @@ To Do
 Recent changes
 - Made a div for gray bg on the business page. It is encaged in the main div. Should there be a bigger wrapper to contain it?
 - attempting to increase search strength little by little. Got rid of case sensitivity with "ILIKE"
-- Next target for search is Name.
 - Categories seems to be deeply embedded, need to examine the entire reducer route to change it
 - add pg_search gem for more dynamic searching
 - Included all instructions for business model and custom migration
@@ -37,4 +36,5 @@ Recent changes
 Mobile Progress
 - homepage splash, nav and search complete (exception: location field)
 - hompage bottom done except for global footer
-- The threshold seemed wrong. Trying 480 vs 320.
+- The threshold seemed wrong. Trying 480 instead of 320.
+- OK trying 375 AND 480. Must put 480 first.
