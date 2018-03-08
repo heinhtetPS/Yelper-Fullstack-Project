@@ -10,7 +10,7 @@ class ResultsShow extends React.Component {
   }
 
   componentDidMount() {
-      //this used to look at filter in state but I changed it because state doens't refresh right
+      //this used to look at filter in state but now it just looks at search term
       //changing this from categories to searchterm didn't change anything at all
       this.props.updateFilter("searchterm", this.props.location.search.slice(1));
   }
@@ -29,7 +29,6 @@ class ResultsShow extends React.Component {
         <div className="top-shelf-options">
           <div className="top-shelf-content">
             <h2>Best {searchterm}(s) in New York, NY</h2>
-
 
           </div>
         </div>
