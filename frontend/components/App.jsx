@@ -21,11 +21,6 @@ if (location.pathname === "/") {
   logopos = "toplogo";
 }
 
-//put this in the link instead
-function returntotop() {
-  document.body.scrollTop = 0; // For Chrome, Safari and Opera
-  document.documentElement.scrollTop = 0; // For IE and Firefox
-}
 
 //why does it still render sessionform after coming back to "/" after errors?
 const App = () => (
@@ -45,7 +40,7 @@ const App = () => (
 
     <div className="global-footer">
         <div className="footer-content">
-        
+
             <div className="footer-column">
               <h1>About</h1>
                 <ul>

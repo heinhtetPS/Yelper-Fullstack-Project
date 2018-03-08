@@ -7,6 +7,7 @@ class SessionForm extends React.Component {
     super(props);
 
     //initial state is blank
+    //check this, it might be the source of login errors
     if (this.props.location.pathname === "/signup") {
       this.state = {
         username: "",
@@ -66,8 +67,6 @@ class SessionForm extends React.Component {
       };
     }
   }
-
-
 
   toggleerrors() {
       $('#errorhider').toggleClass('errorbox-hidden errorbox');

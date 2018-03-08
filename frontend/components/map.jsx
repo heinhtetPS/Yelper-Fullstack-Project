@@ -7,9 +7,6 @@ const getCoordsObj = latLng => ({
   lng: latLng.lng()
 });
 
-
-
-
 class Bizmap extends React.Component {
 
   componentDidMount() {
@@ -30,10 +27,7 @@ class Bizmap extends React.Component {
         center: { lat: 40.7449978, lng: -73.9937579 },
         zoom: 10
       };
-
     }
-
-
 
     const map = this.refs.map;
     this.map = new google.maps.Map(this.mapNode, mapOptions);
@@ -77,7 +71,7 @@ class Bizmap extends React.Component {
 
 
   handleMarkerClick(biz) {
-
+      //what to do when map marker is clicked
   }
 
   render() {

@@ -1,5 +1,4 @@
 import { connect } from 'react-redux';
-
 import CategoriesIndex from './categories_index';
 // import { fetchABusiness, fetchBusinesses } from '../../actions/business_actions';
 // import { selectAllbiz } from '../../reducers/selectors';
