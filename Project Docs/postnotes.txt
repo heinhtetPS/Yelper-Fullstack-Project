@@ -31,6 +31,16 @@ Recent changes
 
 - taking a break from backend, fixed styling for results biz, biz right columns, biz show and others
 
+Filter Buttons Progress
+- Started doing this and then realized that I was stuck in the jquery mindset of changing
+classnames to re-render elements, however, I should do it the correct React way instead
+- Begin react style logic updates, only updating the state & reading from it.
+- State updates correctly but only after the first time. The first time is always fail. OK,
+according to stackex, its doing it correctly, just too fast
+- Not sure how to re-render after getting the correct state update. I guess I should make
+the component smaller
+- convert into smaller func component 
+
 
 
 Mobile Progress

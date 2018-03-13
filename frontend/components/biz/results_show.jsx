@@ -107,15 +107,15 @@ class ResultsShow extends React.Component {
                     </ul>
                   </li>
 
-                  <li className="filters-element2" onClick={(e) => this.toggleDollars("open")}>
+                  <li className="filters-element2" onClick={(e) => this.toggleSelected("open")}>
                     <label className="open-button selected">Open Now</label>
                   </li>
 
-                  <li className="filters-element2" onClick={(e) => this.toggleDollars("delivery")}>
+                  <li className="filters-element2" onClick={(e) => this.toggleSelected("delivery")}>
                     <label className="delivery-button">Delivery</label>
                   </li>
 
-                  <li className="filters-element2" onClick={(e) => this.toggleDollars("takeout")}>
+                  <li className="filters-element2" onClick={(e) => this.toggleSelected("takeout")}>
                     <label className="takeout-button">Take-out</label>
                   </li>
               </ul>
