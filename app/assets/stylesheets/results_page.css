@@ -63,6 +63,13 @@
   cursor: pointer;
 }
 
+.open-button-selected {
+  padding: 10px;
+  border: 1px solid #41a700;
+  background-color: #c4f3a4;
+  cursor: pointer;
+}
+
 .delivery-button {
   border: 1px solid gray;
   padding: 10px;
@@ -77,12 +84,7 @@
   cursor: pointer;
 }
 
-.open-button-selected {
-  padding: 10px;
-  border: 1px solid #41a700;
-  background-color: #c4f3a4;
-  cursor: pointer;
-}
+
 
 .hidden {
   display: none;
