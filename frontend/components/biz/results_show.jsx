@@ -7,23 +7,78 @@ class ResultsShow extends React.Component {
 
   constructor(props) {
     super(props);
+    this.state = {dollarFilter: [false, false, false, false],
+                  openNow: false,
+                  delivery: false,
+                  takeOut: false};
+    this.toggleDollars = this.toggleDollars.bind(this);
+    this.toggleSelected = this.toggleSelected.bind(this);
   }
 
   componentDidMount() {
       //this used to look at filter in state but now it just looks at search term
       //changing this from categories to searchterm didn't change anything at all
       this.props.updateFilter("searchterm", this.props.location.search.slice(1));
+      console.log(this.state);
   }
 
 
+  toggleSelected(which) {
+    switch (which) {
+      case "open":
+      console.log("why doesnt it come");
+      this.setState((prevState) => {
+        return {openNow: true}
+      });
+      console.log(this.state.openNow);
+        break;
+      case "delivery":
+      this.setState((prevState) => {
+        return {delivery: true}
+      });
+      console.log(this.state.delivery);
+        break;
+      case "takeout":
+      this.setState((prevState) => {
+        return {takeOut: true}
+      });
+      console.log(this.state.takeOut);
+        break;
+      default:
 
-
-
-  toggleSelected() {
-
+    }
   }
 
-  toggleDollars() {
+  toggleDollars(number) {
+    console.log(number);
+    switch (number) {
+      case 1:
+          this.setState((prevState) => {
+            return {dollarFilter: [true, false, false, false]}
+          });
+          console.log(this.state.dollarFilter);
+        break;
+      case 2:
+          this.setState((prevState) => {
+            return {dollarFilter: [false, true, false, false]}
+          });
+          console.log(this.state.dollarFilter);
+        break;
+      case 3:
+          this.setState((prevState) => {
+            return {dollarFilter: [false, false, true, false]}
+          });
+          console.log(this.state.dollarFilter);
+        break;
+      case 4:
+          this.setState((prevState) => {
+            return {dollarFilter: [false, false, false, true]}
+          });
+          console.log(this.state.dollarFilter);
+        break;
+      default:
+
+    }
 
   }
 
@@ -32,14 +87,9 @@ class ResultsShow extends React.Component {
     let searchterm = this.props.location.search.slice(1);
     let msgbox = this.props.businesses.length === 0 ? "" : "hidden";
 
-    //vars for filter button logic:
     // dollar toggle has 4 buttons: $ $$ $$$ $$$$
     // remove 1 if another is clicked, only 1 can be picked at a time
     // 3 single toggles: open now, Delivery, Takeout
-    const dollarFilter = [false, false, false, false]
-    const openNow = false;
-    const delivery = false;
-    const takeOut = false;
 
     return (
       <div className="results-page-container">
@@ -48,37 +98,25 @@ class ResultsShow extends React.Component {
             <h2>Best {searchterm}(s) in New York, NY</h2>
 
               <ul className="filters-row">
-
                   <li className="filters-element1">
                     <ul className="dollars-container">
-
-                      <li className="dollars-button-unselected">$
-                        <input type="checkbox" className="hidden-checkbox" value="1" /></li>
-
-                      <li className="dollars-button-unselected">$$
-                      <input type="checkbox" className="hidden-checkbox" value="2" /></li>
-
-                      <li className="dollars-button-unselected">$$$
-                      <input type="checkbox" className="hidden-checkbox" value="3" /></li>
-
-                      <li className="dollars-button-unselected">$$$$
-                      <input type="checkbox" className="hidden-checkbox" value="4" /></li>
+                      <li className="dollars-button-unselected" onClick={(e) => this.toggleDollars(1)}>$</li>
+                      <li className="dollars-button-unselected" onClick={(e) => this.toggleDollars(2)}>$$</li>
+                      <li className="dollars-button-unselected" onClick={(e) => this.toggleDollars(3)}>$$$</li>
+                      <li className="dollars-button-unselected" onClick={(e) => this.toggleDollars(4)}>$$$$</li>
                     </ul>
                   </li>
 
-                  <li className="filters-element2">
-                    <label className="open-button">Open Now</label>
-                    <input type="checkbox" className="hidden-checkbox" value="selected" />
+                  <li className="filters-element2" onClick={(e) => this.toggleDollars("open")}>
+                    <label className="open-button selected">Open Now</label>
                   </li>
 
-                  <li className="filters-element2">
+                  <li className="filters-element2" onClick={(e) => this.toggleDollars("delivery")}>
                     <label className="delivery-button">Delivery</label>
-                    <input type="checkbox" className="hidden-checkbox" value="unselected" />
                   </li>
 
-                  <li className="filters-element2">
+                  <li className="filters-element2" onClick={(e) => this.toggleDollars("takeout")}>
                     <label className="takeout-button">Take-out</label>
-                    <input type="checkbox" className="hidden-checkbox" value="unselected" />
                   </li>
               </ul>
 
