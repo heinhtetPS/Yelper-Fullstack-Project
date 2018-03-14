@@ -1,17 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import BizIndexItem from './biz_index_item';
+import DollarsFilter from '../smallcomponents/dollars';
 import Bizmap from '../map';
 
 class ResultsShow extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {dollarFilter: [false, false, false, false],
-                  openNow: false,
+    this.state = {openNow: false,
                   delivery: false,
                   takeOut: false};
-    this.toggleDollars = this.toggleDollars.bind(this);
+
     this.toggleSelected = this.toggleSelected.bind(this);
   }
 
@@ -49,38 +49,7 @@ class ResultsShow extends React.Component {
     }
   }
 
-  toggleDollars(number) {
-    console.log(number);
-    switch (number) {
-      case 1:
-          this.setState((prevState) => {
-            return {dollarFilter: [true, false, false, false]}
-          });
-          console.log(this.state.dollarFilter);
-        break;
-      case 2:
-          this.setState((prevState) => {
-            return {dollarFilter: [false, true, false, false]}
-          });
-          console.log(this.state.dollarFilter);
-        break;
-      case 3:
-          this.setState((prevState) => {
-            return {dollarFilter: [false, false, true, false]}
-          });
-          console.log(this.state.dollarFilter);
-        break;
-      case 4:
-          this.setState((prevState) => {
-            return {dollarFilter: [false, false, false, true]}
-          });
-          console.log(this.state.dollarFilter);
-        break;
-      default:
 
-    }
-
-  }
 
   render() {
     //vars populate when props come in
@@ -99,12 +68,7 @@ class ResultsShow extends React.Component {
 
               <ul className="filters-row">
                   <li className="filters-element1">
-                    <ul className="dollars-container">
-                      <li className="dollars-button-unselected" onClick={(e) => this.toggleDollars(1)}>$</li>
-                      <li className="dollars-button-unselected" onClick={(e) => this.toggleDollars(2)}>$$</li>
-                      <li className="dollars-button-unselected" onClick={(e) => this.toggleDollars(3)}>$$$</li>
-                      <li className="dollars-button-unselected" onClick={(e) => this.toggleDollars(4)}>$$$$</li>
-                    </ul>
+                    <DollarsFilter />
                   </li>
 
                   <li className="filters-element2" onClick={(e) => this.toggleSelected("open")}>
