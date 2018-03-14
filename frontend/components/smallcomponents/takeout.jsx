@@ -19,7 +19,6 @@ class Takeout extends React.Component {
     this.setState(function(prevState) {
       return {Takeout: !prevState.Takeout};
     });
-    console.log(this.state);
   }
 
 

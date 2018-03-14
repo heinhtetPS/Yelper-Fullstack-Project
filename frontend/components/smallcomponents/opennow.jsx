@@ -19,7 +19,6 @@ class OpenNow extends React.Component {
     this.setState(function(prevState) {
       return {OpenNow: !prevState.OpenNow};
     });
-    console.log(this.state);
   }
 
 

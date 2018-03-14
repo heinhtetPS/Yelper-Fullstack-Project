@@ -39,7 +39,11 @@ classnames to re-render elements, however, I should do it the correct React way 
 according to stackex, its doing it correctly, just too fast
 - Not sure how to re-render after getting the correct state update. I guess I should make
 the component smaller
-- convert into smaller func component 
+- convert into smaller func component
+- all filters now working as frontend, need to connect backend
+- Can probably improve by re-using single filter button and customizing
+- Main component needs to collect info from buttons, current style violates unidirectional flow
+- Made some filter update logic but it needs to grab info from childrens
 
 
 

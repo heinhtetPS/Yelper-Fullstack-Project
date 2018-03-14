@@ -19,7 +19,6 @@ class Delivery extends React.Component {
     this.setState(function(prevState) {
       return {Delivery: !prevState.Delivery};
     });
-    console.log(this.state);
   }
 
 

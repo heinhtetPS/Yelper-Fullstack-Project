@@ -11,19 +11,29 @@ class ResultsShow extends React.Component {
 
   constructor(props) {
     super(props);
-
+    this.state = {
+      Dollars: null,
+      OpenNow: false,
+      Delivery: false,
+      Takeout: false
+    }
   }
 
   componentDidMount() {
-      //this used to look at filter in state but now it just looks at search term
-      //changing this from categories to searchterm didn't change anything at all
       this.props.updateFilter("searchterm", this.props.location.search.slice(1));
-      console.log(this.state);
+
+      //in order to add other filters...we need to check state & if its not null or true,
+      // then add these things
+      // but this needs to be in some other lifecycle, like when state changes instead of mount
+      if (this.state.Dollars)
+      this.props.updateFilter("dollars", this.state.Dollars);
+      if (this.state.OpenNow)
+      this.props.updateFilter("OtherFilters", this.state.OpenNow);
+      if (this.state.Delivery)
+      this.props.updateFilter("OtherFilters", this.state.Delivery);
+      if (this.state.Takeout)
+      this.props.updateFilter("OtherFilters", this.state.Takeout);
   }
-
-
-
-
 
 
   render() {
@@ -34,7 +44,7 @@ class ResultsShow extends React.Component {
     // dollar toggle has 4 buttons: $ $$ $$$ $$$$
     // remove 1 if another is clicked, only 1 can be picked at a time
     // 3 single toggles: open now, Delivery, Takeout
-
+    console.log(this.state);
     return (
       <div className="results-page-container">
         <div className="top-shelf-options">
@@ -44,9 +54,9 @@ class ResultsShow extends React.Component {
               <ul className="filters-row">
                     <DollarsFilter />
                       <ul className="filters-row2">
-                        <OpenButton />
-                        <DeliveryButton />
-                        <TakeoutButton />
+                        <OpenButton value={this.state.OpenNow}/>
+                        <DeliveryButton value={this.state.Delivery}/>
+                        <TakeoutButton value={this.state.Takeout}/>
                       </ul>
               </ul>
 
