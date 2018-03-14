@@ -12,7 +12,6 @@ class DollarsFilter extends React.Component {
   }
 
   toggleDollars(number) {
-    console.log(number);
     switch (number) {
       case 1:
           this.setState((prevState) => {
@@ -57,46 +56,46 @@ class DollarsFilter extends React.Component {
     if (this.state[1]) {
       return (
         <ul className="dollars-container">
-          <li className="dollars-button-selected" onClick={(e) => this.toggleDollars(1)}>$</li>
-          <li className="dollars-button-unselected" onClick={(e) => this.toggleDollars(2)}>$$</li>
-          <li className="dollars-button-unselected" onClick={(e) => this.toggleDollars(3)}>$$$</li>
-          <li className="dollars-button-unselected" onClick={(e) => this.toggleDollars(4)}>$$$$</li>
+            <li className="dollars-button-selected" onClick={(e) => this.toggleDollars(1)}>$</li>
+            <li className="dollars-button-unselected" onClick={(e) => this.toggleDollars(2)}>$$</li>
+            <li className="dollars-button-unselected" onClick={(e) => this.toggleDollars(3)}>$$$</li>
+            <li className="dollars-button-unselected" onClick={(e) => this.toggleDollars(4)}>$$$$</li>
         </ul>
       )
     } else if (this.state[2]) {
       return (
         <ul className="dollars-container">
-          <li className="dollars-button-unselected" onClick={(e) => this.toggleDollars(1)}>$</li>
-          <li className="dollars-button-selected" onClick={(e) => this.toggleDollars(2)}>$$</li>
-          <li className="dollars-button-unselected" onClick={(e) => this.toggleDollars(3)}>$$$</li>
-          <li className="dollars-button-unselected" onClick={(e) => this.toggleDollars(4)}>$$$$</li>
+            <li className="dollars-button-unselected" onClick={(e) => this.toggleDollars(1)}>$</li>
+            <li className="dollars-button-selected" onClick={(e) => this.toggleDollars(2)}>$$</li>
+            <li className="dollars-button-unselected" onClick={(e) => this.toggleDollars(3)}>$$$</li>
+            <li className="dollars-button-unselected" onClick={(e) => this.toggleDollars(4)}>$$$$</li>
         </ul>
       )
     } else if (this.state[3]) {
       return (
         <ul className="dollars-container">
-          <li className="dollars-button-unselected" onClick={(e) => this.toggleDollars(1)}>$</li>
-          <li className="dollars-button-unselected" onClick={(e) => this.toggleDollars(2)}>$$</li>
-          <li className="dollars-button-selected" onClick={(e) => this.toggleDollars(3)}>$$$</li>
-          <li className="dollars-button-unselected" onClick={(e) => this.toggleDollars(4)}>$$$$</li>
+            <li className="dollars-button-unselected" onClick={(e) => this.toggleDollars(1)}>$</li>
+            <li className="dollars-button-unselected" onClick={(e) => this.toggleDollars(2)}>$$</li>
+            <li className="dollars-button-selected" onClick={(e) => this.toggleDollars(3)}>$$$</li>
+            <li className="dollars-button-unselected" onClick={(e) => this.toggleDollars(4)}>$$$$</li>
         </ul>
       )
     } else if (this.state[4]) {
       return (
         <ul className="dollars-container">
-          <li className="dollars-button-unselected" onClick={(e) => this.toggleDollars(1)}>$</li>
-          <li className="dollars-button-unselected" onClick={(e) => this.toggleDollars(2)}>$$</li>
-          <li className="dollars-button-unselected" onClick={(e) => this.toggleDollars(3)}>$$$</li>
-          <li className="dollars-button-selected" onClick={(e) => this.toggleDollars(4)}>$$$$</li>
+            <li className="dollars-button-unselected" onClick={(e) => this.toggleDollars(1)}>$</li>
+            <li className="dollars-button-unselected" onClick={(e) => this.toggleDollars(2)}>$$</li>
+            <li className="dollars-button-unselected" onClick={(e) => this.toggleDollars(3)}>$$$</li>
+            <li className="dollars-button-selected" onClick={(e) => this.toggleDollars(4)}>$$$$</li>
         </ul>
       )
     } else {
       return (
         <ul className="dollars-container">
-          <li className="dollars-button-unselected" onClick={(e) => this.toggleDollars(1)}>$</li>
-          <li className="dollars-button-unselected" onClick={(e) => this.toggleDollars(2)}>$$</li>
-          <li className="dollars-button-unselected" onClick={(e) => this.toggleDollars(3)}>$$$</li>
-          <li className="dollars-button-unselected" onClick={(e) => this.toggleDollars(4)}>$$$$</li>
+            <li className="dollars-button-unselected" onClick={(e) => this.toggleDollars(1)}>$</li>
+            <li className="dollars-button-unselected" onClick={(e) => this.toggleDollars(2)}>$$</li>
+            <li className="dollars-button-unselected" onClick={(e) => this.toggleDollars(3)}>$$$</li>
+            <li className="dollars-button-unselected" onClick={(e) => this.toggleDollars(4)}>$$$$</li>
         </ul>
       )
     }

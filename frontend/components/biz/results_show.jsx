@@ -2,17 +2,16 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import BizIndexItem from './biz_index_item';
 import DollarsFilter from '../smallcomponents/dollars';
+import OpenButton from '../smallcomponents/opennow';
+import DeliveryButton from '../smallcomponents/delivery';
+import TakeoutButton from '../smallcomponents/takeout';
 import Bizmap from '../map';
 
 class ResultsShow extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {openNow: false,
-                  delivery: false,
-                  takeOut: false};
 
-    this.toggleSelected = this.toggleSelected.bind(this);
   }
 
   componentDidMount() {
@@ -23,31 +22,7 @@ class ResultsShow extends React.Component {
   }
 
 
-  toggleSelected(which) {
-    switch (which) {
-      case "open":
-      console.log("why doesnt it come");
-      this.setState((prevState) => {
-        return {openNow: true}
-      });
-      console.log(this.state.openNow);
-        break;
-      case "delivery":
-      this.setState((prevState) => {
-        return {delivery: true}
-      });
-      console.log(this.state.delivery);
-        break;
-      case "takeout":
-      this.setState((prevState) => {
-        return {takeOut: true}
-      });
-      console.log(this.state.takeOut);
-        break;
-      default:
 
-    }
-  }
 
 
 
@@ -67,21 +42,12 @@ class ResultsShow extends React.Component {
             <h2>Best {searchterm}(s) in New York, NY</h2>
 
               <ul className="filters-row">
-                  <li className="filters-element1">
                     <DollarsFilter />
-                  </li>
-
-                  <li className="filters-element2" onClick={(e) => this.toggleSelected("open")}>
-                    <label className="open-button selected">Open Now</label>
-                  </li>
-
-                  <li className="filters-element2" onClick={(e) => this.toggleSelected("delivery")}>
-                    <label className="delivery-button">Delivery</label>
-                  </li>
-
-                  <li className="filters-element2" onClick={(e) => this.toggleSelected("takeout")}>
-                    <label className="takeout-button">Take-out</label>
-                  </li>
+                      <ul className="filters-row2">
+                        <OpenButton />
+                        <DeliveryButton />
+                        <TakeoutButton />
+                      </ul>
               </ul>
 
           </div>
