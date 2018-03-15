@@ -44,6 +44,7 @@
   padding: 10px;
   border: 1px solid gainsboro;
   cursor: pointer;
+  height: 22px;
 }
 
 .dollars-button-selected {
@@ -51,6 +52,7 @@
   border: 1px solid #41a700;
   background-color: #c4f3a4;
   cursor: pointer;
+  height: 25px;
 }
 
 

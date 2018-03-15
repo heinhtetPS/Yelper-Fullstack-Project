@@ -44,6 +44,10 @@ the component smaller
 - Can probably improve by re-using single filter button and customizing
 - Main component needs to collect info from buttons, current style violates unidirectional flow
 - Made some filter update logic but it needs to grab info from childrens
+- When button is declared in results, set a relationship to parent's state with child's State
+- when child state changes, it should update parent, parent will then send a request to backend
+to filter the businesses that appear.
+
 
 
 
