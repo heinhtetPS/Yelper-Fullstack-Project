@@ -3,6 +3,7 @@ Issues
 - Sometimes there are DELETE issues with deleting a review
 - Login errors problem persists: make a login error, return to home and bottom content will be replaced by login pg
 - Have seen similar errors to above from results page also
+- For categories links, on results page there's too many spaces, on business show, theres none
 
 
 Incomplete

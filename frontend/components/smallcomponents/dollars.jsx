@@ -14,36 +14,72 @@ class DollarsFilter extends React.Component {
   toggleDollars(number) {
     switch (number) {
       case 1:
-          this.setState((prevState) => {
-            return {1: true,
-                    2: false,
-                    3: false,
-                    4: false};
-          });
+          if (this.state[1]) {
+            this.setState((prevState) => {
+              return {1: false,
+                      2: false,
+                      3: false,
+                      4: false};
+            });
+          } else {
+            this.setState((prevState) => {
+              return {1: true,
+                      2: false,
+                      3: false,
+                      4: false};
+            });
+          }
         break;
       case 2:
-          this.setState((prevState) => {
-            return {1: false,
-                    2: true,
-                    3: false,
-                    4: false};
-          });
+          if (this.state[2]) {
+            this.setState((prevState) => {
+              return {1: false,
+                      2: false,
+                      3: false,
+                      4: false};
+            });
+          } else {
+            this.setState((prevState) => {
+              return {1: false,
+                      2: true,
+                      3: false,
+                      4: false};
+            });
+          }
         break;
       case 3:
-          this.setState((prevState) => {
-            return {1: false,
-                    2: false,
-                    3: true,
-                    4: false};
-          });
+          if (this.state[3]) {
+            this.setState((prevState) => {
+              return {1: false,
+                      2: false,
+                      3: false,
+                      4: false};
+            });
+          } else {
+            this.setState((prevState) => {
+              return {1: false,
+                      2: false,
+                      3: true,
+                      4: false};
+            });
+          }
         break;
       case 4:
-          this.setState((prevState) => {
-            return {1: false,
-                    2: false,
-                    3: false,
-                    4: true};
-          });
+          if (this.state[4]) {
+            this.setState((prevState) => {
+              return {1: false,
+                      2: false,
+                      3: false,
+                      4: false};
+            });
+          } else {
+            this.setState((prevState) => {
+              return {1: false,
+                      2: false,
+                      3: false,
+                      4: true};
+            });
+          }
         break;
       default:
 
