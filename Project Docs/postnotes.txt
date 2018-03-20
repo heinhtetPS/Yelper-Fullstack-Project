@@ -49,12 +49,14 @@ the component smaller
 - when child state changes, it should update parent, parent will then send a request to backend
 to filter the businesses that appear.
 
-
-
-
 Mobile Progress
 - homepage splash, nav and search complete (exception: location field)
 - hompage bottom done except for global footer
 - The threshold seemed wrong. Trying 480 instead of 320.
 - OK trying 375 AND 480. Must put 480 first.
 - Generally working much better, fix footer & apply to rest
+
+next
+- finish filter buttons
+- do css media queries for rest of pages
+- do location links 
