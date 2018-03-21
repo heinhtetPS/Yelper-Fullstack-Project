@@ -73,6 +73,14 @@
   background-color: #fff;
 }
 
+.svg-clock {
+  fill: gray;
+  height: 18px;
+  width: 18px;
+  margin-right: 5px;
+  vertical-align: text-top;
+}
+
 .delivery-button {
   border: 1px solid gray;
   padding: 10px;
@@ -80,11 +88,27 @@
   cursor: pointer;
 }
 
+.svg-truck {
+  fill: #ca6d00;
+  height: 18px;
+  width: 18px;
+  margin-right: 5px;
+  vertical-align: text-top;
+}
+
 .takeout-button {
   border: 1px solid gray;
   padding: 10px;
   border-radius: 3px;
   cursor: pointer;
+}
+
+.svg-bag {
+  fill: #ca6d00;
+  height: 18px;
+  width: 18px;
+  margin-right: 5px;
+  vertical-align: text-top;
 }
 
 .selected {

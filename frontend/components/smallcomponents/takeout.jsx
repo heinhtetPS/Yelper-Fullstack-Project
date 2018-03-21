@@ -17,13 +17,19 @@ class Takeout extends React.Component {
       if (this.state.Takeout) {
         return(
           <li className="filters-element2" onClick={this.props.handleTakeout}>
-            <label className="open-button selected">Takeout</label>
+            <label className="open-button selected">
+              <svg className="svg-bag">
+                <path d="M12 5V1H6v4H3v10a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V5h-3zM7 2h4v3H7V2z"></path></svg>
+              Takeout</label>
           </li>
         );
       } else {
         return(
           <li className="filters-element2" onClick={this.props.handleTakeout}>
-            <label className="open-button">Takeout</label>
+            <label className="open-button">
+              <svg className="svg-bag">
+                <path d="M12 5V1H6v4H3v10a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V5h-3zM7 2h4v3H7V2z"></path></svg>
+              Takeout</label>
           </li>
         );
       }

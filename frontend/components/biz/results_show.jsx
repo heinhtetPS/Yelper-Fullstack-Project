@@ -144,9 +144,6 @@ class ResultsShow extends React.Component {
     let searchterm = this.props.location.search.slice(1);
     let msgbox = this.props.businesses.length === 0 ? "" : "hidden";
 
-    // dollar toggle has 4 buttons: $ $$ $$$ $$$$
-    // remove 1 if another is clicked, only 1 can be picked at a time
-    // 3 single toggles: open now, Delivery, Takeout
     return (
       <div className="results-page-container">
         <div className="top-shelf-options">
@@ -165,7 +162,6 @@ class ResultsShow extends React.Component {
                                     Takeout={this.state.Takeout}/>
                       </ul>
               </ul>
-
           </div>
         </div>
         <div className="results-content">
