@@ -12,7 +12,10 @@ class ResultsShow extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      Dollars: null,
+      Dollars: {1: false,
+                2: false,
+                3: false,
+                4: false},
       OpenNow: false,
       Delivery: false,
       Takeout: false
@@ -35,6 +38,81 @@ class ResultsShow extends React.Component {
       this.props.updateFilter("OtherFilters", this.state.Takeout);
   }
 
+  toggleDollars(number) {
+    switch (number) {
+      case 1:
+          if (this.state[1]) {
+            this.setState((prevState) => {
+              return {1: false,
+                      2: false,
+                      3: false,
+                      4: false};
+            });
+          } else {
+            this.setState((prevState) => {
+              return {1: true,
+                      2: false,
+                      3: false,
+                      4: false};
+            });
+          }
+        break;
+      case 2:
+          if (this.state[2]) {
+            this.setState((prevState) => {
+              return {1: false,
+                      2: false,
+                      3: false,
+                      4: false};
+            });
+          } else {
+            this.setState((prevState) => {
+              return {1: false,
+                      2: true,
+                      3: false,
+                      4: false};
+            });
+          }
+        break;
+      case 3:
+          if (this.state[3]) {
+            this.setState((prevState) => {
+              return {1: false,
+                      2: false,
+                      3: false,
+                      4: false};
+            });
+          } else {
+            this.setState((prevState) => {
+              return {1: false,
+                      2: false,
+                      3: true,
+                      4: false};
+            });
+          }
+        break;
+      case 4:
+          if (this.state[4]) {
+            this.setState((prevState) => {
+              return {1: false,
+                      2: false,
+                      3: false,
+                      4: false};
+            });
+          } else {
+            this.setState((prevState) => {
+              return {1: false,
+                      2: false,
+                      3: false,
+                      4: true};
+            });
+          }
+        break;
+      default:
+    }
+
+  }
+
 
   render() {
     //vars populate when props come in
@@ -52,7 +130,7 @@ class ResultsShow extends React.Component {
             <h2>Best {searchterm}(s) in New York, NY</h2>
 
               <ul className="filters-row">
-                    <DollarsFilter />
+                    <DollarsFilter toggleDollars={this.toggleDollars.bind(this)}/>
                       <ul className="filters-row2">
                         <OpenButton value={this.state.OpenNow}/>
                         <DeliveryButton value={this.state.Delivery}/>
