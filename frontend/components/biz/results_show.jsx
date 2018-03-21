@@ -110,7 +110,13 @@ class ResultsShow extends React.Component {
         break;
       default:
     }
+  }//end of dollars
 
+  handleClick() {
+    this.setState(function(prevState) {
+      return {OpenNow: !prevState.OpenNow};
+    });
+    console.log(this.state);
   }
 
 
@@ -132,7 +138,7 @@ class ResultsShow extends React.Component {
               <ul className="filters-row">
                     <DollarsFilter toggleDollars={this.toggleDollars.bind(this)}/>
                       <ul className="filters-row2">
-                        <OpenButton value={this.state.OpenNow}/>
+                        <OpenButton handleClick={this.handleClick.bind(this)}/>
                         <DeliveryButton value={this.state.Delivery}/>
                         <TakeoutButton value={this.state.Takeout}/>
                       </ul>
