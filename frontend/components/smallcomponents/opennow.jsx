@@ -4,15 +4,16 @@ class OpenNow extends React.Component {
 
     constructor ( props ) {
         super( props );
-
-		this.state = {
-			OpenNow: null
-		  }
+        this.state = {OpenNow: props.OpenNow}
     }
 
-	componentWillMount () {
-		this.setState( { OpenNow: this.props.OpenNow } );
-	}
+	// componentWillMount () {
+	// 	this.setState( { OpenNow: this.props.OpenNow } );
+	// }
+
+  componentWillReceiveProps(nextProps) {
+    this.setState( { OpenNow: nextProps.OpenNow } );
+  }
 
 
     render () {

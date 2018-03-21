@@ -128,7 +128,6 @@ class ResultsShow extends React.Component {
     // dollar toggle has 4 buttons: $ $$ $$$ $$$$
     // remove 1 if another is clicked, only 1 can be picked at a time
     // 3 single toggles: open now, Delivery, Takeout
-    console.log(this.state);
     return (
       <div className="results-page-container">
         <div className="top-shelf-options">
@@ -136,9 +135,11 @@ class ResultsShow extends React.Component {
             <h2>Best {searchterm}(s) in New York, NY</h2>
 
               <ul className="filters-row">
-                    <DollarsFilter toggleDollars={this.toggleDollars.bind(this)}/>
+                    <DollarsFilter toggleDollars={this.toggleDollars.bind(this)}
+                                    />
                       <ul className="filters-row2">
-                        <OpenButton handleClick={this.handleClick.bind(this)}/>
+                        <OpenButton handleClick={this.handleClick.bind(this)}
+                                    OpenNow={this.state.OpenNow}/>
                         <DeliveryButton value={this.state.Delivery}/>
                         <TakeoutButton value={this.state.Takeout}/>
                       </ul>
