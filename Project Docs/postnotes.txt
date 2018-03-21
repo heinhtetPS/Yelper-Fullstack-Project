@@ -48,6 +48,7 @@ the component smaller
 - When button is declared in results, set a relationship to parent's state with child's State
 - when child state changes, it should update parent, parent will then send a request to backend
 to filter the businesses that appear.
+- success on uni data flow with open button copy this for others 
 
 Mobile Progress
 - homepage splash, nav and search complete (exception: location field)
@@ -59,4 +60,4 @@ Mobile Progress
 next
 - finish filter buttons
 - do css media queries for rest of pages
-- do location links 
+- do location links
