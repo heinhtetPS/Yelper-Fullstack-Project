@@ -5,34 +5,24 @@ class Takeout extends React.Component {
     constructor ( props ) {
         super( props );
 
-		this.state = {
-			Takeout: null
-		  }
-      this.handleClick = this.handleClick.bind(this);
+		this.state = {Takeout: props.Takeout}
     }
 
-	componentWillMount () {
-		this.setState( { Takeout: this.props.Takeout } );
+	componentWillReceiveProps (nextProps) {
+		this.setState( { Takeout: nextProps.Takeout } );
 	}
 
-  handleClick() {
-    this.setState(function(prevState) {
-      return {Takeout: !prevState.Takeout};
-    });
-  }
-
-
-    render () {
+  render () {
 
       if (this.state.Takeout) {
         return(
-          <li className="filters-element2" onClick={this.handleClick}>
+          <li className="filters-element2" onClick={this.props.handleTakeout}>
             <label className="open-button selected">Takeout</label>
           </li>
         );
       } else {
         return(
-          <li className="filters-element2" onClick={this.handleClick}>
+          <li className="filters-element2" onClick={this.props.handleTakeout}>
             <label className="open-button">Takeout</label>
           </li>
         );

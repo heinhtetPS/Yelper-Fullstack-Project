@@ -112,9 +112,23 @@ class ResultsShow extends React.Component {
     }
   }//end of dollars
 
-  handleClick() {
+  handleOpen() {
     this.setState(function(prevState) {
       return {OpenNow: !prevState.OpenNow};
+    });
+    console.log(this.state);
+  }
+
+  handleTakeout() {
+    this.setState(function(prevState) {
+      return {Takeout: !prevState.Takeout};
+    });
+    console.log(this.state);
+  }
+
+  handleDelivery() {
+    this.setState(function(prevState) {
+      return {Delivery: !prevState.Delivery};
     });
     console.log(this.state);
   }
@@ -136,12 +150,14 @@ class ResultsShow extends React.Component {
 
               <ul className="filters-row">
                     <DollarsFilter toggleDollars={this.toggleDollars.bind(this)}
-                                    />
+                                    Dollars={this.state.Dollars}/>
                       <ul className="filters-row2">
-                        <OpenButton handleClick={this.handleClick.bind(this)}
+                        <OpenButton handleOpen={this.handleOpen.bind(this)}
                                     OpenNow={this.state.OpenNow}/>
-                        <DeliveryButton value={this.state.Delivery}/>
-                        <TakeoutButton value={this.state.Takeout}/>
+                        <DeliveryButton handleDelivery={this.handleDelivery.bind(this)}
+                                    Delivery={this.state.Delivery}/>
+                        <TakeoutButton handleTakeout={this.handleTakeout.bind(this)}
+                                    Takeout={this.state.Takeout}/>
                       </ul>
               </ul>
 
