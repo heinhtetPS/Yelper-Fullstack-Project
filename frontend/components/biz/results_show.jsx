@@ -41,70 +41,78 @@ class ResultsShow extends React.Component {
   toggleDollars(number) {
     switch (number) {
       case 1:
-          if (this.state[1]) {
+          if (this.state.Dollars[1]) {
             this.setState((prevState) => {
-              return {1: false,
-                      2: false,
-                      3: false,
-                      4: false};
+              return {
+                Dollars: {1: false,
+                          2: false,
+                          3: false,
+                          4: false}};
             });
           } else {
             this.setState((prevState) => {
-              return {1: true,
-                      2: false,
-                      3: false,
-                      4: false};
+              return {
+                Dollars: {1: true,
+                          2: false,
+                          3: false,
+                          4: false}};
             });
           }
         break;
       case 2:
-          if (this.state[2]) {
+          if (this.state.Dollars[2]) {
             this.setState((prevState) => {
-              return {1: false,
-                      2: false,
-                      3: false,
-                      4: false};
+              return {
+                Dollars: {1: false,
+                          2: false,
+                          3: false,
+                          4: false}};
             });
           } else {
             this.setState((prevState) => {
-              return {1: false,
-                      2: true,
-                      3: false,
-                      4: false};
+              return {
+                Dollars: {1: false,
+                          2: true,
+                          3: false,
+                          4: false}};
             });
           }
         break;
       case 3:
-          if (this.state[3]) {
+          if (this.state.Dollars[3]) {
             this.setState((prevState) => {
-              return {1: false,
-                      2: false,
-                      3: false,
-                      4: false};
+              return {
+                Dollars: {1: false,
+                          2: false,
+                          3: false,
+                          4: false}};
             });
           } else {
             this.setState((prevState) => {
-              return {1: false,
-                      2: false,
-                      3: true,
-                      4: false};
+              return {
+                Dollars: {1: false,
+                          2: false,
+                          3: true,
+                          4: false}};
             });
           }
         break;
       case 4:
-          if (this.state[4]) {
+          if (this.state.Dollars[4]) {
             this.setState((prevState) => {
-              return {1: false,
-                      2: false,
-                      3: false,
-                      4: false};
+              return {
+                Dollars: {1: false,
+                          2: false,
+                          3: false,
+                          4: false}};
             });
           } else {
             this.setState((prevState) => {
-              return {1: false,
-                      2: false,
-                      3: false,
-                      4: true};
+              return {
+                Dollars: {1: false,
+                          2: false,
+                          3: false,
+                          4: true}};
             });
           }
         break;
@@ -116,21 +124,18 @@ class ResultsShow extends React.Component {
     this.setState(function(prevState) {
       return {OpenNow: !prevState.OpenNow};
     });
-    console.log(this.state);
   }
 
   handleTakeout() {
     this.setState(function(prevState) {
       return {Takeout: !prevState.Takeout};
     });
-    console.log(this.state);
   }
 
   handleDelivery() {
     this.setState(function(prevState) {
       return {Delivery: !prevState.Delivery};
     });
-    console.log(this.state);
   }
 
 
