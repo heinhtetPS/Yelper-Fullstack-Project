@@ -49,7 +49,8 @@ the component smaller
 - when child state changes, it should update parent, parent will then send a request to backend
 to filter the businesses that appear.
 - success on uni data flow with open button copy this for others
-- button frontend is complete, need to connect filters with backend 
+- button frontend is complete, need to connect filters with backend
+- need to look back at true/false toggles because params come out opposite
 
 Mobile Progress
 - homepage splash, nav and search complete (exception: location field)
