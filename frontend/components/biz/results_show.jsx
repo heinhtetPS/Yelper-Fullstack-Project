@@ -28,15 +28,10 @@ class ResultsShow extends React.Component {
       //in order to add other filters...we need to check state & if its not null or true,
       // then add these things
       // but this needs to be in some other lifecycle, like when state changes instead of mount
-      if (this.state.Dollars)
       this.props.updateFilter("dollars", this.state.Dollars);
-      if (this.state.OpenNow)
-      this.props.updateFilter("OtherFilters", this.state.OpenNow);
-      if (this.state.Delivery)
-      this.props.updateFilter("OtherFilters", this.state.Delivery);
-      if (this.state.Takeout)
-      this.props.updateFilter("OtherFilters", this.state.Takeout);
+
   }
+
 
   toggleDollars(number) {
     switch (number) {
@@ -58,6 +53,7 @@ class ResultsShow extends React.Component {
                           4: false}};
             });
           }
+          this.props.updateFilter("dollars", this.state.Dollars);
         break;
       case 2:
           if (this.state.Dollars[2]) {
@@ -77,6 +73,7 @@ class ResultsShow extends React.Component {
                           4: false}};
             });
           }
+          this.props.updateFilter("dollars", this.state.Dollars);
         break;
       case 3:
           if (this.state.Dollars[3]) {
@@ -96,6 +93,7 @@ class ResultsShow extends React.Component {
                           4: false}};
             });
           }
+          this.props.updateFilter("dollars", this.state.Dollars);
         break;
       case 4:
           if (this.state.Dollars[4]) {
@@ -115,6 +113,7 @@ class ResultsShow extends React.Component {
                           4: true}};
             });
           }
+          this.props.updateFilter("dollars", this.state.Dollars);
         break;
       default:
     }
@@ -124,18 +123,21 @@ class ResultsShow extends React.Component {
     this.setState(function(prevState) {
       return {OpenNow: !prevState.OpenNow};
     });
+    this.props.updateFilter("OpenFilter", this.state.OpenNow);
   }
 
   handleTakeout() {
     this.setState(function(prevState) {
       return {Takeout: !prevState.Takeout};
     });
+    this.props.updateFilter("TakeoutFilter", this.state.Takeout);
   }
 
   handleDelivery() {
     this.setState(function(prevState) {
       return {Delivery: !prevState.Delivery};
     });
+    this.props.updateFilter("DeliveryFilter", this.state.Delivery);
   }
 
 

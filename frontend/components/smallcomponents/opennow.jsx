@@ -12,7 +12,6 @@ class OpenNow extends React.Component {
     this.setState( { OpenNow: nextProps.OpenNow } );
   }
 
-
     render () {
 
       if (this.state.OpenNow) {
