@@ -63,3 +63,4 @@ next
 - make filter functions for buttons
 - do css media queries for rest of pages
 - do location links
+- make more seeds using faker for quickness
