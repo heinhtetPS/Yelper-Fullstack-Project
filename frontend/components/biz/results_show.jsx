@@ -25,11 +25,6 @@ class ResultsShow extends React.Component {
   componentDidMount() {
       this.props.updateFilter("searchterm", this.props.location.search.slice(1));
 
-      //in order to add other filters...we need to check state & if its not null or true,
-      // then add these things
-      // but this needs to be in some other lifecycle, like when state changes instead of mount
-      this.props.updateFilter("dollars", this.state.Dollars);
-
   }
 
 
@@ -52,8 +47,8 @@ class ResultsShow extends React.Component {
                           3: false,
                           4: false}};
             });
+            this.props.updateFilter("dollars", 1);
           }
-          this.props.updateFilter("dollars", this.state.Dollars);
         break;
       case 2:
           if (this.state.Dollars[2]) {
@@ -72,8 +67,8 @@ class ResultsShow extends React.Component {
                           3: false,
                           4: false}};
             });
+            this.props.updateFilter("dollars", 2);
           }
-          this.props.updateFilter("dollars", this.state.Dollars);
         break;
       case 3:
           if (this.state.Dollars[3]) {
@@ -92,8 +87,8 @@ class ResultsShow extends React.Component {
                           3: true,
                           4: false}};
             });
+            this.props.updateFilter("dollars", 3);
           }
-          this.props.updateFilter("dollars", this.state.Dollars);
         break;
       case 4:
           if (this.state.Dollars[4]) {
@@ -112,8 +107,8 @@ class ResultsShow extends React.Component {
                           3: false,
                           4: true}};
             });
+            this.props.updateFilter("dollars", 4);
           }
-          this.props.updateFilter("dollars", this.state.Dollars);
         break;
       default:
     }
