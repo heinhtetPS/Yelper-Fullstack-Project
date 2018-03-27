@@ -24,7 +24,6 @@ class ResultsShow extends React.Component {
 
   componentDidMount() {
       this.props.updateFilter("searchterm", this.props.location.search.slice(1));
-
   }
 
 
@@ -39,6 +38,7 @@ class ResultsShow extends React.Component {
                           3: false,
                           4: false}};
             });
+            this.props.updateFilter("dollars", 0);
           } else {
             this.setState((prevState) => {
               return {
@@ -59,6 +59,7 @@ class ResultsShow extends React.Component {
                           3: false,
                           4: false}};
             });
+            this.props.updateFilter("dollars", 0);
           } else {
             this.setState((prevState) => {
               return {
@@ -79,6 +80,7 @@ class ResultsShow extends React.Component {
                           3: false,
                           4: false}};
             });
+            this.props.updateFilter("dollars", 0);
           } else {
             this.setState((prevState) => {
               return {
@@ -99,6 +101,7 @@ class ResultsShow extends React.Component {
                           3: false,
                           4: false}};
             });
+            this.props.updateFilter("dollars", 0);
           } else {
             this.setState((prevState) => {
               return {
