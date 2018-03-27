@@ -118,24 +118,45 @@ class ResultsShow extends React.Component {
   }//end of dollars
 
   handleOpen() {
-    this.setState(function(prevState) {
-      return {OpenNow: !prevState.OpenNow};
-    });
-    this.props.updateFilter("OpenFilter", this.state.OpenNow);
+    if (this.state.OpenNow) {
+      this.setState(function(prevState) {
+        return {OpenNow: false};
+      });
+      this.props.updateFilter("OpenFilter", false);
+    } else {
+      this.setState(function(prevState) {
+        return {OpenNow: true};
+      });
+      this.props.updateFilter("OpenFilter", true);
+    }
   }
 
   handleTakeout() {
-    this.setState(function(prevState) {
-      return {Takeout: !prevState.Takeout};
-    });
-    this.props.updateFilter("TakeoutFilter", this.state.Takeout);
+    if (this.state.Takeout) {
+      this.setState(function(prevState) {
+        return {Takeout: false};
+      });
+      this.props.updateFilter("TakeoutFilter", false);
+    } else {
+      this.setState(function(prevState) {
+        return {Takeout: true};
+      });
+      this.props.updateFilter("TakeoutFilter", true);
+    }
   }
 
   handleDelivery() {
-    this.setState(function(prevState) {
-      return {Delivery: !prevState.Delivery};
-    });
-    this.props.updateFilter("DeliveryFilter", this.state.Delivery);
+    if (this.state.Delivery) {
+      this.setState(function(prevState) {
+        return {Delivery: false};
+      });
+      this.props.updateFilter("DeliveryFilter", false);
+    } else {
+      this.setState(function(prevState) {
+        return {Delivery: true};
+      });
+      this.props.updateFilter("DeliveryFilter", true);
+    }
   }
 
 

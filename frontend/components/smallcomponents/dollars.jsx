@@ -8,7 +8,6 @@ class DollarsFilter extends React.Component {
               2: false,
               3: false,
               4: false}};
-
   }
 
   componentWillReceiveProps(nextProps) {
