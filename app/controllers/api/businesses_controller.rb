@@ -7,6 +7,12 @@ class Api::BusinessesController < ApplicationController
     #if there's a searchterm, compare it against names and categories
     @allbusiness = Business.search_all(params[:searchterm]) if params[:searchterm]
 
+    #Additional filters here
+    #maybe filters should be taken care of on front end?
+    if params[:Dollars]
+      #only include if Business.price == :Dollars
+    end
+
   end
 
   #Remember: category is not technically part of business's own db

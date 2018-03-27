@@ -165,6 +165,20 @@ class ResultsShow extends React.Component {
     let searchterm = this.props.location.search.slice(1);
     let msgbox = this.props.businesses.length === 0 ? "" : "hidden";
 
+    let renderable = this.props.businesses
+
+    // Test case for frontend filtering
+    // Need to have conditions that correspond to the filter buttons
+    // for next time: instead of updating filter, go with state 
+    if (renderable.length > 0) {
+        for (let i = 0; i < renderable.length; i++) {
+            if (renderable[i].price != this.state.Dollars) {
+              renderable.splice(i, 1)
+            }
+        }
+    }
+    console.log(renderable);
+
     return (
       <div className="results-page-container">
         <div className="top-shelf-options">
@@ -189,7 +203,7 @@ class ResultsShow extends React.Component {
             <div className="biz-index-container">
               <ul>
                 <p className={msgbox}>Sorry, your search returned no results.</p>
-                {this.props.businesses.map(
+                {renderable.map(
                   business => <BizIndexItem
                   key={business.id}
                   biz={business}     />)}

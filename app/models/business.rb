@@ -26,6 +26,8 @@ class Business < ApplicationRecord
   pg_search_scope :search_all, :against => [:name], :associated_against => {
                                   :categories => :name},
                                   using: {tsearch: {prefix: true}}
+  pg_search_scope :filter_dollars, :against => [:price]
+  
 
   validates :name, :map_lat, :map_lng, :address, :price, presence: true
   validates :categories, presence: { message: 'business must belong to at least one category'}

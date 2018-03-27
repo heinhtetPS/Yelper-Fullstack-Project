@@ -50,7 +50,8 @@ the component smaller
 to filter the businesses that appear.
 - success on uni data flow with open button copy this for others
 - button frontend is complete, need to connect filters with backend
-- need to look back at true/false toggles because params come out opposite
+- need to look back at true/false toggles because params come out opposite (fixed)
+- Started to look at backend filtering options...maybe it should be done on frontend?
 
 Mobile Progress
 - homepage splash, nav and search complete (exception: location field)
