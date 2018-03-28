@@ -20,6 +20,7 @@ class ResultsShow extends React.Component {
       Delivery: false,
       Takeout: false
     }
+    this.updateRenderables = this.updateRenderables.bind(this);
   }
 
   componentDidMount() {
@@ -38,7 +39,7 @@ class ResultsShow extends React.Component {
                           3: false,
                           4: false}};
             });
-            this.props.updateFilter("dollars", 0);
+
           } else {
             this.setState((prevState) => {
               return {
@@ -47,7 +48,7 @@ class ResultsShow extends React.Component {
                           3: false,
                           4: false}};
             });
-            this.props.updateFilter("dollars", 1);
+
           }
         break;
       case 2:
@@ -159,6 +160,18 @@ class ResultsShow extends React.Component {
     }
   }
 
+  updateRenderables(object) {
+    if (object.length > 0) {
+        for (let i = 0; i < object.length; i++) {
+            if (this.state.Dollars[1] && object[i].price != 1) {
+              object.splice(i, 1)
+            }
+        }
+    }
+    console.log(object);
+    console.log(this.state.Dollars[1]);
+  }
+
 
   render() {
     //vars populate when props come in
@@ -166,18 +179,11 @@ class ResultsShow extends React.Component {
     let msgbox = this.props.businesses.length === 0 ? "" : "hidden";
 
     let renderable = this.props.businesses
-
+    this.updateRenderables(renderable)
     // Test case for frontend filtering
     // Need to have conditions that correspond to the filter buttons
     // for next time: instead of updating filter, go with state
-    // if (renderable.length > 0) {
-    //     for (let i = 0; i < renderable.length; i++) {
-    //         if (renderable[i].price != this.state.Dollars) {
-    //           renderable.splice(i, 1)
-    //         }
-    //     }
-    // }
-    console.log(renderable);
+
 
     return (
       <div className="results-page-container">
