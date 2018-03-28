@@ -169,14 +169,14 @@ class ResultsShow extends React.Component {
 
     // Test case for frontend filtering
     // Need to have conditions that correspond to the filter buttons
-    // for next time: instead of updating filter, go with state 
-    if (renderable.length > 0) {
-        for (let i = 0; i < renderable.length; i++) {
-            if (renderable[i].price != this.state.Dollars) {
-              renderable.splice(i, 1)
-            }
-        }
-    }
+    // for next time: instead of updating filter, go with state
+    // if (renderable.length > 0) {
+    //     for (let i = 0; i < renderable.length; i++) {
+    //         if (renderable[i].price != this.state.Dollars) {
+    //           renderable.splice(i, 1)
+    //         }
+    //     }
+    // }
     console.log(renderable);
 
     return (
