@@ -21,6 +21,7 @@ class ResultsShow extends React.Component {
       Takeout: false
     }
     this.updateRenderables = this.updateRenderables.bind(this);
+    this.returnToDefault = this.returnToDefault.bind(this);
   }
 
   componentDidMount() {
@@ -39,7 +40,7 @@ class ResultsShow extends React.Component {
                           3: false,
                           4: false}};
             });
-
+            returnToDefault();
           } else {
             this.setState((prevState) => {
               return {
@@ -48,7 +49,6 @@ class ResultsShow extends React.Component {
                           3: false,
                           4: false}};
             });
-
           }
         break;
       case 2:
@@ -60,7 +60,7 @@ class ResultsShow extends React.Component {
                           3: false,
                           4: false}};
             });
-            this.props.updateFilter("dollars", 0);
+            returnToDefault();
           } else {
             this.setState((prevState) => {
               return {
@@ -69,7 +69,6 @@ class ResultsShow extends React.Component {
                           3: false,
                           4: false}};
             });
-            this.props.updateFilter("dollars", 2);
           }
         break;
       case 3:
@@ -81,7 +80,7 @@ class ResultsShow extends React.Component {
                           3: false,
                           4: false}};
             });
-            this.props.updateFilter("dollars", 0);
+            returnToDefault();
           } else {
             this.setState((prevState) => {
               return {
@@ -90,7 +89,6 @@ class ResultsShow extends React.Component {
                           3: true,
                           4: false}};
             });
-            this.props.updateFilter("dollars", 3);
           }
         break;
       case 4:
@@ -102,7 +100,7 @@ class ResultsShow extends React.Component {
                           3: false,
                           4: false}};
             });
-            this.props.updateFilter("dollars", 0);
+            returnToDefault();
           } else {
             this.setState((prevState) => {
               return {
@@ -111,7 +109,6 @@ class ResultsShow extends React.Component {
                           3: false,
                           4: true}};
             });
-            this.props.updateFilter("dollars", 4);
           }
         break;
       default:
@@ -162,14 +159,42 @@ class ResultsShow extends React.Component {
 
   updateRenderables(object) {
     if (object.length > 0) {
-        for (let i = 0; i < object.length; i++) {
-            if (this.state.Dollars[1] && object[i].price != 1) {
-              object.splice(i, 1)
+        object.forEach( (el) => {
+
+            if (this.state.Dollars[1] && el.price != 1) {
+              object.splice(object.indexOf(el), 1);
+              console.log("removed " + el.name + " because price is " + el.price + " and not 1");
             }
-        }
+
+            if (this.state.Dollars[2] && el.price != 2) {
+              object.splice(object.indexOf(el), 1);
+              console.log("removed " + el.name + " because price is " + el.price + " and not 2");
+            }
+
+            if (this.state.Dollars[3] && el.price != 3) {
+              object.splice(object.indexOf(el), 1);
+              console.log("removed " + el.name + " because price is " + el.price + " and not 3");
+            }
+
+            if (this.state.Dollars[4] && el.price != 4) {
+              object.splice(object.indexOf(el), 1);
+              console.log("removed " + el.name + " because price is " + el.price + " and not 4");
+            }
+
+            if (this.state.Takeout && !el.take_out) {
+              object.splice(object.indexOf(el), 1);
+            }
+
+            if (this.state.Delivery && !el.delivery) {
+              object.splice(object.indexOf(el), 1);
+            }
+        });
     }
     console.log(object);
-    console.log(this.state.Dollars[1]);
+  }
+
+  returnToDefault(renderobj) {
+    renderobj = this.props.businesses
   }
 
 
@@ -180,9 +205,6 @@ class ResultsShow extends React.Component {
 
     let renderable = this.props.businesses
     this.updateRenderables(renderable)
-    // Test case for frontend filtering
-    // Need to have conditions that correspond to the filter buttons
-    // for next time: instead of updating filter, go with state
 
 
     return (
