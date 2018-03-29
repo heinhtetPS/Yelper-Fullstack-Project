@@ -52,6 +52,8 @@ to filter the businesses that appear.
 - button frontend is complete, need to connect filters with backend
 - need to look back at true/false toggles because params come out opposite (fixed)
 - Started to look at backend filtering options...maybe it should be done on frontend?
+  - dollars 2,3,4 doesnt change the state when it was working before...
+  - redo entire dollars state with ON, OFF and NULL
 
 Mobile Progress
 - homepage splash, nav and search complete (exception: location field)
@@ -65,4 +67,4 @@ next
 - do css media queries for rest of pages
 - do location links
 - make more seeds using faker for quickness
-- quick seeding won't work because i have to make up addresses that will show up 
+- quick seeding won't work because i have to make up addresses that will show up

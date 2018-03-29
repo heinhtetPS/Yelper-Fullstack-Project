@@ -40,7 +40,7 @@ class ResultsShow extends React.Component {
                           3: false,
                           4: false}};
             });
-            returnToDefault();
+
           } else {
             this.setState((prevState) => {
               return {
@@ -60,7 +60,7 @@ class ResultsShow extends React.Component {
                           3: false,
                           4: false}};
             });
-            returnToDefault();
+
           } else {
             this.setState((prevState) => {
               return {
@@ -69,6 +69,7 @@ class ResultsShow extends React.Component {
                           3: false,
                           4: false}};
             });
+            console.log(this.state.Dollars);
           }
         break;
       case 3:
@@ -164,21 +165,25 @@ class ResultsShow extends React.Component {
             if (this.state.Dollars[1] && el.price != 1) {
               object.splice(object.indexOf(el), 1);
               console.log("removed " + el.name + " because price is " + el.price + " and not 1");
+              console.log("Dollars1: " + this.state.Dollars[1]);
             }
 
             if (this.state.Dollars[2] && el.price != 2) {
               object.splice(object.indexOf(el), 1);
               console.log("removed " + el.name + " because price is " + el.price + " and not 2");
+              console.log("Dollars2: " + this.state.Dollars[1]);
             }
 
             if (this.state.Dollars[3] && el.price != 3) {
               object.splice(object.indexOf(el), 1);
               console.log("removed " + el.name + " because price is " + el.price + " and not 3");
+              console.log("Dollars3: " + this.state.Dollars[1]);
             }
 
             if (this.state.Dollars[4] && el.price != 4) {
               object.splice(object.indexOf(el), 1);
               console.log("removed " + el.name + " because price is " + el.price + " and not 4");
+              console.log("Dollars4: " + this.state.Dollars[1]);
             }
 
             if (this.state.Takeout && !el.take_out) {
@@ -194,7 +199,19 @@ class ResultsShow extends React.Component {
   }
 
   returnToDefault(renderobj) {
-    renderobj = this.props.businesses
+    renderobj = this.props.businesses;
+
+    this.setState(function(prevState) {
+      return {
+        Dollars: {1: false,
+                  2: false,
+                  3: false,
+                  4: false},
+        OpenNow: false,
+        Delivery: false,
+        Takeout: false
+      };
+    });
   }
 
 
