@@ -54,6 +54,7 @@ to filter the businesses that appear.
 - Started to look at backend filtering options...maybe it should be done on frontend?
   - dollars 2,3,4 doesnt change the state when it was working before...
   - redo entire dollars state with ON, OFF and NULL
+  - GOt the new dollar system to work for #1, logs are late but it does it. Apply to others. 
 
 Mobile Progress
 - homepage splash, nav and search complete (exception: location field)

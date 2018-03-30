@@ -12,10 +12,8 @@ class ResultsShow extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      Dollars: {1: false,
-                2: false,
-                3: false,
-                4: false},
+      Dollars: {On:[],
+                Off: [1, 2, 3, 4]},
       OpenNow: false,
       Delivery: false,
       Takeout: false
@@ -32,23 +30,21 @@ class ResultsShow extends React.Component {
   toggleDollars(number) {
     switch (number) {
       case 1:
-          if (this.state.Dollars[1]) {
-            this.setState((prevState) => {
-              return {
-                Dollars: {1: false,
-                          2: false,
-                          3: false,
-                          4: false}};
-            });
-
+          if (this.state.Dollars.On.includes(1)) {
+            this.setState((prevState) => ({
+              Dollars: { On: [],
+                        Off: [...prevState.Dollars.Off, 1] }
+                        }));
+                        console.log("Dollars was on 1, Setting 1 as off. Is it On?:" + this.state.Dollars.On === [1]);
+                        console.log(this.state.Dollars);
           } else {
-            this.setState((prevState) => {
-              return {
-                Dollars: {1: true,
-                          2: false,
-                          3: false,
-                          4: false}};
-            });
+            this.setState((prevState) => ({
+              Dollars: { On: [1],
+                        Off: prevState.Dollars.Off.filter((val, i) => val !== 1) }
+                        }));
+                        console.log("Setting 1 as On. Here's Off:" + this.state.Dollars.Off);
+                        console.log(this.state.Dollars);
+                        console.log("On is 1: " + this.state.Dollars.On.includes(1));
           }
         break;
       case 2:
@@ -195,7 +191,7 @@ class ResultsShow extends React.Component {
             }
         });
     }
-    console.log(object);
+    // console.log(object);
   }
 
   returnToDefault(renderobj) {
