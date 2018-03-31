@@ -23,7 +23,7 @@ class DollarsFilter extends React.Component {
             <li className="dollars-button-unselected" onClick={(e) => this.props.toggleDollars(4)}>$$$$</li>
         </ul>
       )
-    } else if (this.state.Dollars.On === [2]) {
+    } else if (this.state.Dollars.On.includes(2)) {
       return (
         <ul className="dollars-container">
             <li className="dollars-button-unselected" onClick={(e) => this.props.toggleDollars(1)}>$</li>
@@ -32,7 +32,7 @@ class DollarsFilter extends React.Component {
             <li className="dollars-button-unselected" onClick={(e) => this.props.toggleDollars(4)}>$$$$</li>
         </ul>
       )
-    } else if (this.state.Dollars.On === [3]) {
+    } else if (this.state.Dollars.On.includes(3)) {
       return (
         <ul className="dollars-container">
             <li className="dollars-button-unselected" onClick={(e) => this.props.toggleDollars(1)}>$</li>
@@ -41,7 +41,7 @@ class DollarsFilter extends React.Component {
             <li className="dollars-button-unselected" onClick={(e) => this.props.toggleDollars(4)}>$$$$</li>
         </ul>
       )
-    } else if (this.state.Dollars.On === [4]) {
+    } else if (this.state.Dollars.On.includes(4)) {
       return (
         <ul className="dollars-container">
             <li className="dollars-button-unselected" onClick={(e) => this.props.toggleDollars(1)}>$</li>

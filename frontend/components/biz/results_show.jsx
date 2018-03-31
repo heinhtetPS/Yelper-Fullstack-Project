@@ -48,64 +48,57 @@ class ResultsShow extends React.Component {
           }
         break;
       case 2:
-          if (this.state.Dollars[2]) {
-            this.setState((prevState) => {
-              return {
-                Dollars: {1: false,
-                          2: false,
-                          3: false,
-                          4: false}};
-            });
-
+          if (this.state.Dollars.On.includes(2)) {
+            this.setState((prevState) => ({
+              Dollars: { On: [],
+                        Off: [...prevState.Dollars.Off, 2] }
+                        }));
+                        console.log("Dollars was on 2, Setting 2 as off. Is it On?:" + this.state.Dollars.On === [2]);
+                        console.log(this.state.Dollars);
           } else {
-            this.setState((prevState) => {
-              return {
-                Dollars: {1: false,
-                          2: true,
-                          3: false,
-                          4: false}};
-            });
-            console.log(this.state.Dollars);
+            this.setState((prevState) => ({
+              Dollars: { On: [2],
+                        Off: prevState.Dollars.Off.filter((val, i) => val !== 2) }
+                        }));
+                        console.log("Setting 2 as On. Here's Off:" + this.state.Dollars.Off);
+                        console.log(this.state.Dollars);
+                        console.log("On is 2: " + this.state.Dollars.On.includes(2));
           }
         break;
       case 3:
-          if (this.state.Dollars[3]) {
-            this.setState((prevState) => {
-              return {
-                Dollars: {1: false,
-                          2: false,
-                          3: false,
-                          4: false}};
-            });
-            returnToDefault();
+          if (this.state.Dollars.On.includes(3)) {
+            this.setState((prevState) => ({
+              Dollars: { On: [],
+                        Off: [...prevState.Dollars.Off, 3] }
+                        }));
+                        console.log("Dollars was on 3, Setting 3 as off. Is it On?:" + this.state.Dollars.On === [3]);
+                        console.log(this.state.Dollars);
           } else {
-            this.setState((prevState) => {
-              return {
-                Dollars: {1: false,
-                          2: false,
-                          3: true,
-                          4: false}};
-            });
+            this.setState((prevState) => ({
+              Dollars: { On: [3],
+                        Off: prevState.Dollars.Off.filter((val, i) => val !== 3) }
+                        }));
+                        console.log("Setting 3 as On. Here's Off:" + this.state.Dollars.Off);
+                        console.log(this.state.Dollars);
+                        console.log("On is 3: " + this.state.Dollars.On.includes(3));
           }
         break;
       case 4:
-          if (this.state.Dollars[4]) {
-            this.setState((prevState) => {
-              return {
-                Dollars: {1: false,
-                          2: false,
-                          3: false,
-                          4: false}};
-            });
-            returnToDefault();
+          if (this.state.Dollars.On.includes(4)) {
+            this.setState((prevState) => ({
+              Dollars: { On: [],
+                        Off: [...prevState.Dollars.Off, 4] }
+                        }));
+                        console.log("Dollars was on 4, Setting 4 as off. Is it On?:" + this.state.Dollars.On === [4]);
+                        console.log(this.state.Dollars);
           } else {
-            this.setState((prevState) => {
-              return {
-                Dollars: {1: false,
-                          2: false,
-                          3: false,
-                          4: true}};
-            });
+            this.setState((prevState) => ({
+              Dollars: { On: [4],
+                        Off: prevState.Dollars.Off.filter((val, i) => val !== 4) }
+                        }));
+                        console.log("Setting 4 as On. Here's Off:" + this.state.Dollars.Off);
+                        console.log(this.state.Dollars);
+                        console.log("On is 4: " + this.state.Dollars.On.includes(4));
           }
         break;
       default:
