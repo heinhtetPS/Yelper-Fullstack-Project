@@ -4,8 +4,8 @@ class DollarsFilter extends React.Component {
   constructor(props) {
     super(props);
     this.state = {Dollars:
-                    {On:[],
-                    Off: [1, 2, 3, 4]}};
+                    {On: props.Dollars.On,
+                    Off: props.Dollars.Off }};
   }
 
   componentWillReceiveProps(nextProps) {

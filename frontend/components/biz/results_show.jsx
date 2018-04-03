@@ -35,16 +35,11 @@ class ResultsShow extends React.Component {
               Dollars: { On: [],
                         Off: [...prevState.Dollars.Off, 1] }
                         }));
-                        console.log("Dollars was on 1, Setting 1 as off. Is it On?:" + this.state.Dollars.On === [1]);
-                        console.log(this.state.Dollars);
           } else {
             this.setState((prevState) => ({
               Dollars: { On: [1],
                         Off: prevState.Dollars.Off.filter((val, i) => val !== 1) }
                         }));
-                        console.log("Setting 1 as On. Here's Off:" + this.state.Dollars.Off);
-                        console.log(this.state.Dollars);
-                        console.log("On is 1: " + this.state.Dollars.On.includes(1));
           }
         break;
       case 2:
@@ -53,16 +48,11 @@ class ResultsShow extends React.Component {
               Dollars: { On: [],
                         Off: [...prevState.Dollars.Off, 2] }
                         }));
-                        console.log("Dollars was on 2, Setting 2 as off. Is it On?:" + this.state.Dollars.On === [2]);
-                        console.log(this.state.Dollars);
           } else {
             this.setState((prevState) => ({
               Dollars: { On: [2],
                         Off: prevState.Dollars.Off.filter((val, i) => val !== 2) }
                         }));
-                        console.log("Setting 2 as On. Here's Off:" + this.state.Dollars.Off);
-                        console.log(this.state.Dollars);
-                        console.log("On is 2: " + this.state.Dollars.On.includes(2));
           }
         break;
       case 3:
@@ -71,16 +61,11 @@ class ResultsShow extends React.Component {
               Dollars: { On: [],
                         Off: [...prevState.Dollars.Off, 3] }
                         }));
-                        console.log("Dollars was on 3, Setting 3 as off. Is it On?:" + this.state.Dollars.On === [3]);
-                        console.log(this.state.Dollars);
           } else {
             this.setState((prevState) => ({
               Dollars: { On: [3],
                         Off: prevState.Dollars.Off.filter((val, i) => val !== 3) }
                         }));
-                        console.log("Setting 3 as On. Here's Off:" + this.state.Dollars.Off);
-                        console.log(this.state.Dollars);
-                        console.log("On is 3: " + this.state.Dollars.On.includes(3));
           }
         break;
       case 4:
@@ -89,16 +74,11 @@ class ResultsShow extends React.Component {
               Dollars: { On: [],
                         Off: [...prevState.Dollars.Off, 4] }
                         }));
-                        console.log("Dollars was on 4, Setting 4 as off. Is it On?:" + this.state.Dollars.On === [4]);
-                        console.log(this.state.Dollars);
           } else {
             this.setState((prevState) => ({
               Dollars: { On: [4],
                         Off: prevState.Dollars.Off.filter((val, i) => val !== 4) }
                         }));
-                        console.log("Setting 4 as On. Here's Off:" + this.state.Dollars.Off);
-                        console.log(this.state.Dollars);
-                        console.log("On is 4: " + this.state.Dollars.On.includes(4));
           }
         break;
       default:
@@ -110,12 +90,10 @@ class ResultsShow extends React.Component {
       this.setState(function(prevState) {
         return {OpenNow: false};
       });
-      this.props.updateFilter("OpenFilter", false);
     } else {
       this.setState(function(prevState) {
         return {OpenNow: true};
       });
-      this.props.updateFilter("OpenFilter", true);
     }
   }
 
@@ -124,12 +102,10 @@ class ResultsShow extends React.Component {
       this.setState(function(prevState) {
         return {Takeout: false};
       });
-      this.props.updateFilter("TakeoutFilter", false);
     } else {
       this.setState(function(prevState) {
         return {Takeout: true};
       });
-      this.props.updateFilter("TakeoutFilter", true);
     }
   }
 
@@ -138,12 +114,10 @@ class ResultsShow extends React.Component {
       this.setState(function(prevState) {
         return {Delivery: false};
       });
-      this.props.updateFilter("DeliveryFilter", false);
     } else {
       this.setState(function(prevState) {
         return {Delivery: true};
       });
-      this.props.updateFilter("DeliveryFilter", true);
     }
   }
 
@@ -211,7 +185,6 @@ class ResultsShow extends React.Component {
 
     let renderable = this.props.businesses
     this.updateRenderables(renderable)
-
 
     return (
       <div className="results-page-container">
