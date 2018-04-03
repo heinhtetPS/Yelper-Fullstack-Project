@@ -16,14 +16,17 @@ class ResultsShow extends React.Component {
                 Off: [1, 2, 3, 4]},
       OpenNow: false,
       Delivery: false,
-      Takeout: false
+      Takeout: false,
+      FilteredBiz: []
     }
     this.updateRenderables = this.updateRenderables.bind(this);
-    this.returnToDefault = this.returnToDefault.bind(this);
   }
 
   componentDidMount() {
       this.props.updateFilter("searchterm", this.props.location.search.slice(1));
+
+
+        this.updateRenderables();
   }
 
 
@@ -90,6 +93,7 @@ class ResultsShow extends React.Component {
       this.setState(function(prevState) {
         return {OpenNow: false};
       });
+
     } else {
       this.setState(function(prevState) {
         return {OpenNow: true};
@@ -121,70 +125,61 @@ class ResultsShow extends React.Component {
     }
   }
 
-  updateRenderables(object) {
-    if (object.length > 0) {
-        object.forEach( (el) => {
+  updateRenderables() {
 
-            if (this.state.Dollars[1] && el.price != 1) {
-              object.splice(object.indexOf(el), 1);
-              console.log("removed " + el.name + " because price is " + el.price + " and not 1");
-              console.log("Dollars1: " + this.state.Dollars[1]);
-            }
-
-            if (this.state.Dollars[2] && el.price != 2) {
-              object.splice(object.indexOf(el), 1);
-              console.log("removed " + el.name + " because price is " + el.price + " and not 2");
-              console.log("Dollars2: " + this.state.Dollars[1]);
-            }
-
-            if (this.state.Dollars[3] && el.price != 3) {
-              object.splice(object.indexOf(el), 1);
-              console.log("removed " + el.name + " because price is " + el.price + " and not 3");
-              console.log("Dollars3: " + this.state.Dollars[1]);
-            }
-
-            if (this.state.Dollars[4] && el.price != 4) {
-              object.splice(object.indexOf(el), 1);
-              console.log("removed " + el.name + " because price is " + el.price + " and not 4");
-              console.log("Dollars4: " + this.state.Dollars[1]);
-            }
-
-            if (this.state.Takeout && !el.take_out) {
-              object.splice(object.indexOf(el), 1);
-            }
-
-            if (this.state.Delivery && !el.delivery) {
-              object.splice(object.indexOf(el), 1);
-            }
-        });
-    }
+    let renderables = this.props.businesses;
+    this.setState({FilteredBiz: renderables});
+    console.log(renderables);
+    // if (object.length > 0) {
+    //
+    //   if (this.state.Dollars.On != [] || !this.state.OpenNow || !this.state.Takeout || !this.state.Delivery) {
+    //     object.forEach( (el) => {
+    //
+    //         if (this.state.Dollars[1] && el.price != 1) {
+    //           object.splice(object.indexOf(el), 1);
+    //           console.log("removed " + el.name + " because price is " + el.price + " and not 1");
+    //           console.log("Dollars1: " + this.state.Dollars[1]);
+    //         }
+    //
+    //         if (this.state.Dollars[2] && el.price != 2) {
+    //           object.splice(object.indexOf(el), 1);
+    //           console.log("removed " + el.name + " because price is " + el.price + " and not 2");
+    //           console.log("Dollars2: " + this.state.Dollars[1]);
+    //         }
+    //
+    //         if (this.state.Dollars[3] && el.price != 3) {
+    //           object.splice(object.indexOf(el), 1);
+    //           console.log("removed " + el.name + " because price is " + el.price + " and not 3");
+    //           console.log("Dollars3: " + this.state.Dollars[1]);
+    //         }
+    //
+    //         if (this.state.Dollars[4] && el.price != 4) {
+    //           object.splice(object.indexOf(el), 1);
+    //           console.log("removed " + el.name + " because price is " + el.price + " and not 4");
+    //           console.log("Dollars4: " + this.state.Dollars[1]);
+    //         }
+    //
+    //         if (this.state.Takeout && !el.take_out) {
+    //           object.splice(object.indexOf(el), 1);
+    //           console.log("removed " + el.name + " because takeout is "+ el.take_out);
+    //         }
+    //
+    //         if (this.state.Delivery && !el.delivery) {
+    //           object.splice(object.indexOf(el), 1);
+    //           console.log("removed " + el.name + " because delivery is "+ el.delivery);
+    //         }
+    //     });
+    //   } else {
+    //     object = this.props.businesses;
+    //   }
+    // }
     // console.log(object);
   }
-
-  returnToDefault(renderobj) {
-    renderobj = this.props.businesses;
-
-    this.setState(function(prevState) {
-      return {
-        Dollars: {1: false,
-                  2: false,
-                  3: false,
-                  4: false},
-        OpenNow: false,
-        Delivery: false,
-        Takeout: false
-      };
-    });
-  }
-
 
   render() {
     //vars populate when props come in
     let searchterm = this.props.location.search.slice(1);
     let msgbox = this.props.businesses.length === 0 ? "" : "hidden";
-
-    let renderable = this.props.businesses
-    this.updateRenderables(renderable)
 
     return (
       <div className="results-page-container">
@@ -210,7 +205,7 @@ class ResultsShow extends React.Component {
             <div className="biz-index-container">
               <ul>
                 <p className={msgbox}>Sorry, your search returned no results.</p>
-                {renderable.map(
+                {this.state.FilteredBiz.map(
                   business => <BizIndexItem
                   key={business.id}
                   biz={business}     />)}

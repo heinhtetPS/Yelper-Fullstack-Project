@@ -54,7 +54,9 @@ to filter the businesses that appear.
 - Started to look at backend filtering options...maybe it should be done on frontend?
   - dollars 2,3,4 doesnt change the state when it was working before...
   - redo entire dollars state with ON, OFF and NULL
-  - GOt the new dollar system to work for #1, logs are late but it does it. Apply to others. 
+  - GOt the new dollar system to work for #1, logs are late but it does it. Apply to others.
+- Realized that my entire system doesn't account for what happens when you turn off a filter (all business has to return to default state)
+- Trying to implement a new filtering method using renderables and a new state for filtered biz
 
 Mobile Progress
 - homepage splash, nav and search complete (exception: location field)
