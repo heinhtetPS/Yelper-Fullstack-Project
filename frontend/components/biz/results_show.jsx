@@ -20,11 +20,11 @@ class ResultsShow extends React.Component {
       FilteredBiz: []
     }
     this.updateRenderables = this.updateRenderables.bind(this);
+    this.analyzeBiz = this.analyzeBiz.bind(this);
   }
 
   componentDidMount() {
       this.props.updateFilter("searchterm", this.props.location.search.slice(1));
-
   }
 
   componentWillReceiveProps() {
@@ -127,11 +127,20 @@ class ResultsShow extends React.Component {
     }
   }
 
+  analyzeBiz(biz) {
+    //if no filters are on, return true
+    //if a filter is on, run the test
+    //Dollars filter: test biz.price against this.state.Dollars.On
+    //Takeout filter: test biz.take_out against this.state.Takeout
+    //Delivery Filter: test biz.delivery against this.state.Delivery
+    if (biz.price === 1)
+    return true
+
+  }
+
   updateRenderables() {
 
-    let renderables = this.props.businesses.filter( (biz) => {
-      return biz.price === 1
-    });
+    let renderables = this.props.businesses.filter(this.analyzeBiz);
     this.setState({FilteredBiz: renderables});
     console.log(renderables);
     // if (object.length > 0) {
