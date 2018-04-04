@@ -25,8 +25,10 @@ class ResultsShow extends React.Component {
   componentDidMount() {
       this.props.updateFilter("searchterm", this.props.location.search.slice(1));
 
+  }
 
-        this.updateRenderables();
+  componentWillReceiveProps() {
+    this.updateRenderables();
   }
 
 
@@ -127,7 +129,9 @@ class ResultsShow extends React.Component {
 
   updateRenderables() {
 
-    let renderables = this.props.businesses;
+    let renderables = this.props.businesses.filter( (biz) => {
+      return biz.price === 1
+    });
     this.setState({FilteredBiz: renderables});
     console.log(renderables);
     // if (object.length > 0) {

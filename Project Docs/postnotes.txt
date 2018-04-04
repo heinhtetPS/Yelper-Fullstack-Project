@@ -66,7 +66,6 @@ Mobile Progress
 - Generally working much better, fix footer & apply to rest
 
 next
-- make filter functions for buttons
 - do css media queries for rest of pages
 - do location links
 - make more seeds using faker for quickness
