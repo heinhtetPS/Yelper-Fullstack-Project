@@ -25,9 +25,12 @@ class ResultsShow extends React.Component {
 
   componentDidMount() {
       this.props.updateFilter("searchterm", this.props.location.search.slice(1));
+      //here state is available to use
+      console.log(this.state);
   }
 
   componentWillReceiveProps() {
+    //here state is [Object object]
     this.updateRenderables();
   }
 
@@ -129,12 +132,22 @@ class ResultsShow extends React.Component {
 
   analyzeBiz(biz) {
     //if no filters are on, return true
+    console.log("state: " + this.state.Dollars);
+    if (!this.state.OpenNow && !this.state.Takeout && !this.state.Delivery)
+    return true;
     //if a filter is on, run the test
     //Dollars filter: test biz.price against this.state.Dollars.On
-    //Takeout filter: test biz.take_out against this.state.Takeout
-    //Delivery Filter: test biz.delivery against this.state.Delivery
-    if (biz.price === 1)
-    return true
+    // let pricefilter = this.state.Dollars.On;
+    // if (biz.price != pricefilter)
+    // return false;
+    // //Takeout filter: test biz.take_out against this.state.Takeout
+    // if (biz.take_out != this.state.Takeout)
+    // return false;
+    // //Delivery Filter: test biz.delivery against this.state.Delivery
+    // if (biz.delivery != this.state.Delivery)
+    // return false;
+    //
+    // return true;
 
   }
 
