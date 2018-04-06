@@ -26,11 +26,12 @@ class ResultsShow extends React.Component {
   componentDidMount() {
       this.props.updateFilter("searchterm", this.props.location.search.slice(1));
       //here state is available to use
-      console.log(this.state);
+      // console.log(this.state);
+      this.updateRenderables();
   }
 
   componentWillReceiveProps() {
-    //here state is [Object object]
+    console.log("updating renderables...");
     this.updateRenderables();
   }
 
@@ -94,58 +95,53 @@ class ResultsShow extends React.Component {
   }//end of dollars
 
   handleOpen() {
-    if (this.state.OpenNow) {
-      this.setState(function(prevState) {
-        return {OpenNow: false};
-      });
-
-    } else {
-      this.setState(function(prevState) {
-        return {OpenNow: true};
-      });
-    }
+    this.setState(prevState => ({
+      OpenNow: !prevState.OpenNow
+    }));
+    // console.log(this.state);
   }
 
   handleTakeout() {
-    if (this.state.Takeout) {
-      this.setState(function(prevState) {
-        return {Takeout: false};
-      });
-    } else {
-      this.setState(function(prevState) {
-        return {Takeout: true};
-      });
-    }
+    this.setState(prevState => ({
+      Takeout: !prevState.Takeout
+    }));
+    console.log(this.state);
   }
 
   handleDelivery() {
-    if (this.state.Delivery) {
-      this.setState(function(prevState) {
-        return {Delivery: false};
-      });
-    } else {
-      this.setState(function(prevState) {
-        return {Delivery: true};
-      });
-    }
+    this.setState(prevState => ({
+      Delivery: !prevState.Delivery
+    }));
+    // console.log(this.state);
   }
 
   analyzeBiz(biz) {
     //if no filters are on, return true
-    console.log("state: " + this.state.Dollars);
-    if (!this.state.OpenNow && !this.state.Takeout && !this.state.Delivery)
-    return true;
-    //if a filter is on, run the test
+    // console.log(this.state);
+    if (!this.state.OpenNow && !this.state.Takeout && !this.state.Delivery) {
+      return true;
+
+    } else {
+      //if a filter is on, run the test
+
+
+      // //Takeout filter: test biz.take_out against this.state.Takeout
+      if (biz.take_out != this.state.Takeout)
+      return false;
+
+      //Delivery Filter: test biz.delivery against this.state.Delivery
+      if (biz.delivery != this.state.Delivery)
+      return false;
+
+    }
+
     //Dollars filter: test biz.price against this.state.Dollars.On
-    // let pricefilter = this.state.Dollars.On;
-    // if (biz.price != pricefilter)
-    // return false;
-    // //Takeout filter: test biz.take_out against this.state.Takeout
-    // if (biz.take_out != this.state.Takeout)
-    // return false;
-    // //Delivery Filter: test biz.delivery against this.state.Delivery
-    // if (biz.delivery != this.state.Delivery)
-    // return false;
+    let pricefilter = this.state.Dollars.On;
+    console.log("price: " + pricefilter);
+    if (biz.price != pricefilter)
+    return false;
+
+
     //
     // return true;
 
@@ -155,51 +151,8 @@ class ResultsShow extends React.Component {
 
     let renderables = this.props.businesses.filter(this.analyzeBiz);
     this.setState({FilteredBiz: renderables});
-    console.log(renderables);
-    // if (object.length > 0) {
-    //
-    //   if (this.state.Dollars.On != [] || !this.state.OpenNow || !this.state.Takeout || !this.state.Delivery) {
-    //     object.forEach( (el) => {
-    //
-    //         if (this.state.Dollars[1] && el.price != 1) {
-    //           object.splice(object.indexOf(el), 1);
-    //           console.log("removed " + el.name + " because price is " + el.price + " and not 1");
-    //           console.log("Dollars1: " + this.state.Dollars[1]);
-    //         }
-    //
-    //         if (this.state.Dollars[2] && el.price != 2) {
-    //           object.splice(object.indexOf(el), 1);
-    //           console.log("removed " + el.name + " because price is " + el.price + " and not 2");
-    //           console.log("Dollars2: " + this.state.Dollars[1]);
-    //         }
-    //
-    //         if (this.state.Dollars[3] && el.price != 3) {
-    //           object.splice(object.indexOf(el), 1);
-    //           console.log("removed " + el.name + " because price is " + el.price + " and not 3");
-    //           console.log("Dollars3: " + this.state.Dollars[1]);
-    //         }
-    //
-    //         if (this.state.Dollars[4] && el.price != 4) {
-    //           object.splice(object.indexOf(el), 1);
-    //           console.log("removed " + el.name + " because price is " + el.price + " and not 4");
-    //           console.log("Dollars4: " + this.state.Dollars[1]);
-    //         }
-    //
-    //         if (this.state.Takeout && !el.take_out) {
-    //           object.splice(object.indexOf(el), 1);
-    //           console.log("removed " + el.name + " because takeout is "+ el.take_out);
-    //         }
-    //
-    //         if (this.state.Delivery && !el.delivery) {
-    //           object.splice(object.indexOf(el), 1);
-    //           console.log("removed " + el.name + " because delivery is "+ el.delivery);
-    //         }
-    //     });
-    //   } else {
-    //     object = this.props.businesses;
-    //   }
-    // }
-    // console.log(object);
+    // console.log("render: " + renderables);
+
   }
 
   render() {
