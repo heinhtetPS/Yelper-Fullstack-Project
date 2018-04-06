@@ -50,6 +50,7 @@ class ResultsShow extends React.Component {
                         Off: prevState.Dollars.Off.filter((val, i) => val !== 1) }
                         }));
           }
+          this.updateRenderables();
         break;
       case 2:
           if (this.state.Dollars.On.includes(2)) {
@@ -63,6 +64,7 @@ class ResultsShow extends React.Component {
                         Off: prevState.Dollars.Off.filter((val, i) => val !== 2) }
                         }));
           }
+          this.updateRenderables();
         break;
       case 3:
           if (this.state.Dollars.On.includes(3)) {
@@ -76,6 +78,7 @@ class ResultsShow extends React.Component {
                         Off: prevState.Dollars.Off.filter((val, i) => val !== 3) }
                         }));
           }
+          this.updateRenderables();
         break;
       case 4:
           if (this.state.Dollars.On.includes(4)) {
@@ -89,8 +92,10 @@ class ResultsShow extends React.Component {
                         Off: prevState.Dollars.Off.filter((val, i) => val !== 4) }
                         }));
           }
+          this.updateRenderables();
         break;
       default:
+      this.updateRenderables();
     }
   }//end of dollars
 
@@ -98,6 +103,7 @@ class ResultsShow extends React.Component {
     this.setState(prevState => ({
       OpenNow: !prevState.OpenNow
     }));
+    this.updateRenderables();
     // console.log(this.state);
   }
 
@@ -113,6 +119,7 @@ class ResultsShow extends React.Component {
     this.setState(prevState => ({
       Delivery: !prevState.Delivery
     }));
+    this.updateRenderables();
     // console.log(this.state);
   }
 
