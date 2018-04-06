@@ -30,7 +30,7 @@ class ResultsShow extends React.Component {
       this.updateRenderables();
   }
 
-  componentWillReceiveProps() {
+  componentWillReceiveProps(nextProps) {
     console.log("updating renderables...");
     this.updateRenderables();
   }
@@ -40,12 +40,12 @@ class ResultsShow extends React.Component {
     switch (number) {
       case 1:
           if (this.state.Dollars.On.includes(1)) {
-            this.setState((prevState) => ({
+            this.setState(prevState => ({
               Dollars: { On: [],
                         Off: [...prevState.Dollars.Off, 1] }
                         }));
           } else {
-            this.setState((prevState) => ({
+            this.setState(prevState => ({
               Dollars: { On: [1],
                         Off: prevState.Dollars.Off.filter((val, i) => val !== 1) }
                         }));
@@ -53,12 +53,12 @@ class ResultsShow extends React.Component {
         break;
       case 2:
           if (this.state.Dollars.On.includes(2)) {
-            this.setState((prevState) => ({
+            this.setState(prevState => ({
               Dollars: { On: [],
                         Off: [...prevState.Dollars.Off, 2] }
                         }));
           } else {
-            this.setState((prevState) => ({
+            this.setState(prevState => ({
               Dollars: { On: [2],
                         Off: prevState.Dollars.Off.filter((val, i) => val !== 2) }
                         }));
@@ -66,12 +66,12 @@ class ResultsShow extends React.Component {
         break;
       case 3:
           if (this.state.Dollars.On.includes(3)) {
-            this.setState((prevState) => ({
+            this.setState(prevState => ({
               Dollars: { On: [],
                         Off: [...prevState.Dollars.Off, 3] }
                         }));
           } else {
-            this.setState((prevState) => ({
+            this.setState(prevState => ({
               Dollars: { On: [3],
                         Off: prevState.Dollars.Off.filter((val, i) => val !== 3) }
                         }));
@@ -79,12 +79,12 @@ class ResultsShow extends React.Component {
         break;
       case 4:
           if (this.state.Dollars.On.includes(4)) {
-            this.setState((prevState) => ({
+            this.setState(prevState => ({
               Dollars: { On: [],
                         Off: [...prevState.Dollars.Off, 4] }
                         }));
           } else {
-            this.setState((prevState) => ({
+            this.setState(prevState => ({
               Dollars: { On: [4],
                         Off: prevState.Dollars.Off.filter((val, i) => val !== 4) }
                         }));
@@ -105,6 +105,7 @@ class ResultsShow extends React.Component {
     this.setState(prevState => ({
       Takeout: !prevState.Takeout
     }));
+    this.updateRenderables();
     console.log(this.state);
   }
 
@@ -130,16 +131,16 @@ class ResultsShow extends React.Component {
       return false;
 
       //Delivery Filter: test biz.delivery against this.state.Delivery
-      if (biz.delivery != this.state.Delivery)
-      return false;
+      // if (biz.delivery != this.state.Delivery)
+      // return false;
 
     }
 
     //Dollars filter: test biz.price against this.state.Dollars.On
-    let pricefilter = this.state.Dollars.On;
-    console.log("price: " + pricefilter);
-    if (biz.price != pricefilter)
-    return false;
+    // let pricefilter = this.state.Dollars.On;
+    // console.log("price: " + pricefilter);
+    // if (biz.price != pricefilter)
+    // return false;
 
 
     //
@@ -151,7 +152,7 @@ class ResultsShow extends React.Component {
 
     let renderables = this.props.businesses.filter(this.analyzeBiz);
     this.setState({FilteredBiz: renderables});
-    // console.log("render: " + renderables);
+    console.log("re-rendering with: " + renderables);
 
   }
 

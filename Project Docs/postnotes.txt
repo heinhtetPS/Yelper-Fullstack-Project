@@ -57,7 +57,8 @@ to filter the businesses that appear.
   - GOt the new dollar system to work for #1, logs are late but it does it. Apply to others.
 - Realized that my entire system doesn't account for what happens when you turn off a filter (all business has to return to default state)
 - Trying to implement a new filtering method using renderables and a new state for filtered biz
-- Test case success! Now implement the comments in analyzeBiz to reflect filters 
+- Test case success! Now implement the comments in analyzeBiz to reflect filters
+- buttons now interact with renderables properly. Need to refine analyzebiz or break it up
 
 Mobile Progress
 - homepage splash, nav and search complete (exception: location field)
