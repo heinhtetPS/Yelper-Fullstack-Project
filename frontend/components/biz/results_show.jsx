@@ -134,8 +134,11 @@ class ResultsShow extends React.Component {
 
 
       // //Takeout filter: test biz.take_out against this.state.Takeout
-      if (biz.take_out != this.state.Takeout)
-      return false;
+      if (biz.take_out != this.state.Takeout) {
+        console.log("removing " + biz.name + "because takeout is " + biz.take_out);
+        return false;
+      }
+
 
       //Delivery Filter: test biz.delivery against this.state.Delivery
       // if (biz.delivery != this.state.Delivery)
@@ -150,8 +153,8 @@ class ResultsShow extends React.Component {
     // return false;
 
 
-    //
-    // return true;
+    //if filters ARE on but it passes all the tests
+    return true;
 
   }
 

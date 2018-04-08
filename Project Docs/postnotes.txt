@@ -59,6 +59,7 @@ to filter the businesses that appear.
 - Trying to implement a new filtering method using renderables and a new state for filtered biz
 - Test case success! Now implement the comments in analyzeBiz to reflect filters
 - buttons now interact with renderables properly. Need to refine analyzebiz or break it up
+- takeout filter is now working but its backwards as feared. 
 
 Mobile Progress
 - homepage splash, nav and search complete (exception: location field)
