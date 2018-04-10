@@ -17,7 +17,7 @@ To Do
 - Make this entire site mobile friendly
 - In order to achieve mobile friendly, we have to add @media queries to EVERY CSS file
 - Cities missing under yelp Brooklyn on main pg
-- Tooltips for buttons on results page 
+- Tooltips for buttons on results page
 - Make all foods lead to restaurant
 - Change bounds upon changing location (means we need to find out how gmaps defines bounds on locations)
 
@@ -61,7 +61,8 @@ to filter the businesses that appear.
 - Test case success! Now implement the comments in analyzeBiz to reflect filters
 - buttons now interact with renderables properly. Need to refine analyzebiz or break it up
 - takeout filter is now working but its backwards as feared.
-- simplified Dollars container, still bugged.
+- simplified Dollars container, still bugged. Tried adding zero, still reversed.
+- reversing bug is a bit better, apply DOllars[1] setstate syntax to everything else
 
 
 Mobile Progress

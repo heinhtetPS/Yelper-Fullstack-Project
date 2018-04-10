@@ -40,14 +40,14 @@ class ResultsShow extends React.Component {
           if (this.state.Dollars.includes(1)) {
             //if dollars is already on, turn it off
             console.log("turning off 1");
-            this.setState(prevState => ({
-              Dollars: prevState.Dollars.filter((val, i) => val !== 1)
-                        }));
+            this.setState(prevState => {
+              return {Dollars: prevState.Dollars.filter((val, i) => val !== 1)}
+                        });
           } else {
             console.log("adding 1 to state");
-            this.setState(prevState => ({
-              Dollars: [...prevState.Dollars, 1]
-                        }));
+            this.setState(prevState => {
+              return {Dollars: [...prevState.Dollars, 1]}
+                        });
           }
           this.updateRenderables();
           console.log(this.state);
