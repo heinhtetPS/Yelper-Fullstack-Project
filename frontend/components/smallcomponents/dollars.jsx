@@ -3,18 +3,19 @@ import React from 'react';
 class DollarsFilter extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {Dollars:
-                    {On: props.Dollars.On,
-                    Off: props.Dollars.Off }};
+    this.state = {
+      Dollars: props.Dollars
+    };
   }
 
   componentWillReceiveProps(nextProps) {
     this.setState( { Dollars: nextProps.Dollars } );
+    console.log("Inside dollars" + this.state.Dollars);
   }
 
   render() {
 
-    if (this.state.Dollars.On.includes(1)) {
+    if (this.state.Dollars.includes(1)) {
       return (
         <ul className="dollars-container">
             <li className="dollars-button-selected" onClick={(e) => this.props.toggleDollars(1)}>$</li>
@@ -23,7 +24,7 @@ class DollarsFilter extends React.Component {
             <li className="dollars-button-unselected" onClick={(e) => this.props.toggleDollars(4)}>$$$$</li>
         </ul>
       )
-    } else if (this.state.Dollars.On.includes(2)) {
+    } else if (this.state.Dollars.includes(2)) {
       return (
         <ul className="dollars-container">
             <li className="dollars-button-unselected" onClick={(e) => this.props.toggleDollars(1)}>$</li>
@@ -32,7 +33,7 @@ class DollarsFilter extends React.Component {
             <li className="dollars-button-unselected" onClick={(e) => this.props.toggleDollars(4)}>$$$$</li>
         </ul>
       )
-    } else if (this.state.Dollars.On.includes(3)) {
+    } else if (this.state.Dollars.includes(3)) {
       return (
         <ul className="dollars-container">
             <li className="dollars-button-unselected" onClick={(e) => this.props.toggleDollars(1)}>$</li>
@@ -41,7 +42,7 @@ class DollarsFilter extends React.Component {
             <li className="dollars-button-unselected" onClick={(e) => this.props.toggleDollars(4)}>$$$$</li>
         </ul>
       )
-    } else if (this.state.Dollars.On.includes(4)) {
+    } else if (this.state.Dollars.includes(4)) {
       return (
         <ul className="dollars-container">
             <li className="dollars-button-unselected" onClick={(e) => this.props.toggleDollars(1)}>$</li>

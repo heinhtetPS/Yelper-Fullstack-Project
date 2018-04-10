@@ -10,7 +10,7 @@ class Takeout extends React.Component {
 
 	componentWillReceiveProps (nextProps) {
 		this.setState( { Takeout: nextProps.Takeout } );
-    console.log("inside takeout: " + this.state.Takeout);
+    // console.log("inside takeout: " + this.state.Takeout);
 	}
 
   render () {
