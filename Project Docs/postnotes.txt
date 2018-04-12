@@ -63,6 +63,8 @@ to filter the businesses that appear.
 - takeout filter is now working but its backwards as feared.
 - simplified Dollars container, still bugged. Tried adding zero, still reversed.
 - reversing bug is a bit better, apply DOllars[1] setstate syntax to everything else
+- experiments with toggle: when html is reversed, the bool states are correct but starts off activated
+- more elegant ternary for toggle in opennow, copy this. 
 
 
 Mobile Progress

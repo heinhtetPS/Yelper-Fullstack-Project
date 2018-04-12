@@ -106,11 +106,11 @@ class ResultsShow extends React.Component {
   }//end of dollars
 
   handleOpen() {
-    this.setState(prevState => ({
-      OpenNow: !prevState.OpenNow
-    }));
+    this.setState(prevState => {
+      return {OpenNow: !this.state.OpenNow}
+    });
     this.updateRenderables();
-    // console.log(this.state);
+    console.log(this.state);
   }
 
   handleTakeout() {
@@ -140,15 +140,17 @@ class ResultsShow extends React.Component {
 
 
       // //Takeout filter: test biz.take_out against this.state.Takeout
-      if (biz.take_out != this.state.Takeout) {
+      if (this.state.Takeout && !biz.take_out) {
         console.log("removing " + biz.name + "because takeout is " + biz.take_out);
         return false;
       }
 
 
       //Delivery Filter: test biz.delivery against this.state.Delivery
-      // if (biz.delivery != this.state.Delivery)
-      // return false;
+      if (this.state.Delivery && !biz.delivery) {
+        console.log("removing " + biz.name + "because takeout is " + biz.take_out);
+        return false;
+      }
 
     }
 
@@ -188,7 +190,7 @@ class ResultsShow extends React.Component {
                                     Dollars={this.state.Dollars}/>
                       <ul className="filters-row2">
                         <OpenButton handleOpen={this.handleOpen.bind(this)}
-                                    OpenNow={this.state.OpenNow}/>
+                                    OpenNow={this.state.OpenNow || false}/>
                         <DeliveryButton handleDelivery={this.handleDelivery.bind(this)}
                                     Delivery={this.state.Delivery}/>
                         <TakeoutButton handleTakeout={this.handleTakeout.bind(this)}
