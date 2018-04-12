@@ -53,46 +53,52 @@ class ResultsShow extends React.Component {
           console.log(this.state);
         break;
       case 2:
-          if (this.state.Dollars.includes(2)) {
-            //if dollars is already on, turn it off
-            this.setState(prevState => ({
-              Dollars: prevState.Dollars.filter((val, i) => val !== 2)
-                        }));
-          } else {
-            this.setState(prevState => ({
-              Dollars: [...prevState.Dollars, 2]
-                        }));
-          }
-          this.updateRenderables();
-          console.log(this.state);
+        if (this.state.Dollars.includes(2)) {
+          //if dollars is already on, turn it off
+          console.log("turning off 2");
+          this.setState(prevState => {
+            return {Dollars: prevState.Dollars.filter((val, i) => val !== 2)}
+                      });
+        } else {
+          console.log("adding 2 to state");
+          this.setState(prevState => {
+            return {Dollars: [...prevState.Dollars, 2]}
+                      });
+        }
+        this.updateRenderables();
+        console.log(this.state);
         break;
       case 3:
-          if (this.state.Dollars.includes(3)) {
-            //if dollars is already on, turn it off
-            this.setState(prevState => ({
-              Dollars: prevState.Dollars.filter((val, i) => val !== 3)
-                        }));
-          } else {
-            this.setState(prevState => ({
-              Dollars: [...prevState.Dollars, 3]
-                        }));
-          }
-          this.updateRenderables();
-          console.log(this.state);
+        if (this.state.Dollars.includes(3)) {
+          //if dollars is already on, turn it off
+          console.log("turning off 3");
+          this.setState(prevState => {
+            return {Dollars: prevState.Dollars.filter((val, i) => val !== 3)}
+                      });
+        } else {
+          console.log("adding 3 to state");
+          this.setState(prevState => {
+            return {Dollars: [...prevState.Dollars, 3]}
+                      });
+        }
+        this.updateRenderables();
+        console.log(this.state);
         break;
       case 4:
-          if (this.state.Dollars.includes(4)) {
-            //if dollars is already on, turn it off
-            this.setState(prevState => ({
-              Dollars: prevState.Dollars.filter((val, i) => val !== 4)
-                        }));
-          } else {
-            this.setState(prevState => ({
-              Dollars: [...prevState.Dollars, 4]
-                        }));
-          }
-          this.updateRenderables();
-          console.log(this.state);
+        if (this.state.Dollars.includes(4)) {
+          //if dollars is already on, turn it off
+          console.log("turning off 4");
+          this.setState(prevState => {
+            return {Dollars: prevState.Dollars.filter((val, i) => val !== 4)}
+                      });
+        } else {
+          console.log("adding 4 to state");
+          this.setState(prevState => {
+            return {Dollars: [...prevState.Dollars, 4]}
+                      });
+        }
+        this.updateRenderables();
+        console.log(this.state);
         break;
       default:
       this.updateRenderables();
