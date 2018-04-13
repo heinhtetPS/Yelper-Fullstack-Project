@@ -14,53 +14,18 @@ class DollarsFilter extends React.Component {
   }
 
   render() {
-
-    if (this.state.Dollars.includes(1)) {
       return (
         <ul className="dollars-container">
-            <li className="dollars-button-selected" onClick={(e) => this.props.toggleDollars(1)}>$</li>
-            <li className="dollars-button-unselected" onClick={(e) => this.props.toggleDollars(2)}>$$</li>
-            <li className="dollars-button-unselected" onClick={(e) => this.props.toggleDollars(3)}>$$$</li>
-            <li className="dollars-button-unselected" onClick={(e) => this.props.toggleDollars(4)}>$$$$</li>
+            <li className={this.state.Dollars.includes(1) ? 'dollars-button-selected' : 'dollars-button-unselected'}
+              onClick={(e) => this.props.toggleDollars(1)}>$</li>
+            <li className={this.state.Dollars.includes(2) ? 'dollars-button-selected' : 'dollars-button-unselected'}
+              onClick={(e) => this.props.toggleDollars(2)}>$$</li>
+            <li className={this.state.Dollars.includes(3) ? 'dollars-button-selected' : 'dollars-button-unselected'}
+              onClick={(e) => this.props.toggleDollars(3)}>$$$</li>
+            <li className={this.state.Dollars.includes(4) ? 'dollars-button-selected' : 'dollars-button-unselected'}
+              onClick={(e) => this.props.toggleDollars(4)}>$$$$</li>
         </ul>
       )
-    } else if (this.state.Dollars.includes(2)) {
-      return (
-        <ul className="dollars-container">
-            <li className="dollars-button-unselected" onClick={(e) => this.props.toggleDollars(1)}>$</li>
-            <li className="dollars-button-selected" onClick={(e) => this.props.toggleDollars(2)}>$$</li>
-            <li className="dollars-button-unselected" onClick={(e) => this.props.toggleDollars(3)}>$$$</li>
-            <li className="dollars-button-unselected" onClick={(e) => this.props.toggleDollars(4)}>$$$$</li>
-        </ul>
-      )
-    } else if (this.state.Dollars.includes(3)) {
-      return (
-        <ul className="dollars-container">
-            <li className="dollars-button-unselected" onClick={(e) => this.props.toggleDollars(1)}>$</li>
-            <li className="dollars-button-unselected" onClick={(e) => this.props.toggleDollars(2)}>$$</li>
-            <li className="dollars-button-selected" onClick={(e) => this.props.toggleDollars(3)}>$$$</li>
-            <li className="dollars-button-unselected" onClick={(e) => this.props.toggleDollars(4)}>$$$$</li>
-        </ul>
-      )
-    } else if (this.state.Dollars.includes(4)) {
-      return (
-        <ul className="dollars-container">
-            <li className="dollars-button-unselected" onClick={(e) => this.props.toggleDollars(1)}>$</li>
-            <li className="dollars-button-unselected" onClick={(e) => this.props.toggleDollars(2)}>$$</li>
-            <li className="dollars-button-unselected" onClick={(e) => this.props.toggleDollars(3)}>$$$</li>
-            <li className="dollars-button-selected" onClick={(e) => this.props.toggleDollars(4)}>$$$$</li>
-        </ul>
-      )
-    } else {
-      return (
-        <ul className="dollars-container">
-            <li className="dollars-button-unselected" onClick={(e) => this.props.toggleDollars(1)}>$</li>
-            <li className="dollars-button-unselected" onClick={(e) => this.props.toggleDollars(2)}>$$</li>
-            <li className="dollars-button-unselected" onClick={(e) => this.props.toggleDollars(3)}>$$$</li>
-            <li className="dollars-button-unselected" onClick={(e) => this.props.toggleDollars(4)}>$$$$</li>
-        </ul>
-      )
-    }
   }
 }
 
