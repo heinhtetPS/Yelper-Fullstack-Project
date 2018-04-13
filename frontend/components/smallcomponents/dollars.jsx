@@ -10,7 +10,7 @@ class DollarsFilter extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     this.setState( { Dollars: nextProps.Dollars } );
-    console.log("Inside dollars" + this.state.Dollars);
+    // console.log("Inside dollars" + this.state.Dollars);
   }
 
   render() {

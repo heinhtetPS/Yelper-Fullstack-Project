@@ -4,7 +4,6 @@ class OpenNow extends React.Component {
 
     constructor ( props ) {
         super( props );
-
         this.state = {OpenNow: props.OpenNow}
     }
 
@@ -22,7 +21,6 @@ class OpenNow extends React.Component {
         </li>
       )
     }
-
 }
 
 export default OpenNow;

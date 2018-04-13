@@ -4,7 +4,6 @@ class Delivery extends React.Component {
 
     constructor ( props ) {
         super( props );
-
         this.state = {Delivery: props.Delivery}
     }
 
@@ -13,7 +12,6 @@ class Delivery extends React.Component {
   	}
 
     render () {
-
       return(
         <li className="filters-element2" onClick={this.props.handleDelivery}>
           <label className={this.state.Delivery ? 'open-button' : 'open-button selected'}>
@@ -23,7 +21,6 @@ class Delivery extends React.Component {
         </li>
       )
     }
-
 }
 
 export default Delivery;

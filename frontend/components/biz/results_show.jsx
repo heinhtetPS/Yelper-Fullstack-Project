@@ -154,11 +154,13 @@ class ResultsShow extends React.Component {
 
     }
 
-    //Dollars filter: test biz.price against this.state.Dollars.On
-    // let pricefilter = this.state.Dollars.On;
-    // console.log("price: " + pricefilter);
-    // if (biz.price != pricefilter)
-    // return false;
+    //Dollars filter: test biz.price against this.state.Dollars
+    let pricefilter = this.state.Dollars[0];
+    console.log("price: " + pricefilter);
+    if (biz.price != pricefilter) {
+      console.log("removing " + biz.name + "because price is " + biz.price);
+      return false;
+    }
 
 
     //if filters ARE on but it passes all the tests
@@ -192,9 +194,9 @@ class ResultsShow extends React.Component {
                         <OpenButton handleOpen={this.handleOpen.bind(this)}
                                     OpenNow={this.state.OpenNow || false}/>
                         <DeliveryButton handleDelivery={this.handleDelivery.bind(this)}
-                                    Delivery={this.state.Delivery}/>
+                                    Delivery={this.state.Delivery || false}/>
                         <TakeoutButton handleTakeout={this.handleTakeout.bind(this)}
-                                    Takeout={this.state.Takeout}/>
+                                    Takeout={this.state.Takeout || false}/>
                       </ul>
               </ul>
           </div>
