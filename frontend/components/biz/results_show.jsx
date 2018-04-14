@@ -132,12 +132,10 @@ class ResultsShow extends React.Component {
   analyzeBiz(biz) {
     //if no filters are on, return true
     // console.log(this.state);
-    if (!this.state.OpenNow && !this.state.Takeout && !this.state.Delivery) {
+    if (!this.state.OpenNow || !this.state.Takeout || !this.state.Delivery) {
       return true;
-
     } else {
       //if a filter is on, run the test
-
 
       // //Takeout filter: test biz.take_out against this.state.Takeout
       if (this.state.Takeout && !biz.take_out) {
