@@ -9,11 +9,11 @@ class Takeout extends React.Component {
 
 	componentWillReceiveProps (nextProps) {
 		this.setState( { Takeout: nextProps.Takeout } );
-    console.log("inside takeout: " + this.state.Takeout);
+    // console.log("inside takeout: " + this.state.Takeout);
 	}
 
   render () {
-    //state check for class is reversed as a temp fix. 
+    //state check for class is reversed as a temp fix.
       return(
         <li className="filters-element2" onClick={this.props.handleTakeout}>
           <label className={!this.state.Takeout ? 'open-button' : 'open-button selected'}>

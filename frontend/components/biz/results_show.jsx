@@ -39,66 +39,66 @@ class ResultsShow extends React.Component {
       case 1:
           if (this.state.Dollars.includes(1)) {
             //if dollars is already on, turn it off
-            console.log("turning off 1");
+            // console.log("turning off 1");
             this.setState(prevState => {
               return {Dollars: prevState.Dollars.filter((val, i) => val !== 1)}
                         });
           } else {
-            console.log("adding 1 to state");
+            // console.log("adding 1 to state");
             this.setState(prevState => {
               return {Dollars: [...prevState.Dollars, 1]}
                         });
           }
           this.updateRenderables();
-          console.log(this.state);
+          // console.log(this.state);
         break;
       case 2:
         if (this.state.Dollars.includes(2)) {
           //if dollars is already on, turn it off
-          console.log("turning off 2");
+          // console.log("turning off 2");
           this.setState(prevState => {
             return {Dollars: prevState.Dollars.filter((val, i) => val !== 2)}
                       });
         } else {
-          console.log("adding 2 to state");
+          // console.log("adding 2 to state");
           this.setState(prevState => {
             return {Dollars: [...prevState.Dollars, 2]}
                       });
         }
         this.updateRenderables();
-        console.log(this.state);
+        // console.log(this.state);
         break;
       case 3:
         if (this.state.Dollars.includes(3)) {
           //if dollars is already on, turn it off
-          console.log("turning off 3");
+          // console.log("turning off 3");
           this.setState(prevState => {
             return {Dollars: prevState.Dollars.filter((val, i) => val !== 3)}
                       });
         } else {
-          console.log("adding 3 to state");
+          // console.log("adding 3 to state");
           this.setState(prevState => {
             return {Dollars: [...prevState.Dollars, 3]}
                       });
         }
         this.updateRenderables();
-        console.log(this.state);
+        // console.log(this.state);
         break;
       case 4:
         if (this.state.Dollars.includes(4)) {
           //if dollars is already on, turn it off
-          console.log("turning off 4");
+          // console.log("turning off 4");
           this.setState(prevState => {
             return {Dollars: prevState.Dollars.filter((val, i) => val !== 4)}
                       });
         } else {
-          console.log("adding 4 to state");
+          // console.log("adding 4 to state");
           this.setState(prevState => {
             return {Dollars: [...prevState.Dollars, 4]}
                       });
         }
         this.updateRenderables();
-        console.log(this.state);
+        // console.log(this.state);
         break;
       default:
       this.updateRenderables();
@@ -110,7 +110,7 @@ class ResultsShow extends React.Component {
       return {OpenNow: !this.state.OpenNow}
     });
     this.updateRenderables();
-    console.log(this.state);
+    // console.log(this.state);
   }
 
   handleTakeout() {
@@ -118,7 +118,7 @@ class ResultsShow extends React.Component {
       Takeout: !prevState.Takeout
     }));
     this.updateRenderables();
-    console.log(this.state);
+    // console.log(this.state);
   }
 
   handleDelivery() {
@@ -131,22 +131,23 @@ class ResultsShow extends React.Component {
 
   analyzeBiz(biz) {
     //if no filters are on, return true
-    // console.log(this.state);
-    if (!this.state.OpenNow || !this.state.Takeout || !this.state.Delivery) {
+    console.log(this.state);
+    if (!this.state.OpenNow && !this.state.Takeout && !this.state.Delivery) {
+      console.log('no filters on');
       return true;
     } else {
       //if a filter is on, run the test
 
       // //Takeout filter: test biz.take_out against this.state.Takeout
       if (this.state.Takeout && !biz.take_out) {
-        console.log("removing " + biz.name + "because takeout is " + biz.take_out);
+        console.log("removing " + biz.name + " because takeout is " + biz.take_out);
         return false;
       }
 
 
       //Delivery Filter: test biz.delivery against this.state.Delivery
       if (this.state.Delivery && !biz.delivery) {
-        console.log("removing " + biz.name + "because takeout is " + biz.take_out);
+        console.log("removing " + biz.name + " because takeout is " + biz.take_out);
         return false;
       }
 
@@ -162,6 +163,7 @@ class ResultsShow extends React.Component {
 
 
     //if filters ARE on but it passes all the tests
+    console.log('i got here, which means all tests were skipped');
     return true;
 
   }
@@ -170,7 +172,9 @@ class ResultsShow extends React.Component {
 
     let renderables = this.props.businesses.filter(this.analyzeBiz);
     this.setState({FilteredBiz: renderables});
-    console.log("re-rendering with: " + renderables);
+    renderables.forEach( (biz) => {
+      console.log(biz.name);
+    });
 
   }
 
@@ -205,8 +209,8 @@ class ResultsShow extends React.Component {
                 <p className={msgbox}>Sorry, your search returned no results.</p>
                 {this.state.FilteredBiz.map(
                   business => <BizIndexItem
-                  key={business.id}
-                  biz={business}     />)}
+                  biz={business}
+                  key={business.id}     />)}
               </ul>
             </div>
             <div className="map-column-container">
