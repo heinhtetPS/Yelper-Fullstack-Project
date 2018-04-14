@@ -63,6 +63,7 @@ to filter the businesses that appear.
 - reversing bug is a bit better, apply DOllars[1] setstate syntax to everything else
 - experiments with toggle: when html is reversed, the bool states are correct but starts off activated
 - more elegant ternary for toggle in opennow, copy this.
+- fix: price filter is proccing even though it is off, look at bizfilter & seperate out stuff
 
 
 Mobile Progress
