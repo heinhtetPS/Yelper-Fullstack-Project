@@ -64,7 +64,8 @@ to filter the businesses that appear.
 - experiments with toggle: when html is reversed, the bool states are correct but starts off activated
 - more elegant ternary for toggle in opennow, copy this.
 - fix: price filter is proccing even though it is off, look at bizfilter & seperate out stuff
-
+- changed openfilter to cash filter for simpicity
+- the thing about the toggle bug: When the behavior is correct, it starts as ON. When wrong, it needs 1 cycle to activate. 
 
 Mobile Progress
 - homepage splash, nav and search complete (exception: location field)

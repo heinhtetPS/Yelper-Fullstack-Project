@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import BizIndexItem from './biz_index_item';
 import DollarsFilter from '../smallcomponents/dollars';
-import OpenButton from '../smallcomponents/opennow';
+import OpenButton from '../smallcomponents/cashonly';
 import DeliveryButton from '../smallcomponents/delivery';
 import TakeoutButton from '../smallcomponents/takeout';
 import Bizmap from '../map';
@@ -13,7 +13,7 @@ class ResultsShow extends React.Component {
     super(props);
     this.state = {
       Dollars: [],
-      OpenNow: false,
+      CashOnly: false,
       Delivery: false,
       Takeout: false,
       FilteredBiz: []
@@ -105,9 +105,9 @@ class ResultsShow extends React.Component {
     }
   }//end of dollars
 
-  handleOpen() {
+  handleCash() {
     this.setState(prevState => {
-      return {OpenNow: !this.state.OpenNow}
+      return {CashOnly: !this.state.CashOnly}
     });
     this.updateRenderables();
     // console.log(this.state);
@@ -132,11 +132,17 @@ class ResultsShow extends React.Component {
   analyzeBiz(biz) {
     //if no filters are on, return true
     console.log(this.state);
-    if (!this.state.OpenNow && !this.state.Takeout && !this.state.Delivery) {
+    if (!this.state.CashOnly && !this.state.Takeout && !this.state.Delivery) {
       console.log('no filters on');
       return true;
     } else {
       //if a filter is on, run the test
+
+      // //CashOnly filter: test biz.accepts_credit_cards against this.state.CashOnly
+      if (this.state.CashOnly && !biz.accepts_credit_cards) {
+        console.log("removing " + biz.name + " because Cashonly is " + biz.accepts_credit_cards);
+        return false;
+      }
 
       // //Takeout filter: test biz.take_out against this.state.Takeout
       if (this.state.Takeout && !biz.take_out) {
@@ -193,8 +199,8 @@ class ResultsShow extends React.Component {
                     <DollarsFilter toggleDollars={this.toggleDollars.bind(this)}
                                     Dollars={this.state.Dollars}/>
                       <ul className="filters-row2">
-                        <OpenButton handleOpen={this.handleOpen.bind(this)}
-                                    OpenNow={this.state.OpenNow || false}/>
+                        <OpenButton handleCash={this.handleCash.bind(this)}
+                                    CashOnly={this.state.CashOnly || false}/>
                         <DeliveryButton handleDelivery={this.handleDelivery.bind(this)}
                                     Delivery={this.state.Delivery || false}/>
                         <TakeoutButton handleTakeout={this.handleTakeout.bind(this)}
