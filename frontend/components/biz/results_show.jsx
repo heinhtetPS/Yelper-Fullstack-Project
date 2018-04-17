@@ -156,7 +156,7 @@ class ResultsShow extends React.Component {
     //Dollars filter: test biz.price against this.state.Dollars
     let pricefilter = this.state.Dollars[0];
     console.log("price: " + pricefilter);
-    if (biz.price != pricefilter) {
+    if (biz.price != pricefilter && pricefilter !== undefined) {
       console.log("removing " + biz.name + "because price is " + biz.price);
       return false;
     }
