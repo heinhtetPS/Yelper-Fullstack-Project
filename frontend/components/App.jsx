@@ -1,7 +1,6 @@
 import React from 'react';
 import { Route, Redirect,
   Switch, Link, HashRouter } from 'react-router-dom';
-
 import { ProtectedRoute, AuthRoute } from '../util/route_util';
 import RedNavContainer from './red_nav_container';
 import MainSplashContainer from './main_splash_container';
@@ -13,14 +12,12 @@ import SessionFormContainer from './session_form_container';
 import ReviewFormContainer from './review/review_form_container';
 import BusinessNewContainer from './biz/business_new_container';
 
-
 let logopos;
 if (location.pathname === "/") {
   logopos = "midlogo";
 } else {
   logopos = "toplogo";
 }
-
 
 //why does it still render sessionform after coming back to "/" after errors?
 const App = () => (
@@ -37,7 +34,6 @@ const App = () => (
     <ProtectedRoute path="/writeareview/:id" component={ReviewFormContainer} />
     <ProtectedRoute path="/addbusiness" component={BusinessNewContainer} />
 
-
     <div className="global-footer">
         <div className="footer-content">
 
@@ -53,7 +49,7 @@ const App = () => (
             <div className="footer-column">
               <h1>Discover</h1>
               <ul>
-                <li><Link to="/search?Restaurant">Restaurants</Link></li>
+                <li><Link to="/search?Restaurant">Restaurant</Link></li>
                 <li><Link to="/search?Nightlife">Nightlife</Link></li>
                 <li><Link to="/search?Shopping">Shopping</Link></li>
 
@@ -68,7 +64,6 @@ const App = () => (
     </div>
   </div>
 );
-//next we want to get categories boxes
 
 
 export default App;

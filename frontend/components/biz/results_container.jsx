@@ -1,5 +1,4 @@
 import { connect } from 'react-redux';
-
 import { updateFilter } from '../../actions/filter_actions';
 import { selectAllbiz, asArray } from '../../reducers/selectors';
 import { fetchBusinesses } from '../../actions/business_actions';

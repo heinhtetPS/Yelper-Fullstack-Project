@@ -28,7 +28,7 @@ class ResultsShow extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    console.log("updating renderables...");
+    // console.log("updating renderables...");
     this.updateRenderables();
   }
 
@@ -110,7 +110,7 @@ class ResultsShow extends React.Component {
       return {CashOnly: !this.state.CashOnly}
     });
     this.updateRenderables();
-    // console.log(this.state);
+    console.log(this.state);
   }
 
   handleTakeout() {
@@ -130,8 +130,12 @@ class ResultsShow extends React.Component {
   }
 
   analyzeBiz(biz) {
+
+    //due to state mismatch in the milliseconds between setstate and render, going to reverse every bool in here
+    //so that they match with the render logic 
+
     //if no filters are on, return true
-    console.log(this.state);
+    // console.log(this.state);
     if (!this.state.CashOnly && !this.state.Takeout && !this.state.Delivery) {
       console.log('no filters on');
       return true;
@@ -161,8 +165,8 @@ class ResultsShow extends React.Component {
 
     //Dollars filter: test biz.price against this.state.Dollars
     let pricefilter = this.state.Dollars[0];
-    console.log("price: " + pricefilter);
     if (biz.price != pricefilter && pricefilter !== undefined) {
+      console.log("price: " + pricefilter);
       console.log("removing " + biz.name + "because price is " + biz.price);
       return false;
     }

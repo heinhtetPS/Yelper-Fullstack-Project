@@ -36,7 +36,7 @@ class RedNav extends React.Component {
    } else if (this.props.loggedIn) {
         //here's the dropdown button and menu
      authlinks = (<div className={auth_color}>
-       <div className="full-button"  onClick={this.togglehidden}>
+       <div className="full-button" onClick={this.togglehidden}>
          <img className="dropdown-btn"
 
            src="https://s3-media3.fl.yelpcdn.com/assets/srv0/yelp_styleguide/bf5ff8a79310/assets/img/default_avatars/user_medium_square.png"></img>
@@ -62,6 +62,7 @@ class RedNav extends React.Component {
         {authlinks}
         <Route path="/biz" component={SearchContainer} />
         <Route path="/search" component={SearchContainer} />
+        <Route path="/addbusiness" component={SearchContainer} />
         <nav className={bottomnavclass}>
           <ul>
 

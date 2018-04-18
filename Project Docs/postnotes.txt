@@ -4,7 +4,7 @@ Issues
 - Login errors problem persists: make a login error, return to home and bottom content will be replaced by login pg
 - Have seen similar errors to above from results page also
 - For categories links, on results page there's too many spaces, on business show, theres none
-
+- Besides bug, Login page css is fucked up mang, wtf does "global container" come from?
 
 Incomplete
 - Picture carousel doesn't work
@@ -72,7 +72,7 @@ to filter the businesses that appear.
 Add Business Progress
 - Put red search bar on top
 - Need to look back at cloudinary upload for pics
-- 
+- setup backend to receive and persist to db
 
 Mobile Progress
 - homepage splash, nav and search complete (exception: location field)

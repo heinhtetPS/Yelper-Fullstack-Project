@@ -59,42 +59,41 @@ class BusinessNewForm extends React.Component {
      return (
        <div className="reviewForm-master">
          <div className="left-column">
-           <h2 className="Redh2">Add your business</h2> <br />
-           <p>Add information about your business below. Your business page will not appear in search results until this information has been verified and approved by our moderators. Once it is approved, you'll receive an email with instructions on how to claim your business page.</p>
+           <h2 className="Redh2">Add your business</h2>
+           <p className='smaller'>Add information about your business below and submit to persist to our database.</p>
            <form>
-             <label>Business Name</label><br />
+             <label className="labels">Business Name</label><br />
              <input type="text"
                placeholder="Mel's Diner"
                className="add-inputs"></input><br />
-               <label>Address 1</label><br />
+               <label className="labels">Address</label><br />
                <input type="text"
                  placeholder="123 Main st"
                  className="add-inputs"></input><br />
-                 <label>City</label><br />
+                 <label className="labels">City</label><br />
                  <input type="text"
                    placeholder="Brooklyn"
                    className="add-inputs"></input><br />
-                   <label>State</label><br />
+                   <label className="labels">State</label><br />
                    <input type="text"
                      placeholder="NY"
                      className="add-inputs"></input><br />
-                     <label>ZIP</label><br />
+                     <label className="labels">ZIP</label><br />
                      <input type="text"
                        placeholder="11232"
                        className="add-inputs"></input><br />
-                   <label>Categories</label><br />
+                   <label className="labels">Categories</label><br />
+                   <span className="help-text">Select up to 3 categories. The more specific the better.</span>
                    <input type="text"
                      placeholder="Restaurant, Shopping"
                      className="add-inputs"></input><br />
-                     <label>Web Address</label><br />
+                     <label className="labels">Web Address</label><br />
                      <input type="text"
                        placeholder="www.google.com"
                        className="add-inputs"></input><br />
-                       <label>Picture</label><br />
-                      <button>Upload here</button><br />
-                      <input type="submit" value="Add Business" className="post-button"/>
-
-
+                     <label className="labels">Picture(s)</label><br />
+                      <button>Upload here</button><br /><br />
+                      <input type="submit" value="Add New Business" className="new-submit"/>
 
            </form>
          </div>
