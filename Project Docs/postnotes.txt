@@ -20,6 +20,8 @@ To Do
 - Tooltips for buttons on results page
 - Make all foods lead to restaurant
 - Change bounds upon changing location (means we need to find out how gmaps defines bounds on locations)
+- hover function for map markers that displays another bizindexitem in a square
+- redo search in map area
 
 Recent changes
 - Made a div for gray bg on the business page. It is encaged in the main div. Should there be a bigger wrapper to contain it?
@@ -51,7 +53,7 @@ the component smaller
 to filter the businesses that appear.
 - success on uni data flow with open button copy this for others
 - button frontend is complete, need to connect filters with backend
-- need to look back at true/false toggles because params come out opposite (fixed)
+- need to look back at true/false toggles because params come out opposite (not fixed)
 - Started to look at backend filtering options...maybe it should be done on frontend?
   - dollars 2,3,4 doesnt change the state when it was working before...
   - GOt the new dollar system to work for #1, logs are late but it does it. Apply to others.
@@ -65,7 +67,12 @@ to filter the businesses that appear.
 - more elegant ternary for toggle in opennow, copy this.
 - fix: price filter is proccing even though it is off, look at bizfilter & seperate out stuff
 - changed openfilter to cash filter for simpicity
-- the thing about the toggle bug: When the behavior is correct, it starts as ON. When wrong, it needs 1 cycle to activate. 
+- the thing about the toggle bug: When the behavior is correct, it starts as ON. When wrong, it needs 1 cycle to activate.
+
+Add Business Progress
+- Put red search bar on top
+- Need to look back at cloudinary upload for pics
+- 
 
 Mobile Progress
 - homepage splash, nav and search complete (exception: location field)
