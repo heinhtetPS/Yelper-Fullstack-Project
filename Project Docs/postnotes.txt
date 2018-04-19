@@ -3,18 +3,16 @@ Issues
 - Sometimes there are DELETE issues with deleting a review
 - Login errors problem persists: make a login error, return to home and bottom content will be replaced by login pg
 - Have seen similar errors to above from results page also
-- For categories links, on results page there's too many spaces, on business show, theres none
 - Besides bug, Login page css is fucked up mang, wtf does "global container" come from?
+- clicking category link on results page doesn't cause re-render of results
 
 Incomplete
 - Picture carousel doesn't work
-- Buttons for filtering are hidden as they are incomplete (results page)
 - Make more DB seeds & refactor method of getting featured on homepage
 - Delete map markers properly
 - stars lighting up on write review page
 
 To Do
-- Make this entire site mobile friendly
 - In order to achieve mobile friendly, we have to add @media queries to EVERY CSS file
 - Cities missing under yelp Brooklyn on main pg
 - Tooltips for buttons on results page

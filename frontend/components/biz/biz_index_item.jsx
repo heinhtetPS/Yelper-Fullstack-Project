@@ -46,12 +46,11 @@ const BizIndexItem = ( { biz }  ) => {
 
   //categories links
   let categoriesLinks = biz.categories.map( cat => {
-    return ['/search?'.concat(cat.name), cat.name.concat(', ')]
+    return ['/search?'.concat(cat.name), cat.name.concat(',')]
   });
 
-  //appearing on search page (horizontal box)
+  //appearing on results page (horizontal box)
   if (window.location.href.includes("search?")) {
-
     return (
       <div className="biz_box_horizontal">
         <div className="biz_photo_box_horizontal">
@@ -60,7 +59,6 @@ const BizIndexItem = ( { biz }  ) => {
           </Link>
         </div>
         <div className="biz_info_box_horizontal">
-
             <Link to={bizurl} className="small-header">{biz.name}</Link>
             <div className={ratingclass[average_rating]}></div>
             <p className="reviews-count-smaller">{num_reviews} reviews</p>
@@ -68,9 +66,6 @@ const BizIndexItem = ( { biz }  ) => {
               {categoriesLinks.map(
                 cate => <Link to={cate[0]} className="categories-links">{cate[1]}</Link>
             )}
-
-
-
 
         </div>
         <p>{biz.address}</p>
@@ -101,7 +96,6 @@ const BizIndexItem = ( { biz }  ) => {
               <path d="M11.508 3.743c1.173 2.43-.465 2.27-.696 3.88C10.082 2.758 5.947 1.5 5.947 1.5c2.045 2.697-1.9 4.784-3.63 8.33-1.47 3.016 2.533 5.44 4.67 6.67-2.15-2.993-.563-5.02 1.612-6.793-.81 2.448.5 2.934 1.043 3.944.71-.31 1.028-1.3 1.1-1.79.954 1.31 1.465 2.97-.248 4.64 8.302-3.77 5.977-9.743 1.007-12.752z"></path>
             </svg>
             Opened 2 weeks ago</p>
-
         </div>
       </div>
     )
@@ -109,11 +103,6 @@ const BizIndexItem = ( { biz }  ) => {
   }
 
 
-
 };
-
-// {biz_categories.map(cat =>
-// <Link to="/search?{cat}">{cat}</Link>)}
-
 
 export default BizIndexItem;

@@ -93,10 +93,11 @@
   .demoRed {
     color: white;
     width: 104px;
-    height: 27px;
+    height: 23px;
     z-index: 50;
     font-size: 14px;
     text-decoration: none;
+    margin-top: 3px;
     font-weight: bold;
     display: flex;
     align-items: center;
@@ -113,9 +114,10 @@
 .loginRed {
   color: white;
   width: 104px;
-  height: 27px;
+  height: 23px;
   z-index: 50;
   font-size: 14px;
+  margin-top: 2px;
   text-decoration: none;
   font-weight: bold;
   display: flex;
