@@ -71,6 +71,9 @@ Add Business Progress
 - Put red search bar on top
 - Need to look back at cloudinary upload for pics
 - setup backend to receive and persist to db
+- steps:
+  - prep state to receive form params
+  - put values and onchange methods for form fields, test these in log 
 
 Mobile Progress
 - homepage splash, nav and search complete (exception: location field)

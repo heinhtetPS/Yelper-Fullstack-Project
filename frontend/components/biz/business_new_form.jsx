@@ -8,12 +8,17 @@ class BusinessNewForm extends React.Component {
 
     //initial state is blank
       this.state = {
-        rating: 1,
-        body: "",
-        business_id: this.props.location.pathname.slice(-1)
+        name: "",
+        address: "",
+        city: "",
+        state: "",
+        zip: "",
+        categories: [],
+        website: "",
+        pictures: []
       };
      this.handleSubmit = this.handleSubmit.bind(this);
-
+     this.update = this.update.bind(this);
   }
 
 
@@ -25,25 +30,14 @@ class BusinessNewForm extends React.Component {
   }
 
   //when people type, change the state text
+  //categories needs its own update 
   update(field) {
     return e => this.setState({
       [field]: e.currentTarget.value
     });
   }
 
-  // renderErrors() {
-  //   return (
-  //     <ul id="errorhider"className="errorbox-hidden">
-  //       {this.props.errors.map((error, idx) => (
-  //         <li key={`error-${idx}`}>{error}</li>
-  //       ))}
-  //     </ul>
-  //   );
-  // }
-
-  // toggleerrors() {
-  //   $('#errorhider').toggleClass('errorbox-hidden errorbox');
-  // }
+  //need renderErrors()
 
   handleSubmit(e) {
    e.preventDefault();
@@ -52,7 +46,6 @@ class BusinessNewForm extends React.Component {
    this.props.createNewBusiness(newbiz);
    this.props.history.push("/");
  }
-
 
  render() {
 
@@ -65,36 +58,56 @@ class BusinessNewForm extends React.Component {
              <label className="labels">Business Name</label><br />
              <input type="text"
                placeholder="Mel's Diner"
+               name="name"
+               value={this.state.name}
+               onChange={this.update('name')}
                className="add-inputs"></input><br />
                <label className="labels">Address</label><br />
                <input type="text"
                  placeholder="123 Main st"
+                 name="address"
+                 value={this.state.address}
+                 onChange={this.update('address')}
                  className="add-inputs"></input><br />
                  <label className="labels">City</label><br />
                  <input type="text"
                    placeholder="Brooklyn"
+                   name="city"
+                   value={this.state.city}
+                   onChange={this.update('city')}
                    className="add-inputs"></input><br />
                    <label className="labels">State</label><br />
                    <input type="text"
                      placeholder="NY"
+                     name="state"
+                     value={this.state.state}
+                     onChange={this.update('state')}
                      className="add-inputs"></input><br />
                      <label className="labels">ZIP</label><br />
                      <input type="text"
                        placeholder="11232"
+                       name="zip"
+                       value={this.state.zip}
+                       onChange={this.update('zip')}
                        className="add-inputs"></input><br />
                    <label className="labels">Categories</label><br />
                    <span className="help-text">Select up to 3 categories. The more specific the better.</span>
                    <input type="text"
                      placeholder="Restaurant, Shopping"
+                     name="categories"
+                     value={this.state.categories}
+                     onChange={this.update('categories')}
                      className="add-inputs"></input><br />
                      <label className="labels">Web Address</label><br />
                      <input type="text"
-                       placeholder="www.google.com"
+                       placeholder="www.yelp.com"
+                       name="website"
+                       value={this.state.website}
+                       onChange={this.update('website')}
                        className="add-inputs"></input><br />
                      <label className="labels">Picture(s)</label><br />
                       <button>Upload here</button><br /><br />
                       <input type="submit" value="Add New Business" className="new-submit"/>
-
            </form>
          </div>
          <div className="right-column">

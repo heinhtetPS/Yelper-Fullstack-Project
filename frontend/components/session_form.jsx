@@ -76,7 +76,6 @@ class SessionForm extends React.Component {
    e.preventDefault();
    const user = Object.assign({}, this.state);
    this.props.processForm(user);
-  //  debugger
    if (this.props.errors.length > 0) {
      this.toggleerrors();
    }
@@ -89,7 +88,7 @@ class SessionForm extends React.Component {
  }
 
  whichform() {
-   
+
  }
 
  render() {

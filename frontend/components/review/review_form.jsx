@@ -52,7 +52,6 @@ class ReviewForm extends React.Component {
 changeStars() {
 
   switch(this.state.rating) {
-
     case '0':
     return "stars-interactive";
     break;
