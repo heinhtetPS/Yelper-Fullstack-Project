@@ -7,7 +7,7 @@ export const createNewBusiness = newBusiness => (
   $.ajax({
     method: 'POST',
     url: '/api/biz',
-    data: {biz: newBusiness}
+    data: {business: newBusiness}
   })
 );
 

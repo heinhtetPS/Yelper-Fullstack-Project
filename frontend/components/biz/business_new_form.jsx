@@ -45,14 +45,15 @@ class BusinessNewForm extends React.Component {
     this.props.errors.forEach( (error) => {
       alert(error);
     })
+    console.log("errors rendering");
   }
 
   handleSubmit(e) {
    e.preventDefault();
    const newbiz = Object.assign({}, this.state);
+   console.log(newbiz);
    //check here if there are problems
    this.props.createNewBusiness(newbiz);
-   this.props.history.push("/");
  }
 
  render() {
@@ -62,7 +63,7 @@ class BusinessNewForm extends React.Component {
          <div className="left-column">
            <h2 className="Redh2">Add your business</h2>
            <p className='smaller'>Add information about your business below and submit to persist to our database.</p>
-           <form>
+           <form onSubmit={this.handleSubmit}>
              <label className="labels">Business Name</label><br />
              <input type="text"
                placeholder="Mel's Diner"
