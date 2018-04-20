@@ -73,7 +73,8 @@ Add Business Progress
 - setup backend to receive and persist to db
 - steps:
   - prep state to receive form params
-  - put values and onchange methods for form fields, test these in log 
+  - put values and onchange methods for form fields, test these in log
+  - values are now being sent to server correctly except address needs to be combined before sending
 
 Mobile Progress
 - homepage splash, nav and search complete (exception: location field)

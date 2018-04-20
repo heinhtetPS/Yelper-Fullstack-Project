@@ -10,15 +10,13 @@ class BusinessNewForm extends React.Component {
       this.state = {
         name: "",
         address: "",
-        city: "",
-        state: "",
-        zip: "",
         categories: [],
         website: "",
         pictures: []
       };
      this.handleSubmit = this.handleSubmit.bind(this);
      this.update = this.update.bind(this);
+     this.updateAddress = this.updateAddress.bind(this);
      this.renderErrors = this.renderErrors.bind(this);
   }
 
@@ -38,6 +36,12 @@ class BusinessNewForm extends React.Component {
   update(field) {
     return e => this.setState({
       [field]: e.currentTarget.value
+    });
+  }
+
+  updateAddress() {
+    return e => this.setState({
+      Address: ", " + e.currentTarget.value
     });
   }
 
@@ -82,22 +86,19 @@ class BusinessNewForm extends React.Component {
                  <input type="text"
                    placeholder="Brooklyn"
                    name="city"
-                   value={this.state.city}
-                   onChange={this.update('city')}
+                   onChange={this.updateAddress}
                    className="add-inputs"></input><br />
                    <label className="labels">State</label><br />
                    <input type="text"
                      placeholder="NY"
                      name="state"
-                     value={this.state.state}
-                     onChange={this.update('state')}
+                     onChange={this.updateAddress}
                      className="add-inputs"></input><br />
                      <label className="labels">ZIP</label><br />
                      <input type="text"
                        placeholder="11232"
                        name="zip"
-                       value={this.state.zip}
-                       onChange={this.update('zip')}
+                       onChange={this.updateAddress}
                        className="add-inputs"></input><br />
                    <label className="labels">Categories</label><br />
                    <span className="help-text">Select up to 3 categories. The more specific the better.</span>
