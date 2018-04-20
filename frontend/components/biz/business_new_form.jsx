@@ -10,6 +10,9 @@ class BusinessNewForm extends React.Component {
       this.state = {
         name: "",
         address: "",
+        city: "",
+        state: "",
+        zip: "",
         categories: [],
         website: "",
         pictures: []
@@ -36,12 +39,6 @@ class BusinessNewForm extends React.Component {
   update(field) {
     return e => this.setState({
       [field]: e.currentTarget.value
-    });
-  }
-
-  updateAddress() {
-    return e => this.setState({
-      Address: ", " + e.currentTarget.value
     });
   }
 
@@ -86,19 +83,22 @@ class BusinessNewForm extends React.Component {
                  <input type="text"
                    placeholder="Brooklyn"
                    name="city"
-                   onChange={this.updateAddress}
+                   value={this.state.city}
+                   onChange={this.update('city')}
                    className="add-inputs"></input><br />
                    <label className="labels">State</label><br />
                    <input type="text"
                      placeholder="NY"
                      name="state"
-                     onChange={this.updateAddress}
+                     value={this.state.state}
+                     onChange={this.update('state')}
                      className="add-inputs"></input><br />
                      <label className="labels">ZIP</label><br />
                      <input type="text"
                        placeholder="11232"
                        name="zip"
-                       onChange={this.updateAddress}
+                       value={this.state.zip}
+                       onChange={this.update('state')}
                        className="add-inputs"></input><br />
                    <label className="labels">Categories</label><br />
                    <span className="help-text">Select up to 3 categories. The more specific the better.</span>
