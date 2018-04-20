@@ -19,6 +19,7 @@ class BusinessNewForm extends React.Component {
       };
      this.handleSubmit = this.handleSubmit.bind(this);
      this.update = this.update.bind(this);
+     this.renderErrors = this.renderErrors.bind(this);
   }
 
 
@@ -27,17 +28,24 @@ class BusinessNewForm extends React.Component {
     if (!nextProps.loggedIn) {
       this.props.history.push('/login');
     }
+    if (nextProps.errors.length > 0) {
+      this.renderErrors();
+    }
   }
 
   //when people type, change the state text
-  //categories needs its own update 
+  //categories needs its own update
   update(field) {
     return e => this.setState({
       [field]: e.currentTarget.value
     });
   }
 
-  //need renderErrors()
+  renderErrors() {
+    this.props.errors.forEach( (error) => {
+      alert(error);
+    })
+  }
 
   handleSubmit(e) {
    e.preventDefault();
