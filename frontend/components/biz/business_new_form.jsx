@@ -21,6 +21,7 @@ class BusinessNewForm extends React.Component {
      this.update = this.update.bind(this);
      this.renderErrors = this.renderErrors.bind(this);
      this.composeAddress = this.composeAddress.bind(this);
+     this.handleUploads = this.handleUploads.bind(this);
   }
 
 
@@ -58,10 +59,13 @@ class BusinessNewForm extends React.Component {
     delete bizObject.state;
     temphold.push(bizObject.zip);
     delete bizObject.zip;
-
     //compose address using above values
     bizObject.address += ", " + temphold[0] + ", " + temphold[1] + ", " + temphold[2];
     return bizObject;
+  }
+
+  handleUploads(results) {
+
   }
 
   handleSubmit(e) {
@@ -134,13 +138,13 @@ class BusinessNewForm extends React.Component {
                        className="add-inputs"></input><br />
                      <label className="labels">Picture(s)</label><br />
                       <button onClick={
-
-                        function() {
-                        cloudinary.openUploadWidget({ cloud_name: 'demo', upload_preset: 'a5vxnzbp'},
-                        function(error, result) {
-                          console.log(error, result) }, false)}
-
-                      }>Upload here</button><br /><br />
+                                    () => {
+                                    cloudinary.openUploadWidget({ cloud_name: 'dooqsrgbq', upload_preset: 'wpbbj7sv'},
+                                    (error, result) => {
+                                      console.log(error, result) }, false)}
+                                      }
+                              value={this.state.pictures}
+                              onChange={this.handleUploads}>Upload here</button><br /><br />
                       <input type="submit" value="Add New Business" className="new-submit"/>
            </form>
          </div>

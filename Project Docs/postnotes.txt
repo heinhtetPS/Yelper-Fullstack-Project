@@ -75,6 +75,10 @@ Add Business Progress
   - prep state to receive form params
   - put values and onchange methods for form fields, test these in log
   - values are now being sent to server correctly except address needs to be combined before sending
+  - address parser now complete, need to work on: categories, upload pics
+  - consulting cloudinary for uploader
+  - uploader is online. Maybe we need to set up the env stuff again (i guess not)
+  - uploads are working, it needs to setState pictures value as the returned url(s) forEach results[0].secure_url
 
 Mobile Progress
 - homepage splash, nav and search complete (exception: location field)
