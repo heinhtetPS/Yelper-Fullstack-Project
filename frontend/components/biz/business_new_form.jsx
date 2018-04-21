@@ -19,8 +19,8 @@ class BusinessNewForm extends React.Component {
       };
      this.handleSubmit = this.handleSubmit.bind(this);
      this.update = this.update.bind(this);
-     this.updateAddress = this.updateAddress.bind(this);
      this.renderErrors = this.renderErrors.bind(this);
+     this.composeAddress = this.composeAddress.bind(this);
   }
 
 
@@ -49,12 +49,29 @@ class BusinessNewForm extends React.Component {
     console.log("errors rendering");
   }
 
+  composeAddress(bizObject) {
+    //remove city, state, zip, while also putting them in temphold
+    let temphold = [];
+    temphold.push(bizObject.city);
+    delete bizObject.city;
+    temphold.push(bizObject.state);
+    delete bizObject.state;
+    temphold.push(bizObject.zip);
+    delete bizObject.zip;
+
+    //compose address using above values
+    bizObject.address += ", " + temphold[0] + ", " + temphold[1] + ", " + temphold[2];
+    return bizObject;
+  }
+
   handleSubmit(e) {
    e.preventDefault();
-   const newbiz = Object.assign({}, this.state);
+   let newbiz = Object.assign({}, this.state);
+   newbiz = this.composeAddress(newbiz);
    console.log(newbiz);
    //check here if there are problems
-   this.props.createNewBusiness(newbiz);
+
+   // this.props.createNewBusiness(newbiz);
  }
 
  render() {
@@ -98,10 +115,10 @@ class BusinessNewForm extends React.Component {
                        placeholder="11232"
                        name="zip"
                        value={this.state.zip}
-                       onChange={this.update('state')}
+                       onChange={this.update('zip')}
                        className="add-inputs"></input><br />
                    <label className="labels">Categories</label><br />
-                   <span className="help-text">Select up to 3 categories. The more specific the better.</span>
+                   <span className="help-text">Select up to 3 categories, seperated by commas.</span>
                    <input type="text"
                      placeholder="Restaurant, Shopping"
                      name="categories"
@@ -116,7 +133,14 @@ class BusinessNewForm extends React.Component {
                        onChange={this.update('website')}
                        className="add-inputs"></input><br />
                      <label className="labels">Picture(s)</label><br />
-                      <button>Upload here</button><br /><br />
+                      <button onClick={
+
+                        function() {
+                        cloudinary.openUploadWidget({ cloud_name: 'demo', upload_preset: 'a5vxnzbp'},
+                        function(error, result) {
+                          console.log(error, result) }, false)}
+
+                      }>Upload here</button><br /><br />
                       <input type="submit" value="Add New Business" className="new-submit"/>
            </form>
          </div>
