@@ -33,6 +33,7 @@ class BusinessNewForm extends React.Component {
     if (nextProps.errors.length > 0) {
       this.renderErrors();
     }
+    console.log(this.state);
   }
 
   //when people type, change the state text
@@ -65,14 +66,34 @@ class BusinessNewForm extends React.Component {
   }
 
   handleUploads(results) {
+    //find where the URLS are returned
+    //put as strings in an array
+    let pics = [];
+    let thumbs = [];
+    if (results.length > 0) {
+      results.forEach( (upload) => {
+        pics.push(upload.secure_url);
+        thumbs.push(upload.thumbnail_url);
+      })
+      this.setState(prevState => {
+        return {pictures: ...prevState.pictures, pics}
+      });
 
+    } else {
+      alert("No urls detected!")
+      console.log(results);
+    }
+  }
+
+  createThumbnails(urls) {
+    //for each url in urls, put a pic in the pic holder
   }
 
   handleSubmit(e) {
    e.preventDefault();
    let newbiz = Object.assign({}, this.state);
    newbiz = this.composeAddress(newbiz);
-   console.log(newbiz);
+   // console.log(newbiz);
    //check here if there are problems
 
    // this.props.createNewBusiness(newbiz);
@@ -141,7 +162,7 @@ class BusinessNewForm extends React.Component {
                                     () => {
                                     cloudinary.openUploadWidget({ cloud_name: 'dooqsrgbq', upload_preset: 'wpbbj7sv'},
                                     (error, result) => {
-                                      console.log(error, result) }, false)}
+                                      this.handleUploads(result) }, false)}
                                       }
                               value={this.state.pictures}
                               onChange={this.handleUploads}>Upload here</button><br /><br />
