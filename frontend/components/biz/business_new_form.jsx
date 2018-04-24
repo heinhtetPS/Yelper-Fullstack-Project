@@ -76,7 +76,7 @@ class BusinessNewForm extends React.Component {
         thumbs.push(upload.thumbnail_url);
       })
       this.setState(prevState => {
-        return {pictures: ...prevState.pictures, pics}
+        return {pictures: prevState.pictures.concat(pics)}
       });
 
     } else {
@@ -94,6 +94,7 @@ class BusinessNewForm extends React.Component {
    let newbiz = Object.assign({}, this.state);
    newbiz = this.composeAddress(newbiz);
    // console.log(newbiz);
+   console.log(this.state);
    //check here if there are problems
 
    // this.props.createNewBusiness(newbiz);
