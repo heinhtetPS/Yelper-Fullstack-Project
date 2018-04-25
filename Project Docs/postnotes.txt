@@ -79,6 +79,7 @@ Add Business Progress
   - consulting cloudinary for uploader
   - uploader is online. Maybe we need to set up the env stuff again (i guess not)
   - uploads are working, it needs to setState pictures value as the returned url(s) forEach results[0].secure_url
+  - state has been set correctly
 
 Mobile Progress
 - homepage splash, nav and search complete (exception: location field)
