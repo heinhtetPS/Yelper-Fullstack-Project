@@ -6,7 +6,6 @@ class BusinessNewForm extends React.Component {
   constructor(props) {
     super(props);
 
-    //initial state is blank
       this.state = {
         name: "",
         address: "",
@@ -211,7 +210,6 @@ class BusinessNewForm extends React.Component {
          <div className="right-column">
            <div className="biz-house"></div>
          </div>
-
 
        </div>
      );
