@@ -85,10 +85,11 @@ Add Business Progress
   - Current errors to work on:
   Map lat can't be blank",
   "Map lng can't be blank",
-  "Price can't be blank",
-  "Price is not included in the list",
+  "Price can't be blank", (done)
   "Categories business must belong to at least one category",
   "User must exist" (fixed)
+  add extra bools (done)
+  next: Either look at gmaps address to coords methods OR look at manipulating categories inside createNewBusiness
 
 Mobile Progress
 - homepage splash, nav and search complete (exception: location field)
