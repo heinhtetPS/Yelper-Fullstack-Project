@@ -13,9 +13,14 @@ class BusinessNewForm extends React.Component {
         city: "",
         state: "",
         zip: "",
+        price: "",
         categories: [],
         website: "",
-        pictures: []
+        pictures: [],
+        delivery: false,
+        take_out: false,
+        accepts_credit_cards: true,
+        owner_id: 1
       };
      this.handleSubmit = this.handleSubmit.bind(this);
      this.update = this.update.bind(this);
@@ -71,6 +76,7 @@ class BusinessNewForm extends React.Component {
     let pics = [];
     let thumbs = [];
     if (results.length > 0) {
+      alert("Upload Success")
       results.forEach( (upload) => {
         pics.push(upload.secure_url);
         thumbs.push(upload.thumbnail_url);
@@ -93,9 +99,12 @@ class BusinessNewForm extends React.Component {
    e.preventDefault();
    let newbiz = Object.assign({}, this.state);
    newbiz = this.composeAddress(newbiz);
-   // console.log(newbiz);
+
    console.log(this.state);
    //check here if there are problems
+
+   //things to add: lng, lat,
+   //it has to belong to a category...but you can't assign it on creation...(do this in createNewBusiness)
 
    // this.props.createNewBusiness(newbiz);
  }
@@ -143,6 +152,14 @@ class BusinessNewForm extends React.Component {
                        value={this.state.zip}
                        onChange={this.update('zip')}
                        className="add-inputs"></input><br />
+                     <label className="labels">Price</label><br />
+                     <span className="help-text">1 is the cheapest, 4 is the most expensive.</span>
+                       <input type="text"
+                         placeholder="2"
+                         name="price"
+                         value={this.state.price}
+                         onChange={this.update('price')}
+                         className="add-inputs"></input><br />
                    <label className="labels">Categories</label><br />
                    <span className="help-text">Select up to 3 categories, seperated by commas.</span>
                    <input type="text"
@@ -158,9 +175,25 @@ class BusinessNewForm extends React.Component {
                        value={this.state.website}
                        onChange={this.update('website')}
                        className="add-inputs"></input><br />
+                     <input type="checkbox"
+                            name="accepts_credit_cards"
+                            value={!this.state.accepts_credit_cards}
+                            onChange={this.update('accepts_credit_cards')}></input>
+                     <label>Cash Only      </label>
+                     <input type="checkbox"
+                           name="delivery"
+                           value={this.state.delivery}
+                           onChange={this.update('delivery')}></input>
+                     <label>Does Delivery  </label>
+                       <input type="checkbox"
+                             name="take_out"
+                             value={this.state.take_out}
+                             onChange={this.update('take_out')}></input>
+                     <label>Does Takeout   </label><br />
                      <label className="labels">Picture(s)</label><br />
                       <button onClick={
-                                    () => {
+                                    (e) => {
+                                      e.preventDefault();
                                     cloudinary.openUploadWidget({ cloud_name: 'dooqsrgbq', upload_preset: 'wpbbj7sv'},
                                     (error, result) => {
                                       this.handleUploads(result) }, false)}

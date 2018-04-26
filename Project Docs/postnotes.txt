@@ -5,6 +5,8 @@ Issues
 - Have seen similar errors to above from results page also
 - Besides bug, Login page css is fucked up mang, wtf does "global container" come from?
 - clicking category link on results page doesn't cause re-render of results
+- Login bug occurs when Upload pics fails or succeeds???
+  - It looks like handleuploads button is not preventing default, which is submitting the form.
 
 Incomplete
 - Picture carousel doesn't work
@@ -80,6 +82,13 @@ Add Business Progress
   - uploader is online. Maybe we need to set up the env stuff again (i guess not)
   - uploads are working, it needs to setState pictures value as the returned url(s) forEach results[0].secure_url
   - state has been set correctly
+  - Current errors to work on:
+  Map lat can't be blank",
+  "Map lng can't be blank",
+  "Price can't be blank",
+  "Price is not included in the list",
+  "Categories business must belong to at least one category",
+  "User must exist" (fixed)
 
 Mobile Progress
 - homepage splash, nav and search complete (exception: location field)
