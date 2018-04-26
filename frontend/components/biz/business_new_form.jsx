@@ -19,11 +19,12 @@ class BusinessNewForm extends React.Component {
         pictures: [],
         delivery: false,
         take_out: false,
-        accepts_credit_cards: true,
+        accepts_credit_cards: false,
         owner_id: 1
       };
      this.handleSubmit = this.handleSubmit.bind(this);
      this.update = this.update.bind(this);
+     this.updateBool = this.updateBool.bind(this);
      this.renderErrors = this.renderErrors.bind(this);
      this.composeAddress = this.composeAddress.bind(this);
      this.handleUploads = this.handleUploads.bind(this);
@@ -41,11 +42,15 @@ class BusinessNewForm extends React.Component {
     console.log(this.state);
   }
 
-  //when people type, change the state text
-  //categories needs its own update
   update(field) {
     return e => this.setState({
       [field]: e.currentTarget.value
+    });
+  }
+
+  updateBool(attr) {
+    return e => this.setState({
+      [attr]: e.currentTarget.checked
     });
   }
 
@@ -177,18 +182,18 @@ class BusinessNewForm extends React.Component {
                        className="add-inputs"></input><br />
                      <input type="checkbox"
                             name="accepts_credit_cards"
-                            value={!this.state.accepts_credit_cards}
-                            onChange={this.update('accepts_credit_cards')}></input>
-                     <label>Cash Only      </label>
+                            checked={this.state.accepts_credit_cards}
+                            onChange={this.updateBool('accepts_credit_cards')}></input>
+                          <label>Credit/Debit      </label>
                      <input type="checkbox"
                            name="delivery"
-                           value={this.state.delivery}
-                           onChange={this.update('delivery')}></input>
+                           checked={this.state.delivery}
+                           onChange={this.updateBool('delivery')}></input>
                      <label>Does Delivery  </label>
                        <input type="checkbox"
                              name="take_out"
-                             value={this.state.take_out}
-                             onChange={this.update('take_out')}></input>
+                             checked={this.state.take_out}
+                             onChange={this.updateBool('take_out')}></input>
                      <label>Does Takeout   </label><br />
                      <label className="labels">Picture(s)</label><br />
                       <button onClick={
