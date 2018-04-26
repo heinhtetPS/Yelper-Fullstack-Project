@@ -137,16 +137,19 @@
 .middlepic {
   width: 250px;
   height: 250px;
+  object-fit: cover;
 }
 
 .leftpic {
   width: 220px;
   height: 220px;
+  object-fit: cover;
 }
 
 .rightpic {
   width: 220px;
   height: 220px;
+  object-fit: cover;
 }
 
 

@@ -103,3 +103,9 @@ next
 - do location links
 - make more seeds using faker for quickness
 - quick seeding won't work because i have to make up addresses that will show up
+
+
+CSS
+- padding around businessshow
+- use chrome built in viewer for
+- small project for responsive design
