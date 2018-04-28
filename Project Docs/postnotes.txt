@@ -97,6 +97,8 @@ Mobile Progress
 - The threshold seemed wrong. Trying 480 instead of 320.
 - OK trying 375 AND 480. Must put 480 first.
 - Generally working much better, fix footer & apply to rest
+- Discovered device picker on chrome, new skews: 375 and 768
+- Iphone 6 - x and ipad use the same media query but look different
 
 next
 - do css media queries for rest of pages

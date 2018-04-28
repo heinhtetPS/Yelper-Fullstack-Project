@@ -124,11 +124,11 @@
   background-color: #BD1F1F;
 }
 
-/* Tablet (portrait) ----------- */
-@media only screen and (max-width : 480px) {
+/* Tablet and Iphone 6 and up ----------- */
+@media only screen and (max-width : 768px) {
 
   .search-container-splash {
-    width: 475px;
+    width: 328px;
     height: 63px;
     position: relative;
     top: 215px;

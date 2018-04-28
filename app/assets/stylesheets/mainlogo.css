@@ -36,8 +36,8 @@
     top: 110px;
 }
 
-/* Tablet (portrait) ----------- */
-@media only screen and (max-width : 480px) {
+/* Tablet,Iphone 6 and above ----------- */
+@media only screen and (max-width : 768px) {
 
   .putlogohere {
     width: 256px;
@@ -48,7 +48,7 @@
     color: rgba(0,0,0,0);
     display: block;
     position: relative;
-    left: 22%;
+    left: 15%;
     top: 110px;
   }
 

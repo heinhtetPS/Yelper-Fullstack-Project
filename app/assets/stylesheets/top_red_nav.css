@@ -223,8 +223,8 @@
   display: none;
 }
 
-/* Tablets? (portrait) ----------- */
-@media only screen and (max-width : 480px) {
+/* Tablets, iphone 6 and up ----------- */
+@media only screen and (max-width : 768px) {
 
   .auth-links {
     width: 75%;
