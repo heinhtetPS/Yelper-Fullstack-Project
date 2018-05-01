@@ -5,6 +5,7 @@ import DollarsFilter from '../smallcomponents/dollars';
 import OpenButton from '../smallcomponents/cashonly';
 import DeliveryButton from '../smallcomponents/delivery';
 import TakeoutButton from '../smallcomponents/takeout';
+import GeneralButton from '../smallcomponents/generalButton';
 import Bizmap from '../map';
 
 class ResultsShow extends React.Component {
@@ -20,6 +21,7 @@ class ResultsShow extends React.Component {
     }
     this.updateRenderables = this.updateRenderables.bind(this);
     this.analyzeBiz = this.analyzeBiz.bind(this);
+    this.handleRandom = this.handleRandom.bind(this);
   }
 
   componentDidMount() {
@@ -129,10 +131,15 @@ class ResultsShow extends React.Component {
     // console.log(this.state);
   }
 
+  handleRandom() {
+    this.props.history.push('/search?random!');
+    window.location.reload();
+  }
+
   analyzeBiz(biz) {
 
     //due to state mismatch in the milliseconds between setstate and render, going to reverse every bool in here
-    //so that they match with the render logic 
+    //so that they match with the render logic
 
     //if no filters are on, return true
     // console.log(this.state);
@@ -191,13 +198,16 @@ class ResultsShow extends React.Component {
   render() {
     //vars populate when props come in
     let searchterm = this.props.location.search.slice(1);
+    if (searchterm === "random!")
+    searchterm = "random";
     let msgbox = this.props.businesses.length === 0 ? "" : "hidden";
 
     return (
       <div className="results-page-container">
         <div className="top-shelf-options">
           <div className="top-shelf-content">
-            <h2>Best {searchterm}(s) in New York, NY</h2>
+            <h2 className="result-text">Best {searchterm}(s) in New York, NY</h2>
+            <h2>Feeling Lucky? Try a random place!</h2>
 
               <ul className="filters-row">
                     <DollarsFilter toggleDollars={this.toggleDollars.bind(this)}
@@ -210,6 +220,8 @@ class ResultsShow extends React.Component {
                         <TakeoutButton handleTakeout={this.handleTakeout.bind(this)}
                                     Takeout={this.state.Takeout || false}/>
                       </ul>
+
+                      <GeneralButton handleRandom={this.handleRandom} />
               </ul>
           </div>
         </div>

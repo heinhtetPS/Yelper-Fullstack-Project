@@ -5,12 +5,13 @@ class Api::BusinessesController < ApplicationController
     @allbusiness = bounds ? Business.in_bounds(bounds) : Business.all
 
     #if there's a searchterm, compare it against names and categories
-    @allbusiness = Business.search_all(params[:searchterm]) if params[:searchterm]
-
-    #Additional filters here
-    #maybe filters should be taken care of on front end?
-    if params[:Dollars]
-      #only include if Business.price == :Dollars
+    if params[:searchterm]
+      #flag for randomized return 
+      if params[:searchterm] == "random!"
+        @allbusiness = Business.order("RANDOM()").limit(4)
+      else
+        @allbusiness = Business.search_all(params[:searchterm])
+      end
     end
 
   end

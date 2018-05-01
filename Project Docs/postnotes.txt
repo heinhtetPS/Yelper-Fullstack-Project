@@ -69,6 +69,12 @@ to filter the businesses that appear.
 - changed openfilter to cash filter for simpicity
 - the thing about the toggle bug: When the behavior is correct, it starts as ON. When wrong, it needs 1 cycle to activate.
 
+Random button
+- Created new button to return random businesses
+- button can be done using Link to or a function that pushes history and refreshes pages
+- Chose function because link causes error where it can't push the same thing.
+- bug: renderables needs to delete itself when a new search is initiated
+
 Add Business Progress
 - Put red search bar on top
 - Need to look back at cloudinary upload for pics
