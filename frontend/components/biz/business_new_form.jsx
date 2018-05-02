@@ -38,7 +38,7 @@ class BusinessNewForm extends React.Component {
     if (nextProps.errors.length > 0) {
       this.renderErrors();
     }
-    console.log(this.state);
+    // console.log(this.state);
   }
 
   update(field) {
@@ -57,7 +57,7 @@ class BusinessNewForm extends React.Component {
     this.props.errors.forEach( (error) => {
       alert(error);
     })
-    console.log("errors rendering");
+    // console.log("errors rendering");
   }
 
   composeAddress(bizObject) {
@@ -91,7 +91,7 @@ class BusinessNewForm extends React.Component {
 
     } else {
       alert("No urls detected!")
-      console.log(results);
+      // console.log(results);
     }
   }
 
@@ -104,7 +104,7 @@ class BusinessNewForm extends React.Component {
    let newbiz = Object.assign({}, this.state);
    newbiz = this.composeAddress(newbiz);
 
-   console.log(this.state);
+   // console.log(this.state);
    //check here if there are problems
 
    //things to add: lng, lat,

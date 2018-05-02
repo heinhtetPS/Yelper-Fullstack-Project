@@ -17,7 +17,6 @@ class ReviewForm extends React.Component {
      this.handleSubmit = this.handleSubmit.bind(this);
      this.handleOptionChange = this.handleOptionChange.bind(this);
      this.changeStars = this.changeStars.bind(this);
-
   }
 
   componentDidMount() {
@@ -45,7 +44,7 @@ class ReviewForm extends React.Component {
   this.setState({
     rating: changeEvent.target.value
   });
-  console.log(this.state);
+  // console.log(this.state);
 }
 
 //sets the classname for stars component
@@ -131,8 +130,6 @@ changeStars() {
    if (this.props.formType === "writeareview") {
      return(
        <div className="review-box">
-
-
          <form onSubmit={this.handleSubmit}>
            <div className="input-container">
              <h2>Your review:</h2>
@@ -177,13 +174,9 @@ changeStars() {
                </textarea>
                <input type="submit" value="Post Review" className="post-button"/>
                <small>* You can always edit or remove reviews later</small>
-
              </div>
-
            </div>
-
          </form>
-
        </div>
      );
    } else {
@@ -209,13 +202,9 @@ changeStars() {
                </textarea>
                <input type="submit" value="Edit Review" className="post-button"/>
                <small>* You can always edit or remove reviews later</small>
-
              </div>
-
            </div>
-
          </form>
-
        </div>
      );
    }
@@ -226,9 +215,6 @@ changeStars() {
 
    if (this.props.biz[0]) {
      currentbiz = this.props.biz[0];
-
-
-
 
      return (
        <div className="reviewForm-master">
@@ -251,10 +237,8 @@ changeStars() {
      return null;
    }
 
-
  }
 
-  //...
 }
 
 export default ReviewForm;

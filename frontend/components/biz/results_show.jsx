@@ -112,7 +112,7 @@ class ResultsShow extends React.Component {
       return {CashOnly: !this.state.CashOnly}
     });
     this.updateRenderables();
-    console.log(this.state);
+    // console.log(this.state);
   }
 
   handleTakeout() {
@@ -137,34 +137,33 @@ class ResultsShow extends React.Component {
   }
 
   analyzeBiz(biz) {
-
     //due to state mismatch in the milliseconds between setstate and render, going to reverse every bool in here
     //so that they match with the render logic
 
     //if no filters are on, return true
     // console.log(this.state);
     if (!this.state.CashOnly && !this.state.Takeout && !this.state.Delivery) {
-      console.log('no filters on');
+      // console.log('no filters on');
       return true;
     } else {
       //if a filter is on, run the test
 
       // //CashOnly filter: test biz.accepts_credit_cards against this.state.CashOnly
       if (this.state.CashOnly && !biz.accepts_credit_cards) {
-        console.log("removing " + biz.name + " because Cashonly is " + biz.accepts_credit_cards);
+        // console.log("removing " + biz.name + " because Cashonly is " + biz.accepts_credit_cards);
         return false;
       }
 
       // //Takeout filter: test biz.take_out against this.state.Takeout
       if (this.state.Takeout && !biz.take_out) {
-        console.log("removing " + biz.name + " because takeout is " + biz.take_out);
+        // console.log("removing " + biz.name + " because takeout is " + biz.take_out);
         return false;
       }
 
 
       //Delivery Filter: test biz.delivery against this.state.Delivery
       if (this.state.Delivery && !biz.delivery) {
-        console.log("removing " + biz.name + " because takeout is " + biz.take_out);
+        // console.log("removing " + biz.name + " because takeout is " + biz.take_out);
         return false;
       }
 
@@ -173,14 +172,13 @@ class ResultsShow extends React.Component {
     //Dollars filter: test biz.price against this.state.Dollars
     let pricefilter = this.state.Dollars[0];
     if (biz.price != pricefilter && pricefilter !== undefined) {
-      console.log("price: " + pricefilter);
-      console.log("removing " + biz.name + "because price is " + biz.price);
+      // console.log("price: " + pricefilter);
+      // console.log("removing " + biz.name + "because price is " + biz.price);
       return false;
     }
 
-
     //if filters ARE on but it passes all the tests
-    console.log('i got here, which means all tests were skipped');
+    // console.log('i got here, which means all tests were skipped');
     return true;
 
   }
@@ -190,7 +188,7 @@ class ResultsShow extends React.Component {
     let renderables = this.props.businesses.filter(this.analyzeBiz);
     this.setState({FilteredBiz: renderables});
     renderables.forEach( (biz) => {
-      console.log(biz.name);
+      // console.log(biz.name);
     });
 
   }
@@ -258,7 +256,6 @@ class ResultsShow extends React.Component {
     );
   }
 }
-
 
 
 export default ResultsShow;

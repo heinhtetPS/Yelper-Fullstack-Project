@@ -9,14 +9,14 @@ class CashOnly extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     this.setState( { CashOnly: nextProps.CashOnly } );
-    console.log("Inside comp:");
-    console.log(this.state);
+    // console.log("Inside comp:");
+    // console.log(this.state);
   }
 
     render () {
       //state check for class is un-reversed as a temp fix.
-      console.log("inside comp render:");
-      console.log(this.state);
+      // console.log("inside comp render:");
+      // console.log(this.state);
       return(
         <li className="filters-element2" onClick={this.props.handleCash}>
           <label className={this.state.CashOnly ? 'open-button selected' : 'open-button'}>
