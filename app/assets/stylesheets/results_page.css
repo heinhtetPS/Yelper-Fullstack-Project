@@ -118,6 +118,14 @@
   vertical-align: text-top;
 }
 
+.svg-star2 {
+  fill: #ca6d00;
+  height: 20px;
+  width: 20px;
+  margin-right: 5px;
+  vertical-align: top;
+}
+
 .selected {
   background-color: #c4f3a4;
 }
@@ -137,19 +145,19 @@
 
 .random-button:hover {
   -webkit-animation: colorchange 3s infinite alternate;
-  color: green;
+  color: white;
 }
 
 @keyframes colorchange {
-  0% {background: white;}
+  0% {background: green;}
 
-  20% {background: crimson;}
+  20% {background: #BD1F1F;}
 
-  40% {background: gainsboro;}
+  40% {background: grey;}
 
   60% {background: #D32323;}
 
-  80% {background: #f5f5f5;}
+  80% {background: crimson;}
 
   100% {background: tomato;}
 }

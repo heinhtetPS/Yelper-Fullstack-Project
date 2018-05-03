@@ -116,4 +116,4 @@ next
 CSS
 - padding around businessshow
 - use chrome built in viewer for
-- small project for responsive design
+- small project for responsive design (lol proj)
