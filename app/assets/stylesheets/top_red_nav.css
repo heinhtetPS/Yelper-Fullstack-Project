@@ -103,7 +103,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    top: -27px;
+    top: -24px;
     right: 845px;
     cursor: pointer;
   }
@@ -217,6 +217,11 @@
   height: 27px;
   position: absolute;
   top: 64px;
+}
+
+.navlinks {
+  margin-left: 300px;
+  z-index: 51;
 }
 
 .hidden-nav {
