@@ -7,6 +7,7 @@ Issues
 - clicking category link on results page doesn't cause re-render of results
 - Login bug occurs when Upload pics fails or succeeds???
   - It looks like handleuploads button is not preventing default, which is submitting the form.
+- Doing a 2nd search on results page fails unless you refresh or search again.
 
 Incomplete
 - Picture carousel doesn't work
@@ -105,6 +106,11 @@ Mobile Progress
 - Generally working much better, fix footer & apply to rest
 - Discovered device picker on chrome, new skews: 375 and 768
 - Iphone 6 - x and ipad use the same media query but look different
+
+gmaps
+- Gmap markers are not connected to the results. Looks like they are just retrieving their own shit
+- Make it render depending on renderables instead of by itself
+- Make sure to look at nestio work to make sure it deletes properly. 
 
 next
 - do css media queries for rest of pages

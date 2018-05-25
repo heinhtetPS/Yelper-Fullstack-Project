@@ -19,7 +19,7 @@ class Bizmap extends React.Component {
     if (this.props.singleBiz) {
       mapOptions = {
         center: { lat: this.props.biz.map_lat, lng: this.props.biz.map_lng },
-        zoom: 14
+        zoom: 13
       };
 
     } else {

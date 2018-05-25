@@ -2,9 +2,7 @@ import React from 'react';
 import { Link, Route } from 'react-router-dom';
 import SearchContainer from './biz/search_container';
 
-
 class RedNav extends React.Component {
-
   constructor(props) {
     super(props);
   }
@@ -53,7 +51,6 @@ class RedNav extends React.Component {
        </div>
      </div>);
    }
-
    //actual render happens here
    // Why does it still render sessionform after going to "/"?
    return (
@@ -72,13 +69,5 @@ class RedNav extends React.Component {
    );
  }
 }
-
-// <li>
-//   <Link to="/search?restaurant" refresh="true">
-//     <svg className="svg-star2">
-//       <path d="M13.61 17h-.007a1.39 1.39 0 0 1-1.376-1.587L13 10l-2-1c0-5.373 1.375-8 3.25-8 .497 0 .75.336.75.75v13.86A1.39 1.39 0 0 1 13.61 17zM6.557 9.912l.35 5.59a1.41 1.41 0 1 1-2.813 0l.35-5.59A1.994 1.994 0 0 1 3 8V1.5a.5.5 0 0 1 1 0v5a.5.5 0 0 0 1 0v-5a.5.5 0 0 1 1 0v5a.5.5 0 0 0 1 0v-5a.5.5 0 0 1 1 0V8c0 .91-.61 1.67-1.443 1.912z"></path></svg>
-//     Restaurants
-//   </Link>
-// </li>
 
 export default RedNav;
